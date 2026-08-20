@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ExternalLink, CheckCircle, Mail, Send, Activity, MessageSquare, LayoutDashboard, Search, Users, Settings, Globe, Phone, Hash as Instagram, ThumbsUp as Facebook, Link as LinkIcon, Building2, Bell, ChevronDown, ChevronLeft, Menu, ChevronRight, Loader2, RefreshCw, Flame } from "lucide-react";
+import { ExternalLink, CheckCircle, Mail, Send, Activity, MessageSquare, LayoutDashboard, Search, Users, Settings, Globe, Phone, Hash as Instagram, ThumbsUp as Facebook, Link as LinkIcon, Building2, Bell, ChevronDown, ChevronLeft, Menu, ChevronRight, Loader2, RefreshCw, Flame, History } from "lucide-react";
 
 export default function Dashboard() {
   const [leads, setLeads] = useState<any[]>([]);
@@ -256,6 +256,61 @@ export default function Dashboard() {
                         {startingEngine ? <Loader2 className="w-5 h-5 mr-2 animate-spin" /> : <Search className="w-5 h-5 mr-2" />}
                         {startingEngine ? "Executing Cloud Pipeline..." : "Start Lead Generation"}
                       </button>
+                    </div>
+                    
+                    {/* RECENT SEARCHES HISTORY */}
+                    <div className="mt-12 max-w-3xl">
+                      <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center">
+                        <History className="w-4 h-4 mr-2 text-slate-400" /> Recent Scraper Campaigns
+                      </h3>
+                      {leads.length === 0 ? (
+                        <div className="text-sm text-slate-500 bg-white p-6 rounded-lg border border-slate-200 text-center">
+                          No history available. Run your first scrape above!
+                        </div>
+                      ) : (
+                        <div className="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm">
+                          <table className="w-full text-left border-collapse text-sm">
+                            <thead>
+                              <tr className="bg-slate-50 text-slate-500 border-b border-slate-200">
+                                <th className="px-6 py-3 font-semibold">City</th>
+                                <th className="px-6 py-3 font-semibold">Vertical / Category</th>
+                                <th className="px-6 py-3 font-semibold text-center">Leads Discovered</th>
+                                <th className="px-6 py-3 font-semibold text-right">Last Run</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-100">
+                              {Object.values(leads.reduce((acc: any, lead: any) => {
+                                const city = lead.city || 'Unknown';
+                                const cat = lead.category || 'Unknown';
+                                const key = `${city}-${cat}`.toLowerCase();
+                                if (!acc[key]) {
+                                  acc[key] = { city, category: cat, count: 0, lastRun: lead.created_at || '' };
+                                }
+                                acc[key].count += 1;
+                                if (lead.created_at && lead.created_at > acc[key].lastRun) {
+                                  acc[key].lastRun = lead.created_at;
+                                }
+                                return acc;
+                              }, {})).sort((a: any, b: any) => b.lastRun.localeCompare(a.lastRun)).map((campaign: any, idx: number) => (
+                                <tr key={idx} className="hover:bg-slate-50 transition-colors">
+                                  <td className="px-6 py-4 font-medium text-slate-800">{campaign.city}</td>
+                                  <td className="px-6 py-4 text-slate-600 capitalize">{campaign.category}</td>
+                                  <td className="px-6 py-4 text-center">
+                                    <span className="bg-indigo-50 text-indigo-700 px-2.5 py-1 rounded-full font-bold text-xs border border-indigo-100">
+                                      {campaign.count}
+                                    </span>
+                                  </td>
+                                  <td className="px-6 py-4 text-right text-slate-500 text-xs">
+                                    {campaign.lastRun ? new Date(campaign.lastRun).toLocaleString(undefined, {
+                                      month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
+                                    }) : 'Unknown'}
+                                  </td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
