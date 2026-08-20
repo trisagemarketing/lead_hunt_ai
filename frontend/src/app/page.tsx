@@ -233,33 +233,35 @@ export default function Dashboard() {
 
       <div className="flex flex-1 overflow-hidden">
         {/* SIDEBAR */}
-        <aside className="w-[260px] bg-[#0B0E14] border-r border-[#1E2330] flex flex-col overflow-y-auto shrink-0">
-          <div className="p-4">
-            <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3 px-3">Navigation</div>
-            <nav className="space-y-0.5">
-              <button onClick={() => setActiveTab('pipeline')} className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-[13px] font-medium transition-colors ${activeTab === 'pipeline' ? 'bg-[#1E2330] text-white border-l-2 border-[#F97316] rounded-l-none' : 'text-slate-400 hover:text-white hover:bg-[#13161F]'}`}>
-                <LayoutDashboard className="w-4 h-4" /> Pipeline Overview
+                <aside className="w-[260px] bg-[#0B0E14] border-r border-[#1E2330] flex flex-col overflow-y-auto shrink-0 py-6">
+          <div className="mb-6">
+            <div className="text-[11px] font-bold text-[#64748B] uppercase tracking-[0.15em] mb-4 px-6">Navigation</div>
+            <nav className="space-y-1">
+              <button onClick={() => setActiveTab('pipeline')} className={`w-[calc(100%-12px)] flex items-center gap-3.5 px-6 py-2.5 text-[14px] font-medium transition-colors rounded-r-lg ${activeTab === 'pipeline' ? 'bg-[#1D2333] text-white border-l-[3px] border-[#F97316]' : 'text-[#94A3B8] hover:text-white hover:bg-[#13161F] border-l-[3px] border-transparent'}`}>
+                <LayoutDashboard className="w-5 h-5 opacity-80" /> Pipeline Overview
               </button>
-              <button onClick={() => setActiveTab('approval')} className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-[13px] font-medium transition-colors ${activeTab === 'approval' ? 'bg-[#1E2330] text-white border-l-2 border-[#F97316] rounded-l-none' : 'text-slate-400 hover:text-white hover:bg-[#13161F]'}`}>
-                <div className="flex items-center gap-3"><CheckSquare className="w-4 h-4" /> Human Approval Queue</div>
-                <span className="bg-[#F97316] text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold shadow-[0_0_5px_rgba(249,115,22,0.5)]">{metrics.pending}</span>
+              <button onClick={() => setActiveTab('approval')} className={`w-[calc(100%-12px)] flex items-center justify-between px-6 py-2.5 text-[14px] font-medium transition-colors rounded-r-lg ${activeTab === 'approval' ? 'bg-[#1D2333] text-white border-l-[3px] border-[#F97316]' : 'text-[#94A3B8] hover:text-white hover:bg-[#13161F] border-l-[3px] border-transparent'}`}>
+                <div className="flex items-center gap-3.5"><CheckSquare className="w-5 h-5 opacity-80" /> Human Approval Queue</div>
+                {metrics.pending > 0 && (
+                  <span className="bg-[#F97316] text-white text-[11px] w-5 h-5 flex items-center justify-center rounded-full font-bold shadow-[0_0_8px_rgba(249,115,22,0.6)]">{metrics.pending}</span>
+                )}
               </button>
-              <button onClick={() => setActiveTab('explorer')} className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-[13px] font-medium transition-colors ${activeTab === 'explorer' ? 'bg-[#1E2330] text-white border-l-2 border-[#F97316] rounded-l-none' : 'text-slate-400 hover:text-white hover:bg-[#13161F]'}`}>
-                <Users className="w-4 h-4" /> Lead Explorer Table
+              <button onClick={() => setActiveTab('explorer')} className={`w-[calc(100%-12px)] flex items-center gap-3.5 px-6 py-2.5 text-[14px] font-medium transition-colors rounded-r-lg ${activeTab === 'explorer' ? 'bg-[#1D2333] text-white border-l-[3px] border-[#F97316]' : 'text-[#94A3B8] hover:text-white hover:bg-[#13161F] border-l-[3px] border-transparent'}`}>
+                <Users className="w-5 h-5 opacity-80" /> Lead Explorer Table
               </button>
-              <button onClick={() => setActiveTab('logs')} className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-[13px] font-medium transition-colors ${activeTab === 'logs' ? 'bg-[#1E2330] text-white border-l-2 border-[#F97316] rounded-l-none' : 'text-slate-400 hover:text-white hover:bg-[#13161F]'}`}>
-                <Terminal className="w-4 h-4" /> Live Console Logs
+              <button onClick={() => setActiveTab('logs')} className={`w-[calc(100%-12px)] flex items-center gap-3.5 px-6 py-2.5 text-[14px] font-medium transition-colors rounded-r-lg ${activeTab === 'logs' ? 'bg-[#1D2333] text-white border-l-[3px] border-[#F97316]' : 'text-[#94A3B8] hover:text-white hover:bg-[#13161F] border-l-[3px] border-transparent'}`}>
+                <Terminal className="w-5 h-5 opacity-80" /> Live Console Logs
               </button>
-                          <button onClick={() => setActiveTab('history')} className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-[13px] font-medium transition-colors ${activeTab === 'history' ? 'bg-[#1E2330] text-white border-l-2 border-[#F97316] rounded-l-none' : 'text-slate-400 hover:text-white hover:bg-[#13161F]'}`}>
-                <History className="w-4 h-4" /> Campaign History
+              <button onClick={() => setActiveTab('history')} className={`w-[calc(100%-12px)] flex items-center gap-3.5 px-6 py-2.5 text-[14px] font-medium transition-colors rounded-r-lg ${activeTab === 'history' ? 'bg-[#1D2333] text-white border-l-[3px] border-[#F97316]' : 'text-[#94A3B8] hover:text-white hover:bg-[#13161F] border-l-[3px] border-transparent'}`}>
+                <History className="w-5 h-5 opacity-80" /> Campaign History
               </button>
-</nav>
+            </nav>
           </div>
 
-          <div className="px-4 py-2">
-            <div className="h-px bg-[#1E2330] w-full mb-4"></div>
-            <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3 px-3">Quick 1-Click Actions</div>
-            <nav className="space-y-0.5">
+          <div className="mt-2">
+            <div className="h-px bg-[#1E2330] w-[calc(100%-32px)] mx-4 mb-6"></div>
+            <div className="text-[11px] font-bold text-[#64748B] uppercase tracking-[0.15em] mb-4 px-6">Quick 1-Click Actions</div>
+            <nav className="space-y-1">
               {[
                 { icon: Search, label: 'Discover Leads' },
                 { icon: Globe, label: 'Verify Websites' },
@@ -268,8 +270,8 @@ export default function Dashboard() {
                 { icon: Monitor, label: 'Generate Demos' },
                 { icon: Send, label: 'Dispatch Outreach' },
               ].map((action, idx) => (
-                <button key={idx} className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-[13px] font-medium text-slate-400 hover:text-white hover:bg-[#13161F] transition-colors">
-                  <action.icon className="w-4 h-4 text-slate-500" /> {action.label}
+                <button key={idx} className="w-[calc(100%-12px)] flex items-center gap-3.5 px-6 py-2.5 text-[14px] font-medium text-[#94A3B8] hover:text-white hover:bg-[#13161F] transition-colors border-l-[3px] border-transparent rounded-r-lg">
+                  <action.icon className="w-5 h-5 opacity-70" /> {action.label}
                 </button>
               ))}
             </nav>
@@ -277,7 +279,7 @@ export default function Dashboard() {
         </aside>
 
         {/* MAIN CONTENT */}
-        <main className="flex-1 overflow-y-auto bg-[#13161F] p-8">
+        <main className="flex-1 min-w-0 overflow-y-auto bg-[#13161F] p-4 sm:p-8">
           
           <div className="flex justify-between items-end mb-8">
             <div>
