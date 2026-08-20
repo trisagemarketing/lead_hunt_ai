@@ -9,6 +9,9 @@ from typing import Optional
 # Add parent directory to path so we can import models and database
 sys.path.append(str(Path(__file__).parent.parent))
 from database import Database
+from utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 # Initialize Professional FastAPI App
 app = FastAPI(
