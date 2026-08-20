@@ -350,47 +350,6 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* INTERACTIVE PIPELINE MATRIX */}
-          <div className="bg-[#0B0E14] border border-[#1E2330] rounded-xl p-6 mb-10 relative">
-            <div className="flex justify-between items-center mb-10">
-              <div className="flex items-center gap-2">
-                <Zap className="w-4 h-4 text-amber-400" />
-                <h3 className="text-sm font-bold text-white uppercase tracking-wider">Interactive Pipeline Control Matrix</h3>
-              </div>
-              <div className="text-[10px] font-bold text-[#38bdf8] bg-[#0c4a6e]/50 px-2.5 py-1 rounded tracking-widest border border-[#0284c7]/50">
-                CLICK ANY STAGE TO EXECUTE INSTANTLY
-              </div>
-            </div>
-
-            <div className="flex items-start justify-between w-full relative z-10 px-6">
-              {/* Connector Line */}
-              <div className="absolute left-16 right-16 top-4 h-[1px] bg-[#2A3143] -z-10"></div>
-              
-              {/* Stages */}
-              {[
-                { num: '2', title: 'Verification', desc: 'HTTP Site Check', btn: 'Check Sites' },
-                { num: '3', title: 'Scoring', desc: 'HOT/WARM/LOW', btn: 'Score Leads' },
-                { num: '4', title: 'AI Copy', desc: 'Claude Sonnet', btn: 'Write Copy' },
-                { num: '5', title: 'Demo Pages', desc: 'Preview Sites', btn: 'Build Demos' },
-                { num: '6', title: 'Approval', desc: 'Human Gate', btn: 'Review Queue', active: true },
-                { num: '7', title: 'Outreach', desc: 'Email & WhatsApp', btn: 'Send Outreach' },
-              ].map((stage, i) => (
-                <div key={i} className="flex flex-col items-center bg-[#0B0E14] px-4 group">
-                  <div className="w-8 h-8 rounded bg-[#13161F] flex items-center justify-center text-[13px] font-bold text-slate-300 border border-[#2A3143] mb-4 group-hover:border-slate-400 transition-colors">
-                    {stage.num}
-                  </div>
-                  <div className="text-center mb-4">
-                    <div className="font-bold text-white text-[13px] mb-1">{stage.title}</div>
-                    <div className="text-[11px] text-slate-500">{stage.desc}</div>
-                  </div>
-                  <button className={`text-[10px] font-bold px-4 py-1.5 rounded uppercase tracking-wider transition-all ${stage.active ? 'bg-[#F97316] hover:bg-[#EA580C] text-white shadow-[0_0_10px_rgba(249,115,22,0.3)]' : 'bg-[#1E2330] hover:bg-[#2A3143] text-slate-400 border border-[#2A3143]'}`}>
-                    {stage.btn}
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* LEADS TABLE PREVIEW (Adapting the dark mode) */}
           <div className="bg-[#0B0E14] border border-[#1E2330] rounded-xl overflow-hidden">
             <div className="p-5 border-b border-[#1E2330] flex justify-between items-center bg-[#0F131C]">
