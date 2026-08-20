@@ -129,14 +129,23 @@ export default function Dashboard() {
             <Search className="w-5 h-5 shrink-0" /> 
             {!sidebarCollapsed && <span className="ml-4 whitespace-nowrap">Discover Leads</span>}
           </button>
+
+          <button 
+            onClick={() => setActiveTab("history")}
+            className={`w-full flex items-center px-6 py-3 text-sm font-medium transition-all border-l-4 group ${activeTab === 'history' ? 'bg-[#755BB5] border-white' : 'border-transparent text-indigo-100 hover:bg-[#755BB5]/50 hover:text-white'}`}
+            title="Search History"
+          >
+            <History className="w-5 h-5 shrink-0" /> 
+            {!sidebarCollapsed && <span className="ml-4 whitespace-nowrap">Search History</span>}
+          </button>
           
           <button 
             onClick={() => setActiveTab("pipeline")}
             className={`w-full flex items-center px-6 py-3 text-sm font-medium transition-all border-l-4 group ${activeTab === 'pipeline' ? 'bg-[#755BB5] border-white' : 'border-transparent text-indigo-100 hover:bg-[#755BB5]/50 hover:text-white'}`}
-            title="Outreach Pipeline"
+            title="Leads Pipeline"
           >
             <Users className="w-5 h-5 shrink-0" /> 
-            {!sidebarCollapsed && <span className="ml-4 whitespace-nowrap">Outreach Pipeline</span>}
+            {!sidebarCollapsed && <span className="ml-4 whitespace-nowrap">Leads Pipeline</span>}
           </button>
         </nav>
 
@@ -257,61 +266,70 @@ export default function Dashboard() {
                         {startingEngine ? "Executing Cloud Pipeline..." : "Start Lead Generation"}
                       </button>
                     </div>
-                    
-                    {/* RECENT SEARCHES HISTORY */}
-                    <div className="mt-12 max-w-3xl">
-                      <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center">
-                        <History className="w-4 h-4 mr-2 text-slate-400" /> Recent Scraper Campaigns
-                      </h3>
-                      {leads.length === 0 ? (
-                        <div className="text-sm text-slate-500 bg-white p-6 rounded-lg border border-slate-200 text-center">
-                          No history available. Run your first scrape above!
-                        </div>
-                      ) : (
-                        <div className="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm">
-                          <table className="w-full text-left border-collapse text-sm">
-                            <thead>
-                              <tr className="bg-slate-50 text-slate-500 border-b border-slate-200">
-                                <th className="px-6 py-3 font-semibold">City</th>
-                                <th className="px-6 py-3 font-semibold">Vertical / Category</th>
-                                <th className="px-6 py-3 font-semibold text-center">Leads Discovered</th>
-                                <th className="px-6 py-3 font-semibold text-right">Last Run</th>
-                              </tr>
-                            </thead>
-                            <tbody className="divide-y divide-slate-100">
-                              {Object.values(leads.reduce((acc: any, lead: any) => {
-                                const city = lead.city || 'Unknown';
-                                const cat = lead.category || 'Unknown';
-                                const key = `${city}-${cat}`.toLowerCase();
-                                if (!acc[key]) {
-                                  acc[key] = { city, category: cat, count: 0, lastRun: lead.created_at || '' };
-                                }
-                                acc[key].count += 1;
-                                if (lead.created_at && lead.created_at > acc[key].lastRun) {
-                                  acc[key].lastRun = lead.created_at;
-                                }
-                                return acc;
-                              }, {})).sort((a: any, b: any) => b.lastRun.localeCompare(a.lastRun)).map((campaign: any, idx: number) => (
-                                <tr key={idx} className="hover:bg-slate-50 transition-colors">
-                                  <td className="px-6 py-4 font-medium text-slate-800">{campaign.city}</td>
-                                  <td className="px-6 py-4 text-slate-600 capitalize">{campaign.category}</td>
-                                  <td className="px-6 py-4 text-center">
-                                    <span className="bg-indigo-50 text-indigo-700 px-2.5 py-1 rounded-full font-bold text-xs border border-indigo-100">
-                                      {campaign.count}
-                                    </span>
-                                  </td>
-                                  <td className="px-6 py-4 text-right text-slate-500 text-xs">
-                                    {campaign.lastRun ? new Date(campaign.lastRun).toLocaleString(undefined, {
-                                      month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
-                                    }) : 'Unknown'}
-                                  </td>
-                                </tr>
-                              ))}
-                            </tbody>
-                          </table>
-                        </div>
-                      )}
                     </div>
+                  </div>
+                </div>
+              )}
+
+              {/* TAB: HISTORY */}
+              {activeTab === "history" && (
+                <div className="animate-in fade-in zoom-in-95 duration-300">
+                  <div className="max-w-4xl">
+                    <h2 className="text-xl font-bold text-slate-800 mb-2 flex items-center">
+                      <History className="w-5 h-5 mr-2 text-[#654CA5]" /> Scraper Campaign History
+                    </h2>
+                    <p className="text-sm text-slate-500 mb-8 max-w-xl">
+                      Review all past lead generation campaigns. Campaigns are grouped automatically by target city and business vertical.
+                    </p>
+
+                    {leads.length === 0 ? (
+                      <div className="text-sm text-slate-500 bg-white p-6 rounded-lg border border-slate-200 text-center">
+                        No history available. Go to the Scraper to run your first campaign!
+                      </div>
+                    ) : (
+                      <div className="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm">
+                        <table className="w-full text-left border-collapse text-sm">
+                          <thead>
+                            <tr className="bg-slate-50 text-slate-500 border-b border-slate-200">
+                              <th className="px-6 py-4 font-semibold">Target City</th>
+                              <th className="px-6 py-4 font-semibold">Business Vertical</th>
+                              <th className="px-6 py-4 font-semibold text-center">Total Leads Discovered</th>
+                              <th className="px-6 py-4 font-semibold text-right">Most Recent Run</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-slate-100">
+                            {Object.values(leads.reduce((acc: any, lead: any) => {
+                              const city = lead.city || 'Unknown';
+                              const cat = lead.category || 'Unknown';
+                              const key = `${city}-${cat}`.toLowerCase();
+                              if (!acc[key]) {
+                                acc[key] = { city, category: cat, count: 0, lastRun: lead.created_at || '' };
+                              }
+                              acc[key].count += 1;
+                              if (lead.created_at && lead.created_at > acc[key].lastRun) {
+                                acc[key].lastRun = lead.created_at;
+                              }
+                              return acc;
+                            }, {})).sort((a: any, b: any) => b.lastRun.localeCompare(a.lastRun)).map((campaign: any, idx: number) => (
+                              <tr key={idx} className="hover:bg-slate-50 transition-colors">
+                                <td className="px-6 py-4 font-medium text-slate-800">{campaign.city}</td>
+                                <td className="px-6 py-4 text-slate-600 capitalize">{campaign.category}</td>
+                                <td className="px-6 py-4 text-center">
+                                  <span className="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-bold text-xs border border-indigo-100">
+                                    {campaign.count}
+                                  </span>
+                                </td>
+                                <td className="px-6 py-4 text-right text-slate-500 text-xs">
+                                  {campaign.lastRun ? new Date(campaign.lastRun).toLocaleString(undefined, {
+                                    month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
+                                  }) : 'Unknown'}
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
                   </div>
                 </div>
               )}
