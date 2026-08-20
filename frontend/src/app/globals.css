@@ -1,4 +1,21 @@
-@import url('https://fonts.cdnfonts.com/css/national-park');
+@font-face {
+    font-family: 'National Park';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/NationalPark-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'National Park';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/NationalPark-Heavy.woff') format('woff');
+}
+@font-face {
+    font-family: 'National Park';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/fonts/NationalPark-Heavy.woff') format('woff');
+}
 @import "tailwindcss";
 
 :root {
