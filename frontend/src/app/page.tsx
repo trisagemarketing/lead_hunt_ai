@@ -214,6 +214,9 @@ export default function Dashboard() {
                <button onClick={() => setActiveTab("search")} className={`px-6 py-2.5 text-sm font-medium rounded-t-lg bg-white ml-2 whitespace-nowrap transition-all ${activeTab === 'search' ? 'text-[#654CA5] shadow-[0_-3px_0_0_#654CA5_inset]' : 'text-slate-500 shadow-sm border-b border-slate-200 hover:bg-slate-50'}`}>
                  Scrape New Engine
                </button>
+               <button onClick={() => setActiveTab("history")} className={`px-6 py-2.5 text-sm font-medium rounded-t-lg bg-white ml-2 whitespace-nowrap transition-all ${activeTab === 'history' ? 'text-[#654CA5] shadow-[0_-3px_0_0_#654CA5_inset]' : 'text-slate-500 shadow-sm border-b border-slate-200 hover:bg-slate-50'}`}>
+                 Search History
+               </button>
                <button onClick={() => setActiveTab("dashboard")} className={`px-6 py-2.5 text-sm font-medium rounded-t-lg bg-white ml-2 whitespace-nowrap transition-all ${activeTab === 'dashboard' ? 'text-[#654CA5] shadow-[0_-3px_0_0_#654CA5_inset]' : 'text-slate-500 shadow-sm border-b border-slate-200 hover:bg-slate-50'}`}>
                  Statistics
                </button>
