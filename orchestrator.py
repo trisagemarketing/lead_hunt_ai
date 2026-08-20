@@ -10,8 +10,8 @@ def run_module(module_args: list, description: str):
     """Runs a Python module as a subprocess and streams the output."""
     logger.info(f"========== STARTING: {description} ==========")
     try:
-        # Run the module and stream output in real-time
-        cmd = [sys.executable, "-m"] + module_args
+        # Run the module and stream output in real-time unbuffered
+        cmd = [sys.executable, "-u", "-m"] + module_args
         process = subprocess.Popen(
             cmd,
             stdout=subprocess.PIPE,
