@@ -1,7 +1,7 @@
 import sys
 import os
 from pathlib import Path
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException, Request, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
@@ -96,14 +96,35 @@ def approve_and_send_lead(lead_id: str, payload: ApprovePayload = None):
         raise HTTPException(status_code=404, detail="Lead not found")
         
     lead = dict(row)
-    
-    # TODO: In Phase 4, we will add the actual HTTP POST request to your n8n webhook here.
-    # For now, it just returns success to the Next.js dashboard.
-    
     return {
         "success": True, 
         "message": f"Lead '{lead['business_name']}' approved! Ready to dispatch to n8n.",
         "data": lead
+    }
+
+# ==========================================
+# ENGINE TRIGGER
+# ==========================================
+def run_orchestrator_in_background():
+    """Runs the master pipeline in the background so the HTTP request doesn't timeout."""
+    import subprocess
+    logger.info("Triggering background orchestrator...")
+    try:
+        subprocess.run([sys.executable, "orchestrator.py"], check=True)
+        logger.info("Background orchestrator finished successfully!")
+    except Exception as e:
+        logger.error(f"Background orchestrator failed: {e}")
+
+@app.get("/api/engine/start")
+def start_engine(background_tasks: BackgroundTasks):
+    """
+    Hit this URL in your browser to wake up the AI and start scraping!
+    It runs in the background so your browser doesn't load forever.
+    """
+    background_tasks.add_task(run_orchestrator_in_background)
+    return {
+        "success": True,
+        "message": "🚀 Engine Started! The AI is now scraping Google Maps and writing emails in the background. Check back in 60 seconds!"
     }
 
 if __name__ == "__main__":
