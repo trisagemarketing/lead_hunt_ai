@@ -295,7 +295,9 @@ export default function Dashboard() {
                             <tr className="bg-slate-50 text-slate-500 border-b border-slate-200">
                               <th className="px-6 py-4 font-semibold">Target City</th>
                               <th className="px-6 py-4 font-semibold">Business Vertical</th>
-                              <th className="px-6 py-4 font-semibold text-center">Total Leads Discovered</th>
+                              <th className="px-6 py-4 font-semibold text-center">Total Leads</th>
+                              <th className="px-6 py-4 font-semibold text-center">Websites Found</th>
+                              <th className="px-6 py-4 font-semibold text-center">Socials Found</th>
                               <th className="px-6 py-4 font-semibold text-right">Most Recent Run</th>
                             </tr>
                           </thead>
@@ -305,9 +307,12 @@ export default function Dashboard() {
                               const cat = lead.category || 'Unknown';
                               const key = `${city}-${cat}`.toLowerCase();
                               if (!acc[key]) {
-                                acc[key] = { city, category: cat, count: 0, lastRun: lead.created_at || '' };
+                                acc[key] = { city, category: cat, count: 0, websites: 0, socials: 0, lastRun: lead.created_at || '' };
                               }
                               acc[key].count += 1;
+                              if (lead.website_url) acc[key].websites += 1;
+                              if (lead.instagram || lead.facebook) acc[key].socials += 1;
+                              
                               if (lead.created_at && lead.created_at > acc[key].lastRun) {
                                 acc[key].lastRun = lead.created_at;
                               }
@@ -319,6 +324,16 @@ export default function Dashboard() {
                                 <td className="px-6 py-4 text-center">
                                   <span className="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-bold text-xs border border-indigo-100">
                                     {campaign.count}
+                                  </span>
+                                </td>
+                                <td className="px-6 py-4 text-center">
+                                  <span className="text-slate-600 font-medium text-sm">
+                                    {campaign.websites}
+                                  </span>
+                                </td>
+                                <td className="px-6 py-4 text-center">
+                                  <span className="text-slate-600 font-medium text-sm">
+                                    {campaign.socials}
                                   </span>
                                 </td>
                                 <td className="px-6 py-4 text-right text-slate-500 text-xs">
@@ -443,9 +458,23 @@ export default function Dashboard() {
                                       </a>
                                     ) : <span className="text-slate-400 italic">N/A</span>}
                                   </div>
-                                  <div className="text-slate-700 flex items-center text-xs">
-                                    <Instagram className="w-3.5 h-3.5 mr-2 text-slate-400 shrink-0" /> 
-                                    {lead.instagram || <span className="text-slate-400 italic">N/A</span>}
+                                  <div className="flex gap-4">
+                                    <div className="text-slate-700 flex items-center text-xs">
+                                      <Instagram className="w-3.5 h-3.5 mr-1.5 text-slate-400 shrink-0" /> 
+                                      {lead.instagram ? (
+                                        <a href={lead.instagram.startsWith('http') ? lead.instagram : `https://instagram.com/${lead.instagram}`} target="_blank" rel="noreferrer" className="hover:text-[#654CA5] hover:underline font-medium text-slate-600 truncate max-w-[80px] inline-block align-bottom">
+                                          Insta
+                                        </a>
+                                      ) : <span className="text-slate-400 italic">N/A</span>}
+                                    </div>
+                                    <div className="text-slate-700 flex items-center text-xs">
+                                      <Facebook className="w-3.5 h-3.5 mr-1.5 text-slate-400 shrink-0" /> 
+                                      {lead.facebook ? (
+                                        <a href={lead.facebook.startsWith('http') ? lead.facebook : `https://facebook.com/${lead.facebook}`} target="_blank" rel="noreferrer" className="hover:text-[#654CA5] hover:underline font-medium text-slate-600 truncate max-w-[80px] inline-block align-bottom">
+                                          FB
+                                        </a>
+                                      ) : <span className="text-slate-400 italic">N/A</span>}
+                                    </div>
                                   </div>
                                 </div>
                               </td>
