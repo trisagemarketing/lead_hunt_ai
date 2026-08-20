@@ -82,12 +82,12 @@ Output format MUST be a pure JSON object with these exact keys: "email_subject",
         logger.info("Falling back to local mock generator due to API error...")
         return generate_messages_mock(lead_data)
 
-def process_leads(limit=3):
+def process_leads(limit=20):
     db = Database()
-    leads = db.get_leads_by_status(LeadStatus.QUALIFIED.value)
+    leads = db.get_leads_by_status(LeadStatus.SCORED.value)
     
     if not leads:
-        logger.info("No QUALIFIED leads found.")
+        logger.info("No SCORED leads found.")
         return []
 
     # Sort to get HOT leads first (score >= 70)

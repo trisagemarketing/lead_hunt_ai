@@ -391,6 +391,10 @@ export default function Dashboard() {
                                        </a>
                                      )}
                                    </div>
+                                 ) : lead.lead_tier !== 'HOT' ? (
+                                   <div className="text-slate-400 italic text-xs flex items-center bg-slate-50 p-2 rounded-md border border-slate-100">
+                                      Skipped by AI (Low Score)
+                                   </div>
                                  ) : (
                                    <div className="text-slate-400 italic text-xs flex items-center bg-slate-50 p-2 rounded-md border border-slate-100">
                                       <Activity className="w-3 h-3 mr-1 animate-pulse" /> Processing via AI...
