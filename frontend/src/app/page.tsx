@@ -12,6 +12,7 @@ export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("pipeline");
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [activeCampaign, setActiveCampaign] = useState<{city: string, category: string} | null>(null);
 
   // Engine State
   const [city, setCity] = useState("Vadodara");
@@ -34,6 +35,8 @@ export default function Dashboard() {
           
           if (text.includes("PIPELINE FINISHED SUCCESSFULLY") || text.includes("ENGINE FINISHED WITH CODE")) {
             setStartingEngine(false);
+            // After scraping completes, we fetch the new leads and auto-set active campaign
+            setActiveCampaign({ city: city, category: category });
             fetchLeads();
             setActiveTab("pipeline");
           }
@@ -43,7 +46,7 @@ export default function Dashboard() {
       }, 3000);
     }
     return () => clearInterval(interval);
-  }, [startingEngine]);
+  }, [startingEngine, city, category]);
 
   const fetchLeads = async () => {
     try {
@@ -52,6 +55,10 @@ export default function Dashboard() {
       if (!res.ok) throw new Error("Failed to fetch leads");
       const json = await res.json();
       setLeads(json.data);
+      // Auto-set the active campaign to the most recent one if none is selected
+      if (json.data.length > 0 && !activeCampaign) {
+        setActiveCampaign({ city: json.data[0].city, category: json.data[0].category });
+      }
     } catch (err) {
       console.error(err);
     } finally {
@@ -101,8 +108,16 @@ export default function Dashboard() {
     }
   };
 
-  // Filter leads based on the global search query
+  // Filter leads based on the global search query and active campaign
   const filteredLeads = leads.filter(lead => {
+    // 1. Filter by active campaign (if selected)
+    if (activeCampaign) {
+      if (lead.city !== activeCampaign.city || lead.category !== activeCampaign.category) {
+        return false;
+      }
+    }
+    
+    // 2. Filter by search query
     if (!searchQuery) return true;
     const q = searchQuery.toLowerCase();
     return (
@@ -349,6 +364,7 @@ export default function Dashboard() {
                               <th className="px-6 py-4 font-semibold text-center">Websites Found</th>
                               <th className="px-6 py-4 font-semibold text-center">Socials Found</th>
                               <th className="px-6 py-4 font-semibold text-right">Most Recent Run</th>
+                              <th className="px-6 py-4 font-semibold text-center">Action</th>
                             </tr>
                           </thead>
                           <tbody className="divide-y divide-slate-100">
@@ -390,6 +406,17 @@ export default function Dashboard() {
                                   {campaign.lastRun ? new Date(campaign.lastRun).toLocaleString(undefined, {
                                     month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
                                   }) : 'Unknown'}
+                                </td>
+                                <td className="px-6 py-4 text-center">
+                                  <button 
+                                    onClick={() => {
+                                      setActiveCampaign({ city: campaign.city, category: campaign.category });
+                                      setActiveTab("pipeline");
+                                    }}
+                                    className="text-indigo-600 hover:text-indigo-800 text-xs font-semibold bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded transition-colors"
+                                  >
+                                    View Leads
+                                  </button>
                                 </td>
                               </tr>
                             ))}
@@ -435,7 +462,19 @@ export default function Dashboard() {
                   {/* Table Controls */}
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4">
                     <div className="flex items-center gap-3">
-                       <h2 className="text-xl font-bold text-slate-800 mr-2">Pipeline {loading ? "" : `(${filteredLeads.length})`}</h2>
+                      <div className="flex flex-col">
+                        <h2 className="text-xl font-bold text-slate-800 mr-2 flex items-center">
+                          Pipeline {loading ? "" : `(${filteredLeads.length})`}
+                        </h2>
+                        {activeCampaign && (
+                          <div className="text-xs text-indigo-600 font-medium mt-0.5 flex items-center">
+                            Campaign: {activeCampaign.category} in {activeCampaign.city}
+                            <button onClick={() => setActiveCampaign(null)} className="ml-3 text-slate-400 hover:text-red-500 underline text-[10px]">
+                              Clear Filter (View All)
+                            </button>
+                          </div>
+                        )}
+                      </div>
                        
                        {/* This triggers the "Scrape New" tab to simulate "Add new" from image */}
                        <button onClick={() => setActiveTab("search")} className="bg-[#654CA5] hover:bg-[#563D96] text-white px-4 py-2 rounded text-sm shadow-sm transition-colors font-medium hover:shadow-md active:scale-95">
