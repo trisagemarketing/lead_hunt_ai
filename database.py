@@ -167,7 +167,7 @@ class Database:
             return None
 
     def get_all_leads(self):
-        query = "SELECT * FROM leads"
+        query = "SELECT * FROM leads ORDER BY created_at DESC"
         try:
             conn = self.get_connection()
             if self.use_postgres:
