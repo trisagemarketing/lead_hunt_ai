@@ -108,19 +108,18 @@ def approve_and_send_lead(lead_id: str, payload: ApprovePayload = None):
 # Global variable to store logs in memory (bypasses Railway read-only disk issues)
 engine_debug_logs = "Engine has not been started yet."
 
-def run_orchestrator_in_background():
+def run_orchestrator_in_background(city: str, business_type: str):
     """Runs the master pipeline and saves the output to memory for debugging."""
     global engine_debug_logs
     import subprocess
     import traceback
     
-    logger.info("Triggering background orchestrator...")
-    engine_debug_logs = "--- ENGINE STARTING ---\n"
+    logger.info(f"Triggering background orchestrator for {business_type} in {city}...")
+    engine_debug_logs = f"--- ENGINE STARTING ({business_type} in {city}) ---\n"
     
     try:
-        # We use 'python' explicitly instead of sys.executable
         process = subprocess.run(
-            ["python", "orchestrator.py"],
+            ["python", "orchestrator.py", "--city", city, "--business-type", business_type],
             capture_output=True,
             text=True
         )
@@ -130,15 +129,19 @@ def run_orchestrator_in_background():
     except Exception as e:
         engine_debug_logs += f"\n--- FATAL ERROR ---\n{traceback.format_exc()}\n"
 
-@app.get("/api/engine/start")
-def start_engine(background_tasks: BackgroundTasks):
+class EngineRequest(BaseModel):
+    city: str
+    business_type: str
+
+@app.post("/api/engine/start")
+def start_engine(request: EngineRequest, background_tasks: BackgroundTasks):
     """
     Hit this URL in your browser to wake up the AI and start scraping!
     """
-    background_tasks.add_task(run_orchestrator_in_background)
+    background_tasks.add_task(run_orchestrator_in_background, request.city, request.business_type)
     return {
         "success": True,
-        "message": "Engine Started! Check /api/engine/logs to see live progress."
+        "message": f"Engine Started! Searching for {request.business_type} in {request.city}. Check /api/engine/logs to see live progress."
     }
 
 from fastapi.responses import PlainTextResponse

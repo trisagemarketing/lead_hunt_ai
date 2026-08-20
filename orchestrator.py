@@ -37,12 +37,17 @@ def run_module(module_args: list, description: str):
         return False
 
 def main():
+    parser = argparse.ArgumentParser(description="LeadHunter AI Orchestrator")
+    parser.add_argument("--city", type=str, default="Vadodara", help="City to search in")
+    parser.add_argument("--business-type", type=str, default="restaurants", help="Type of business to search for")
+    args = parser.parse_args()
+
     logger.info("STARTING FULL LEADHUNTER AI ORCHESTRATOR")
     start_time = time.time()
     
     # Define the exact sequence of the pipeline
     pipeline = [
-        (["discovery.serpapi_search", "--city", "Vadodara", "--business-type", "restaurants"], "Phase 1: Discovery (Google Maps Scrape)"),
+        (["discovery.serpapi_search", "--city", args.city, "--business-type", args.business_type], "Phase 1: Discovery (Google Maps Scrape)"),
         (["processing.normalize"], "Phase 2A: Data Normalization"),
         (["processing.deduplicate"], "Phase 2B: Deduplication"),
         (["processing.website_checker"], "Phase 3: Website Auditing"),
