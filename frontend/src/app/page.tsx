@@ -49,7 +49,7 @@ export default function Dashboard() {
         body: JSON.stringify({ city: city, business_type: category }),
       });
       const data = await res.json();
-      alert(data.message);
+      alert(`Cloud Pipeline Started!\n\nThe AI is currently scraping Google Maps, verifying websites, and personalizing emails in the background. This usually takes 45-60 seconds.\n\nWe will now switch you to the Pipeline view. Please wait a minute and then click the 'Refresh' button to see your new leads!`);
       setActiveTab("pipeline");
     } catch (err) {
       console.error(err);
