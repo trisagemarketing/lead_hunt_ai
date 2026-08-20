@@ -22,7 +22,7 @@ def run_module(module_args: list, description: str):
         )
         
         for line in process.stdout:
-            print(line.strip())
+            print(line.strip(), flush=True)
             
         process.wait()
         

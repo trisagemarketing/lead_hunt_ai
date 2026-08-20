@@ -116,18 +116,26 @@ def run_orchestrator_in_background(city: str, business_type: str):
     global engine_debug_logs
     import subprocess
     import traceback
+    import sys
     
     logger.info(f"Triggering background orchestrator for {business_type} in {city}...")
     engine_debug_logs = f"--- ENGINE STARTING ({business_type} in {city}) ---\n"
     
     try:
-        process = subprocess.run(
-            ["python", "orchestrator.py", "--city", city, "--business-type", business_type],
-            capture_output=True,
-            text=True
+        process = subprocess.Popen(
+            [sys.executable, "-u", "orchestrator.py", "--city", city, "--business-type", business_type],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            bufsize=1
         )
-        engine_debug_logs += process.stdout
-        engine_debug_logs += process.stderr if process.stderr else ""
+        
+        for line in iter(process.stdout.readline, ''):
+            engine_debug_logs += line
+            
+        process.stdout.close()
+        process.wait()
+        
         engine_debug_logs += f"\n--- ENGINE FINISHED WITH CODE {process.returncode} ---\n"
     except Exception as e:
         engine_debug_logs += f"\n--- FATAL ERROR ---\n{traceback.format_exc()}\n"
