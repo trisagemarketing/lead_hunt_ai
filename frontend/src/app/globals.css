@@ -2,13 +2,15 @@
 @import "tailwindcss";
 
 :root {
-  --bg-app: #0A0A0A;
-  --bg-panel: #111111;
-  --border-color: #222222;
-  --text-main: #EDEDED;
-  --text-muted: #A1A1AA;
-  --accent: #FFFFFF;
-  --accent-fg: #000000;
+  --bg-app: #F4F7FC;
+  --bg-sidebar: #654CA5;
+  --bg-sidebar-hover: #755BB5;
+  --bg-header: #563D96;
+  --bg-panel: #FFFFFF;
+  --border-color: #E2E8F0;
+  --text-main: #334155;
+  --text-muted: #64748B;
+  --accent: #654CA5;
 }
 
 body {
@@ -20,16 +22,16 @@ body {
 
 /* Custom Scrollbar for professional look */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-app);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--border-color);
+  background: #CBD5E1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #333333;
+  background: #94A3B8;
 }
