@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadHunter AI - Admin Dashboard</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; color: #333; }
+        .header { display: flex; justify-content: space-between; align-items: center; background: #2c3e50; color: white; padding: 15px 30px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { margin: 0; font-size: 1.5rem; }
+        .stats { font-size: 1rem; font-weight: bold; background: #34495e; padding: 8px 15px; border-radius: 5px; }
+        
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f1f3f5; color: #555; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; }
+        tr:hover { background-color: #f8f9fa; }
+        
+        .badge { display: inline-block; padding: 4px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: bold; color: white; }
+        .badge-HOT { background-color: #e74c3c; }
+        .badge-WARM { background-color: #f39c12; }
+        .badge-LOW { background-color: #95a5a6; }
+        
+        .status-badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; background: #e9ecef; color: #495057; border: 1px solid #ced4da; }
+        .status-PERSONALIZED { background: #d4edda; color: #155724; border-color: #c3e6cb; }
+        
+        .msg-container { max-height: 80px; overflow-y: auto; font-size: 0.85rem; background: #f8f9fa; padding: 8px; border-radius: 4px; border: 1px solid #eee; margin-bottom: 5px; }
+        
+        .btn { display: inline-block; padding: 6px 12px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85rem; font-weight: bold; }
+        .btn:hover { background: #2980b9; }
+        .btn-disabled { background: #bdc3c7; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>🎯 LeadHunter AI Dashboard</h1>
+        <div class="stats">Total Leads: {{ leads|length }}</div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Business Name</th>
+                <th>City & Category</th>
+                <th>Score & Tier</th>
+                <th>Web Status</th>
+                <th>Pipeline Status</th>
+                <th>Generated AI Messages</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for lead in leads %}
+            <tr>
+                <td><strong>{{ lead.business_name }}</strong><br><small style="color: #666;">{{ lead.phone }}</small></td>
+                <td>{{ lead.city }}<br><small style="color: #666;">{{ lead.category }}</small></td>
+                
+                <td>
+                    <span class="badge badge-{{ lead.lead_tier }}">{{ lead.lead_tier }}</span><br>
+                    <small><strong>{{ lead.lead_score }}</strong> pts</small>
+                </td>
+                
+                <td>
+                    {% if lead.website_status == 'BROKEN_WEBSITE' %}<span style="color: #e74c3c;">❌ Broken</span>
+                    {% elif lead.website_status == 'NO_WEBSITE' %}<span style="color: #e74c3c;">❌ None</span>
+                    {% elif lead.website_status == 'SOCIAL_ONLY' %}<span style="color: #f39c12;">📱 Social Only</span>
+                    {% elif lead.website_status == 'VALID_WEBSITE' %}<span style="color: #27ae60;">✅ Valid</span>
+                    {% else %}<span style="color: #7f8c8d;">{{ lead.website_status }}</span>{% endif %}
+                </td>
+                
+                <td><span class="status-badge status-{{ lead.status }}">{{ lead.status }}</span></td>
+                
+                <td style="width: 35%;">
+                    {% if lead.email_message %}
+                        <div class="msg-container"><strong>Email:</strong> {{ lead.email_message }}</div>
+                        <div class="msg-container"><strong>WA:</strong> {{ lead.whatsapp_message }}</div>
+                    {% else %}
+                        <span style="color: #999; font-style: italic;">Not generated yet</span>
+                    {% endif %}
+                </td>
+                
+                <td>
+                    {% if lead.demo_url %}
+                        <a href="{{ lead.demo_url }}" target="_blank" class="btn">👁️ View Demo</a>
+                    {% else %}
+                        <span class="btn btn-disabled">No Demo</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

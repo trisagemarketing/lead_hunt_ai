@@ -1,0 +1,400 @@
+2026-08-20 11:51:46,240 - __main__ - INFO - [main.py:40] - LeadHunter AI initialized.
+2026-08-20 11:51:46,240 - __main__ - INFO - [main.py:41] - Dry Run Mode: True
+2026-08-20 11:51:46,241 - __main__ - INFO - [main.py:9] - Starting SQLite database test...
+2026-08-20 11:51:46,262 - database - INFO - [database.py:55] - Database tables initialized successfully.
+2026-08-20 11:51:46,262 - __main__ - INFO - [main.py:21] - Created Test Lead with ID: 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef
+2026-08-20 11:51:46,275 - database - DEBUG - [database.py:109] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-20 11:51:46,276 - __main__ - INFO - [main.py:25] - Lead inserted into database.
+2026-08-20 11:51:46,279 - __main__ - INFO - [main.py:30] - Successfully fetched lead from database!
+2026-08-20 11:51:46,280 - __main__ - INFO - [main.py:31] - Fetched Data: Business Name=Acme Corp, City=New York
+2026-08-20 11:51:46,282 - database - DEBUG - [database.py:109] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-20 11:51:46,282 - __main__ - INFO - [main.py:37] - Duplicate insertion handled gracefully (UPSERT successful).
+2026-08-20 12:33:18,771 - __main__ - ERROR - [serpapi_search.py:31] - SERPAPI_KEY is not configured.
+2026-08-20 12:34:36,214 - discovery.serpapi_search - INFO - [serpapi_search.py:34] - Starting business discovery:
+city=Vadodara
+business_type=restaurants
+max_results=5
+2026-08-20 12:34:36,221 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 12:34:36,233 - database - DEBUG - [database.py:115] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-20 12:34:36,233 - discovery.serpapi_search - INFO - [serpapi_search.py:135] - Lead inserted: 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 (Vadodara Rest 1)
+2026-08-20 12:34:36,251 - database - DEBUG - [database.py:115] - Lead 4f8f1d156c7fa314912e50518cdc035ef6500470faf0c7d857167e6c63bb1a05 inserted/updated successfully.
+2026-08-20 12:34:36,251 - discovery.serpapi_search - INFO - [serpapi_search.py:135] - Lead inserted: 4f8f1d156c7fa314912e50518cdc035ef6500470faf0c7d857167e6c63bb1a05 (Vadodara Rest 2)
+2026-08-20 12:34:36,251 - discovery.serpapi_search - INFO - [serpapi_search.py:140] - Search completed: discovered=2, inserted=2, duplicates=0
+2026-08-20 12:34:36,251 - discovery.serpapi_search - INFO - [serpapi_search.py:34] - Starting business discovery:
+city=Vadodara
+business_type=restaurants
+max_results=5
+2026-08-20 12:34:36,254 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 12:34:36,256 - discovery.serpapi_search - INFO - [serpapi_search.py:128] - Skipping duplicate lead: 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 (Vadodara Rest 1)
+2026-08-20 12:34:36,257 - discovery.serpapi_search - INFO - [serpapi_search.py:128] - Skipping duplicate lead: 4f8f1d156c7fa314912e50518cdc035ef6500470faf0c7d857167e6c63bb1a05 (Vadodara Rest 2)
+2026-08-20 12:34:36,258 - discovery.serpapi_search - INFO - [serpapi_search.py:140] - Search completed: discovered=2, inserted=0, duplicates=2
+2026-08-20 12:47:49,404 - __main__ - INFO - [serpapi_search.py:15] - Starting business discovery:
+city=Vadodara
+business_type=restaurants
+max_results=5
+2026-08-20 12:47:49,405 - __main__ - ERROR - [serpapi_search.py:30] - SERPAPI_KEY is not configured.
+2026-08-20 12:48:07,288 - __main__ - INFO - [serpapi_search.py:15] - Starting business discovery:
+city=Vadodara
+business_type=restaurants
+max_results=5
+2026-08-20 12:48:08,566 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 12:48:08,592 - database - DEBUG - [database.py:115] - Lead c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde inserted/updated successfully.
+2026-08-20 12:48:08,593 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde
+2026-08-20 12:48:08,624 - database - DEBUG - [database.py:115] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-20 12:48:08,624 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061
+2026-08-20 12:48:08,653 - database - DEBUG - [database.py:115] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-20 12:48:08,653 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015
+2026-08-20 12:48:08,681 - database - DEBUG - [database.py:115] - Lead 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03 inserted/updated successfully.
+2026-08-20 12:48:08,682 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03
+2026-08-20 12:48:08,705 - database - DEBUG - [database.py:115] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-20 12:48:08,705 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375
+2026-08-20 12:48:08,706 - __main__ - INFO - [serpapi_search.py:122] - Search completed: discovered=20, inserted=5, duplicates=0
+2026-08-20 12:48:15,202 - __main__ - INFO - [serpapi_search.py:15] - Starting business discovery:
+city=Vadodara
+business_type=restaurants
+max_results=5
+2026-08-20 12:48:15,306 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 12:48:15,307 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde
+2026-08-20 12:48:15,308 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061
+2026-08-20 12:48:15,310 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015
+2026-08-20 12:48:15,312 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03
+2026-08-20 12:48:15,313 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375
+2026-08-20 12:48:15,333 - database - DEBUG - [database.py:115] - Lead 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b inserted/updated successfully.
+2026-08-20 12:48:15,333 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b
+2026-08-20 12:48:15,346 - database - DEBUG - [database.py:115] - Lead e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8 inserted/updated successfully.
+2026-08-20 12:48:15,346 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8
+2026-08-20 12:48:15,358 - database - DEBUG - [database.py:115] - Lead 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3 inserted/updated successfully.
+2026-08-20 12:48:15,358 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3
+2026-08-20 12:48:15,370 - database - DEBUG - [database.py:115] - Lead 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e inserted/updated successfully.
+2026-08-20 12:48:15,371 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e
+2026-08-20 12:48:15,382 - database - DEBUG - [database.py:115] - Lead fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86 inserted/updated successfully.
+2026-08-20 12:48:15,382 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86
+2026-08-20 12:48:15,382 - __main__ - INFO - [serpapi_search.py:122] - Search completed: discovered=20, inserted=5, duplicates=5
+2026-08-20 12:48:26,835 - __main__ - INFO - [serpapi_search.py:15] - Starting business discovery:
+city=Vadodara
+business_type=restaurants
+max_results=20
+2026-08-20 12:48:26,924 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 12:48:26,926 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde
+2026-08-20 12:48:26,928 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061
+2026-08-20 12:48:26,930 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015
+2026-08-20 12:48:26,931 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03
+2026-08-20 12:48:26,932 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375
+2026-08-20 12:48:26,934 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b
+2026-08-20 12:48:26,935 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8
+2026-08-20 12:48:26,936 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3
+2026-08-20 12:48:26,937 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e
+2026-08-20 12:48:26,938 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86
+2026-08-20 12:48:26,949 - database - DEBUG - [database.py:115] - Lead dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996 inserted/updated successfully.
+2026-08-20 12:48:26,949 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996
+2026-08-20 12:48:26,960 - database - DEBUG - [database.py:115] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-20 12:48:26,961 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f
+2026-08-20 12:48:26,972 - database - DEBUG - [database.py:115] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-20 12:48:26,972 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f
+2026-08-20 12:48:26,986 - database - DEBUG - [database.py:115] - Lead d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1 inserted/updated successfully.
+2026-08-20 12:48:26,986 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1
+2026-08-20 12:48:26,999 - database - DEBUG - [database.py:115] - Lead 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140 inserted/updated successfully.
+2026-08-20 12:48:26,999 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140
+2026-08-20 12:48:27,010 - database - DEBUG - [database.py:115] - Lead fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef inserted/updated successfully.
+2026-08-20 12:48:27,010 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef
+2026-08-20 12:48:27,021 - database - DEBUG - [database.py:115] - Lead 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0 inserted/updated successfully.
+2026-08-20 12:48:27,021 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0
+2026-08-20 12:48:27,033 - database - DEBUG - [database.py:115] - Lead 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c inserted/updated successfully.
+2026-08-20 12:48:27,034 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c
+2026-08-20 12:48:27,046 - database - DEBUG - [database.py:115] - Lead 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731 inserted/updated successfully.
+2026-08-20 12:48:27,046 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731
+2026-08-20 12:48:27,057 - database - DEBUG - [database.py:115] - Lead 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff inserted/updated successfully.
+2026-08-20 12:48:27,057 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff
+2026-08-20 12:48:27,058 - __main__ - INFO - [serpapi_search.py:122] - Search completed: discovered=20, inserted=10, duplicates=10
+2026-08-20 12:48:37,685 - __main__ - INFO - [serpapi_search.py:15] - Starting business discovery:
+city=Vadodara
+business_type=restaurants
+max_results=5
+2026-08-20 12:48:37,781 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 12:48:37,783 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde
+2026-08-20 12:48:37,784 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061
+2026-08-20 12:48:37,785 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015
+2026-08-20 12:48:37,786 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03
+2026-08-20 12:48:37,788 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375
+2026-08-20 12:48:37,789 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b
+2026-08-20 12:48:37,792 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8
+2026-08-20 12:48:37,795 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3
+2026-08-20 12:48:37,797 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e
+2026-08-20 12:48:37,799 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86
+2026-08-20 12:48:37,800 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996
+2026-08-20 12:48:37,802 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f
+2026-08-20 12:48:37,803 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f
+2026-08-20 12:48:37,805 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1
+2026-08-20 12:48:37,807 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140
+2026-08-20 12:48:37,809 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef
+2026-08-20 12:48:37,811 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0
+2026-08-20 12:48:37,813 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c
+2026-08-20 12:48:37,815 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731
+2026-08-20 12:48:37,816 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff
+2026-08-20 12:48:37,817 - __main__ - INFO - [serpapi_search.py:122] - Search completed: discovered=20, inserted=0, duplicates=20
+2026-08-20 12:57:44,995 - __main__ - INFO - [deduplicate.py:142] - Starting normalization and deduplication process...
+2026-08-20 12:57:45,010 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 12:57:45,033 - database - DEBUG - [database.py:115] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-20 12:57:45,053 - database - DEBUG - [database.py:115] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-20 12:57:45,055 - __main__ - INFO - [deduplicate.py:83] - Duplicate detected: 4f8f1d156c7fa314912e50518cdc035ef6500470faf0c7d857167e6c63bb1a05. Reason: Name and Address match with 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902
+2026-08-20 12:57:45,071 - database - DEBUG - [database.py:115] - Lead 4f8f1d156c7fa314912e50518cdc035ef6500470faf0c7d857167e6c63bb1a05 inserted/updated successfully.
+2026-08-20 12:57:45,090 - database - DEBUG - [database.py:115] - Lead c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde inserted/updated successfully.
+2026-08-20 12:57:45,105 - database - DEBUG - [database.py:115] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-20 12:57:45,118 - database - DEBUG - [database.py:115] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-20 12:57:45,131 - database - DEBUG - [database.py:115] - Lead 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03 inserted/updated successfully.
+2026-08-20 12:57:45,143 - database - DEBUG - [database.py:115] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-20 12:57:45,155 - database - DEBUG - [database.py:115] - Lead 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b inserted/updated successfully.
+2026-08-20 12:57:45,169 - database - DEBUG - [database.py:115] - Lead e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8 inserted/updated successfully.
+2026-08-20 12:57:45,181 - database - DEBUG - [database.py:115] - Lead 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3 inserted/updated successfully.
+2026-08-20 12:57:45,194 - database - DEBUG - [database.py:115] - Lead 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e inserted/updated successfully.
+2026-08-20 12:57:45,206 - database - DEBUG - [database.py:115] - Lead fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86 inserted/updated successfully.
+2026-08-20 12:57:45,218 - database - DEBUG - [database.py:115] - Lead dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996 inserted/updated successfully.
+2026-08-20 12:57:45,229 - database - DEBUG - [database.py:115] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-20 12:57:45,240 - database - DEBUG - [database.py:115] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-20 12:57:45,257 - database - DEBUG - [database.py:115] - Lead d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1 inserted/updated successfully.
+2026-08-20 12:57:45,268 - database - DEBUG - [database.py:115] - Lead 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140 inserted/updated successfully.
+2026-08-20 12:57:45,279 - database - DEBUG - [database.py:115] - Lead fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef inserted/updated successfully.
+2026-08-20 12:57:45,298 - database - DEBUG - [database.py:115] - Lead 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0 inserted/updated successfully.
+2026-08-20 12:57:45,316 - database - DEBUG - [database.py:115] - Lead 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c inserted/updated successfully.
+2026-08-20 12:57:45,330 - database - DEBUG - [database.py:115] - Lead 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731 inserted/updated successfully.
+2026-08-20 12:57:45,347 - database - DEBUG - [database.py:115] - Lead 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff inserted/updated successfully.
+2026-08-20 12:59:04,292 - __main__ - INFO - [website_checker.py:205] - Starting Website Verification Module...
+2026-08-20 12:59:04,295 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 12:59:04,296 - __main__ - INFO - [website_checker.py:126] - Checking website for Acme Corp (68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef)
+2026-08-20 12:59:04,297 - __main__ - INFO - [website_checker.py:133] - No real website found. Searching via SerpAPI...
+2026-08-20 12:59:16,399 - __main__ - INFO - [website_checker.py:138] - Found website via SerpAPI: https://storelocator.acmecorp.com/en/l/United+States/New+York/New+York
+2026-08-20 12:59:17,941 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: DOMAIN_ONLY
+2026-08-20 12:59:17,973 - database - DEBUG - [database.py:115] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-20 12:59:18,974 - __main__ - INFO - [website_checker.py:126] - Checking website for Vadodara Rest 1 (230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902)
+2026-08-20 12:59:22,897 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: DOMAIN_ONLY
+2026-08-20 12:59:22,914 - database - DEBUG - [database.py:115] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-20 12:59:23,915 - __main__ - INFO - [website_checker.py:126] - Checking website for Candle Light Date N Dinner & Rooftop Restaurant Vadodara (c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde)
+2026-08-20 12:59:23,916 - __main__ - INFO - [website_checker.py:133] - No real website found. Searching via SerpAPI...
+2026-08-20 12:59:30,435 - __main__ - INFO - [website_checker.py:138] - Found website via SerpAPI: https://www.district.in/dining/vadodara/candle-light-date-n-dinner-restaurant-gotri?srsltid=AfmBOooowAth77Weq6Dt4yusCWCtc6wmwlRc6GKsjy7boIcYak0MnoYK
+2026-08-20 12:59:31,080 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: VALID_WEBSITE
+2026-08-20 12:59:31,104 - database - DEBUG - [database.py:115] - Lead c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde inserted/updated successfully.
+2026-08-20 12:59:32,105 - __main__ - INFO - [website_checker.py:126] - Checking website for Vibes The Bistro (7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061)
+2026-08-20 12:59:32,398 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: DOMAIN_ONLY
+2026-08-20 12:59:32,412 - database - DEBUG - [database.py:115] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-20 12:59:33,413 - __main__ - INFO - [website_checker.py:126] - Checking website for Jassi De Parathe (a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015)
+2026-08-20 12:59:33,867 - __main__ - WARNING - [website_checker.py:80] - HTTP Error 403 for https://www.jassideparathe.com/
+2026-08-20 12:59:33,868 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: BROKEN_WEBSITE
+2026-08-20 12:59:33,897 - database - DEBUG - [database.py:115] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-20 12:59:34,898 - __main__ - INFO - [website_checker.py:126] - Checking website for The House of Makeba - Veg Family Dining Restaurant in Vadodara (4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03)
+2026-08-20 12:59:36,088 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: VALID_WEBSITE
+2026-08-20 12:59:36,098 - database - DEBUG - [database.py:115] - Lead 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03 inserted/updated successfully.
+2026-08-20 12:59:37,099 - __main__ - INFO - [website_checker.py:126] - Checking website for Le Prive World Cuisine (d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375)
+2026-08-20 12:59:37,100 - __main__ - INFO - [website_checker.py:133] - No real website found. Searching via SerpAPI...
+2026-08-20 12:59:39,592 - __main__ - INFO - [website_checker.py:138] - Found website via SerpAPI: https://www.tripadvisor.com/Restaurant_Review-g297613-d13748420-Reviews-Le_Prive_World_Cuisine_Pizzeria-Vadodara_Vadodara_District_Gujarat.html
+2026-08-20 12:59:39,867 - __main__ - WARNING - [website_checker.py:80] - HTTP Error 403 for https://www.tripadvisor.com/Restaurant_Review-g297613-d13748420-Reviews-Le_Prive_World_Cuisine_Pizzeria-Vadodara_Vadodara_District_Gujarat.html
+2026-08-20 12:59:39,867 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: BROKEN_WEBSITE
+2026-08-20 12:59:39,903 - database - DEBUG - [database.py:115] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-20 12:59:40,904 - __main__ - INFO - [website_checker.py:126] - Checking website for Taste Carnival - (Banquet, Rooms, Restaurant) (81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b)
+2026-08-20 12:59:40,905 - __main__ - INFO - [website_checker.py:133] - No real website found. Searching via SerpAPI...
+2026-08-20 12:59:46,818 - __main__ - INFO - [website_checker.py:138] - Found website via SerpAPI: https://www.eazydiner.com/vadodara/taste-carnival-gotri-vadodara-703399
+2026-08-20 12:59:47,462 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: VALID_WEBSITE
+2026-08-20 12:59:47,481 - database - DEBUG - [database.py:115] - Lead 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b inserted/updated successfully.
+2026-08-20 12:59:48,482 - __main__ - INFO - [website_checker.py:126] - Checking website for Spice Kraft Restaurant (e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8)
+2026-08-20 12:59:48,483 - __main__ - INFO - [website_checker.py:133] - No real website found. Searching via SerpAPI...
+2026-08-20 12:59:51,611 - __main__ - INFO - [website_checker.py:138] - Found website via SerpAPI: https://www.spicekraftva.com/?srsltid=AfmBOor37Cy6L6JmgL9NdzSIfmVSX_9a-mAMvwXBnauelPuxzon6jAA5
+2026-08-20 12:59:52,494 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: VALID_WEBSITE
+2026-08-20 12:59:52,518 - database - DEBUG - [database.py:115] - Lead e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8 inserted/updated successfully.
+2026-08-20 12:59:53,519 - __main__ - INFO - [website_checker.py:126] - Checking website for Sakura Pan Asian Cuisine (491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3)
+2026-08-20 12:59:53,971 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: VALID_WEBSITE
+2026-08-20 12:59:53,986 - database - DEBUG - [database.py:115] - Lead 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3 inserted/updated successfully.
+2026-08-20 12:59:54,987 - __main__ - INFO - [website_checker.py:126] - Checking website for Retro Bistro : The Fine Multi Cuisine Restaurant ( Vadodara ) (510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e)
+2026-08-20 12:59:59,162 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: VALID_WEBSITE
+2026-08-20 12:59:59,180 - database - DEBUG - [database.py:115] - Lead 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e inserted/updated successfully.
+2026-08-20 13:00:00,181 - __main__ - INFO - [website_checker.py:126] - Checking website for The Secret Kitchen (fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86)
+2026-08-20 13:00:02,058 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: VALID_WEBSITE
+2026-08-20 13:00:02,083 - database - DEBUG - [database.py:115] - Lead fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86 inserted/updated successfully.
+2026-08-20 13:00:03,084 - __main__ - INFO - [website_checker.py:126] - Checking website for Peshawri by Welcomhotel Vadodara (dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996)
+2026-08-20 13:00:03,746 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: VALID_WEBSITE
+2026-08-20 13:00:03,770 - database - DEBUG - [database.py:115] - Lead dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996 inserted/updated successfully.
+2026-08-20 13:00:04,771 - __main__ - INFO - [website_checker.py:126] - Checking website for Island The Restaurant Waves Club (954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f)
+2026-08-20 13:00:04,772 - __main__ - INFO - [website_checker.py:133] - No real website found. Searching via SerpAPI...
+2026-08-20 13:00:14,202 - __main__ - INFO - [website_checker.py:138] - Found website via SerpAPI: https://www.tripadvisor.com/Restaurant_Review-g297613-d12652416-Reviews-Waves_Club-Vadodara_Vadodara_District_Gujarat.html
+2026-08-20 13:00:14,476 - __main__ - WARNING - [website_checker.py:80] - HTTP Error 403 for https://www.tripadvisor.com/Restaurant_Review-g297613-d12652416-Reviews-Waves_Club-Vadodara_Vadodara_District_Gujarat.html
+2026-08-20 13:00:14,476 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: BROKEN_WEBSITE
+2026-08-20 13:00:14,508 - database - DEBUG - [database.py:115] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-20 13:00:15,510 - __main__ - INFO - [website_checker.py:126] - Checking website for The Morsel Restaurant (1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f)
+2026-08-20 13:00:15,901 - __main__ - WARNING - [website_checker.py:80] - HTTP Error 403 for http://www.themorsel.in/
+2026-08-20 13:00:15,902 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: BROKEN_WEBSITE
+2026-08-20 13:00:15,931 - database - DEBUG - [database.py:115] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-20 13:00:16,932 - __main__ - INFO - [website_checker.py:126] - Checking website for Bayleaf Multi Cuisine Restaurant (d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1)
+2026-08-20 13:00:19,678 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: VALID_WEBSITE
+2026-08-20 13:00:19,700 - database - DEBUG - [database.py:115] - Lead d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1 inserted/updated successfully.
+2026-08-20 13:00:20,700 - __main__ - INFO - [website_checker.py:126] - Checking website for 22nd Parallel (5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140)
+2026-08-20 13:00:23,157 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: VALID_WEBSITE
+2026-08-20 13:00:23,182 - database - DEBUG - [database.py:115] - Lead 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140 inserted/updated successfully.
+2026-08-20 13:00:24,184 - __main__ - INFO - [website_checker.py:126] - Checking website for Barbeque Nation - Vadodara - Cine Mall (fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef)
+2026-08-20 13:00:24,684 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: VALID_WEBSITE
+2026-08-20 13:00:24,708 - database - DEBUG - [database.py:115] - Lead fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef inserted/updated successfully.
+2026-08-20 13:00:25,710 - __main__ - INFO - [website_checker.py:126] - Checking website for 812 CE Urban Restaurant (6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0)
+2026-08-20 13:00:25,800 - __main__ - WARNING - [website_checker.py:80] - HTTP Error 403 for https://www.marriott.com/en-us/hotels/bdqcc-courtyard-vadodara/dining/
+2026-08-20 13:00:25,801 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: BROKEN_WEBSITE
+2026-08-20 13:00:25,832 - database - DEBUG - [database.py:115] - Lead 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0 inserted/updated successfully.
+2026-08-20 13:00:26,833 - __main__ - INFO - [website_checker.py:126] - Checking website for The Highway Eats - Vadodara | Multicuisine Restaurant, Rooms, Banquet & Poolside Party Lawns (36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c)
+2026-08-20 13:00:26,834 - __main__ - INFO - [website_checker.py:133] - No real website found. Searching via SerpAPI...
+2026-08-20 13:00:29,513 - __main__ - INFO - [website_checker.py:138] - Found website via SerpAPI: https://www.google.com/goto?url=CAESaQHuR6pNgxvmmbAJvVhZuf67RPF2GYLoAbh0_Oj99qcPgS6qfyg9I8-6wTjv2HY9_09Bvtu8vOtf1k-kjUC3C_GbsiHyzMmo81bL3tjObr9aD9hc-oL6YC4lbMPaq7C6PsIlVF1jWn7DxQ==
+2026-08-20 13:00:30,365 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: DOMAIN_ONLY
+2026-08-20 13:00:30,400 - database - DEBUG - [database.py:115] - Lead 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c inserted/updated successfully.
+2026-08-20 13:00:31,401 - __main__ - INFO - [website_checker.py:126] - Checking website for Nizam's The Royal Kitchen (074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731)
+2026-08-20 13:00:32,578 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: VALID_WEBSITE
+2026-08-20 13:00:32,606 - database - DEBUG - [database.py:115] - Lead 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731 inserted/updated successfully.
+2026-08-20 13:00:33,607 - __main__ - INFO - [website_checker.py:126] - Checking website for Fitoor (519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff)
+2026-08-20 13:00:33,608 - __main__ - INFO - [website_checker.py:133] - No real website found. Searching via SerpAPI...
+2026-08-20 13:00:58,513 - __main__ - INFO - [website_checker.py:138] - Found website via SerpAPI: https://www.tripadvisor.com/Restaurant_Review-g297613-d8603282-Reviews-Cafe_Fitoor-Vadodara_Vadodara_District_Gujarat.html
+2026-08-20 13:00:58,774 - __main__ - WARNING - [website_checker.py:80] - HTTP Error 403 for https://www.tripadvisor.com/Restaurant_Review-g297613-d8603282-Reviews-Cafe_Fitoor-Vadodara_Vadodara_District_Gujarat.html
+2026-08-20 13:00:58,775 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: BROKEN_WEBSITE
+2026-08-20 13:00:58,801 - database - DEBUG - [database.py:115] - Lead 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff inserted/updated successfully.
+2026-08-20 13:00:59,803 - __main__ - INFO - [website_checker.py:202] - Website checking complete. Processed 22 leads.
+2026-08-20 13:02:20,471 - __main__ - INFO - [lead_scorer.py:150] - Starting Lead Scoring Module...
+2026-08-20 13:02:20,473 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 13:02:20,474 - __main__ - INFO - [lead_scorer.py:104] - Scored Acme Corp (68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef): Score=35.0, Tier=LOW
+2026-08-20 13:02:20,486 - database - DEBUG - [database.py:115] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-20 13:02:20,486 - __main__ - INFO - [lead_scorer.py:104] - Scored Vadodara Rest 1 (230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902): Score=60.0, Tier=WARM
+2026-08-20 13:02:20,497 - database - DEBUG - [database.py:115] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-20 13:02:20,498 - __main__ - INFO - [lead_scorer.py:104] - Scored Candle Light Date N Dinner & Rooftop Restaurant Vadodara (c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde): Score=40.0, Tier=LOW
+2026-08-20 13:02:20,508 - database - DEBUG - [database.py:115] - Lead c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde inserted/updated successfully.
+2026-08-20 13:02:20,508 - __main__ - INFO - [lead_scorer.py:104] - Scored Vibes The Bistro (7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061): Score=60.0, Tier=WARM
+2026-08-20 13:02:20,519 - database - DEBUG - [database.py:115] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-20 13:02:20,520 - __main__ - INFO - [lead_scorer.py:104] - Scored Jassi De Parathe (a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015): Score=75.0, Tier=HOT
+2026-08-20 13:02:20,531 - database - DEBUG - [database.py:115] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-20 13:02:20,531 - __main__ - INFO - [lead_scorer.py:104] - Scored The House of Makeba - Veg Family Dining Restaurant in Vadodara (4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03): Score=40.0, Tier=LOW
+2026-08-20 13:02:20,542 - database - DEBUG - [database.py:115] - Lead 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03 inserted/updated successfully.
+2026-08-20 13:02:20,542 - __main__ - INFO - [lead_scorer.py:104] - Scored Le Prive World Cuisine (d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375): Score=75.0, Tier=HOT
+2026-08-20 13:02:20,554 - database - DEBUG - [database.py:115] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-20 13:02:20,554 - __main__ - INFO - [lead_scorer.py:104] - Scored Taste Carnival - (Banquet, Rooms, Restaurant) (81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b): Score=40.0, Tier=LOW
+2026-08-20 13:02:20,566 - database - DEBUG - [database.py:115] - Lead 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b inserted/updated successfully.
+2026-08-20 13:02:20,566 - __main__ - INFO - [lead_scorer.py:104] - Scored Spice Kraft Restaurant (e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8): Score=40.0, Tier=LOW
+2026-08-20 13:02:20,579 - database - DEBUG - [database.py:115] - Lead e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8 inserted/updated successfully.
+2026-08-20 13:02:20,580 - __main__ - INFO - [lead_scorer.py:104] - Scored Sakura Pan Asian Cuisine (491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3): Score=40.0, Tier=LOW
+2026-08-20 13:02:20,590 - database - DEBUG - [database.py:115] - Lead 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3 inserted/updated successfully.
+2026-08-20 13:02:20,590 - __main__ - INFO - [lead_scorer.py:104] - Scored Retro Bistro : The Fine Multi Cuisine Restaurant ( Vadodara ) (510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e): Score=40.0, Tier=LOW
+2026-08-20 13:02:20,601 - database - DEBUG - [database.py:115] - Lead 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e inserted/updated successfully.
+2026-08-20 13:02:20,601 - __main__ - INFO - [lead_scorer.py:104] - Scored The Secret Kitchen (fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86): Score=40.0, Tier=LOW
+2026-08-20 13:02:20,612 - database - DEBUG - [database.py:115] - Lead fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86 inserted/updated successfully.
+2026-08-20 13:02:20,612 - __main__ - INFO - [lead_scorer.py:104] - Scored Peshawri by Welcomhotel Vadodara (dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996): Score=40.0, Tier=LOW
+2026-08-20 13:02:20,623 - database - DEBUG - [database.py:115] - Lead dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996 inserted/updated successfully.
+2026-08-20 13:02:20,624 - __main__ - INFO - [lead_scorer.py:104] - Scored Island The Restaurant Waves Club (954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f): Score=75.0, Tier=HOT
+2026-08-20 13:02:20,634 - database - DEBUG - [database.py:115] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-20 13:02:20,634 - __main__ - INFO - [lead_scorer.py:104] - Scored The Morsel Restaurant (1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f): Score=75.0, Tier=HOT
+2026-08-20 13:02:20,645 - database - DEBUG - [database.py:115] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-20 13:02:20,645 - __main__ - INFO - [lead_scorer.py:104] - Scored Bayleaf Multi Cuisine Restaurant (d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1): Score=40.0, Tier=LOW
+2026-08-20 13:02:20,661 - database - DEBUG - [database.py:115] - Lead d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1 inserted/updated successfully.
+2026-08-20 13:02:20,661 - __main__ - INFO - [lead_scorer.py:104] - Scored 22nd Parallel (5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140): Score=40.0, Tier=LOW
+2026-08-20 13:02:20,672 - database - DEBUG - [database.py:115] - Lead 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140 inserted/updated successfully.
+2026-08-20 13:02:20,672 - __main__ - INFO - [lead_scorer.py:104] - Scored Barbeque Nation - Vadodara - Cine Mall (fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef): Score=40.0, Tier=LOW
+2026-08-20 13:02:20,683 - database - DEBUG - [database.py:115] - Lead fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef inserted/updated successfully.
+2026-08-20 13:02:20,683 - __main__ - INFO - [lead_scorer.py:104] - Scored 812 CE Urban Restaurant (6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0): Score=75.0, Tier=HOT
+2026-08-20 13:02:20,695 - database - DEBUG - [database.py:115] - Lead 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0 inserted/updated successfully.
+2026-08-20 13:02:20,696 - __main__ - INFO - [lead_scorer.py:104] - Scored The Highway Eats - Vadodara | Multicuisine Restaurant, Rooms, Banquet & Poolside Party Lawns (36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c): Score=60.0, Tier=WARM
+2026-08-20 13:02:20,708 - database - DEBUG - [database.py:115] - Lead 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c inserted/updated successfully.
+2026-08-20 13:02:20,708 - __main__ - INFO - [lead_scorer.py:104] - Scored Nizam's The Royal Kitchen (074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731): Score=40.0, Tier=LOW
+2026-08-20 13:02:20,720 - database - DEBUG - [database.py:115] - Lead 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731 inserted/updated successfully.
+2026-08-20 13:02:20,720 - __main__ - INFO - [lead_scorer.py:104] - Scored Fitoor (519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff): Score=75.0, Tier=HOT
+2026-08-20 13:02:20,733 - database - DEBUG - [database.py:115] - Lead 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff inserted/updated successfully.
+2026-08-20 13:08:10,928 - __main__ - INFO - [personalizer.py:171] - Starting AI Personalization Module (Testing on 3 leads)...
+2026-08-20 13:08:10,942 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 13:08:10,944 - __main__ - WARNING - [personalizer.py:103] - ANTHROPIC_API_KEY is missing. Using mock generator for testing.
+2026-08-20 13:08:10,945 - __main__ - INFO - [personalizer.py:111] - Personalizing messages for Jassi De Parathe (Status: BROKEN_WEBSITE)
+2026-08-20 13:08:10,960 - database - DEBUG - [database.py:115] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-20 13:08:10,960 - __main__ - INFO - [personalizer.py:166] - Successfully personalized and saved lead: Jassi De Parathe
+2026-08-20 13:08:10,960 - __main__ - INFO - [personalizer.py:111] - Personalizing messages for Le Prive World Cuisine (Status: BROKEN_WEBSITE)
+2026-08-20 13:08:10,974 - database - DEBUG - [database.py:115] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-20 13:08:10,975 - __main__ - INFO - [personalizer.py:166] - Successfully personalized and saved lead: Le Prive World Cuisine
+2026-08-20 13:08:10,975 - __main__ - INFO - [personalizer.py:111] - Personalizing messages for Island The Restaurant Waves Club (Status: BROKEN_WEBSITE)
+2026-08-20 13:08:10,989 - database - DEBUG - [database.py:115] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-20 13:08:10,989 - __main__ - INFO - [personalizer.py:166] - Successfully personalized and saved lead: Island The Restaurant Waves Club
+2026-08-20 13:14:17,801 - __main__ - INFO - [personalizer.py:164] - Starting AI Personalization Module (Groq Edition) on 3 leads...
+2026-08-20 13:14:17,806 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 13:14:17,968 - __main__ - INFO - [personalizer.py:104] - Personalizing messages for Jassi De Parathe (Status: BROKEN_WEBSITE)
+2026-08-20 13:14:18,389 - __main__ - ERROR - [personalizer.py:78] - Groq API Error for Jassi De Parathe: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-08-20 13:14:18,890 - __main__ - ERROR - [personalizer.py:113] - Failed to generate messages for Jassi De Parathe
+2026-08-20 13:14:18,891 - __main__ - INFO - [personalizer.py:104] - Personalizing messages for Le Prive World Cuisine (Status: BROKEN_WEBSITE)
+2026-08-20 13:14:18,943 - __main__ - ERROR - [personalizer.py:78] - Groq API Error for Le Prive World Cuisine: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-08-20 13:14:19,444 - __main__ - ERROR - [personalizer.py:113] - Failed to generate messages for Le Prive World Cuisine
+2026-08-20 13:14:19,445 - __main__ - INFO - [personalizer.py:104] - Personalizing messages for Island The Restaurant Waves Club (Status: BROKEN_WEBSITE)
+2026-08-20 13:14:19,490 - __main__ - ERROR - [personalizer.py:78] - Groq API Error for Island The Restaurant Waves Club: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-08-20 13:14:19,991 - __main__ - ERROR - [personalizer.py:113] - Failed to generate messages for Island The Restaurant Waves Club
+2026-08-20 13:15:10,430 - __main__ - INFO - [personalizer.py:164] - Starting AI Personalization Module (Groq Edition) on 3 leads...
+2026-08-20 13:15:10,432 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 13:15:10,539 - __main__ - INFO - [personalizer.py:104] - Personalizing messages for Jassi De Parathe (Status: BROKEN_WEBSITE)
+2026-08-20 13:15:10,816 - __main__ - ERROR - [personalizer.py:78] - Groq API Error for Jassi De Parathe: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-20 13:15:11,317 - __main__ - ERROR - [personalizer.py:113] - Failed to generate messages for Jassi De Parathe
+2026-08-20 13:15:11,318 - __main__ - INFO - [personalizer.py:104] - Personalizing messages for Le Prive World Cuisine (Status: BROKEN_WEBSITE)
+2026-08-20 13:15:11,372 - __main__ - ERROR - [personalizer.py:78] - Groq API Error for Le Prive World Cuisine: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-20 13:15:11,873 - __main__ - ERROR - [personalizer.py:113] - Failed to generate messages for Le Prive World Cuisine
+2026-08-20 13:15:11,874 - __main__ - INFO - [personalizer.py:104] - Personalizing messages for Island The Restaurant Waves Club (Status: BROKEN_WEBSITE)
+2026-08-20 13:15:11,927 - __main__ - ERROR - [personalizer.py:78] - Groq API Error for Island The Restaurant Waves Club: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-20 13:15:12,428 - __main__ - ERROR - [personalizer.py:113] - Failed to generate messages for Island The Restaurant Waves Club
+2026-08-20 13:18:51,167 - __main__ - INFO - [personalizer.py:164] - Starting AI Personalization Module (Groq Edition) on 3 leads...
+2026-08-20 13:18:51,170 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 13:18:51,278 - __main__ - INFO - [personalizer.py:104] - Personalizing messages for Jassi De Parathe (Status: BROKEN_WEBSITE)
+2026-08-20 13:18:51,644 - __main__ - ERROR - [personalizer.py:78] - Groq API Error for Jassi De Parathe: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-20 13:18:52,146 - __main__ - ERROR - [personalizer.py:113] - Failed to generate messages for Jassi De Parathe
+2026-08-20 13:18:52,147 - __main__ - INFO - [personalizer.py:104] - Personalizing messages for Le Prive World Cuisine (Status: BROKEN_WEBSITE)
+2026-08-20 13:18:52,204 - __main__ - ERROR - [personalizer.py:78] - Groq API Error for Le Prive World Cuisine: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-20 13:18:52,705 - __main__ - ERROR - [personalizer.py:113] - Failed to generate messages for Le Prive World Cuisine
+2026-08-20 13:18:52,706 - __main__ - INFO - [personalizer.py:104] - Personalizing messages for Island The Restaurant Waves Club (Status: BROKEN_WEBSITE)
+2026-08-20 13:18:52,773 - __main__ - ERROR - [personalizer.py:78] - Groq API Error for Island The Restaurant Waves Club: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-20 13:18:53,275 - __main__ - ERROR - [personalizer.py:113] - Failed to generate messages for Island The Restaurant Waves Club
+2026-08-20 13:19:11,344 - __main__ - INFO - [personalizer.py:164] - Starting AI Personalization Module (Groq Edition) on 3 leads...
+2026-08-20 13:19:11,346 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 13:19:11,453 - __main__ - INFO - [personalizer.py:104] - Personalizing messages for Jassi De Parathe (Status: BROKEN_WEBSITE)
+2026-08-20 13:19:13,094 - __main__ - ERROR - [personalizer.py:78] - Groq API Error for Jassi De Parathe: Error code: 400 - {'error': {'message': "Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}
+2026-08-20 13:19:13,596 - __main__ - ERROR - [personalizer.py:113] - Failed to generate messages for Jassi De Parathe
+2026-08-20 13:19:13,596 - __main__ - INFO - [personalizer.py:104] - Personalizing messages for Le Prive World Cuisine (Status: BROKEN_WEBSITE)
+2026-08-20 13:19:14,862 - __main__ - ERROR - [personalizer.py:78] - Groq API Error for Le Prive World Cuisine: Error code: 400 - {'error': {'message': "Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}
+2026-08-20 13:19:15,363 - __main__ - ERROR - [personalizer.py:113] - Failed to generate messages for Le Prive World Cuisine
+2026-08-20 13:19:15,364 - __main__ - INFO - [personalizer.py:104] - Personalizing messages for Island The Restaurant Waves Club (Status: BROKEN_WEBSITE)
+2026-08-20 13:19:16,795 - __main__ - ERROR - [personalizer.py:78] - Groq API Error for Island The Restaurant Waves Club: Error code: 400 - {'error': {'message': "Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}
+2026-08-20 13:19:17,296 - __main__ - ERROR - [personalizer.py:113] - Failed to generate messages for Island The Restaurant Waves Club
+2026-08-20 13:19:35,918 - __main__ - INFO - [personalizer.py:167] - Starting AI Personalization Module (Groq Edition) on 3 leads...
+2026-08-20 13:19:35,920 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 13:19:36,032 - __main__ - INFO - [personalizer.py:107] - Personalizing messages for Jassi De Parathe (Status: BROKEN_WEBSITE)
+2026-08-20 13:19:37,819 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Jassi De Parathe: Expecting value: line 1 column 1 (char 0)
+2026-08-20 13:19:38,320 - __main__ - ERROR - [personalizer.py:116] - Failed to generate messages for Jassi De Parathe
+2026-08-20 13:19:38,321 - __main__ - INFO - [personalizer.py:107] - Personalizing messages for Le Prive World Cuisine (Status: BROKEN_WEBSITE)
+2026-08-20 13:19:39,720 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Le Prive World Cuisine: Expecting value: line 1 column 1 (char 0)
+2026-08-20 13:19:40,230 - __main__ - ERROR - [personalizer.py:116] - Failed to generate messages for Le Prive World Cuisine
+2026-08-20 13:19:40,231 - __main__ - INFO - [personalizer.py:107] - Personalizing messages for Island The Restaurant Waves Club (Status: BROKEN_WEBSITE)
+2026-08-20 13:19:41,439 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Island The Restaurant Waves Club: Expecting value: line 1 column 1 (char 0)
+2026-08-20 13:19:41,940 - __main__ - ERROR - [personalizer.py:116] - Failed to generate messages for Island The Restaurant Waves Club
+2026-08-20 13:20:08,396 - __main__ - INFO - [personalizer.py:168] - Starting AI Personalization Module (Groq Edition) on 3 leads...
+2026-08-20 13:20:08,397 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 13:20:08,503 - __main__ - INFO - [personalizer.py:108] - Personalizing messages for Jassi De Parathe (Status: BROKEN_WEBSITE)
+2026-08-20 13:20:10,360 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Jassi De Parathe: Expecting value: line 1 column 1 (char 0)
+2026-08-20 13:20:10,360 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-20 13:20:10,890 - database - DEBUG - [database.py:115] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-20 13:20:10,890 - __main__ - INFO - [personalizer.py:163] - Successfully personalized and saved lead: Jassi De Parathe
+2026-08-20 13:20:10,891 - __main__ - INFO - [personalizer.py:108] - Personalizing messages for Le Prive World Cuisine (Status: BROKEN_WEBSITE)
+2026-08-20 13:20:12,428 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Le Prive World Cuisine: Expecting value: line 1 column 1 (char 0)
+2026-08-20 13:20:12,428 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-20 13:20:12,957 - database - DEBUG - [database.py:115] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-20 13:20:12,958 - __main__ - INFO - [personalizer.py:163] - Successfully personalized and saved lead: Le Prive World Cuisine
+2026-08-20 13:20:12,959 - __main__ - INFO - [personalizer.py:108] - Personalizing messages for Island The Restaurant Waves Club (Status: BROKEN_WEBSITE)
+2026-08-20 13:20:14,383 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Island The Restaurant Waves Club: Expecting value: line 1 column 1 (char 0)
+2026-08-20 13:20:14,384 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-20 13:20:14,921 - database - DEBUG - [database.py:115] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-20 13:20:14,922 - __main__ - INFO - [personalizer.py:163] - Successfully personalized and saved lead: Island The Restaurant Waves Club
+2026-08-20 13:23:56,476 - __main__ - INFO - [url_generator.py:93] - Starting Demo URL Generator Module...
+2026-08-20 13:23:56,489 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 13:23:56,491 - __main__ - INFO - [url_generator.py:52] - Generated Demo URL for Jassi De Parathe: https://yourdomain.com/preview/jassi-de-parathe-vadodara
+2026-08-20 13:23:56,509 - database - DEBUG - [database.py:115] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-20 13:23:56,509 - __main__ - INFO - [url_generator.py:52] - Generated Demo URL for Le Prive World Cuisine: https://yourdomain.com/preview/le-prive-world-cuisine-vadodara
+2026-08-20 13:23:56,520 - database - DEBUG - [database.py:115] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-20 13:23:56,521 - __main__ - INFO - [url_generator.py:52] - Generated Demo URL for Island The Restaurant Waves Club: https://yourdomain.com/preview/island-the-restaurant-waves-club-vadodara
+2026-08-20 13:23:56,533 - database - DEBUG - [database.py:115] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-20 13:25:21,502 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 13:25:23,432 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 13:25:23,791 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 13:26:17,539 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 13:26:17,819 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 13:29:33,035 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 13:29:33,292 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 14:29:07,683 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 14:29:08,116 - database - INFO - [database.py:58] - Database tables initialized successfully.
+2026-08-20 14:29:34,480 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 14:29:34,760 - database - INFO - [database.py:26] - Using SQLite Database (Local).

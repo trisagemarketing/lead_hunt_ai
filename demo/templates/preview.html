@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Website - {{ business_name }}</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 0; }
+        .header { background: #2c3e50; color: #fff; padding: 2rem 0; text-align: center; }
+        .container { max-width: 800px; margin: 2rem auto; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { margin-top: 0; color: #f39c12; }
+        .info { margin: 20px 0; font-size: 1.1rem; line-height: 1.6; }
+        .cta { display: inline-block; background: #27ae60; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; margin-top: 15px; }
+        .cta:hover { background: #2ecc71; }
+        .footer { text-align: center; margin-top: 40px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>We built this demo website for {{ business_name }}</h2>
+    </div>
+
+    <div class="container">
+        <h1>{{ business_name }}</h1>
+        <p class="info">
+            <strong>Category:</strong> {{ category | default('Business', true) }}<br>
+            <strong>Location:</strong> {{ city | default('N/A', true) }}<br>
+            <strong>Phone:</strong> {{ phone | default('N/A', true) }}<br>
+            <strong>Address:</strong> {{ address | default('N/A', true) }}<br>
+            <strong>Google Rating:</strong> {{ rating | default('New', true) }} ⭐️
+        </p>
+
+        <p>This is a custom-designed concept to show how a modern, fast-loading website can help you attract more customers locally.</p>
+        
+        <a href="#" class="cta">Book an Appointment / Order Now</a>
+    </div>
+
+    <div class="footer">
+        Powered by LeadHunter AI Concepts
+    </div>
+
+</body>
+</html>
