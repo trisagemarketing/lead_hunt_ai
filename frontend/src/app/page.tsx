@@ -150,10 +150,19 @@ export default function Dashboard() {
         </nav>
 
         {/* Sidebar Footer */}
-        <div className="pb-6">
+        <div className="pb-4 mt-auto">
           <button className={`w-full flex items-center px-6 py-3 text-sm font-medium transition-all border-l-4 border-transparent text-indigo-100 hover:bg-[#755BB5]/50 hover:text-white`} title="Settings">
              <Settings className="w-5 h-5 shrink-0" /> 
              {!sidebarCollapsed && <span className="ml-4 whitespace-nowrap">Settings</span>}
+          </button>
+          
+          <button 
+            onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
+            className={`w-full flex items-center px-6 py-3 text-sm font-medium transition-all border-l-4 border-transparent text-indigo-100 hover:bg-[#755BB5]/50 hover:text-white mt-2`} 
+            title="Toggle Sidebar"
+          >
+             <Menu className="w-5 h-5 shrink-0" /> 
+             {!sidebarCollapsed && <span className="ml-4 whitespace-nowrap">Collapse Menu</span>}
           </button>
         </div>
       </aside>
@@ -165,14 +174,6 @@ export default function Dashboard() {
         <header className="h-16 bg-[#563D96] flex items-center justify-between px-6 shrink-0 z-10 text-white shadow-md">
           <div className="flex-1 flex items-center gap-6">
             
-            <button 
-              onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
-              className="text-indigo-200 hover:text-white transition-colors p-2 rounded-md hover:bg-[#755BB5]"
-              title="Toggle Sidebar"
-            >
-              <Menu className="w-5 h-5" />
-            </button>
-
             {/* Functional Search Bar */}
             <div className="bg-white/10 border border-white/20 rounded px-3 py-2 w-72 flex items-center focus-within:bg-white focus-within:border-white transition-colors group">
                <Search className="w-4 h-4 text-indigo-200 group-focus-within:text-slate-400 mr-2" />
