@@ -17,10 +17,33 @@ export default function Dashboard() {
   const [city, setCity] = useState("Vadodara");
   const [category, setCategory] = useState("restaurants");
   const [startingEngine, setStartingEngine] = useState(false);
+  const [engineLogs, setEngineLogs] = useState("");
 
   useEffect(() => {
     fetchLeads();
   }, []);
+
+  useEffect(() => {
+    let interval: any;
+    if (startingEngine) {
+      interval = setInterval(async () => {
+        try {
+          const res = await fetch("https://leadhuntai-production.up.railway.app/api/engine/logs");
+          const text = await res.text();
+          setEngineLogs(text);
+          
+          if (text.includes("PIPELINE FINISHED SUCCESSFULLY") || text.includes("ENGINE FINISHED WITH CODE")) {
+            setStartingEngine(false);
+            fetchLeads();
+            setActiveTab("pipeline");
+          }
+        } catch (e) {
+          console.error(e);
+        }
+      }, 3000);
+    }
+    return () => clearInterval(interval);
+  }, [startingEngine]);
 
   const fetchLeads = async () => {
     try {
@@ -42,19 +65,16 @@ export default function Dashboard() {
       return;
     }
     setStartingEngine(true);
+    setEngineLogs("");
     try {
-      const res = await fetch("https://leadhuntai-production.up.railway.app/api/engine/start", {
+      await fetch("https://leadhuntai-production.up.railway.app/api/engine/start", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ city: city, business_type: category }),
       });
-      const data = await res.json();
-      alert(`Cloud Pipeline Started!\n\nThe AI is currently scraping Google Maps, verifying websites, and personalizing emails in the background. This usually takes 45-60 seconds.\n\nWe will now switch you to the Pipeline view. Please wait a minute and then click the 'Refresh' button to see your new leads!`);
-      setActiveTab("pipeline");
     } catch (err) {
       console.error(err);
       alert("Failed to start engine. Check if backend is running.");
-    } finally {
       setStartingEngine(false);
     }
   };
@@ -227,7 +247,37 @@ export default function Dashboard() {
 
               {/* TAB: FIND LEADS */}
               {activeTab === "search" && (
-                <div className="animate-in fade-in zoom-in-95 duration-300">
+                <div className="animate-in fade-in zoom-in-95 duration-300 relative">
+                  
+                  {startingEngine && (
+                    <div className="absolute inset-0 z-50 flex items-center justify-center bg-white/80 backdrop-blur-sm rounded-xl p-6 min-h-[400px]">
+                      <div className="flex flex-col items-center text-center w-full max-w-md">
+                        <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 shadow-inner">
+                          <Loader2 className="w-8 h-8 text-[#654CA5] animate-spin" />
+                        </div>
+                        <h3 className="text-xl font-bold text-slate-800 mb-2">Cloud Pipeline Running...</h3>
+                        <p className="text-sm text-slate-500 mb-6">
+                          The AI is currently searching Google Maps for <span className="font-semibold text-slate-700">{category}</span> in <span className="font-semibold text-slate-700">{city}</span>, auditing websites, and personalizing outreach.
+                        </p>
+                        
+                        <div className="w-full bg-slate-100 rounded-full h-2.5 mb-3 overflow-hidden shadow-inner border border-slate-200">
+                          <div className="bg-[#654CA5] h-2.5 rounded-full transition-all duration-1000 ease-in-out" style={{ width: engineLogs.includes("Phase 6") ? "95%" : engineLogs.includes("Phase 5") ? "80%" : engineLogs.includes("Phase 4") ? "60%" : engineLogs.includes("Phase 3") ? "40%" : engineLogs.includes("Phase 2") ? "25%" : "10%" }}></div>
+                        </div>
+                        
+                        <div className="text-xs text-slate-500 font-medium mb-4 flex justify-between w-full px-1">
+                          <span>Initializing</span>
+                          <span>Complete</span>
+                        </div>
+                        
+                        <div className="text-xs text-slate-400 font-mono text-left w-full h-24 overflow-y-auto bg-slate-800 p-3 rounded-lg border border-slate-700 shadow-inner">
+                          {engineLogs ? engineLogs.split('\n').filter(line => line.trim() !== "").slice(-6).map((line, i) => (
+                            <div key={i} className="truncate text-emerald-400">{line}</div>
+                          )) : <span className="animate-pulse">Connecting to cloud engine...</span>}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                   <h2 className="text-xl font-bold text-slate-800 mb-2 flex items-center">
                     <Search className="w-5 h-5 mr-2 text-[#654CA5]" /> Execute AI Scraper
                   </h2>
