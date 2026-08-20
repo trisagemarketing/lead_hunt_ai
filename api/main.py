@@ -103,33 +103,51 @@ def approve_and_send_lead(lead_id: str, payload: ApprovePayload = None):
     }
 
 # ==========================================
-# ENGINE TRIGGER
+# ENGINE TRIGGER & DEBUGGING
 # ==========================================
 def run_orchestrator_in_background():
-    """Runs the master pipeline in the background so the HTTP request doesn't timeout."""
+    """Runs the master pipeline and saves the output to a log file for debugging."""
     import subprocess
+    import traceback
+    
     logger.info("Triggering background orchestrator...")
-    try:
-        subprocess.run([sys.executable, "orchestrator.py"], check=True)
-        logger.info("Background orchestrator finished successfully!")
-    except Exception as e:
-        logger.error(f"Background orchestrator failed: {e}")
+    with open("engine_log.txt", "w") as log_file:
+        try:
+            log_file.write("--- ENGINE STARTING ---\n")
+            # We use 'python' explicitly instead of sys.executable to avoid virtualenv issues in cloud
+            process = subprocess.run(
+                ["python", "orchestrator.py"],
+                stdout=log_file,
+                stderr=subprocess.STDOUT,
+                text=True
+            )
+            log_file.write(f"\n--- ENGINE FINISHED WITH CODE {process.returncode} ---\n")
+        except Exception as e:
+            log_file.write(f"\n--- FATAL ERROR ---\n{traceback.format_exc()}\n")
 
 @app.get("/api/engine/start")
 def start_engine(background_tasks: BackgroundTasks):
     """
     Hit this URL in your browser to wake up the AI and start scraping!
-    It runs in the background so your browser doesn't load forever.
     """
     background_tasks.add_task(run_orchestrator_in_background)
     return {
         "success": True,
-        "message": "🚀 Engine Started! The AI is now scraping Google Maps and writing emails in the background. Check back in 60 seconds!"
+        "message": "Engine Started! Check /api/engine/logs to see live progress."
     }
+
+from fastapi.responses import PlainTextResponse
+
+@app.get("/api/engine/logs", response_class=PlainTextResponse)
+def get_engine_logs():
+    """Read the exact output of the background task to see why it failed."""
+    try:
+        with open("engine_log.txt", "r") as f:
+            return f.read()
+    except FileNotFoundError:
+        return "Log file not created yet. Have you started the engine?"
 
 if __name__ == "__main__":
     import uvicorn
-    # Railway dynamically assigns a PORT environment variable. 
-    # We must listen on it, otherwise Railway will crash the deployment.
     port = int(os.environ.get("PORT", 8000))
     uvicorn.run("api.main:app", host="0.0.0.0", port=port, reload=True)
