@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ExternalLink, CheckCircle, Mail, Send, Activity, MessageSquare, LayoutDashboard, Search, Users, Settings, Globe, Phone, Hash as Instagram, ThumbsUp as Facebook, Link as LinkIcon, Building2, Bell, ChevronDown, ChevronLeft, Menu, ChevronRight, Loader2 } from "lucide-react";
+import { ExternalLink, CheckCircle, Mail, Send, Activity, MessageSquare, LayoutDashboard, Search, Users, Settings, Globe, Phone, Hash as Instagram, ThumbsUp as Facebook, Link as LinkIcon, Building2, Bell, ChevronDown, ChevronLeft, Menu, ChevronRight, Loader2, RefreshCw, Flame } from "lucide-react";
 
 export default function Dashboard() {
   const [leads, setLeads] = useState<any[]>([]);
@@ -278,7 +278,7 @@ export default function Dashboard() {
                       <div className="text-red-500 text-sm font-medium mb-2 uppercase tracking-wide">HOT Leads Identified</div>
                       <div className="text-4xl font-bold text-red-600">{loading ? <Loader2 className="w-8 h-8 animate-spin text-red-300"/> : leads.filter(l => l.lead_tier === 'HOT').length}</div>
                       <div className="absolute top-0 right-0 p-4 opacity-10">
-                         <Activity className="w-16 h-16 text-red-600" />
+                         <Flame className="w-16 h-16 text-red-600" />
                       </div>
                     </div>
                     <div className="border border-green-100 p-6 rounded-lg bg-green-50/50 shadow-sm relative overflow-hidden">
@@ -307,7 +307,7 @@ export default function Dashboard() {
                        </button>
                        
                        <button onClick={fetchLeads} disabled={loading} className="border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 px-4 py-2 rounded text-sm shadow-sm transition-colors font-medium flex items-center active:scale-95 disabled:opacity-50">
-                          {loading ? <Loader2 className="w-3.5 h-3.5 mr-2 animate-spin" /> : <Activity className="w-3.5 h-3.5 mr-2" />} 
+                          {loading ? <Loader2 className="w-3.5 h-3.5 mr-2 animate-spin" /> : <RefreshCw className="w-3.5 h-3.5 mr-2" />} 
                           Refresh
                        </button>
                     </div>
