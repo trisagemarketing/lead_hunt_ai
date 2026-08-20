@@ -142,14 +142,10 @@ export default function Dashboard() {
 
         {/* Sidebar Footer */}
         <div className="pb-4 mt-auto">
-          <button className={`w-full flex items-center px-6 py-3 text-sm font-medium transition-all border-l-4 border-transparent text-indigo-100 hover:bg-[#755BB5]/50 hover:text-white`} title="Settings">
-             <Settings className="w-5 h-5 shrink-0" /> 
-             {!sidebarCollapsed && <span className="ml-4 whitespace-nowrap">Settings</span>}
-          </button>
           
           <button 
             onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
-            className={`w-full flex items-center px-6 py-3 text-sm font-medium transition-all border-l-4 border-transparent text-indigo-100 hover:bg-[#755BB5]/50 hover:text-white mt-2`} 
+            className={`w-full flex items-center px-6 py-3 text-sm font-medium transition-all border-l-4 border-transparent text-indigo-100 hover:bg-[#755BB5]/50 hover:text-white`} 
             title="Toggle Sidebar"
           >
              <Menu className="w-5 h-5 shrink-0" /> 
