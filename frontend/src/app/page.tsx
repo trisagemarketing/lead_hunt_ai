@@ -266,7 +266,6 @@ export default function Dashboard() {
                         {startingEngine ? "Executing Cloud Pipeline..." : "Start Lead Generation"}
                       </button>
                     </div>
-                    </div>
                   </div>
                 </div>
               )}
