@@ -102,7 +102,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="flex h-screen bg-[#F4F7FC] text-slate-800 overflow-hidden font-sans">
+    <div className="flex h-screen bg-[#F4F7FC] text-slate-800 overflow-hidden">
       
       {/* --- LEFT SIDEBAR (Purple) --- */}
       <aside className={`bg-[#654CA5] flex flex-col shrink-0 shadow-[4px_0_10px_rgba(0,0,0,0.05)] z-20 text-white transition-all duration-300 ease-in-out ${sidebarCollapsed ? 'w-20' : 'w-64'} hidden md:flex`}>

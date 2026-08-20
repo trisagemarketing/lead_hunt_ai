@@ -18,6 +18,10 @@
 }
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "National Park", ui-sans-serif, system-ui, sans-serif;
+}
+
 :root {
   --bg-app: #F4F7FC;
   --bg-sidebar: #654CA5;
