@@ -105,25 +105,30 @@ def approve_and_send_lead(lead_id: str, payload: ApprovePayload = None):
 # ==========================================
 # ENGINE TRIGGER & DEBUGGING
 # ==========================================
+# Global variable to store logs in memory (bypasses Railway read-only disk issues)
+engine_debug_logs = "Engine has not been started yet."
+
 def run_orchestrator_in_background():
-    """Runs the master pipeline and saves the output to a log file for debugging."""
+    """Runs the master pipeline and saves the output to memory for debugging."""
+    global engine_debug_logs
     import subprocess
     import traceback
     
     logger.info("Triggering background orchestrator...")
-    with open("engine_log.txt", "w") as log_file:
-        try:
-            log_file.write("--- ENGINE STARTING ---\n")
-            # We use 'python' explicitly instead of sys.executable to avoid virtualenv issues in cloud
-            process = subprocess.run(
-                ["python", "orchestrator.py"],
-                stdout=log_file,
-                stderr=subprocess.STDOUT,
-                text=True
-            )
-            log_file.write(f"\n--- ENGINE FINISHED WITH CODE {process.returncode} ---\n")
-        except Exception as e:
-            log_file.write(f"\n--- FATAL ERROR ---\n{traceback.format_exc()}\n")
+    engine_debug_logs = "--- ENGINE STARTING ---\n"
+    
+    try:
+        # We use 'python' explicitly instead of sys.executable
+        process = subprocess.run(
+            ["python", "orchestrator.py"],
+            capture_output=True,
+            text=True
+        )
+        engine_debug_logs += process.stdout
+        engine_debug_logs += process.stderr if process.stderr else ""
+        engine_debug_logs += f"\n--- ENGINE FINISHED WITH CODE {process.returncode} ---\n"
+    except Exception as e:
+        engine_debug_logs += f"\n--- FATAL ERROR ---\n{traceback.format_exc()}\n"
 
 @app.get("/api/engine/start")
 def start_engine(background_tasks: BackgroundTasks):
@@ -141,11 +146,8 @@ from fastapi.responses import PlainTextResponse
 @app.get("/api/engine/logs", response_class=PlainTextResponse)
 def get_engine_logs():
     """Read the exact output of the background task to see why it failed."""
-    try:
-        with open("engine_log.txt", "r") as f:
-            return f.read()
-    except FileNotFoundError:
-        return "Log file not created yet. Have you started the engine?"
+    global engine_debug_logs
+    return engine_debug_logs
 
 if __name__ == "__main__":
     import uvicorn
