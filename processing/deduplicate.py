@@ -33,15 +33,11 @@ def deduplicate_and_score_leads():
     processed = []
     
     # We will keep track of unique leads to compare against
-    # to find duplicates among the existing records.
-    unique_leads = []
-    
     for row in leads:
         lead_dict = dict(row)
         
-        # Calculate quality score
-        score = calculate_quality_score(lead_dict)
-        lead_dict['lead_score'] = score
+        # Calculate quality score for internal logic, but don't overwrite lead_score
+        quality_score = calculate_quality_score(lead_dict)
         
         # If it's already marked as DUPLICATE, keep it as is?
         # Let's process all DISCOVERED leads and check duplicates
@@ -57,44 +53,39 @@ def deduplicate_and_score_leads():
         is_duplicate = False
         duplicate_reason = ""
         
-        for u_lead in unique_leads:
-            # Check phone match
-            if norm_phone and norm_phone == u_lead['norm_phone']:
+        # Simple duplicate check against already processed in this batch
+        # For a real system, we'd query the DB for matches
+        for p in processed:
+            if p['status'] == LeadStatus.DUPLICATE.value:
+                continue
+                
+            # Rule 1: Same phone number (and valid)
+            if norm_phone and norm_phone == normalize_phone(p.get('phone', '')):
                 is_duplicate = True
-                duplicate_reason = f"Phone match with {u_lead['lead_id']}"
+                duplicate_reason = f"Duplicate phone with {p['business_name']}"
                 break
                 
-            # Check website match
-            if norm_url and norm_url == u_lead['norm_url']:
+            # Rule 2: Same website (and valid)
+            if norm_url and norm_url == normalize_url(p.get('website_url', '')):
                 is_duplicate = True
-                duplicate_reason = f"Website match with {u_lead['lead_id']}"
+                duplicate_reason = f"Duplicate website with {p['business_name']}"
                 break
                 
-            # Check name + address match (different branches = keep both)
-            name_match = is_similar(norm_name, u_lead['norm_name'], 0.85)
-            if name_match:
-                addr_match = is_similar(norm_addr, u_lead['norm_addr'], 0.80)
-                if addr_match:
+            # Rule 3: Very similar name AND same address
+            if norm_addr and norm_addr == normalize_address(p.get('address', '')):
+                if is_similar(norm_name, normalize_business_name(p.get('business_name', ''))):
                     is_duplicate = True
-                    duplicate_reason = f"Name and Address match with {u_lead['lead_id']}"
+                    duplicate_reason = f"Similar name & same address with {p['business_name']}"
                     break
         
         if is_duplicate:
-            logger.info(f"Duplicate detected: {lead_dict['lead_id']}. Reason: {duplicate_reason}")
             lead_dict['status'] = LeadStatus.DUPLICATE.value
+            lead_dict['error_log'] = duplicate_reason
+            logger.info(f"DUPLICATE FOUND: {lead_dict['business_name']} -> {duplicate_reason}")
         else:
-            unique_leads.append({
-                'lead_id': lead_dict['lead_id'],
-                'norm_name': norm_name,
-                'norm_phone': norm_phone,
-                'norm_url': norm_url,
-                'norm_addr': norm_addr
-            })
+            lead_dict['status'] = LeadStatus.VERIFIED.value # Mark as ready for next phase
             
-        processed.append(lead_dict)
-        
-        # We need to save the updated lead score and status back to DB.
-        # But wait, insert_or_update_lead expects a Lead object.
+        # Save to DB
         try:
             status_enum = LeadStatus(lead_dict['status'])
         except ValueError:
@@ -111,7 +102,7 @@ def deduplicate_and_score_leads():
             email=lead_dict['email'],
             instagram=lead_dict['instagram'],
             facebook=lead_dict['facebook'],
-            lead_score=lead_dict['lead_score'],
+            lead_score=lead_dict.get('lead_score', 0.0),
             lead_tier=lead_dict['lead_tier'],
             qualification_reason=lead_dict['qualification_reason'],
             demo_url=lead_dict['demo_url'],
