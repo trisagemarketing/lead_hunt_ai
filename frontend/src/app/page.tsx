@@ -1,12 +1,33 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ExternalLink, CheckCircle, Mail, Send, Activity, MessageSquare, LayoutDashboard, Search, Users, Settings, Globe, Phone, Hash as Instagram, ThumbsUp as Facebook, Link as LinkIcon, Building2, Bell, ChevronDown, ChevronLeft, Menu, ChevronRight, Loader2, RefreshCw, Flame, History, Zap, Monitor, Hourglass, CheckSquare, List, Terminal, FileCode, Play } from "lucide-react";
+import { Trash2, ExternalLink, CheckCircle, Mail, Send, Activity, MessageSquare, LayoutDashboard, Search, Users, Settings, Globe, Phone, Hash as Instagram, ThumbsUp as Facebook, Link as LinkIcon, Building2, Bell, ChevronDown, ChevronLeft, Menu, ChevronRight, Loader2, RefreshCw, Flame, History, Zap, Monitor, Hourglass, CheckSquare, List, Terminal, FileCode, Play } from "lucide-react";
 
 export default function Dashboard() {
   const [leads, setLeads] = useState<Record<string, string | number | null | undefined | boolean>[]>([]);
   const [loading, setLoading] = useState(true);
   const [approving, setApproving] = useState<string | null>(null);
+
+  const [selectedLeads, setSelectedLeads] = useState<Set<string>>(new Set());
+  const [deletedLeads, setDeletedLeads] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    const saved = localStorage.getItem('deletedLeads');
+    if (saved) {
+      setDeletedLeads(new Set(JSON.parse(saved)));
+    }
+  }, []);
+
+  const handleDeleteSelected = () => {
+    const newDeleted = new Set(deletedLeads);
+    selectedLeads.forEach(id => newDeleted.add(id));
+    setDeletedLeads(newDeleted);
+    localStorage.setItem('deletedLeads', JSON.stringify(Array.from(newDeleted)));
+    setSelectedLeads(new Set());
+  };
+
+  const visibleLeads = leads.filter(lead => !deletedLeads.has(String(lead.lead_id)));
+
 
   // UI State
   const [activeTab, setActiveTab] = useState("pipeline");
@@ -109,7 +130,7 @@ export default function Dashboard() {
   };
 
   // Filter leads based on the global search query and active campaign
-  const filteredLeads = leads.filter(lead => {
+  const filteredLeads = visibleLeads.filter(lead => {
     // 1. Filter by active campaign (if selected)
     if (activeCampaign) {
       if (lead.city !== activeCampaign.city || lead.category !== activeCampaign.category) {
@@ -129,11 +150,11 @@ export default function Dashboard() {
 
   // Compute metrics for the new UI
   const metrics = {
-    discovered: leads.length,
-    hot: leads.filter(l => l.lead_tier === 'HOT').length,
-    warm: leads.filter(l => l.lead_tier === 'WARM').length,
+    discovered: visibleLeads.length,
+    hot: visibleLeads.filter(l => l.lead_tier === 'HOT').length,
+    warm: visibleLeads.filter(l => l.lead_tier === 'WARM').length,
     demos: leads.filter(l => l.demo_url).length,
-    pending: leads.filter(l => l.email_message && l.lead_tier === 'HOT').length,
+    pending: visibleLeads.filter(l => l.email_message && l.lead_tier === 'HOT').length,
     outreach: 0 // Mocked for now
   };
 
@@ -334,16 +355,40 @@ export default function Dashboard() {
               <div className="pb-10">
                 <div className="bg-white rounded-3xl shadow-[0_4px_25px_-10px_rgba(0,0,0,0.05)] border border-slate-100 overflow-hidden flex flex-col">
                   <div className="p-6 border-b border-slate-100 flex justify-between items-center">
-                    <h3 className="text-lg font-bold text-[#1E293B]">Lead Analytics</h3>
-                    <div className="bg-[#F5F6F8] px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-500">
-                      {filteredLeads.length} Total Found
+                    <div className="flex items-center gap-4">
+                      <h3 className="text-lg font-bold text-[#1E293B]">Lead Analytics</h3>
+                      <div className="bg-[#F5F6F8] px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-500">
+                        {filteredLeads.length} Total Found
+                      </div>
                     </div>
+                    {selectedLeads.size > 0 && (
+                      <button 
+                        onClick={handleDeleteSelected}
+                        className="flex items-center gap-2 bg-rose-50 hover:bg-rose-100 text-rose-600 px-4 py-2 rounded-lg text-sm font-bold transition-all border border-rose-200"
+                      >
+                        <Trash2 className="w-4 h-4" /> Delete Selected ({selectedLeads.size})
+                      </button>
+                    )}
                   </div>
                   
                   <div className="overflow-x-auto flex-1 p-2">
                     <table className="w-full text-left border-collapse">
                       <thead>
                         <tr>
+                          <th className="px-6 py-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest whitespace-nowrap w-10">
+                            <input 
+                              type="checkbox" 
+                              className="w-4 h-4 rounded border-slate-300 text-[#489473] focus:ring-[#489473]"
+                              checked={filteredLeads.length > 0 && selectedLeads.size === filteredLeads.length}
+                              onChange={(e) => {
+                                if (e.target.checked) {
+                                  setSelectedLeads(new Set(filteredLeads.map(l => String(l.lead_id))));
+                                } else {
+                                  setSelectedLeads(new Set());
+                                }
+                              }}
+                            />
+                          </th>
                           <th className="px-6 py-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest whitespace-nowrap">Business Target</th>
                           <th className="px-6 py-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest whitespace-nowrap">Score</th>
                           <th className="px-6 py-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest whitespace-nowrap">Website</th>
@@ -352,10 +397,23 @@ export default function Dashboard() {
                       </thead>
                       <tbody className="divide-y divide-slate-50">
                         {filteredLeads.length === 0 ? (
-                          <tr><td colSpan={4} className="px-6 py-16 text-center text-slate-400 font-medium">No leads discovered yet.</td></tr>
+                          <tr><td colSpan={5} className="px-6 py-16 text-center text-slate-400 font-medium">No leads discovered yet.</td></tr>
                         ) : (
                           filteredLeads.map((lead) => (
-                            <tr key={String(lead.lead_id)} className="hover:bg-slate-50/80 transition-colors group">
+                            <tr key={String(lead.lead_id)} className={`hover:bg-slate-50/80 transition-colors group ${selectedLeads.has(String(lead.lead_id)) ? 'bg-slate-50' : ''}`}>
+                              <td className="px-6 py-4 align-middle">
+                                <input 
+                                  type="checkbox" 
+                                  className="w-4 h-4 rounded border-slate-300 text-[#489473] focus:ring-[#489473]"
+                                  checked={selectedLeads.has(String(lead.lead_id))}
+                                  onChange={(e) => {
+                                    const next = new Set(selectedLeads);
+                                    if (e.target.checked) next.add(String(lead.lead_id));
+                                    else next.delete(String(lead.lead_id));
+                                    setSelectedLeads(next);
+                                  }}
+                                />
+                              </td>
                               <td className="px-6 py-4 align-middle">
                                 <div className="font-bold text-[#1E293B] text-[14px] mb-1">{lead.business_name}</div>
                                 <div className="text-slate-500 text-[12px] flex items-center gap-1.5 font-medium">
@@ -417,7 +475,7 @@ export default function Dashboard() {
                   </thead>
                   <tbody className="divide-y divide-slate-50">
                     {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                    {Object.values(leads.reduce((acc: any, lead: any) => {
+                    {Object.values(visibleLeads.reduce((acc: any, lead: any) => {
                       const city = lead.city || 'Unknown';
                       const cat = lead.category || 'Unknown';
                       const key = `${city}-${cat}`.toLowerCase();
