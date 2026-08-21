@@ -1,53 +1,24 @@
-@font-face {
-    font-family: 'National Park';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/NationalPark-Regular.woff') format('woff');
-}
-@font-face {
-    font-family: 'National Park';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/fonts/NationalPark-Heavy.woff') format('woff');
-}
-@font-face {
-    font-family: 'National Park';
-    font-style: normal;
-    font-weight: 900;
-    src: url('/fonts/NationalPark-Heavy.woff') format('woff');
-}
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "National Park", ui-sans-serif, system-ui, sans-serif;
-}
-
-:root {
-  --bg-app: #F4F7FC;
-  --bg-sidebar: #654CA5;
-  --bg-sidebar-hover: #755BB5;
-  --bg-header: #563D96;
-  --bg-panel: #FFFFFF;
-  --border-color: #E2E8F0;
-  --text-main: #334155;
-  --text-muted: #64748B;
-  --accent: #654CA5;
+  --font-sans: "Google Sans Flex", ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
-  background-color: var(--bg-app);
-  color: var(--text-main);
-  font-family: 'National Park', sans-serif;
+  font-family: "Google Sans Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "ROND" 0;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Scrollbar for professional look */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-app);
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: #CBD5E1;
