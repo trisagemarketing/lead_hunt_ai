@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { ExternalLink, CheckCircle, Mail, Send, Activity, MessageSquare, LayoutDashboard, Search, Users, Settings, Globe, Phone, Hash as Instagram, ThumbsUp as Facebook, Link as LinkIcon, Building2, Bell, ChevronDown, ChevronLeft, Menu, ChevronRight, Loader2, RefreshCw, Flame, History, Zap, Monitor, Hourglass, CheckSquare, List, Terminal, FileCode, Play } from "lucide-react";
 
 export default function Dashboard() {
-  const [leads, setLeads] = useState<any[]>([]);
+  const [leads, setLeads] = useState<Record<string, string | number | null | undefined | boolean>[]>([]);
   const [loading, setLoading] = useState(true);
   const [approving, setApproving] = useState<string | null>(null);
 
@@ -25,7 +25,7 @@ export default function Dashboard() {
   }, []);
 
   useEffect(() => {
-    let interval: any;
+    let interval: NodeJS.Timeout;
     if (startingEngine) {
       interval = setInterval(async () => {
         try {
@@ -48,7 +48,7 @@ export default function Dashboard() {
     return () => clearInterval(interval);
   }, [startingEngine, city, category]);
 
-  const fetchLeads = async () => {
+  async function fetchLeads() {
     try {
       setLoading(true);
       const res = await fetch("https://leadhuntai-production.up.railway.app/api/leads");
@@ -66,7 +66,7 @@ export default function Dashboard() {
     }
   };
 
-  const startEngine = async () => {
+  async function startEngine() {
     if (!city.trim() || !category.trim()) {
       alert("Please enter both City and Category.");
       return;
@@ -86,7 +86,7 @@ export default function Dashboard() {
     }
   };
 
-  const approveLead = async (leadId: string) => {
+  async function approveLead(leadId: string) {
     setApproving(leadId);
     try {
       const res = await fetch(`https://leadhuntai-production.up.railway.app/api/leads/${leadId}/approve`, {
@@ -443,7 +443,9 @@ export default function Dashboard() {
                         acc[key].lastRun = lead.created_at;
                       }
                       return acc;
-                    }, {})).sort((a: any, b: any) => b.lastRun.localeCompare(a.lastRun)).map((campaign: any, idx: number) => (
+                    }, {}))/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+                    .sort((a: any, b: any) => b.lastRun.localeCompare(a.lastRun))/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+                    .map((campaign: any, idx: number) => (
                       <tr key={idx} className="hover:bg-[#13161F] transition-colors group">
                         <td className="px-6 py-5 font-bold text-white text-[13px]">{campaign.city}</td>
                         <td className="px-6 py-5 text-slate-400 text-[13px] capitalize">{campaign.category}</td>
