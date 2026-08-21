@@ -167,9 +167,6 @@ export default function Dashboard() {
         </nav>
         
         <div className="p-4 flex flex-col gap-2">
-          <button title="Settings" className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all hover:bg-[#3C7F62]/50 font-medium opacity-90 w-full ${sidebarCollapsed ? 'justify-center px-0' : ''}`}>
-            <Settings className="w-5 h-5 shrink-0" /> {!sidebarCollapsed && <span className="whitespace-nowrap overflow-hidden">Settings</span>}
-          </button>
           <button 
             onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
             title="Toggle Sidebar"
