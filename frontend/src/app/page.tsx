@@ -140,8 +140,8 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-[#0B0E14] text-slate-200 font-sans flex flex-col selection:bg-[#F97316]/30">
       {/* TOP NAVBAR */}
-      <header className="h-[60px] bg-[#0B0E14] border-b border-[#1E2330] flex items-center justify-between px-6 shrink-0 z-10 relative">
-        <div className="flex items-center gap-6">
+            <header className="h-auto lg:h-[60px] py-4 lg:py-0 bg-[#0B0E14] border-b border-[#1E2330] flex flex-col lg:flex-row items-center justify-between px-4 lg:px-6 shrink-0 z-10 relative gap-4 lg:gap-0">
+        <div className="flex flex-col sm:flex-row items-center gap-4 lg:gap-6 w-full lg:w-auto">
           <div className="flex items-center gap-2">
             <Zap className="w-5 h-5 text-[#F97316]" fill="#F97316" />
             <h1 className="text-lg font-bold tracking-tight text-white flex items-center">
@@ -150,35 +150,35 @@ export default function Dashboard() {
             </h1>
           </div>
           
-          <div className="h-5 w-px bg-[#1E2330]"></div>
+          <div className="hidden lg:block h-5 w-px bg-[#1E2330]"></div>
           
-          <div className="flex items-center gap-5 text-[13px]">
-            <div className="flex items-center gap-2 bg-[#13161F] border border-[#1E2330] px-3 py-1.5 rounded-md">
-              <span className="text-slate-500">📍 City:</span>
+          <div className="flex items-center gap-3 lg:gap-5 text-[13px] w-full sm:w-auto justify-center">
+            <div className="flex items-center gap-2 bg-[#13161F] border border-[#1E2330] px-3 py-1.5 rounded-md flex-1 sm:flex-none">
+              <span className="text-slate-500 whitespace-nowrap">📍 City:</span>
               <input 
                 type="text" 
                 value={city} 
                 onChange={e => setCity(e.target.value)}
-                className="bg-transparent border-none text-white focus:outline-none w-20 placeholder-slate-600 font-medium p-0"
+                className="bg-transparent border-none text-white focus:outline-none w-full sm:w-20 placeholder-slate-600 font-medium p-0"
                 placeholder="City"
               />
             </div>
-            <div className="flex items-center gap-2 bg-[#13161F] border border-[#1E2330] px-3 py-1.5 rounded-md">
-              <span className="text-slate-500">📁 Category:</span>
+            <div className="flex items-center gap-2 bg-[#13161F] border border-[#1E2330] px-3 py-1.5 rounded-md flex-1 sm:flex-none">
+              <span className="text-slate-500 whitespace-nowrap">📁 Category:</span>
               <input 
                 type="text" 
                 value={category} 
                 onChange={e => setCategory(e.target.value)}
-                className="bg-transparent border-none text-white focus:outline-none w-24 placeholder-slate-600 font-medium p-0"
+                className="bg-transparent border-none text-white focus:outline-none w-full sm:w-24 placeholder-slate-600 font-medium p-0"
                 placeholder="Category"
               />
             </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-5">
+        <div className="flex flex-col sm:flex-row items-center gap-3 lg:gap-5 w-full lg:w-auto">
           <div className="flex items-center gap-2 text-[11px] uppercase tracking-wide font-bold">
-            <span className="text-slate-500">Outreach Mode:</span>
+            <span className="text-slate-500 hidden sm:inline">Outreach Mode:</span>
             <span className="bg-red-500/10 text-red-500 border border-red-500/20 px-2.5 py-1 rounded-sm flex items-center gap-1.5 shadow-[0_0_10px_rgba(239,68,68,0.2)]">
               <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></span>
               LIVE MODE ACTIVE
@@ -187,7 +187,7 @@ export default function Dashboard() {
           <button 
             onClick={startEngine}
             disabled={startingEngine}
-            className="bg-[#F97316] hover:bg-[#EA580C] text-white px-5 py-1.5 rounded text-sm font-bold shadow-[0_0_15px_rgba(249,115,22,0.3)] transition-all flex items-center gap-2 active:scale-95 disabled:opacity-50"
+            className="w-full sm:w-auto justify-center bg-[#F97316] hover:bg-[#EA580C] text-white px-5 py-2 lg:py-1.5 rounded text-sm font-bold shadow-[0_0_15px_rgba(249,115,22,0.3)] transition-all flex items-center gap-2 active:scale-95 disabled:opacity-50"
           >
             {startingEngine ? <Loader2 className="w-4 h-4 animate-spin" /> : <Play className="w-3.5 h-3.5" fill="currentColor" />}
             Run Full Pipeline
@@ -233,53 +233,29 @@ export default function Dashboard() {
 
       <div className="flex flex-1 overflow-hidden">
         {/* SIDEBAR */}
-                <aside className="w-[260px] bg-[#0B0E14] border-r border-[#1E2330] flex flex-col overflow-y-auto shrink-0 py-6">
+                        <aside className="hidden lg:flex w-[260px] bg-[#0B0E14] border-r border-[#1E2330] flex-col overflow-y-auto shrink-0 py-6">
           <div className="mb-6">
             <div className="text-[11px] font-bold text-[#64748B] uppercase tracking-[0.15em] mb-4 px-6">Navigation</div>
             <nav className="space-y-1">
               <button onClick={() => setActiveTab('pipeline')} className={`w-[calc(100%-12px)] flex items-center gap-3.5 px-6 py-2.5 text-[14px] font-medium transition-colors rounded-r-lg ${activeTab === 'pipeline' ? 'bg-[#1D2333] text-white border-l-[3px] border-[#F97316]' : 'text-[#94A3B8] hover:text-white hover:bg-[#13161F] border-l-[3px] border-transparent'}`}>
                 <LayoutDashboard className="w-5 h-5 opacity-80" /> Pipeline Overview
               </button>
-              <button onClick={() => setActiveTab('approval')} className={`w-[calc(100%-12px)] flex items-center justify-between px-6 py-2.5 text-[14px] font-medium transition-colors rounded-r-lg ${activeTab === 'approval' ? 'bg-[#1D2333] text-white border-l-[3px] border-[#F97316]' : 'text-[#94A3B8] hover:text-white hover:bg-[#13161F] border-l-[3px] border-transparent'}`}>
-                <div className="flex items-center gap-3.5"><CheckSquare className="w-5 h-5 opacity-80" /> Human Approval Queue</div>
-                {metrics.pending > 0 && (
-                  <span className="bg-[#F97316] text-white text-[11px] w-5 h-5 flex items-center justify-center rounded-full font-bold shadow-[0_0_8px_rgba(249,115,22,0.6)]">{metrics.pending}</span>
-                )}
-              </button>
-              <button onClick={() => setActiveTab('explorer')} className={`w-[calc(100%-12px)] flex items-center gap-3.5 px-6 py-2.5 text-[14px] font-medium transition-colors rounded-r-lg ${activeTab === 'explorer' ? 'bg-[#1D2333] text-white border-l-[3px] border-[#F97316]' : 'text-[#94A3B8] hover:text-white hover:bg-[#13161F] border-l-[3px] border-transparent'}`}>
-                <Users className="w-5 h-5 opacity-80" /> Lead Explorer Table
-              </button>
-              <button onClick={() => setActiveTab('logs')} className={`w-[calc(100%-12px)] flex items-center gap-3.5 px-6 py-2.5 text-[14px] font-medium transition-colors rounded-r-lg ${activeTab === 'logs' ? 'bg-[#1D2333] text-white border-l-[3px] border-[#F97316]' : 'text-[#94A3B8] hover:text-white hover:bg-[#13161F] border-l-[3px] border-transparent'}`}>
-                <Terminal className="w-5 h-5 opacity-80" /> Live Console Logs
-              </button>
               <button onClick={() => setActiveTab('history')} className={`w-[calc(100%-12px)] flex items-center gap-3.5 px-6 py-2.5 text-[14px] font-medium transition-colors rounded-r-lg ${activeTab === 'history' ? 'bg-[#1D2333] text-white border-l-[3px] border-[#F97316]' : 'text-[#94A3B8] hover:text-white hover:bg-[#13161F] border-l-[3px] border-transparent'}`}>
                 <History className="w-5 h-5 opacity-80" /> Campaign History
               </button>
             </nav>
           </div>
-
-          <div className="mt-2">
-            <div className="h-px bg-[#1E2330] w-[calc(100%-32px)] mx-4 mb-6"></div>
-            <div className="text-[11px] font-bold text-[#64748B] uppercase tracking-[0.15em] mb-4 px-6">Quick 1-Click Actions</div>
-            <nav className="space-y-1">
-              {[
-                { icon: Search, label: 'Discover Leads' },
-                { icon: Globe, label: 'Verify Websites' },
-                { icon: Flame, label: 'Score & Qualify' },
-                { icon: FileCode, label: 'AI Personalize' },
-                { icon: Monitor, label: 'Generate Demos' },
-                { icon: Send, label: 'Dispatch Outreach' },
-              ].map((action, idx) => (
-                <button key={idx} className="w-[calc(100%-12px)] flex items-center gap-3.5 px-6 py-2.5 text-[14px] font-medium text-[#94A3B8] hover:text-white hover:bg-[#13161F] transition-colors border-l-[3px] border-transparent rounded-r-lg">
-                  <action.icon className="w-5 h-5 opacity-70" /> {action.label}
-                </button>
-              ))}
-            </nav>
-          </div>
         </aside>
 
         {/* MAIN CONTENT */}
-        <main className="flex-1 min-w-0 overflow-y-auto bg-[#13161F] p-4 sm:p-8">
+                <main className="flex-1 min-w-0 overflow-y-auto bg-[#13161F] flex flex-col">
+          {/* MOBILE ONLY TAB BAR */}
+          <div className="flex lg:hidden bg-[#0B0E14] border-b border-[#1E2330] p-4 gap-2 overflow-x-auto shrink-0">
+            <button onClick={() => setActiveTab('pipeline')} className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap ${activeTab === 'pipeline' ? 'bg-[#F97316] text-white' : 'bg-[#1E2330] text-slate-400'}`}>Pipeline Overview</button>
+            <button onClick={() => setActiveTab('history')} className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap ${activeTab === 'history' ? 'bg-[#F97316] text-white' : 'bg-[#1E2330] text-slate-400'}`}>Campaign History</button>
+          </div>
+          
+          <div className="p-4 sm:p-8 flex-1">
           
           <div className="flex justify-between items-end mb-8">
             <div>
@@ -501,7 +477,8 @@ export default function Dashboard() {
             </div>
           )}
 
-</main>
+</div>
+        </main>
       </div>
     </div>
   );
