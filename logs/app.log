@@ -398,3 +398,346 @@ max_results=5
 2026-08-20 14:29:08,116 - database - INFO - [database.py:58] - Database tables initialized successfully.
 2026-08-20 14:29:34,480 - database - INFO - [database.py:26] - Using SQLite Database (Local).
 2026-08-20 14:29:34,760 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 14:53:03,248 - __main__ - INFO - [orchestrator.py:10] - ========== STARTING: Phase 1: Discovery (Google Maps Scrape) ==========
+2026-08-20 14:53:20,727 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 14:53:21,038 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 14:53:40,206 - __main__ - INFO - [orchestrator.py:40] - STARTING FULL LEADHUNTER AI ORCHESTRATOR
+2026-08-20 14:53:40,206 - __main__ - INFO - [orchestrator.py:10] - ========== STARTING: Phase 1: Discovery (Google Maps Scrape) ==========
+2026-08-20 14:53:40,598 - __main__ - INFO - [serpapi_search.py:15] - Starting business discovery:
+city=Vadodara
+business_type=restaurants
+max_results=10
+2026-08-20 14:53:42,743 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 14:53:42,753 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015
+2026-08-20 14:53:42,758 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde
+2026-08-20 14:53:42,762 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03
+2026-08-20 14:53:42,766 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061
+2026-08-20 14:53:42,770 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3
+2026-08-20 14:53:42,774 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996
+2026-08-20 14:53:42,777 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f
+2026-08-20 14:53:42,780 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e
+2026-08-20 14:53:42,783 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8
+2026-08-20 14:53:42,787 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86
+2026-08-20 14:53:42,792 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140
+2026-08-20 14:53:42,795 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef
+2026-08-20 14:53:42,799 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0
+2026-08-20 14:53:42,804 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375
+2026-08-20 14:53:42,807 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1
+2026-08-20 14:53:42,810 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731
+2026-08-20 14:53:42,813 - __main__ - INFO - [serpapi_search.py:111] - Skipping duplicate lead: 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c
+2026-08-20 14:53:42,838 - database - DEBUG - [database.py:146] - Lead 54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a inserted/updated successfully.
+2026-08-20 14:53:42,839 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a
+2026-08-20 14:53:42,866 - database - DEBUG - [database.py:146] - Lead 37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e inserted/updated successfully.
+2026-08-20 14:53:42,867 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e
+2026-08-20 14:53:42,894 - database - DEBUG - [database.py:146] - Lead c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3 inserted/updated successfully.
+2026-08-20 14:53:42,895 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3
+2026-08-20 14:53:42,895 - __main__ - INFO - [serpapi_search.py:122] - Search completed: discovered=20, inserted=3, duplicates=17
+2026-08-20 14:53:42,987 - __main__ - INFO - [orchestrator.py:32] - [SUCCESS] MODULE COMPLETE: Phase 1: Discovery (Google Maps Scrape)
+2026-08-20 14:53:44,988 - __main__ - INFO - [orchestrator.py:10] - ========== STARTING: Phase 2A: Data Normalization ==========
+2026-08-20 14:53:45,168 - __main__ - INFO - [orchestrator.py:32] - [SUCCESS] MODULE COMPLETE: Phase 2A: Data Normalization
+2026-08-20 14:53:47,169 - __main__ - INFO - [orchestrator.py:10] - ========== STARTING: Phase 2B: Deduplication ==========
+2026-08-20 14:53:47,695 - __main__ - INFO - [deduplicate.py:142] - Starting normalization and deduplication process...
+2026-08-20 14:53:47,696 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 14:53:47,734 - database - DEBUG - [database.py:146] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-20 14:53:47,753 - database - DEBUG - [database.py:146] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-20 14:53:47,770 - database - DEBUG - [database.py:146] - Lead c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde inserted/updated successfully.
+2026-08-20 14:53:47,788 - database - DEBUG - [database.py:146] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-20 14:53:47,805 - database - DEBUG - [database.py:146] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-20 14:53:47,822 - database - DEBUG - [database.py:146] - Lead 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03 inserted/updated successfully.
+2026-08-20 14:53:47,841 - database - DEBUG - [database.py:146] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-20 14:53:47,858 - database - DEBUG - [database.py:146] - Lead 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b inserted/updated successfully.
+2026-08-20 14:53:47,876 - database - DEBUG - [database.py:146] - Lead e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8 inserted/updated successfully.
+2026-08-20 14:53:47,895 - database - DEBUG - [database.py:146] - Lead 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3 inserted/updated successfully.
+2026-08-20 14:53:47,914 - database - DEBUG - [database.py:146] - Lead 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e inserted/updated successfully.
+2026-08-20 14:53:47,932 - database - DEBUG - [database.py:146] - Lead fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86 inserted/updated successfully.
+2026-08-20 14:53:47,953 - database - DEBUG - [database.py:146] - Lead dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996 inserted/updated successfully.
+2026-08-20 14:53:47,972 - database - DEBUG - [database.py:146] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-20 14:53:47,997 - database - DEBUG - [database.py:146] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-20 14:53:48,017 - database - DEBUG - [database.py:146] - Lead d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1 inserted/updated successfully.
+2026-08-20 14:53:48,037 - database - DEBUG - [database.py:146] - Lead 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140 inserted/updated successfully.
+2026-08-20 14:53:48,058 - database - DEBUG - [database.py:146] - Lead fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef inserted/updated successfully.
+2026-08-20 14:53:48,077 - database - DEBUG - [database.py:146] - Lead 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0 inserted/updated successfully.
+2026-08-20 14:53:48,101 - database - DEBUG - [database.py:146] - Lead 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c inserted/updated successfully.
+2026-08-20 14:53:48,122 - database - DEBUG - [database.py:146] - Lead 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731 inserted/updated successfully.
+2026-08-20 14:53:48,139 - database - DEBUG - [database.py:146] - Lead 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff inserted/updated successfully.
+2026-08-20 14:53:48,158 - database - DEBUG - [database.py:146] - Lead 54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a inserted/updated successfully.
+2026-08-20 14:53:48,177 - database - DEBUG - [database.py:146] - Lead 37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e inserted/updated successfully.
+2026-08-20 14:53:48,196 - database - DEBUG - [database.py:146] - Lead c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3 inserted/updated successfully.
+2026-08-20 14:53:48,243 - __main__ - INFO - [orchestrator.py:32] - [SUCCESS] MODULE COMPLETE: Phase 2B: Deduplication
+2026-08-20 14:53:50,244 - __main__ - INFO - [orchestrator.py:10] - ========== STARTING: Phase 3: Website Auditing ==========
+2026-08-20 14:53:50,926 - __main__ - INFO - [website_checker.py:205] - Starting Website Verification Module...
+2026-08-20 14:53:50,926 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 14:53:50,930 - __main__ - INFO - [website_checker.py:126] - Checking website for western restaurant (54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a)
+2026-08-20 14:53:52,130 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: VALID_WEBSITE
+2026-08-20 14:53:52,161 - database - DEBUG - [database.py:146] - Lead 54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a inserted/updated successfully.
+2026-08-20 14:53:53,162 - __main__ - INFO - [website_checker.py:126] - Checking website for Thyme & Whisk (37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e)
+2026-08-20 14:53:54,651 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: VALID_WEBSITE
+2026-08-20 14:53:54,667 - database - DEBUG - [database.py:146] - Lead 37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e inserted/updated successfully.
+2026-08-20 14:53:55,668 - __main__ - INFO - [website_checker.py:126] - Checking website for Hocco Kitchen (OP Road) (c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3)
+2026-08-20 14:53:56,775 - __main__ - INFO - [website_checker.py:153] - Website Verification Result: VALID_WEBSITE
+2026-08-20 14:53:56,796 - database - DEBUG - [database.py:146] - Lead c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3 inserted/updated successfully.
+2026-08-20 14:53:57,796 - __main__ - INFO - [website_checker.py:202] - Website checking complete. Processed 3 leads.
+2026-08-20 14:53:57,939 - __main__ - INFO - [orchestrator.py:32] - [SUCCESS] MODULE COMPLETE: Phase 3: Website Auditing
+2026-08-20 14:53:59,940 - __main__ - INFO - [orchestrator.py:10] - ========== STARTING: Phase 4: Lead Scoring Engine ==========
+2026-08-20 14:54:00,178 - __main__ - INFO - [lead_scorer.py:150] - Starting Lead Scoring Module...
+2026-08-20 14:54:00,178 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 14:54:00,188 - __main__ - INFO - [lead_scorer.py:104] - Scored western restaurant (54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a): Score=40.0, Tier=LOW
+2026-08-20 14:54:00,205 - database - DEBUG - [database.py:146] - Lead 54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a inserted/updated successfully.
+2026-08-20 14:54:00,206 - __main__ - INFO - [lead_scorer.py:104] - Scored Thyme & Whisk (37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e): Score=40.0, Tier=LOW
+2026-08-20 14:54:00,223 - database - DEBUG - [database.py:146] - Lead 37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e inserted/updated successfully.
+2026-08-20 14:54:00,223 - __main__ - INFO - [lead_scorer.py:104] - Scored Hocco Kitchen (OP Road) (c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3): Score=40.0, Tier=LOW
+2026-08-20 14:54:00,239 - database - DEBUG - [database.py:146] - Lead c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3 inserted/updated successfully.
+2026-08-20 14:54:00,282 - __main__ - INFO - [orchestrator.py:32] - [SUCCESS] MODULE COMPLETE: Phase 4: Lead Scoring Engine
+2026-08-20 14:54:02,283 - __main__ - INFO - [orchestrator.py:10] - ========== STARTING: Phase 5: AI Personalization (Groq Llama-3) ==========
+2026-08-20 14:54:03,157 - __main__ - INFO - [personalizer.py:168] - Starting AI Personalization Module (Groq Edition) on 3 leads...
+2026-08-20 14:54:03,157 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 14:54:03,251 - __main__ - INFO - [personalizer.py:108] - Personalizing messages for Vadodara Rest 1 (Status: DOMAIN_ONLY)
+2026-08-20 14:54:05,046 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Vadodara Rest 1: Expecting value: line 1 column 1 (char 0)
+2026-08-20 14:54:05,047 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-20 14:54:05,577 - database - DEBUG - [database.py:146] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-20 14:54:05,578 - __main__ - INFO - [personalizer.py:163] - Successfully personalized and saved lead: Vadodara Rest 1
+2026-08-20 14:54:05,579 - __main__ - INFO - [personalizer.py:108] - Personalizing messages for Vibes The Bistro (Status: DOMAIN_ONLY)
+2026-08-20 14:54:07,027 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Vibes The Bistro: Expecting value: line 1 column 1 (char 0)
+2026-08-20 14:54:07,028 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-20 14:54:07,562 - database - DEBUG - [database.py:146] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-20 14:54:07,563 - __main__ - INFO - [personalizer.py:163] - Successfully personalized and saved lead: Vibes The Bistro
+2026-08-20 14:54:07,563 - __main__ - INFO - [personalizer.py:108] - Personalizing messages for The Morsel Restaurant (Status: BROKEN_WEBSITE)
+2026-08-20 14:54:09,049 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for The Morsel Restaurant: Expecting value: line 1 column 1 (char 0)
+2026-08-20 14:54:09,050 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-20 14:54:09,577 - database - DEBUG - [database.py:146] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-20 14:54:09,577 - __main__ - INFO - [personalizer.py:163] - Successfully personalized and saved lead: The Morsel Restaurant
+2026-08-20 14:54:09,760 - __main__ - INFO - [orchestrator.py:32] - [SUCCESS] MODULE COMPLETE: Phase 5: AI Personalization (Groq Llama-3)
+2026-08-20 14:54:11,762 - __main__ - INFO - [orchestrator.py:10] - ========== STARTING: Phase 6: Demo URL Generation ==========
+2026-08-20 14:54:12,067 - __main__ - INFO - [url_generator.py:93] - Starting Demo URL Generator Module...
+2026-08-20 14:54:12,067 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 14:54:12,070 - __main__ - INFO - [url_generator.py:52] - Generated Demo URL for Vadodara Rest 1: https://yourdomain.com/preview/vadodara-rest-1-vadodara
+2026-08-20 14:54:12,084 - database - DEBUG - [database.py:146] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-20 14:54:12,085 - __main__ - INFO - [url_generator.py:52] - Generated Demo URL for Vibes The Bistro: https://yourdomain.com/preview/vibes-the-bistro-vadodara
+2026-08-20 14:54:12,096 - database - DEBUG - [database.py:146] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-20 14:54:12,096 - __main__ - INFO - [url_generator.py:52] - Generated Demo URL for Jassi De Parathe: https://yourdomain.com/preview/jassi-de-parathe-vadodara
+2026-08-20 14:54:12,099 - database - DEBUG - [database.py:146] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-20 14:54:12,099 - __main__ - INFO - [url_generator.py:52] - Generated Demo URL for Le Prive World Cuisine: https://yourdomain.com/preview/le-prive-world-cuisine-vadodara
+2026-08-20 14:54:12,100 - database - DEBUG - [database.py:146] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-20 14:54:12,100 - __main__ - INFO - [url_generator.py:52] - Generated Demo URL for Island The Restaurant Waves Club: https://yourdomain.com/preview/island-the-restaurant-waves-club-vadodara
+2026-08-20 14:54:12,101 - database - DEBUG - [database.py:146] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-20 14:54:12,101 - __main__ - INFO - [url_generator.py:52] - Generated Demo URL for The Morsel Restaurant: https://yourdomain.com/preview/the-morsel-restaurant-vadodara
+2026-08-20 14:54:12,112 - database - DEBUG - [database.py:146] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-20 14:54:12,134 - __main__ - INFO - [orchestrator.py:32] - [SUCCESS] MODULE COMPLETE: Phase 6: Demo URL Generation
+2026-08-20 14:54:14,135 - __main__ - INFO - [orchestrator.py:64] - [DONE] PIPELINE FINISHED SUCCESSFULLY in 33.93 seconds!
+2026-08-20 14:58:09,394 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 14:58:10,597 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 14:58:10,877 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 15:00:29,299 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 15:00:30,300 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 15:00:30,571 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 15:01:15,548 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 16:38:03,850 - __main__ - INFO - [deduplicate.py:133] - Starting normalization and deduplication process...
+2026-08-20 16:38:03,850 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 16:38:03,879 - database - DEBUG - [database.py:146] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-20 16:38:03,891 - database - DEBUG - [database.py:146] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-20 16:38:03,903 - database - DEBUG - [database.py:146] - Lead c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde inserted/updated successfully.
+2026-08-20 16:38:03,915 - database - DEBUG - [database.py:146] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-20 16:38:03,927 - database - DEBUG - [database.py:146] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-20 16:38:03,938 - database - DEBUG - [database.py:146] - Lead 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03 inserted/updated successfully.
+2026-08-20 16:38:03,949 - database - DEBUG - [database.py:146] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-20 16:38:03,962 - database - DEBUG - [database.py:146] - Lead 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b inserted/updated successfully.
+2026-08-20 16:38:03,973 - database - DEBUG - [database.py:146] - Lead e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8 inserted/updated successfully.
+2026-08-20 16:38:03,984 - database - DEBUG - [database.py:146] - Lead 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3 inserted/updated successfully.
+2026-08-20 16:38:04,000 - database - DEBUG - [database.py:146] - Lead 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e inserted/updated successfully.
+2026-08-20 16:38:04,012 - database - DEBUG - [database.py:146] - Lead fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86 inserted/updated successfully.
+2026-08-20 16:38:04,023 - database - DEBUG - [database.py:146] - Lead dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996 inserted/updated successfully.
+2026-08-20 16:38:04,034 - database - DEBUG - [database.py:146] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-20 16:38:04,049 - database - DEBUG - [database.py:146] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-20 16:38:04,060 - database - DEBUG - [database.py:146] - Lead d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1 inserted/updated successfully.
+2026-08-20 16:38:04,075 - database - DEBUG - [database.py:146] - Lead 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140 inserted/updated successfully.
+2026-08-20 16:38:04,087 - database - DEBUG - [database.py:146] - Lead fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef inserted/updated successfully.
+2026-08-20 16:38:04,101 - database - DEBUG - [database.py:146] - Lead 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0 inserted/updated successfully.
+2026-08-20 16:38:04,112 - database - DEBUG - [database.py:146] - Lead 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c inserted/updated successfully.
+2026-08-20 16:38:04,122 - database - DEBUG - [database.py:146] - Lead 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731 inserted/updated successfully.
+2026-08-20 16:38:04,133 - database - DEBUG - [database.py:146] - Lead 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff inserted/updated successfully.
+2026-08-20 16:38:04,146 - database - DEBUG - [database.py:146] - Lead 54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a inserted/updated successfully.
+2026-08-20 16:38:04,156 - database - DEBUG - [database.py:146] - Lead 37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e inserted/updated successfully.
+2026-08-20 16:38:04,167 - database - DEBUG - [database.py:146] - Lead c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3 inserted/updated successfully.
+2026-08-20 16:38:24,730 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 17:16:50,381 - __main__ - INFO - [orchestrator.py:46] - STARTING FULL LEADHUNTER AI ORCHESTRATOR
+2026-08-20 17:16:50,382 - __main__ - INFO - [orchestrator.py:11] - ========== STARTING: Phase 1: Discovery (Google Maps Scrape) ==========
+2026-08-20 17:16:51,302 - __main__ - INFO - [serpapi_search.py:15] - Starting business discovery:
+city=Dallas
+business_type=plumbers
+max_results=10
+2026-08-20 17:16:52,790 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 17:16:52,815 - database - DEBUG - [database.py:146] - Lead 67653dede81d016606aa3ea23aabdd9a17f48b66f637e93dc70b27681f382f20 inserted/updated successfully.
+2026-08-20 17:16:52,816 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 67653dede81d016606aa3ea23aabdd9a17f48b66f637e93dc70b27681f382f20
+2026-08-20 17:16:52,829 - database - DEBUG - [database.py:146] - Lead a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075 inserted/updated successfully.
+2026-08-20 17:16:52,829 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075
+2026-08-20 17:16:52,841 - database - DEBUG - [database.py:146] - Lead dfe0d94dbae3a0c76d953a458ddf076768addd6b3a5cf08655c3013b13daaf22 inserted/updated successfully.
+2026-08-20 17:16:52,841 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: dfe0d94dbae3a0c76d953a458ddf076768addd6b3a5cf08655c3013b13daaf22
+2026-08-20 17:16:52,852 - database - DEBUG - [database.py:146] - Lead bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf inserted/updated successfully.
+2026-08-20 17:16:52,853 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf
+2026-08-20 17:16:52,866 - database - DEBUG - [database.py:146] - Lead 135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858 inserted/updated successfully.
+2026-08-20 17:16:52,866 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858
+2026-08-20 17:16:52,881 - database - DEBUG - [database.py:146] - Lead d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c inserted/updated successfully.
+2026-08-20 17:16:52,881 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c
+2026-08-20 17:16:52,894 - database - DEBUG - [database.py:146] - Lead 0248ccd1a5ac7c76ecd1e232d20b93d87f789a6abd5dbaa5e8093f88583ca049 inserted/updated successfully.
+2026-08-20 17:16:52,894 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 0248ccd1a5ac7c76ecd1e232d20b93d87f789a6abd5dbaa5e8093f88583ca049
+2026-08-20 17:16:52,909 - database - DEBUG - [database.py:146] - Lead 7ed1e2ebabc3d18d9ec385f8a2a0205acd5d3101b6f428f10e181484eaa7f06e inserted/updated successfully.
+2026-08-20 17:16:52,910 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 7ed1e2ebabc3d18d9ec385f8a2a0205acd5d3101b6f428f10e181484eaa7f06e
+2026-08-20 17:16:52,927 - database - DEBUG - [database.py:146] - Lead eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086 inserted/updated successfully.
+2026-08-20 17:16:52,927 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086
+2026-08-20 17:16:52,941 - database - DEBUG - [database.py:146] - Lead 4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d inserted/updated successfully.
+2026-08-20 17:16:52,941 - __main__ - INFO - [serpapi_search.py:117] - Lead inserted: 4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d
+2026-08-20 17:16:52,941 - __main__ - INFO - [serpapi_search.py:122] - Search completed: discovered=20, inserted=10, duplicates=0
+2026-08-20 17:16:53,010 - __main__ - INFO - [orchestrator.py:33] - [SUCCESS] MODULE COMPLETE: Phase 1: Discovery (Google Maps Scrape)
+2026-08-20 17:16:55,011 - __main__ - INFO - [orchestrator.py:11] - ========== STARTING: Phase 2A: Data Normalization ==========
+2026-08-20 17:16:55,138 - __main__ - INFO - [orchestrator.py:33] - [SUCCESS] MODULE COMPLETE: Phase 2A: Data Normalization
+2026-08-20 17:16:57,140 - __main__ - INFO - [orchestrator.py:11] - ========== STARTING: Phase 2B: Deduplication ==========
+2026-08-20 17:16:57,448 - __main__ - INFO - [deduplicate.py:133] - Starting normalization and deduplication process...
+2026-08-20 17:16:57,448 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 17:16:57,464 - database - DEBUG - [database.py:146] - Lead 4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d inserted/updated successfully.
+2026-08-20 17:16:57,475 - database - DEBUG - [database.py:146] - Lead eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086 inserted/updated successfully.
+2026-08-20 17:16:57,489 - database - DEBUG - [database.py:146] - Lead 7ed1e2ebabc3d18d9ec385f8a2a0205acd5d3101b6f428f10e181484eaa7f06e inserted/updated successfully.
+2026-08-20 17:16:57,510 - database - DEBUG - [database.py:146] - Lead 0248ccd1a5ac7c76ecd1e232d20b93d87f789a6abd5dbaa5e8093f88583ca049 inserted/updated successfully.
+2026-08-20 17:16:57,521 - database - DEBUG - [database.py:146] - Lead d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c inserted/updated successfully.
+2026-08-20 17:16:57,537 - database - DEBUG - [database.py:146] - Lead 135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858 inserted/updated successfully.
+2026-08-20 17:16:57,555 - database - DEBUG - [database.py:146] - Lead bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf inserted/updated successfully.
+2026-08-20 17:16:57,568 - database - DEBUG - [database.py:146] - Lead dfe0d94dbae3a0c76d953a458ddf076768addd6b3a5cf08655c3013b13daaf22 inserted/updated successfully.
+2026-08-20 17:16:57,581 - database - DEBUG - [database.py:146] - Lead a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075 inserted/updated successfully.
+2026-08-20 17:16:57,604 - database - DEBUG - [database.py:146] - Lead 67653dede81d016606aa3ea23aabdd9a17f48b66f637e93dc70b27681f382f20 inserted/updated successfully.
+2026-08-20 17:16:57,607 - database - DEBUG - [database.py:146] - Lead c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3 inserted/updated successfully.
+2026-08-20 17:16:57,608 - database - DEBUG - [database.py:146] - Lead 37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e inserted/updated successfully.
+2026-08-20 17:16:57,609 - database - DEBUG - [database.py:146] - Lead 54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a inserted/updated successfully.
+2026-08-20 17:16:57,611 - database - DEBUG - [database.py:146] - Lead 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff inserted/updated successfully.
+2026-08-20 17:16:57,612 - database - DEBUG - [database.py:146] - Lead 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731 inserted/updated successfully.
+2026-08-20 17:16:57,613 - database - DEBUG - [database.py:146] - Lead 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c inserted/updated successfully.
+2026-08-20 17:16:57,614 - database - DEBUG - [database.py:146] - Lead 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0 inserted/updated successfully.
+2026-08-20 17:16:57,616 - database - DEBUG - [database.py:146] - Lead fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef inserted/updated successfully.
+2026-08-20 17:16:57,617 - database - DEBUG - [database.py:146] - Lead 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140 inserted/updated successfully.
+2026-08-20 17:16:57,618 - database - DEBUG - [database.py:146] - Lead d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1 inserted/updated successfully.
+2026-08-20 17:16:57,619 - database - DEBUG - [database.py:146] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-20 17:16:57,621 - database - DEBUG - [database.py:146] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-20 17:16:57,622 - database - DEBUG - [database.py:146] - Lead dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996 inserted/updated successfully.
+2026-08-20 17:16:57,623 - database - DEBUG - [database.py:146] - Lead fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86 inserted/updated successfully.
+2026-08-20 17:16:57,625 - database - DEBUG - [database.py:146] - Lead 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e inserted/updated successfully.
+2026-08-20 17:16:57,626 - database - DEBUG - [database.py:146] - Lead 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3 inserted/updated successfully.
+2026-08-20 17:16:57,627 - database - DEBUG - [database.py:146] - Lead e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8 inserted/updated successfully.
+2026-08-20 17:16:57,628 - database - DEBUG - [database.py:146] - Lead 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b inserted/updated successfully.
+2026-08-20 17:16:57,629 - database - DEBUG - [database.py:146] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-20 17:16:57,630 - database - DEBUG - [database.py:146] - Lead 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03 inserted/updated successfully.
+2026-08-20 17:16:57,631 - database - DEBUG - [database.py:146] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-20 17:16:57,632 - database - DEBUG - [database.py:146] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-20 17:16:57,633 - database - DEBUG - [database.py:146] - Lead c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde inserted/updated successfully.
+2026-08-20 17:16:57,634 - database - DEBUG - [database.py:146] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-20 17:16:57,636 - database - DEBUG - [database.py:146] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-20 17:16:57,661 - __main__ - INFO - [orchestrator.py:33] - [SUCCESS] MODULE COMPLETE: Phase 2B: Deduplication
+2026-08-20 17:16:59,662 - __main__ - INFO - [orchestrator.py:11] - ========== STARTING: Phase 3: Website Auditing ==========
+2026-08-20 17:17:00,556 - __main__ - INFO - [website_checker.py:205] - Starting Website Verification Module...
+2026-08-20 17:17:00,556 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 17:17:00,562 - __main__ - INFO - [website_checker.py:202] - Website checking complete. Processed 0 leads.
+2026-08-20 17:17:00,678 - __main__ - INFO - [orchestrator.py:33] - [SUCCESS] MODULE COMPLETE: Phase 3: Website Auditing
+2026-08-20 17:17:02,679 - __main__ - INFO - [orchestrator.py:11] - ========== STARTING: Phase 4: Lead Scoring Engine ==========
+2026-08-20 17:17:03,063 - __main__ - INFO - [lead_scorer.py:150] - Starting Lead Scoring Module...
+2026-08-20 17:17:03,063 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 17:17:03,068 - __main__ - INFO - [lead_scorer.py:104] - Scored Acme Corp (68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef): Score=35.0, Tier=LOW
+2026-08-20 17:17:03,080 - database - DEBUG - [database.py:146] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-20 17:17:03,081 - __main__ - INFO - [lead_scorer.py:104] - Scored Vadodara Rest 1 (230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902): Score=60.0, Tier=WARM
+2026-08-20 17:17:03,098 - database - DEBUG - [database.py:146] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-20 17:17:03,099 - __main__ - INFO - [lead_scorer.py:104] - Scored Candle Light Date N Dinner & Rooftop Restaurant Vadodara (c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde): Score=40.0, Tier=LOW
+2026-08-20 17:17:03,110 - database - DEBUG - [database.py:146] - Lead c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde inserted/updated successfully.
+2026-08-20 17:17:03,110 - __main__ - INFO - [lead_scorer.py:104] - Scored Vibes The Bistro (7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061): Score=60.0, Tier=WARM
+2026-08-20 17:17:03,128 - database - DEBUG - [database.py:146] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-20 17:17:03,128 - __main__ - INFO - [lead_scorer.py:104] - Scored Jassi De Parathe (a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015): Score=75.0, Tier=HOT
+2026-08-20 17:17:03,140 - database - DEBUG - [database.py:146] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-20 17:17:03,140 - __main__ - INFO - [lead_scorer.py:104] - Scored The House of Makeba - Veg Family Dining Restaurant in Vadodara (4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03): Score=40.0, Tier=LOW
+2026-08-20 17:17:03,152 - database - DEBUG - [database.py:146] - Lead 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03 inserted/updated successfully.
+2026-08-20 17:17:03,152 - __main__ - INFO - [lead_scorer.py:104] - Scored Le Prive World Cuisine (d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375): Score=75.0, Tier=HOT
+2026-08-20 17:17:03,168 - database - DEBUG - [database.py:146] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-20 17:17:03,169 - __main__ - INFO - [lead_scorer.py:104] - Scored Taste Carnival - (Banquet, Rooms, Restaurant) (81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b): Score=40.0, Tier=LOW
+2026-08-20 17:17:03,182 - database - DEBUG - [database.py:146] - Lead 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b inserted/updated successfully.
+2026-08-20 17:17:03,183 - __main__ - INFO - [lead_scorer.py:104] - Scored Spice Kraft Restaurant (e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8): Score=40.0, Tier=LOW
+2026-08-20 17:17:03,197 - database - DEBUG - [database.py:146] - Lead e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8 inserted/updated successfully.
+2026-08-20 17:17:03,197 - __main__ - INFO - [lead_scorer.py:104] - Scored Sakura Pan Asian Cuisine (491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3): Score=40.0, Tier=LOW
+2026-08-20 17:17:03,212 - database - DEBUG - [database.py:146] - Lead 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3 inserted/updated successfully.
+2026-08-20 17:17:03,212 - __main__ - INFO - [lead_scorer.py:104] - Scored Retro Bistro : The Fine Multi Cuisine Restaurant ( Vadodara ) (510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e): Score=40.0, Tier=LOW
+2026-08-20 17:17:03,229 - database - DEBUG - [database.py:146] - Lead 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e inserted/updated successfully.
+2026-08-20 17:17:03,230 - __main__ - INFO - [lead_scorer.py:104] - Scored The Secret Kitchen (fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86): Score=40.0, Tier=LOW
+2026-08-20 17:17:03,261 - database - DEBUG - [database.py:146] - Lead fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86 inserted/updated successfully.
+2026-08-20 17:17:03,262 - __main__ - INFO - [lead_scorer.py:104] - Scored Peshawri by Welcomhotel Vadodara (dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996): Score=40.0, Tier=LOW
+2026-08-20 17:17:03,290 - database - DEBUG - [database.py:146] - Lead dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996 inserted/updated successfully.
+2026-08-20 17:17:03,291 - __main__ - INFO - [lead_scorer.py:104] - Scored Island The Restaurant Waves Club (954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f): Score=75.0, Tier=HOT
+2026-08-20 17:17:03,307 - database - DEBUG - [database.py:146] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-20 17:17:03,308 - __main__ - INFO - [lead_scorer.py:104] - Scored The Morsel Restaurant (1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f): Score=75.0, Tier=HOT
+2026-08-20 17:17:03,325 - database - DEBUG - [database.py:146] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-20 17:17:03,325 - __main__ - INFO - [lead_scorer.py:104] - Scored Bayleaf Multi Cuisine Restaurant (d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1): Score=40.0, Tier=LOW
+2026-08-20 17:17:03,339 - database - DEBUG - [database.py:146] - Lead d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1 inserted/updated successfully.
+2026-08-20 17:17:03,340 - __main__ - INFO - [lead_scorer.py:104] - Scored 22nd Parallel (5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140): Score=40.0, Tier=LOW
+2026-08-20 17:17:03,362 - database - DEBUG - [database.py:146] - Lead 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140 inserted/updated successfully.
+2026-08-20 17:17:03,362 - __main__ - INFO - [lead_scorer.py:104] - Scored Barbeque Nation - Vadodara - Cine Mall (fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef): Score=40.0, Tier=LOW
+2026-08-20 17:17:03,379 - database - DEBUG - [database.py:146] - Lead fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef inserted/updated successfully.
+2026-08-20 17:17:03,379 - __main__ - INFO - [lead_scorer.py:104] - Scored 812 CE Urban Restaurant (6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0): Score=75.0, Tier=HOT
+2026-08-20 17:17:03,392 - database - DEBUG - [database.py:146] - Lead 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0 inserted/updated successfully.
+2026-08-20 17:17:03,392 - __main__ - INFO - [lead_scorer.py:104] - Scored The Highway Eats - Vadodara | Multicuisine Restaurant, Rooms, Banquet & Poolside Party Lawns (36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c): Score=60.0, Tier=WARM
+2026-08-20 17:17:03,407 - database - DEBUG - [database.py:146] - Lead 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c inserted/updated successfully.
+2026-08-20 17:17:03,407 - __main__ - INFO - [lead_scorer.py:104] - Scored Nizam's The Royal Kitchen (074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731): Score=40.0, Tier=LOW
+2026-08-20 17:17:03,418 - database - DEBUG - [database.py:146] - Lead 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731 inserted/updated successfully.
+2026-08-20 17:17:03,418 - __main__ - INFO - [lead_scorer.py:104] - Scored Fitoor (519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff): Score=75.0, Tier=HOT
+2026-08-20 17:17:03,439 - database - DEBUG - [database.py:146] - Lead 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff inserted/updated successfully.
+2026-08-20 17:17:03,440 - __main__ - INFO - [lead_scorer.py:104] - Scored western restaurant (54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a): Score=40.0, Tier=LOW
+2026-08-20 17:17:03,451 - database - DEBUG - [database.py:146] - Lead 54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a inserted/updated successfully.
+2026-08-20 17:17:03,451 - __main__ - INFO - [lead_scorer.py:104] - Scored Thyme & Whisk (37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e): Score=40.0, Tier=LOW
+2026-08-20 17:17:03,468 - database - DEBUG - [database.py:146] - Lead 37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e inserted/updated successfully.
+2026-08-20 17:17:03,468 - __main__ - INFO - [lead_scorer.py:104] - Scored Hocco Kitchen (OP Road) (c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3): Score=40.0, Tier=LOW
+2026-08-20 17:17:03,483 - database - DEBUG - [database.py:146] - Lead c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3 inserted/updated successfully.
+2026-08-20 17:17:03,484 - __main__ - INFO - [lead_scorer.py:104] - Scored Public Service Plumbers (67653dede81d016606aa3ea23aabdd9a17f48b66f637e93dc70b27681f382f20): Score=30.0, Tier=LOW
+2026-08-20 17:17:03,499 - database - DEBUG - [database.py:146] - Lead 67653dede81d016606aa3ea23aabdd9a17f48b66f637e93dc70b27681f382f20 inserted/updated successfully.
+2026-08-20 17:17:03,500 - __main__ - INFO - [lead_scorer.py:104] - Scored Metro Flow Plumbing - Dallas Emergency Plumbers (a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075): Score=30.0, Tier=LOW
+2026-08-20 17:17:03,519 - database - DEBUG - [database.py:146] - Lead a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075 inserted/updated successfully.
+2026-08-20 17:17:03,519 - __main__ - INFO - [lead_scorer.py:104] - Scored Dallas Plumbing & Air Conditioning (dfe0d94dbae3a0c76d953a458ddf076768addd6b3a5cf08655c3013b13daaf22): Score=30.0, Tier=LOW
+2026-08-20 17:17:03,535 - database - DEBUG - [database.py:146] - Lead dfe0d94dbae3a0c76d953a458ddf076768addd6b3a5cf08655c3013b13daaf22 inserted/updated successfully.
+2026-08-20 17:17:03,536 - __main__ - INFO - [lead_scorer.py:104] - Scored Tribeca Plumbing, Inc. (bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf): Score=30.0, Tier=LOW
+2026-08-20 17:17:03,554 - database - DEBUG - [database.py:146] - Lead bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf inserted/updated successfully.
+2026-08-20 17:17:03,554 - __main__ - INFO - [lead_scorer.py:104] - Scored Milestone Electric, A/C, & Plumbing (135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858): Score=30.0, Tier=LOW
+2026-08-20 17:17:03,566 - database - DEBUG - [database.py:146] - Lead 135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858 inserted/updated successfully.
+2026-08-20 17:17:03,567 - __main__ - INFO - [lead_scorer.py:104] - Scored Baker Brothers Plumbing, Air & Electric (d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c): Score=30.0, Tier=LOW
+2026-08-20 17:17:03,581 - database - DEBUG - [database.py:146] - Lead d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c inserted/updated successfully.
+2026-08-20 17:17:03,582 - __main__ - INFO - [lead_scorer.py:104] - Scored Anchor Plumbing Company (0248ccd1a5ac7c76ecd1e232d20b93d87f789a6abd5dbaa5e8093f88583ca049): Score=30.0, Tier=LOW
+2026-08-20 17:17:03,599 - database - DEBUG - [database.py:146] - Lead 0248ccd1a5ac7c76ecd1e232d20b93d87f789a6abd5dbaa5e8093f88583ca049 inserted/updated successfully.
+2026-08-20 17:17:03,599 - __main__ - INFO - [lead_scorer.py:104] - Scored Jake the Plumbing Pro (7ed1e2ebabc3d18d9ec385f8a2a0205acd5d3101b6f428f10e181484eaa7f06e): Score=30.0, Tier=LOW
+2026-08-20 17:17:03,611 - database - DEBUG - [database.py:146] - Lead 7ed1e2ebabc3d18d9ec385f8a2a0205acd5d3101b6f428f10e181484eaa7f06e inserted/updated successfully.
+2026-08-20 17:17:03,611 - __main__ - INFO - [lead_scorer.py:104] - Scored Tide Turners Plumbing (eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086): Score=30.0, Tier=LOW
+2026-08-20 17:17:03,627 - database - DEBUG - [database.py:146] - Lead eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086 inserted/updated successfully.
+2026-08-20 17:17:03,627 - __main__ - INFO - [lead_scorer.py:104] - Scored Reliant Plumbing - Dallas (4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d): Score=30.0, Tier=LOW
+2026-08-20 17:17:03,645 - database - DEBUG - [database.py:146] - Lead 4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d inserted/updated successfully.
+2026-08-20 17:17:03,699 - __main__ - INFO - [orchestrator.py:33] - [SUCCESS] MODULE COMPLETE: Phase 4: Lead Scoring Engine
+2026-08-20 17:17:05,700 - __main__ - INFO - [orchestrator.py:11] - ========== STARTING: Phase 5: AI Personalization (Groq Llama-3) ==========
+2026-08-20 17:17:06,972 - __main__ - INFO - [personalizer.py:168] - Starting AI Personalization Module (Groq Edition) on 3 leads...
+2026-08-20 17:17:06,973 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 17:17:07,144 - __main__ - INFO - [personalizer.py:108] - Personalizing messages for Acme Corp (Status: DOMAIN_ONLY)
+2026-08-20 17:17:09,219 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Acme Corp: Expecting value: line 1 column 1 (char 0)
+2026-08-20 17:17:09,220 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-20 17:17:09,748 - database - DEBUG - [database.py:146] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-20 17:17:09,748 - __main__ - INFO - [personalizer.py:163] - Successfully personalized and saved lead: Acme Corp
+2026-08-20 17:17:09,749 - __main__ - INFO - [personalizer.py:108] - Personalizing messages for Candle Light Date N Dinner & Rooftop Restaurant Vadodara (Status: VALID_WEBSITE)
+2026-08-20 17:17:11,248 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Candle Light Date N Dinner & Rooftop Restaurant Vadodara: Expecting value: line 1 column 1 (char 0)
+2026-08-20 17:17:11,249 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-20 17:17:11,782 - database - DEBUG - [database.py:146] - Lead c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde inserted/updated successfully.
+2026-08-20 17:17:11,782 - __main__ - INFO - [personalizer.py:163] - Successfully personalized and saved lead: Candle Light Date N Dinner & Rooftop Restaurant Vadodara
+2026-08-20 17:17:11,783 - __main__ - INFO - [personalizer.py:108] - Personalizing messages for The House of Makeba - Veg Family Dining Restaurant in Vadodara (Status: VALID_WEBSITE)
+2026-08-20 17:17:13,265 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for The House of Makeba - Veg Family Dining Restaurant in Vadodara: Expecting value: line 1 column 1 (char 0)
+2026-08-20 17:17:13,266 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-20 17:17:13,800 - database - DEBUG - [database.py:146] - Lead 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03 inserted/updated successfully.
+2026-08-20 17:17:13,801 - __main__ - INFO - [personalizer.py:163] - Successfully personalized and saved lead: The House of Makeba - Veg Family Dining Restaurant in Vadodara
+2026-08-20 17:17:14,059 - __main__ - INFO - [orchestrator.py:33] - [SUCCESS] MODULE COMPLETE: Phase 5: AI Personalization (Groq Llama-3)
+2026-08-20 17:17:16,060 - __main__ - INFO - [orchestrator.py:11] - ========== STARTING: Phase 6: Demo URL Generation ==========
+2026-08-20 17:17:16,484 - __main__ - INFO - [url_generator.py:93] - Starting Demo URL Generator Module...
+2026-08-20 17:17:16,484 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 17:17:16,488 - __main__ - INFO - [url_generator.py:52] - Generated Demo URL for Acme Corp: https://yourdomain.com/preview/acme-corp-new-york
+2026-08-20 17:17:16,502 - database - DEBUG - [database.py:146] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-20 17:17:16,503 - __main__ - INFO - [url_generator.py:52] - Generated Demo URL for Candle Light Date N Dinner & Rooftop Restaurant Vadodara: https://yourdomain.com/preview/candle-light-date-n-dinner-rooftop-restaurant-vadodara-vadodara
+2026-08-20 17:17:16,514 - database - DEBUG - [database.py:146] - Lead c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde inserted/updated successfully.
+2026-08-20 17:17:16,515 - __main__ - INFO - [url_generator.py:52] - Generated Demo URL for The House of Makeba - Veg Family Dining Restaurant in Vadodara: https://yourdomain.com/preview/the-house-of-makeba---veg-family-dining-restaurant-in-vadodara-vadodara
+2026-08-20 17:17:16,532 - database - DEBUG - [database.py:146] - Lead 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03 inserted/updated successfully.
+2026-08-20 17:17:16,568 - __main__ - INFO - [orchestrator.py:33] - [SUCCESS] MODULE COMPLETE: Phase 6: Demo URL Generation
+2026-08-20 17:17:18,569 - __main__ - INFO - [orchestrator.py:70] - [DONE] PIPELINE FINISHED SUCCESSFULLY in 28.19 seconds!
+2026-08-20 17:17:48,624 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 17:17:49,798 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-20 17:17:50,130 - database - INFO - [database.py:26] - Using SQLite Database (Local).
