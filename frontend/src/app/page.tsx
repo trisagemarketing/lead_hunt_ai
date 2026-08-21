@@ -140,33 +140,42 @@ export default function Dashboard() {
   return (
     <div className="flex h-screen bg-[#F5F6F8] font-sans text-[#1E293B]">
       {/* SIDEBAR (Light Theme Green) */}
-      <aside className="hidden lg:flex w-[260px] bg-[#489473] flex-col shrink-0 text-white shadow-xl z-20">
-        <div className="p-6 flex items-center gap-3 mb-6">
-          <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md">
+      <aside className={`hidden lg:flex ${sidebarCollapsed ? 'w-[80px]' : 'w-[260px]'} bg-[#489473] flex-col shrink-0 text-white shadow-xl z-20 transition-all duration-300`}>
+        <div className={`p-6 flex items-center gap-3 mb-6 ${sidebarCollapsed ? 'justify-center px-0' : ''}`}>
+          <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md shrink-0">
             <Zap className="w-5 h-5 text-[#489473]" fill="currentColor" />
           </div>
-          <h1 className="text-xl font-bold tracking-tight">LeadHunter</h1>
+          {!sidebarCollapsed && <h1 className="text-xl font-bold tracking-tight whitespace-nowrap overflow-hidden">LeadHunter</h1>}
         </div>
         
         <nav className="flex-1 flex flex-col gap-2 px-3">
           <button 
             onClick={() => setActiveTab('pipeline')} 
-            className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all ${activeTab === 'pipeline' ? 'bg-[#3C7F62] font-semibold border-l-[4px] border-white' : 'hover:bg-[#3C7F62]/50 border-l-[4px] border-transparent font-medium opacity-90'}`}
+            title="Dashboard"
+            className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all ${activeTab === 'pipeline' ? 'bg-[#3C7F62] font-semibold border-l-[4px] border-white' : 'hover:bg-[#3C7F62]/50 border-l-[4px] border-transparent font-medium opacity-90'} ${sidebarCollapsed ? 'justify-center px-0' : ''}`}
           >
-            <LayoutDashboard className="w-5 h-5" /> Dashboard
+            <LayoutDashboard className="w-5 h-5 shrink-0" /> {!sidebarCollapsed && <span className="whitespace-nowrap overflow-hidden">Dashboard</span>}
           </button>
           
           <button 
             onClick={() => setActiveTab('history')} 
-            className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all ${activeTab === 'history' ? 'bg-[#3C7F62] font-semibold border-l-[4px] border-white' : 'hover:bg-[#3C7F62]/50 border-l-[4px] border-transparent font-medium opacity-90'}`}
+            title="History"
+            className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all ${activeTab === 'history' ? 'bg-[#3C7F62] font-semibold border-l-[4px] border-white' : 'hover:bg-[#3C7F62]/50 border-l-[4px] border-transparent font-medium opacity-90'} ${sidebarCollapsed ? 'justify-center px-0' : ''}`}
           >
-            <History className="w-5 h-5" /> History
+            <History className="w-5 h-5 shrink-0" /> {!sidebarCollapsed && <span className="whitespace-nowrap overflow-hidden">History</span>}
           </button>
         </nav>
         
-        <div className="p-6">
-          <button className="flex items-center gap-4 px-4 py-3 rounded-xl transition-all hover:bg-[#3C7F62]/50 font-medium opacity-90 w-full">
-            <Settings className="w-5 h-5" /> Settings
+        <div className="p-4 flex flex-col gap-2">
+          <button title="Settings" className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all hover:bg-[#3C7F62]/50 font-medium opacity-90 w-full ${sidebarCollapsed ? 'justify-center px-0' : ''}`}>
+            <Settings className="w-5 h-5 shrink-0" /> {!sidebarCollapsed && <span className="whitespace-nowrap overflow-hidden">Settings</span>}
+          </button>
+          <button 
+            onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
+            title="Toggle Sidebar"
+            className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all hover:bg-[#3C7F62]/50 font-medium opacity-90 w-full ${sidebarCollapsed ? 'justify-center px-0' : ''}`}
+          >
+            <ChevronLeft className={`w-5 h-5 shrink-0 transition-transform ${sidebarCollapsed ? 'rotate-180' : ''}`} /> {!sidebarCollapsed && <span className="whitespace-nowrap overflow-hidden">Collapse</span>}
           </button>
         </div>
       </aside>
