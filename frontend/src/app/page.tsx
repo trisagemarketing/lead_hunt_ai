@@ -553,7 +553,9 @@ export default function Dashboard() {
                         ? <span className="text-slate-400 italic">Not available</span> 
                         : typeof value === 'boolean' 
                           ? (value ? <span className="text-[#489473] font-bold">Yes</span> : 'No') 
-                          : String(value)}
+                          : (key === 'created_at' || key === 'updated_at') && typeof value === 'string'
+                            ? new Date(value + (value.endsWith('Z') ? '' : 'Z')).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' })
+                            : String(value)}
                     </div>
                   </div>
                 ))}
