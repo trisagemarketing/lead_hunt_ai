@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Trash2, ExternalLink, CheckCircle, Mail, Send, Activity, MessageSquare, LayoutDashboard, Search, Users, Settings, Globe, Phone, Hash as Instagram, ThumbsUp as Facebook, Link as LinkIcon, Building2, Bell, ChevronDown, ChevronLeft, Menu, ChevronRight, Loader2, RefreshCw, Flame, History, Zap, Monitor, Hourglass, CheckSquare, List, Terminal, FileCode, Play } from "lucide-react";
+import { X, Trash2, ExternalLink, CheckCircle, Mail, Send, Activity, MessageSquare, LayoutDashboard, Search, Users, Settings, Globe, Phone, Hash as Instagram, ThumbsUp as Facebook, Link as LinkIcon, Building2, Bell, ChevronDown, ChevronLeft, Menu, ChevronRight, Loader2, RefreshCw, Flame, History, Zap, Monitor, Hourglass, CheckSquare, List, Terminal, FileCode, Play } from "lucide-react";
 
 export default function Dashboard() {
   const [leads, setLeads] = useState<Record<string, string | number | null | undefined | boolean>[]>([]);
@@ -39,6 +39,10 @@ export default function Dashboard() {
   const [city, setCity] = useState("Vadodara");
   const [category, setCategory] = useState("restaurants");
   const [startingEngine, setStartingEngine] = useState(false);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [viewLead, setViewLead] = useState<any>(null);
+
   const [engineLogs, setEngineLogs] = useState("");
 
   useEffect(() => {
@@ -415,7 +419,12 @@ export default function Dashboard() {
                                 />
                               </td>
                               <td className="px-6 py-4 align-middle">
-                                <div className="font-bold text-[#1E293B] text-[14px] mb-1">{lead.business_name}</div>
+                                <div 
+                                  className="font-bold text-[#1E293B] text-[14px] mb-1 cursor-pointer hover:text-[#489473] hover:underline transition-all"
+                                  onClick={() => setViewLead(lead)}
+                                >
+                                  {lead.business_name}
+                                </div>
                                 <div className="text-slate-500 text-[12px] flex items-center gap-1.5 font-medium">
                                   {lead.category} <span className="mx-0.5">•</span> {lead.city}
                                 </div>
@@ -514,8 +523,58 @@ export default function Dashboard() {
 
         </main>
       </div>
+
+      {/* LEAD DETAILS MODAL */}
+      {viewLead && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 sm:p-8">
+          <div className="bg-white w-full max-w-4xl max-h-full rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in duration-200">
+            <div className="flex items-center justify-between p-6 border-b border-slate-100 bg-slate-50/50 shrink-0">
+              <h3 className="text-xl font-bold text-[#1E293B] flex items-center gap-3">
+                <div className="w-10 h-10 bg-[#489473]/10 rounded-full flex items-center justify-center">
+                  <Building2 className="w-5 h-5 text-[#489473]" />
+                </div>
+                {viewLead.business_name}
+              </h3>
+              <button 
+                onClick={() => setViewLead(null)}
+                className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-200 text-slate-500 transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            
+            <div className="p-6 overflow-y-auto flex-1">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {Object.entries(viewLead).map(([key, value]) => (
+                  <div key={key} className="bg-slate-50 rounded-xl p-4 border border-slate-100 hover:border-[#489473]/30 transition-colors group">
+                    <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1.5 group-hover:text-[#489473] transition-colors">{key.replace(/_/g, ' ')}</div>
+                    <div className="text-sm font-medium text-[#1E293B] break-words">
+                      {value === null || value === undefined || value === '' 
+                        ? <span className="text-slate-400 italic">Not available</span> 
+                        : typeof value === 'boolean' 
+                          ? (value ? <span className="text-[#489473] font-bold">Yes</span> : 'No') 
+                          : String(value)}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="p-6 border-t border-slate-100 bg-slate-50/50 flex justify-end shrink-0">
+              <button 
+                onClick={() => setViewLead(null)}
+                className="px-6 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold text-sm rounded-xl transition-colors"
+              >
+                Close Details
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
+
 
 
