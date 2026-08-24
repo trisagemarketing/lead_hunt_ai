@@ -268,6 +268,7 @@ export default function Dashboard() {
             >
               {startingEngine ? <Loader2 className="w-4 h-4 animate-spin" /> : <Play className="w-4 h-4" fill="currentColor" />}
               Start AI Hunt
+            </button>
           </div>
         </header>
 
