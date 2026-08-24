@@ -268,17 +268,6 @@ export default function Dashboard() {
             >
               {startingEngine ? <Loader2 className="w-4 h-4 animate-spin" /> : <Play className="w-4 h-4" fill="currentColor" />}
               Start AI Hunt
-            </button>
-            <div className="h-8 w-px bg-slate-200 hidden sm:block"></div>
-            <div className="hidden sm:flex items-center gap-3">
-              <div className="text-right">
-                <div className="text-xs text-slate-500 font-medium">Administrator</div>
-                <div className="text-sm font-bold text-[#1E293B]">Admin User</div>
-              </div>
-              <div className="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center">
-                <Users className="w-5 h-5 text-slate-500" />
-              </div>
-            </div>
           </div>
         </header>
 
