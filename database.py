@@ -78,10 +78,12 @@ class Database:
             else:
                 conn.execute(query)
             conn.commit()
-            conn.close()
         except Exception as e:
             logger.error(f"Error initializing database: {e}")
             raise
+        finally:
+            if 'conn' in locals() and conn:
+                conn.close()
 
     def insert_or_update_lead(self, lead: Lead):
         # Postgres uses %s for variables, SQLite uses ?
@@ -142,11 +144,13 @@ class Database:
             else:
                 conn.execute(query, values)
             conn.commit()
-            conn.close()
             logger.debug(f"Lead {lead.lead_id} inserted/updated successfully.")
         except Exception as e:
             logger.error(f"Error inserting/updating lead {lead.lead_id}: {e}")
             raise
+        finally:
+            if 'conn' in locals() and conn:
+                conn.close()
 
     def get_lead(self, lead_id: str):
         placeholder = "%s" if self.use_postgres else "?"
@@ -160,11 +164,13 @@ class Database:
             else:
                 cursor = conn.execute(query, (lead_id,))
                 row = cursor.fetchone()
-            conn.close()
             return row
         except Exception as e:
             logger.error(f"Error fetching lead {lead_id}: {e}")
             return None
+        finally:
+            if 'conn' in locals() and conn:
+                conn.close()
 
     def get_all_leads(self):
         query = "SELECT * FROM leads ORDER BY created_at DESC"
@@ -177,11 +183,13 @@ class Database:
             else:
                 cursor = conn.execute(query)
                 rows = cursor.fetchall()
-            conn.close()
             return rows
         except Exception as e:
             logger.error(f"Error fetching all leads: {e}")
             return []
+        finally:
+            if 'conn' in locals() and conn:
+                conn.close()
 
     def get_leads_by_status(self, status: str):
         placeholder = "%s" if self.use_postgres else "?"
@@ -195,8 +203,10 @@ class Database:
             else:
                 cursor = conn.execute(query, (status,))
                 rows = cursor.fetchall()
-            conn.close()
             return rows
         except Exception as e:
             logger.error(f"Error fetching leads by status {status}: {e}")
             return []
+        finally:
+            if 'conn' in locals() and conn:
+                conn.close()

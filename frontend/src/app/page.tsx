@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { X, Trash2, ExternalLink, CheckCircle, Mail, Send, Activity, MessageSquare, LayoutDashboard, Search, Users, Settings, Globe, Phone, Hash as Instagram, ThumbsUp as Facebook, Link as LinkIcon, Building2, Bell, ChevronDown, ChevronLeft, Menu, ChevronRight, Loader2, RefreshCw, Flame, History, Zap, Monitor, Hourglass, CheckSquare, List, Terminal, FileCode, Play } from "lucide-react";
 
 export default function Dashboard() {
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://leadhuntai-production.up.railway.app";
+
   const [leads, setLeads] = useState<Record<string, string | number | null | undefined | boolean>[]>([]);
   const [loading, setLoading] = useState(true);
   const [approving, setApproving] = useState<string | null>(null);
@@ -14,7 +16,13 @@ export default function Dashboard() {
   useEffect(() => {
     const saved = localStorage.getItem('deletedLeads');
     if (saved) {
-      setDeletedLeads(new Set(JSON.parse(saved)));
+      try {
+        setDeletedLeads(new Set(JSON.parse(saved)));
+      } catch (e) {
+        console.error("Failed to parse deletedLeads from localStorage:", e);
+        setDeletedLeads(new Set());
+        localStorage.removeItem('deletedLeads');
+      }
     }
   }, []);
 
@@ -54,7 +62,7 @@ export default function Dashboard() {
     if (startingEngine) {
       interval = setInterval(async () => {
         try {
-          const res = await fetch("https://leadhuntai-production.up.railway.app/api/engine/logs");
+          const res = await fetch(`${API_URL}/api/engine/logs`);
           const text = await res.text();
           setEngineLogs(text);
           
@@ -76,7 +84,7 @@ export default function Dashboard() {
   async function fetchLeads() {
     try {
       setLoading(true);
-      const res = await fetch("https://leadhuntai-production.up.railway.app/api/leads");
+      const res = await fetch(`${API_URL}/api/leads`);
       if (!res.ok) throw new Error("Failed to fetch leads");
       const json = await res.json();
       setLeads(json.data);
@@ -99,7 +107,7 @@ export default function Dashboard() {
     setStartingEngine(true);
     setEngineLogs("");
     try {
-      await fetch("https://leadhuntai-production.up.railway.app/api/engine/start", {
+      await fetch(`${API_URL}/api/engine/start`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ city: city, business_type: category }),
@@ -114,7 +122,7 @@ export default function Dashboard() {
   async function approveLead(leadId: string) {
     setApproving(leadId);
     try {
-      const res = await fetch(`https://leadhuntai-production.up.railway.app/api/leads/${leadId}/approve`, {
+      const res = await fetch(`${API_URL}/api/leads/${leadId}/approve`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ n8n_webhook_url: "https://your-n8n-url/webhook" }),

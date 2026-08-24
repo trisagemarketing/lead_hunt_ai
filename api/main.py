@@ -5,6 +5,7 @@ from fastapi import FastAPI, HTTPException, Request, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
+import httpx
 
 # Add parent directory to path so we can import models and database
 sys.path.append(str(Path(__file__).parent.parent))
@@ -99,9 +100,28 @@ def approve_and_send_lead(lead_id: str, payload: ApprovePayload = None):
         raise HTTPException(status_code=404, detail="Lead not found")
         
     lead = dict(row)
+    
+    n8n_url = payload.n8n_webhook_url if payload and payload.n8n_webhook_url else os.environ.get("N8N_WEBHOOK_URL")
+    
+    if n8n_url:
+        try:
+            # Send payload to n8n with strict timeout
+            response = httpx.post(n8n_url, json=lead, timeout=5.0)
+            response.raise_for_status()
+            logger.info(f"Successfully dispatched lead {lead_id} to N8N webhook.")
+            return {
+                "success": True, 
+                "message": f"Lead '{lead['business_name']}' securely dispatched to n8n workflow!",
+                "data": lead
+            }
+        except Exception as e:
+            logger.error(f"Failed to dispatch to n8n: {e}")
+            raise HTTPException(status_code=502, detail=f"Failed to reach n8n workflow: {e}")
+    
+    # Fallback if no URL provided
     return {
         "success": True, 
-        "message": f"Lead '{lead['business_name']}' approved! Ready to dispatch to n8n.",
+        "message": f"Lead '{lead['business_name']}' approved! (Simulated - no n8n webhook URL provided)",
         "data": lead
     }
 
@@ -110,10 +130,12 @@ def approve_and_send_lead(lead_id: str, payload: ApprovePayload = None):
 # ==========================================
 # Global variable to store logs in memory (bypasses Railway read-only disk issues)
 engine_debug_logs = "Engine has not been started yet."
+engine_is_running = False
 
 def run_orchestrator_in_background(city: str, business_type: str):
     """Runs the master pipeline and saves the output to memory for debugging."""
-    global engine_debug_logs
+    global engine_debug_logs, engine_is_running
+    engine_is_running = True
     import subprocess
     import traceback
     import sys
@@ -139,6 +161,8 @@ def run_orchestrator_in_background(city: str, business_type: str):
         engine_debug_logs += f"\n--- ENGINE FINISHED WITH CODE {process.returncode} ---\n"
     except Exception as e:
         engine_debug_logs += f"\n--- FATAL ERROR ---\n{traceback.format_exc()}\n"
+    finally:
+        engine_is_running = False
 
 class EngineRequest(BaseModel):
     city: str
@@ -149,6 +173,13 @@ def start_engine(request: EngineRequest, background_tasks: BackgroundTasks):
     """
     Hit this URL in your browser to wake up the AI and start scraping!
     """
+    global engine_is_running
+    if engine_is_running:
+        return {
+            "success": False,
+            "message": "Engine is already running. Please wait for the current hunt to finish."
+        }
+    
     background_tasks.add_task(run_orchestrator_in_background, request.city, request.business_type)
     return {
         "success": True,
