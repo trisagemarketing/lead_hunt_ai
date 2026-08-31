@@ -4,10 +4,10 @@ import { useEffect, useState, useMemo } from "react";
 import { 
   X, Trash2, ExternalLink, CheckCircle, Mail, Send, Activity, 
   MessageSquare, LayoutDashboard, Search, Globe, Phone, 
-  Link as LinkIcon, Building2, ChevronLeft, Loader2, RefreshCw, 
+  Building2, ChevronLeft, Loader2, RefreshCw, 
   Flame, History, Zap, Play, Download, Copy, Check, Star, 
   MapPin, AlertCircle, Filter, ArrowUpRight, CheckSquare, 
-  FileJson, FileSpreadsheet, Eye, Terminal, Sparkles, Clock, Target
+  FileJson, FileSpreadsheet, Eye, Terminal, Sparkles, Clock, Menu
 } from "lucide-react";
 
 interface Lead {
@@ -61,6 +61,7 @@ export default function Dashboard() {
   // Navigation & Filtering State
   const [activeTab, setActiveTab] = useState<"pipeline" | "history" | "logs">("pipeline");
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTierFilter, setSelectedTierFilter] = useState<"ALL" | "HOT" | "WARM" | "NO_WEBSITE" | "DEMO_READY" | "PENDING">("ALL");
   const [selectedCityFilter, setSelectedCityFilter] = useState<string>("ALL");
@@ -109,7 +110,6 @@ export default function Dashboard() {
             const text = await res.text();
             setEngineLogs(text);
 
-            // Calculate progress estimation
             if (text.includes("Phase 6")) {
               setEnginePhase("Generating Demo Websites");
               setEngineProgress(95);
@@ -135,7 +135,6 @@ export default function Dashboard() {
               setEngineProgress(100);
               setEnginePhase("Hunt Completed!");
               
-              // Automatically switch city filter to newly scraped city!
               setSelectedCityFilter(city);
               setActiveCampaign({ city, category });
               fetchLeads();
@@ -368,62 +367,81 @@ export default function Dashboard() {
   return (
     <div className="flex h-screen bg-[#F8FAFC] font-sans text-[#1E293B] antialiased overflow-hidden">
       
-      {/* PROFESSIONAL SIDEBAR */}
-      <aside className={`hidden lg:flex ${sidebarCollapsed ? 'w-[76px]' : 'w-[250px]'} bg-[#193F2E] flex-col shrink-0 text-white shadow-2xl z-30 transition-all duration-300 select-none border-r border-[#193F2E]/20`}>
+      {/* MOBILE BACKDROP DRAWER */}
+      {mobileMenuOpen && (
+        <div 
+          onClick={() => setMobileMenuOpen(false)}
+          className="fixed inset-0 z-40 bg-slate-900/60 backdrop-blur-sm lg:hidden animate-in fade-in"
+        />
+      )}
+
+      {/* PROFESSIONAL SIDEBAR (DESKTOP & MOBILE DRAWER) */}
+      <aside className={`
+        fixed inset-y-0 left-0 z-50 bg-[#193F2E] flex flex-col text-white shadow-2xl transition-all duration-300 select-none border-r border-[#193F2E]/20
+        ${mobileMenuOpen ? 'translate-x-0 w-[260px]' : '-translate-x-full lg:translate-x-0'}
+        ${sidebarCollapsed ? 'lg:w-[76px]' : 'lg:w-[250px]'}
+      `}>
         {/* Brand Header */}
-        <div className={`h-[80px] flex items-center gap-3 px-6 border-b border-white/10 ${sidebarCollapsed ? 'justify-center px-0' : ''}`}>
-          <div className="w-10 h-10 bg-gradient-to-tr from-[#489473] to-[#71C99B] rounded-xl flex items-center justify-center shadow-lg shadow-[#489473]/30 shrink-0">
-            <Sparkles className="w-5 h-5 text-white" />
-          </div>
-          {!sidebarCollapsed && (
-            <div className="flex flex-col">
-              <span className="text-base font-extrabold tracking-tight text-white leading-tight">LeadHunter</span>
-              <span className="text-[11px] font-medium text-[#71C99B] uppercase tracking-wider">AI Autonomous B2B</span>
+        <div className={`h-[72px] sm:h-[80px] flex items-center justify-between px-6 border-b border-white/10 ${sidebarCollapsed ? 'lg:justify-center lg:px-0' : ''}`}>
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-gradient-to-tr from-[#489473] to-[#71C99B] rounded-xl flex items-center justify-center shadow-lg shadow-[#489473]/30 shrink-0">
+              <Sparkles className="w-5 h-5 text-white" />
             </div>
+            {(!sidebarCollapsed || mobileMenuOpen) && (
+              <div className="flex flex-col">
+                <span className="text-base font-extrabold tracking-tight text-white leading-tight">LeadHunter</span>
+                <span className="text-[11px] font-medium text-[#71C99B] uppercase tracking-wider">AI Autonomous B2B</span>
+              </div>
+            )}
+          </div>
+          {mobileMenuOpen && (
+            <button onClick={() => setMobileMenuOpen(false)} className="lg:hidden text-white/70 hover:text-white">
+              <X className="w-5 h-5" />
+            </button>
           )}
         </div>
         
         {/* Navigation Items */}
         <nav className="flex-1 flex flex-col gap-1.5 p-4">
           <button 
-            onClick={() => { setActiveTab('pipeline'); }} 
+            onClick={() => { setActiveTab('pipeline'); setMobileMenuOpen(false); }} 
             className={`flex items-center gap-3.5 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
               activeTab === 'pipeline' 
                 ? 'bg-[#489473] text-white shadow-md shadow-[#489473]/20' 
                 : 'text-slate-300 hover:bg-white/5 hover:text-white'
-            } ${sidebarCollapsed ? 'justify-center px-0' : ''}`}
+            } ${sidebarCollapsed ? 'lg:justify-center lg:px-0' : ''}`}
           >
             <LayoutDashboard className="w-5 h-5 shrink-0" />
-            {!sidebarCollapsed && <span>Dashboard & Leads</span>}
+            {(!sidebarCollapsed || mobileMenuOpen) && <span>Dashboard & Leads</span>}
           </button>
           
           <button 
-            onClick={() => setActiveTab('history')} 
+            onClick={() => { setActiveTab('history'); setMobileMenuOpen(false); }} 
             className={`flex items-center gap-3.5 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
               activeTab === 'history' 
                 ? 'bg-[#489473] text-white shadow-md shadow-[#489473]/20' 
                 : 'text-slate-300 hover:bg-white/5 hover:text-white'
-            } ${sidebarCollapsed ? 'justify-center px-0' : ''}`}
+            } ${sidebarCollapsed ? 'lg:justify-center lg:px-0' : ''}`}
           >
             <History className="w-5 h-5 shrink-0" />
-            {!sidebarCollapsed && <span>Campaign History</span>}
+            {(!sidebarCollapsed || mobileMenuOpen) && <span>Campaign History</span>}
           </button>
 
           <button 
-            onClick={() => setActiveTab('logs')} 
+            onClick={() => { setActiveTab('logs'); setMobileMenuOpen(false); }} 
             className={`flex items-center gap-3.5 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
               activeTab === 'logs' 
                 ? 'bg-[#489473] text-white shadow-md shadow-[#489473]/20' 
                 : 'text-slate-300 hover:bg-white/5 hover:text-white'
-            } ${sidebarCollapsed ? 'justify-center px-0' : ''}`}
+            } ${sidebarCollapsed ? 'lg:justify-center lg:px-0' : ''}`}
           >
             <Terminal className="w-5 h-5 shrink-0" />
-            {!sidebarCollapsed && <span>Live Engine Logs</span>}
+            {(!sidebarCollapsed || mobileMenuOpen) && <span>Live Engine Logs</span>}
           </button>
         </nav>
         
-        {/* Collapse Toggle */}
-        <div className="p-4 border-t border-white/10">
+        {/* Collapse Toggle (Desktop only) */}
+        <div className="p-4 border-t border-white/10 hidden lg:block">
           <button 
             onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
             className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-300 hover:bg-white/5 hover:text-white text-xs font-medium w-full transition-colors justify-center"
@@ -435,18 +453,18 @@ export default function Dashboard() {
       </aside>
 
       {/* MAIN CONTAINER */}
-      <div className="flex-1 flex flex-col overflow-hidden relative">
+      <div className={`flex-1 flex flex-col overflow-hidden relative transition-all duration-300 ${sidebarCollapsed ? 'lg:ml-[76px]' : 'lg:ml-[250px]'}`}>
 
         {/* FULL-SCREEN LIVE AI HUNT PROGRESS OVERLAY */}
         {startingEngine && (
-          <div className="absolute inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-md p-4 animate-in fade-in duration-200">
-            <div className="flex flex-col items-center text-center w-full max-w-xl bg-white p-8 sm:p-10 rounded-3xl shadow-2xl border border-slate-100 relative overflow-hidden">
-              <div className="w-16 h-16 bg-[#489473]/10 rounded-2xl flex items-center justify-center mb-5 relative">
-                <Loader2 className="w-8 h-8 text-[#489473] animate-spin" />
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 backdrop-blur-md p-4 animate-in fade-in duration-200">
+            <div className="flex flex-col items-center text-center w-full max-w-xl bg-white p-6 sm:p-10 rounded-3xl shadow-2xl border border-slate-100 relative overflow-hidden">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#489473]/10 rounded-2xl flex items-center justify-center mb-4 sm:mb-5 relative">
+                <Loader2 className="w-7 h-7 sm:w-8 sm:h-8 text-[#489473] animate-spin" />
               </div>
               
-              <h3 className="text-2xl font-black text-[#1E293B] mb-2 tracking-tight">AI Autonomous Pipeline Active</h3>
-              <p className="text-sm text-slate-500 mb-6">
+              <h3 className="text-xl sm:text-2xl font-black text-[#1E293B] mb-2 tracking-tight">AI Autonomous Pipeline Active</h3>
+              <p className="text-xs sm:text-sm text-slate-500 mb-6">
                 Hunting <span className="font-bold text-[#489473]">{targetCount} {category}</span> leads in <span className="font-bold text-[#489473]">{city}</span>.
               </p>
 
@@ -458,15 +476,15 @@ export default function Dashboard() {
                 />
               </div>
               
-              <div className="flex justify-between w-full text-xs font-bold text-slate-500 mb-6">
-                <span className="text-[#489473] flex items-center gap-1.5">
-                  <Activity className="w-3.5 h-3.5 animate-pulse" /> {enginePhase}
+              <div className="flex justify-between w-full text-xs font-bold text-slate-500 mb-4 sm:mb-6">
+                <span className="text-[#489473] flex items-center gap-1.5 truncate">
+                  <Activity className="w-3.5 h-3.5 animate-pulse shrink-0" /> {enginePhase}
                 </span>
                 <span>{engineProgress}%</span>
               </div>
               
               {/* Terminal Logs Window */}
-              <div className="text-[11px] font-mono text-left w-full h-44 overflow-y-auto bg-slate-950 text-emerald-400 p-4 rounded-xl border border-slate-800 leading-relaxed shadow-inner">
+              <div className="text-[10px] sm:text-[11px] font-mono text-left w-full h-36 sm:h-44 overflow-y-auto bg-slate-950 text-emerald-400 p-3 sm:p-4 rounded-xl border border-slate-800 leading-relaxed shadow-inner">
                 {engineLogs ? (
                   engineLogs.split('\n').filter(l => l.trim()).slice(-15).map((line, i) => (
                     <div key={i} className="truncate">{line}</div>
@@ -478,7 +496,7 @@ export default function Dashboard() {
 
               <button 
                 onClick={() => setStartingEngine(false)}
-                className="mt-6 text-xs text-slate-400 hover:text-slate-600 font-semibold underline"
+                className="mt-5 text-xs text-slate-400 hover:text-slate-600 font-semibold underline"
               >
                 Hide progress and let run in background
               </button>
@@ -487,54 +505,75 @@ export default function Dashboard() {
         )}
 
         {/* TOP SEARCH & ACTION BAR */}
-        <header className="h-[80px] bg-white border-b border-slate-200/80 flex items-center justify-between px-6 sm:px-8 shrink-0 z-20 gap-4">
+        <header className="bg-white border-b border-slate-200/80 px-4 sm:px-8 py-3.5 sm:py-0 sm:h-[80px] flex flex-col sm:flex-row sm:items-center justify-between gap-3 shrink-0 z-20">
           
+          {/* Mobile Top Bar Header (Logo + Hamburger) */}
+          <div className="flex items-center justify-between sm:hidden w-full">
+            <div className="flex items-center gap-2.5">
+              <button 
+                onClick={() => setMobileMenuOpen(true)}
+                className="w-9 h-9 bg-slate-100 text-slate-700 rounded-xl flex items-center justify-center border border-slate-200"
+              >
+                <Menu className="w-5 h-5" />
+              </button>
+              <span className="text-base font-extrabold text-[#193F2E]">LeadHunter AI</span>
+            </div>
+
+            <button 
+              onClick={fetchLeads}
+              disabled={loading}
+              className="w-9 h-9 bg-slate-100 text-slate-600 rounded-xl flex items-center justify-center border border-slate-200"
+            >
+              <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin text-[#489473]' : ''}`} />
+            </button>
+          </div>
+
           {/* SEARCH & CAMPAIGN INPUTS */}
-          <div className="flex items-center bg-[#F1F5F9] rounded-2xl p-1.5 flex-1 max-w-2xl border border-slate-200 shadow-inner">
-            <div className="flex items-center gap-2 flex-1 px-3 border-r border-slate-300/80">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center bg-[#F1F5F9] rounded-2xl p-1.5 flex-1 max-w-2xl border border-slate-200 shadow-inner gap-1 sm:gap-0">
+            <div className="flex items-center gap-2 flex-1 px-3 py-1 sm:py-0 sm:border-r border-slate-300/80">
               <MapPin className="w-4 h-4 text-[#489473] shrink-0" />
-              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">City</span>
+              <span className="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider shrink-0">City</span>
               <input 
                 type="text" 
                 value={city} 
                 onChange={e => setCity(e.target.value)}
-                className="bg-transparent border-none text-[#1E293B] focus:outline-none w-full text-sm font-bold placeholder-slate-400"
+                className="bg-transparent border-none text-[#1E293B] focus:outline-none w-full text-xs sm:text-sm font-bold placeholder-slate-400"
                 placeholder="e.g. Lucknow"
               />
             </div>
             
-            <div className="flex items-center gap-2 flex-1 px-3 border-r border-slate-300/80">
+            <div className="flex items-center gap-2 flex-1 px-3 py-1 sm:py-0 sm:border-r border-slate-300/80">
               <Building2 className="w-4 h-4 text-[#489473] shrink-0" />
-              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Niche</span>
+              <span className="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider shrink-0">Niche</span>
               <input 
                 type="text" 
                 value={category} 
                 onChange={e => setCategory(e.target.value)}
-                className="bg-transparent border-none text-[#1E293B] focus:outline-none w-full text-sm font-bold placeholder-slate-400"
+                className="bg-transparent border-none text-[#1E293B] focus:outline-none w-full text-xs sm:text-sm font-bold placeholder-slate-400"
                 placeholder="e.g. Coaching Institutes"
               />
             </div>
 
-            <div className="flex items-center gap-1.5 px-3">
-              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Goal</span>
+            <div className="flex items-center justify-between sm:justify-start gap-1.5 px-3 py-1 sm:py-0">
+              <span className="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider">Goal</span>
               <select 
                 value={targetCount}
                 onChange={e => setTargetCount(Number(e.target.value))}
                 className="bg-transparent text-xs font-bold text-[#1E293B] focus:outline-none cursor-pointer"
               >
-                <option value={20}>20</option>
+                <option value={20}>20 Leads</option>
                 <option value={50}>50 Leads</option>
                 <option value={100}>100 Leads</option>
               </select>
             </div>
           </div>
 
-          {/* START AI HUNT & QUICK ACTIONS */}
+          {/* START AI HUNT & DESKTOP REFRESH */}
           <div className="flex items-center gap-3">
             <button 
               onClick={startEngine}
               disabled={startingEngine}
-              className="bg-gradient-to-r from-[#489473] to-[#36a877] hover:from-[#3C7F62] hover:to-[#2d8f65] text-white px-6 py-2.5 rounded-xl text-sm font-bold shadow-lg shadow-[#489473]/30 transition-all flex items-center gap-2 active:scale-95 disabled:opacity-50 whitespace-nowrap"
+              className="w-full sm:w-auto bg-gradient-to-r from-[#489473] to-[#36a877] hover:from-[#3C7F62] hover:to-[#2d8f65] text-white px-5 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold shadow-lg shadow-[#489473]/30 transition-all flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50 whitespace-nowrap"
             >
               {startingEngine ? <Loader2 className="w-4 h-4 animate-spin" /> : <Play className="w-4 h-4" fill="currentColor" />}
               <span>Start AI Hunt</span>
@@ -544,7 +583,7 @@ export default function Dashboard() {
               onClick={fetchLeads}
               disabled={loading}
               title="Refresh leads list"
-              className="w-10 h-10 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl flex items-center justify-center transition-colors border border-slate-200 shrink-0"
+              className="hidden sm:flex w-10 h-10 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl items-center justify-center transition-colors border border-slate-200 shrink-0"
             >
               <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin text-[#489473]' : ''}`} />
             </button>
@@ -552,20 +591,20 @@ export default function Dashboard() {
         </header>
 
         {/* SCROLLABLE DASHBOARD VIEW */}
-        <main className="flex-1 overflow-y-auto p-6 sm:p-8">
+        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
           
           {/* TAB 1: PIPELINE & LEADS */}
           {activeTab === 'pipeline' && (
             <>
               {/* LOCATION CLUSTER SELECTOR PILLS */}
-              <div className="flex items-center gap-2 mb-6 overflow-x-auto pb-1 scrollbar-none">
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1 shrink-0 mr-1">
+              <div className="flex items-center gap-2 mb-5 overflow-x-auto pb-1 scrollbar-none">
+                <span className="text-[11px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1 shrink-0 mr-1">
                   <MapPin className="w-3.5 h-3.5 text-[#489473]" /> Filter Location:
                 </span>
                 
                 <button
                   onClick={() => { setSelectedCityFilter("ALL"); setActiveCampaign(null); }}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all shrink-0 ${
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all shrink-0 ${
                     selectedCityFilter === "ALL"
                       ? "bg-[#193F2E] text-white shadow-md shadow-[#193F2E]/20"
                       : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-100"
@@ -578,7 +617,7 @@ export default function Dashboard() {
                   <button
                     key={c.name}
                     onClick={() => { setSelectedCityFilter(c.name); setActiveCampaign(null); }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all shrink-0 flex items-center gap-1.5 ${
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all shrink-0 flex items-center gap-1.5 ${
                       selectedCityFilter.toLowerCase() === c.name.toLowerCase()
                         ? "bg-[#489473] text-white shadow-md shadow-[#489473]/30"
                         : "bg-white text-slate-700 border border-slate-200 hover:bg-slate-100"
@@ -596,109 +635,111 @@ export default function Dashboard() {
                 ))}
               </div>
 
-              {/* METRIC CARDS OVERVIEW */}
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+              {/* HIGH-CONTRAST RESPONSIVE METRIC CARDS */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-3 sm:gap-4 mb-6 sm:mb-8">
                 
                 {/* Total Discovered */}
                 <div 
                   onClick={() => setSelectedTierFilter("ALL")}
-                  className={`cursor-pointer rounded-2xl p-5 border transition-all ${
+                  className={`cursor-pointer rounded-2xl p-4 sm:p-5 border transition-all ${
                     selectedTierFilter === "ALL" 
-                      ? "bg-[#193F2E] text-white shadow-xl shadow-[#193F2E]/20 border-[#193F2E]" 
-                      : "bg-white text-slate-800 border-slate-200/80 hover:border-[#489473]/50 shadow-sm"
+                      ? "bg-white text-slate-900 border-2 border-[#193F2E] shadow-lg shadow-[#193F2E]/10 ring-2 ring-[#193F2E]/20" 
+                      : "bg-white text-slate-800 border-slate-200/80 hover:border-[#193F2E]/40 shadow-sm"
                   }`}
                 >
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-bold uppercase tracking-wider opacity-80">All Leads</span>
-                    <Search className="w-4 h-4 opacity-70" />
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-slate-600">All Leads</span>
+                    <Search className="w-4 h-4 text-slate-400" />
                   </div>
-                  <div className="text-2xl font-black">{metrics.total}</div>
-                  <div className="text-[11px] opacity-70 mt-1">{selectedCityFilter === "ALL" ? "All cities" : selectedCityFilter}</div>
+                  <div className="text-xl sm:text-2xl font-black text-slate-900">{metrics.total}</div>
+                  <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium mt-1 truncate">
+                    {selectedCityFilter === "ALL" ? "All cities" : selectedCityFilter}
+                  </div>
                 </div>
 
                 {/* Hot Prospects */}
                 <div 
                   onClick={() => setSelectedTierFilter("HOT")}
-                  className={`cursor-pointer rounded-2xl p-5 border transition-all ${
+                  className={`cursor-pointer rounded-2xl p-4 sm:p-5 border transition-all ${
                     selectedTierFilter === "HOT" 
-                      ? "bg-rose-600 text-white shadow-xl shadow-rose-600/20 border-rose-600" 
+                      ? "bg-white text-slate-900 border-2 border-rose-500 shadow-lg shadow-rose-500/10 ring-2 ring-rose-500/20" 
                       : "bg-white text-slate-800 border-slate-200/80 hover:border-rose-300 shadow-sm"
                   }`}
                 >
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-bold uppercase tracking-wider text-rose-500 group-hover:text-rose-600">Hot Leads</span>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-rose-600">Hot Leads</span>
                     <Flame className="w-4 h-4 text-rose-500" />
                   </div>
-                  <div className="text-2xl font-black text-rose-600">{metrics.hot}</div>
-                  <div className="text-[11px] text-slate-400 mt-1">Score &ge; 70 pts</div>
+                  <div className="text-xl sm:text-2xl font-black text-rose-600">{metrics.hot}</div>
+                  <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium mt-1">Score &ge; 70 pts</div>
                 </div>
 
                 {/* Warm Prospects */}
                 <div 
                   onClick={() => setSelectedTierFilter("WARM")}
-                  className={`cursor-pointer rounded-2xl p-5 border transition-all ${
+                  className={`cursor-pointer rounded-2xl p-4 sm:p-5 border transition-all ${
                     selectedTierFilter === "WARM" 
-                      ? "bg-amber-500 text-white shadow-xl shadow-amber-500/20 border-amber-500" 
+                      ? "bg-white text-slate-900 border-2 border-amber-500 shadow-lg shadow-amber-500/10 ring-2 ring-amber-500/20" 
                       : "bg-white text-slate-800 border-slate-200/80 hover:border-amber-300 shadow-sm"
                   }`}
                 >
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-bold uppercase tracking-wider text-amber-600">Warm Leads</span>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-amber-600">Warm Leads</span>
                     <Zap className="w-4 h-4 text-amber-500" />
                   </div>
-                  <div className="text-2xl font-black text-amber-600">{metrics.warm}</div>
-                  <div className="text-[11px] text-slate-400 mt-1">Score 45-69 pts</div>
+                  <div className="text-xl sm:text-2xl font-black text-amber-600">{metrics.warm}</div>
+                  <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium mt-1">Score 45-69 pts</div>
                 </div>
 
                 {/* No Website Opps */}
                 <div 
                   onClick={() => setSelectedTierFilter("NO_WEBSITE")}
-                  className={`cursor-pointer rounded-2xl p-5 border transition-all ${
+                  className={`cursor-pointer rounded-2xl p-4 sm:p-5 border transition-all ${
                     selectedTierFilter === "NO_WEBSITE" 
-                      ? "bg-indigo-600 text-white shadow-xl shadow-indigo-600/20 border-indigo-600" 
+                      ? "bg-white text-slate-900 border-2 border-indigo-600 shadow-lg shadow-indigo-600/10 ring-2 ring-indigo-600/20" 
                       : "bg-white text-slate-800 border-slate-200/80 hover:border-indigo-300 shadow-sm"
                   }`}
                 >
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">No Website</span>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-indigo-600">No Website</span>
                     <Globe className="w-4 h-4 text-indigo-500" />
                   </div>
-                  <div className="text-2xl font-black text-indigo-600">{metrics.no_website}</div>
-                  <div className="text-[11px] text-slate-400 mt-1">Prime design targets</div>
+                  <div className="text-xl sm:text-2xl font-black text-indigo-600">{metrics.no_website}</div>
+                  <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium mt-1">Prime redesign targets</div>
                 </div>
 
                 {/* Demo Ready */}
                 <div 
                   onClick={() => setSelectedTierFilter("DEMO_READY")}
-                  className={`cursor-pointer rounded-2xl p-5 border transition-all ${
+                  className={`cursor-pointer rounded-2xl p-4 sm:p-5 border transition-all ${
                     selectedTierFilter === "DEMO_READY" 
-                      ? "bg-emerald-600 text-white shadow-xl shadow-emerald-600/20 border-emerald-600" 
+                      ? "bg-white text-slate-900 border-2 border-emerald-600 shadow-lg shadow-emerald-600/10 ring-2 ring-emerald-600/20" 
                       : "bg-white text-slate-800 border-slate-200/80 hover:border-emerald-300 shadow-sm"
                   }`}
                 >
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-bold uppercase tracking-wider text-emerald-600">Demos Ready</span>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-emerald-600">Demos Ready</span>
                     <Sparkles className="w-4 h-4 text-emerald-500" />
                   </div>
-                  <div className="text-2xl font-black text-emerald-600">{metrics.demo_ready}</div>
-                  <div className="text-[11px] text-slate-400 mt-1">Pitch URL generated</div>
+                  <div className="text-xl sm:text-2xl font-black text-emerald-600">{metrics.demo_ready}</div>
+                  <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium mt-1">Pitch URL generated</div>
                 </div>
 
-                {/* Pending Approval */}
+                {/* Pending Approval (100% CLEAR HIGH CONTRAST) */}
                 <div 
                   onClick={() => setSelectedTierFilter("PENDING")}
-                  className={`cursor-pointer rounded-2xl p-5 border transition-all ${
+                  className={`cursor-pointer rounded-2xl p-4 sm:p-5 border transition-all ${
                     selectedTierFilter === "PENDING" 
-                      ? "bg-blue-600 text-white shadow-xl shadow-blue-600/20 border-blue-600" 
+                      ? "bg-white text-slate-900 border-2 border-blue-600 shadow-lg shadow-blue-600/10 ring-2 ring-blue-600/20" 
                       : "bg-white text-slate-800 border-slate-200/80 hover:border-blue-300 shadow-sm"
                   }`}
                 >
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-bold uppercase tracking-wider text-blue-600">Ready To Send</span>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-blue-600">Ready To Send</span>
                     <CheckCircle className="w-4 h-4 text-blue-500" />
                   </div>
-                  <div className="text-2xl font-black text-blue-600">{metrics.pending}</div>
-                  <div className="text-[11px] text-slate-400 mt-1">1-click n8n dispatch</div>
+                  <div className="text-xl sm:text-2xl font-black text-blue-600">{metrics.pending}</div>
+                  <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium mt-1">1-click n8n dispatch</div>
                 </div>
 
               </div>
@@ -707,11 +748,11 @@ export default function Dashboard() {
               <div className="bg-white rounded-3xl shadow-sm border border-slate-200/80 overflow-hidden flex flex-col">
                 
                 {/* TOOLBAR */}
-                <div className="p-5 border-b border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4 bg-slate-50/50">
+                <div className="p-4 sm:p-5 border-b border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4 bg-slate-50/50">
                   
                   {/* Left: Search query within results & active campaign indicator */}
-                  <div className="flex items-center gap-3 flex-1 flex-wrap">
-                    <div className="relative flex-1 min-w-[280px] max-w-md">
+                  <div className="flex items-center gap-2 sm:gap-3 flex-1 flex-wrap">
+                    <div className="relative flex-1 min-w-[240px] max-w-md">
                       <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                       <input 
                         type="text"
@@ -729,8 +770,8 @@ export default function Dashboard() {
 
                     {/* Active Campaign Filter Badge */}
                     {activeCampaign && (
-                      <div className="flex items-center gap-1.5 bg-[#489473]/10 text-[#489473] px-3 py-1.5 rounded-lg text-xs font-bold border border-[#489473]/20">
-                        <span>Campaign: {activeCampaign.city} ({activeCampaign.category})</span>
+                      <div className="flex items-center gap-1.5 bg-[#489473]/10 text-[#489473] px-2.5 py-1.5 rounded-lg text-xs font-bold border border-[#489473]/20">
+                        <span>{activeCampaign.city} ({activeCampaign.category})</span>
                         <button onClick={() => setActiveCampaign(null)} className="hover:text-rose-600 ml-1">
                           <X className="w-3.5 h-3.5" />
                         </button>
@@ -738,7 +779,7 @@ export default function Dashboard() {
                     )}
 
                     {selectedCityFilter !== "ALL" && (
-                      <div className="flex items-center gap-1.5 bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-200">
+                      <div className="flex items-center gap-1.5 bg-slate-100 text-slate-700 px-2.5 py-1.5 rounded-lg text-xs font-bold border border-slate-200">
                         <span>City: {selectedCityFilter}</span>
                         <button onClick={() => setSelectedCityFilter("ALL")} className="hover:text-rose-600 ml-1">
                           <X className="w-3.5 h-3.5" />
@@ -748,15 +789,15 @@ export default function Dashboard() {
                   </div>
 
                   {/* Right: Results Count, Batch Delete, Export Buttons */}
-                  <div className="flex items-center gap-2 self-end md:self-auto">
-                    <span className="text-xs font-bold text-slate-500 mr-2">
+                  <div className="flex items-center gap-2 flex-wrap justify-between sm:justify-end">
+                    <span className="text-xs font-bold text-slate-500 mr-1">
                       Showing {filteredLeads.length} of {visibleLeads.length} leads
                     </span>
 
                     {selectedLeads.size > 0 && (
                       <button 
                         onClick={handleDeleteSelected}
-                        className="flex items-center gap-1.5 bg-rose-50 hover:bg-rose-100 text-rose-600 px-3 py-2 rounded-xl text-xs font-bold transition-all border border-rose-200"
+                        className="flex items-center gap-1.5 bg-rose-50 hover:bg-rose-100 text-rose-600 px-3 py-1.5 rounded-xl text-xs font-bold transition-all border border-rose-200"
                       >
                         <Trash2 className="w-3.5 h-3.5" /> Delete ({selectedLeads.size})
                       </button>
@@ -765,23 +806,23 @@ export default function Dashboard() {
                     <button 
                       onClick={exportCSV}
                       disabled={filteredLeads.length === 0}
-                      className="flex items-center gap-1.5 bg-white hover:bg-slate-100 text-slate-700 px-3 py-2 rounded-xl text-xs font-bold transition-all border border-slate-200 shadow-sm disabled:opacity-50"
+                      className="flex items-center gap-1.5 bg-white hover:bg-slate-100 text-slate-700 px-3 py-1.5 rounded-xl text-xs font-bold transition-all border border-slate-200 shadow-sm disabled:opacity-50"
                     >
-                      <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-600" /> Export CSV
+                      <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-600" /> CSV
                     </button>
 
                     <button 
                       onClick={exportJSON}
                       disabled={filteredLeads.length === 0}
-                      className="flex items-center gap-1.5 bg-white hover:bg-slate-100 text-slate-700 px-3 py-2 rounded-xl text-xs font-bold transition-all border border-slate-200 shadow-sm disabled:opacity-50"
+                      className="flex items-center gap-1.5 bg-white hover:bg-slate-100 text-slate-700 px-3 py-1.5 rounded-xl text-xs font-bold transition-all border border-slate-200 shadow-sm disabled:opacity-50"
                     >
                       <FileJson className="w-3.5 h-3.5 text-blue-600" /> JSON
                     </button>
                   </div>
                 </div>
 
-                {/* TABLE */}
-                <div className="overflow-x-auto">
+                {/* DESKTOP TABLE VIEW (HIDDEN ON MOBILE) */}
+                <div className="hidden md:block overflow-x-auto">
                   <table className="w-full text-left border-collapse">
                     <thead>
                       <tr className="bg-slate-100/60 border-b border-slate-200 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider">
@@ -816,16 +857,16 @@ export default function Dashboard() {
                         </tr>
                       ) : filteredLeads.length === 0 ? (
                         <tr>
-                          <td colSpan={6} className="px-6 py-20 text-center">
+                          <td colSpan={6} className="px-6 py-16 text-center">
                             <div className="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center mx-auto mb-3 text-slate-400">
                               <Search className="w-6 h-6" />
                             </div>
                             <h4 className="font-bold text-[#1E293B] mb-1">No Leads Found</h4>
                             <p className="text-xs text-slate-500 max-w-sm mx-auto mb-4">
                               {selectedCityFilter !== "ALL"
-                                ? `No leads found for location "${selectedCityFilter}". Click 'Start AI Hunt' above to scrape leads in ${selectedCityFilter}!`
+                                ? `No leads found for "${selectedCityFilter}". Click 'Start AI Hunt' above to scrape leads in ${selectedCityFilter}!`
                                 : searchQuery 
-                                ? `No leads matched your search query "${searchQuery}".` 
+                                ? `No leads matched "${searchQuery}".` 
                                 : "Start your first AI Hunt by clicking 'Start AI Hunt' above!"}
                             </p>
                             <div className="flex justify-center gap-2">
@@ -1011,16 +1052,125 @@ export default function Dashboard() {
                   </table>
                 </div>
 
+                {/* MOBILE CARD LIST VIEW (SPECIALLY OPTIMIZED FOR PHONES) */}
+                <div className="md:hidden divide-y divide-slate-100">
+                  {loading ? (
+                    <div className="p-12 text-center text-slate-400">
+                      <Loader2 className="w-8 h-8 animate-spin mx-auto mb-2 text-[#489473]" />
+                      <p className="font-semibold text-xs">Loading discovered leads...</p>
+                    </div>
+                  ) : filteredLeads.length === 0 ? (
+                    <div className="p-8 text-center">
+                      <h4 className="font-bold text-sm text-[#1E293B] mb-1">No Leads Found</h4>
+                      <p className="text-xs text-slate-500 mb-3">Try clearing search or starting a hunt.</p>
+                      {selectedCityFilter !== "ALL" && (
+                        <button 
+                          onClick={() => setSelectedCityFilter("ALL")} 
+                          className="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-lg text-xs font-bold"
+                        >
+                          View All Locations
+                        </button>
+                      )}
+                    </div>
+                  ) : (
+                    filteredLeads.map((lead, idx) => (
+                      <div key={String(lead.lead_id || idx)} className="p-4 space-y-3">
+                        <div className="flex items-start justify-between gap-2">
+                          <div>
+                            <h4 
+                              onClick={() => { setViewLead(lead); setModalTab("overview"); }}
+                              className="font-extrabold text-sm text-[#1E293B] active:text-[#489473]"
+                            >
+                              {lead.business_name}
+                            </h4>
+                            <p className="text-xs text-slate-500 font-medium mt-0.5">
+                              {lead.category || "Business"} • <strong className="text-slate-700">{lead.city}</strong>
+                            </p>
+                          </div>
+                          
+                          <span className={`px-2.5 py-0.5 rounded-md text-[11px] font-black ${
+                            lead.lead_tier === 'HOT' 
+                              ? 'bg-rose-100 text-rose-700' 
+                              : lead.lead_tier === 'WARM' 
+                              ? 'bg-amber-100 text-amber-700' 
+                              : 'bg-slate-100 text-slate-600'
+                          }`}>
+                            {lead.lead_score || 0} PTS
+                          </span>
+                        </div>
+
+                        {/* Status Tags */}
+                        <div className="flex items-center gap-2 flex-wrap text-xs">
+                          {lead.website_status === "NO_WEBSITE" ? (
+                            <span className="px-2 py-0.5 rounded bg-rose-50 text-rose-600 border border-rose-200 text-[10px] font-bold">
+                              No Website
+                            </span>
+                          ) : lead.website_status === "BROKEN_WEBSITE" ? (
+                            <span className="px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-200 text-[10px] font-bold">
+                              Broken Site
+                            </span>
+                          ) : lead.website_url ? (
+                            <a href={lead.website_url} target="_blank" rel="noreferrer" className="text-blue-600 font-semibold text-[11px] flex items-center gap-0.5">
+                              Website <ExternalLink className="w-3 h-3" />
+                            </a>
+                          ) : null}
+
+                          {lead.phone && (
+                            <span className="text-slate-500 text-[11px] font-mono flex items-center gap-1">
+                              <Phone className="w-3 h-3 text-slate-400" /> {lead.phone}
+                            </span>
+                          )}
+
+                          {lead.demo_url && (
+                            <a href={lead.demo_url} target="_blank" rel="noreferrer" className="px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] font-bold border border-emerald-200">
+                              Demo ↗
+                            </a>
+                          )}
+                        </div>
+
+                        {/* Mobile Actions */}
+                        <div className="flex items-center gap-2 pt-1">
+                          <button
+                            onClick={() => { setViewLead(lead); setModalTab("pitch"); }}
+                            className="flex-1 py-1.5 bg-slate-100 text-slate-700 rounded-lg text-xs font-bold text-center"
+                          >
+                            View Pitch
+                          </button>
+
+                          {lead.phone && lead.whatsapp_message && (
+                            <a
+                              href={`https://wa.me/${lead.phone.replace(/\D/g, '')}?text=${encodeURIComponent(lead.whatsapp_message)}`}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="px-3 py-1.5 bg-emerald-600 text-white rounded-lg text-xs font-bold flex items-center gap-1"
+                            >
+                              <MessageSquare className="w-3.5 h-3.5" /> WhatsApp
+                            </a>
+                          )}
+
+                          <button
+                            onClick={() => approveLead(String(lead.lead_id))}
+                            disabled={approving === lead.lead_id || !lead.email_message}
+                            className="px-4 py-1.5 bg-[#489473] text-white rounded-lg text-xs font-bold shadow-sm disabled:opacity-50"
+                          >
+                            {approving === lead.lead_id ? "..." : "Approve"}
+                          </button>
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </div>
+
               </div>
             </>
           )}
 
           {/* TAB 2: CAMPAIGN HISTORY */}
           {activeTab === 'history' && (
-            <div className="bg-white rounded-3xl shadow-sm border border-slate-200/80 p-8">
+            <div className="bg-white rounded-3xl shadow-sm border border-slate-200/80 p-5 sm:p-8">
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <h3 className="text-xl font-extrabold text-[#1E293B]">Campaign History</h3>
+                  <h3 className="text-lg sm:text-xl font-extrabold text-[#1E293B]">Campaign History</h3>
                   <p className="text-xs text-slate-500 mt-1">All unique location and business target clusters discovered.</p>
                 </div>
                 <div className="text-xs font-bold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg">
@@ -1032,15 +1182,15 @@ export default function Dashboard() {
                 <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="bg-slate-100/60 border-b border-slate-200 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider">
-                      <th className="px-5 py-3.5">Location</th>
-                      <th className="px-5 py-3.5">Business Niche</th>
-                      <th className="px-5 py-3.5 text-center">Total Leads</th>
-                      <th className="px-5 py-3.5 text-center">Hot Prospects</th>
-                      <th className="px-5 py-3.5 text-center">Warm Prospects</th>
-                      <th className="px-5 py-3.5 text-right">Filter Action</th>
+                      <th className="px-4 sm:px-5 py-3.5">Location</th>
+                      <th className="px-4 sm:px-5 py-3.5">Business Niche</th>
+                      <th className="px-4 sm:px-5 py-3.5 text-center">Total Leads</th>
+                      <th className="px-4 sm:px-5 py-3.5 text-center">Hot Prospects</th>
+                      <th className="px-4 sm:px-5 py-3.5 text-center">Warm Prospects</th>
+                      <th className="px-4 sm:px-5 py-3.5 text-right">Filter Action</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-slate-100 text-sm">
+                  <tbody className="divide-y divide-slate-100 text-xs sm:text-sm">
                     {campaignsList.length === 0 ? (
                       <tr>
                         <td colSpan={6} className="px-6 py-12 text-center text-slate-400">
@@ -1050,34 +1200,34 @@ export default function Dashboard() {
                     ) : (
                       campaignsList.map((c, i) => (
                         <tr key={i} className="hover:bg-slate-50 transition-colors">
-                          <td className="px-5 py-4 font-bold text-[#1E293B] flex items-center gap-2">
-                            <MapPin className="w-4 h-4 text-[#489473]" />
+                          <td className="px-4 sm:px-5 py-4 font-bold text-[#1E293B] flex items-center gap-2">
+                            <MapPin className="w-4 h-4 text-[#489473] shrink-0" />
                             <span>{c.city}</span>
                           </td>
-                          <td className="px-5 py-4 text-slate-600 font-semibold">{c.category}</td>
-                          <td className="px-5 py-4 text-center">
-                            <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-md font-bold text-xs">
+                          <td className="px-4 sm:px-5 py-4 text-slate-600 font-semibold">{c.category}</td>
+                          <td className="px-4 sm:px-5 py-4 text-center">
+                            <span className="bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md font-bold text-xs">
                               {c.count}
                             </span>
                           </td>
-                          <td className="px-5 py-4 text-center">
-                            <span className="bg-rose-50 text-rose-600 px-3 py-1 rounded-md font-bold text-xs">
+                          <td className="px-4 sm:px-5 py-4 text-center">
+                            <span className="bg-rose-50 text-rose-600 px-2.5 py-1 rounded-md font-bold text-xs">
                               {c.hot} HOT
                             </span>
                           </td>
-                          <td className="px-5 py-4 text-center">
-                            <span className="bg-amber-50 text-amber-600 px-3 py-1 rounded-md font-bold text-xs">
+                          <td className="px-4 sm:px-5 py-4 text-center">
+                            <span className="bg-amber-50 text-amber-600 px-2.5 py-1 rounded-md font-bold text-xs">
                               {c.warm} WARM
                             </span>
                           </td>
-                          <td className="px-5 py-4 text-right">
+                          <td className="px-4 sm:px-5 py-4 text-right">
                             <button
                               onClick={() => {
                                 setSelectedCityFilter(c.city);
                                 setActiveCampaign({ city: c.city, category: c.category });
                                 setActiveTab("pipeline");
                               }}
-                              className="px-4 py-1.5 bg-[#489473]/10 hover:bg-[#489473] hover:text-white text-[#489473] rounded-lg text-xs font-bold transition-colors"
+                              className="px-3 sm:px-4 py-1.5 bg-[#489473]/10 hover:bg-[#489473] hover:text-white text-[#489473] rounded-lg text-xs font-bold transition-colors whitespace-nowrap"
                             >
                               View Leads
                             </button>
@@ -1093,10 +1243,10 @@ export default function Dashboard() {
 
           {/* TAB 3: LIVE ENGINE LOGS */}
           {activeTab === 'logs' && (
-            <div className="bg-white rounded-3xl shadow-sm border border-slate-200/80 p-8 flex flex-col h-[calc(100vh-140px)]">
+            <div className="bg-white rounded-3xl shadow-sm border border-slate-200/80 p-5 sm:p-8 flex flex-col h-[calc(100vh-140px)]">
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <h3 className="text-xl font-extrabold text-[#1E293B]">Live Engine Console</h3>
+                  <h3 className="text-lg sm:text-xl font-extrabold text-[#1E293B]">Live Engine Console</h3>
                   <p className="text-xs text-slate-500 mt-1">Real-time output stream from the Python orchestrator pipeline.</p>
                 </div>
                 <button
@@ -1110,7 +1260,7 @@ export default function Dashboard() {
                 </button>
               </div>
 
-              <div className="flex-1 bg-slate-950 text-emerald-400 p-6 rounded-2xl font-mono text-xs overflow-y-auto leading-relaxed shadow-inner border border-slate-800">
+              <div className="flex-1 bg-slate-950 text-emerald-400 p-4 sm:p-6 rounded-2xl font-mono text-xs overflow-y-auto leading-relaxed shadow-inner border border-slate-800">
                 {engineLogs ? (
                   engineLogs.split('\n').map((line, i) => (
                     <div key={i} className="whitespace-pre-wrap">{line}</div>
@@ -1127,17 +1277,17 @@ export default function Dashboard() {
 
       {/* LEAD DETAILS & OUTREACH MODAL */}
       {viewLead && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 sm:p-6 animate-in fade-in duration-150">
-          <div className="bg-white w-full max-w-3xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-slate-100">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-3 sm:p-6 animate-in fade-in duration-150">
+          <div className="bg-white w-full max-w-3xl max-h-[92vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-slate-100">
             
             {/* Modal Header */}
-            <div className="p-6 border-b border-slate-100 flex items-center justify-between bg-slate-50/60 shrink-0">
+            <div className="p-5 sm:p-6 border-b border-slate-100 flex items-center justify-between bg-slate-50/60 shrink-0">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-tr from-[#489473] to-[#71C99B] rounded-2xl flex items-center justify-center text-white shadow-md shadow-[#489473]/30">
-                  <Building2 className="w-6 h-6" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-tr from-[#489473] to-[#71C99B] rounded-2xl flex items-center justify-center text-white shadow-md shadow-[#489473]/30 shrink-0">
+                  <Building2 className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-black text-[#1E293B]">{viewLead.business_name}</h3>
+                  <h3 className="text-lg sm:text-xl font-black text-[#1E293B]">{viewLead.business_name}</h3>
                   <p className="text-xs text-slate-500 font-medium">
                     {viewLead.category} • {viewLead.city} • Tier: <strong className={viewLead.lead_tier === "HOT" ? "text-rose-600" : "text-amber-600"}>{viewLead.lead_tier} ({viewLead.lead_score} pts)</strong>
                   </p>
@@ -1146,46 +1296,46 @@ export default function Dashboard() {
 
               <button 
                 onClick={() => setViewLead(null)}
-                className="w-9 h-9 rounded-full bg-slate-200/80 hover:bg-slate-300 text-slate-600 flex items-center justify-center transition-colors"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-200/80 hover:bg-slate-300 text-slate-600 flex items-center justify-center transition-colors"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
 
             {/* Modal Navigation Tabs */}
-            <div className="flex border-b border-slate-200 px-6 gap-6 bg-white shrink-0">
+            <div className="flex border-b border-slate-200 px-4 sm:px-6 gap-4 sm:gap-6 bg-white shrink-0 overflow-x-auto scrollbar-none">
               <button 
                 onClick={() => setModalTab("overview")}
-                className={`py-3 text-xs font-bold border-b-2 transition-all ${modalTab === "overview" ? "border-[#489473] text-[#489473]" : "border-transparent text-slate-400 hover:text-slate-600"}`}
+                className={`py-3 text-xs font-bold border-b-2 transition-all whitespace-nowrap ${modalTab === "overview" ? "border-[#489473] text-[#489473]" : "border-transparent text-slate-400 hover:text-slate-600"}`}
               >
                 Business Profile
               </button>
               <button 
                 onClick={() => setModalTab("score")}
-                className={`py-3 text-xs font-bold border-b-2 transition-all ${modalTab === "score" ? "border-[#489473] text-[#489473]" : "border-transparent text-slate-400 hover:text-slate-600"}`}
+                className={`py-3 text-xs font-bold border-b-2 transition-all whitespace-nowrap ${modalTab === "score" ? "border-[#489473] text-[#489473]" : "border-transparent text-slate-400 hover:text-slate-600"}`}
               >
                 Score Breakdown
               </button>
               <button 
                 onClick={() => setModalTab("pitch")}
-                className={`py-3 text-xs font-bold border-b-2 transition-all ${modalTab === "pitch" ? "border-[#489473] text-[#489473]" : "border-transparent text-slate-400 hover:text-slate-600"}`}
+                className={`py-3 text-xs font-bold border-b-2 transition-all whitespace-nowrap ${modalTab === "pitch" ? "border-[#489473] text-[#489473]" : "border-transparent text-slate-400 hover:text-slate-600"}`}
               >
                 AI Outreach & Demo
               </button>
               <button 
                 onClick={() => setModalTab("payload")}
-                className={`py-3 text-xs font-bold border-b-2 transition-all ${modalTab === "payload" ? "border-[#489473] text-[#489473]" : "border-transparent text-slate-400 hover:text-slate-600"}`}
+                className={`py-3 text-xs font-bold border-b-2 transition-all whitespace-nowrap ${modalTab === "payload" ? "border-[#489473] text-[#489473]" : "border-transparent text-slate-400 hover:text-slate-600"}`}
               >
                 Raw API Payload
               </button>
             </div>
 
             {/* Modal Body */}
-            <div className="p-6 overflow-y-auto flex-1 space-y-6">
+            <div className="p-4 sm:p-6 overflow-y-auto flex-1 space-y-4 sm:space-y-6">
               
               {/* TAB 1: OVERVIEW */}
               {modalTab === "overview" && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100">
                     <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Phone Number</span>
                     <p className="text-sm font-bold text-[#1E293B] mt-1 font-mono">{viewLead.phone || "Not available"}</p>
@@ -1232,22 +1382,22 @@ export default function Dashboard() {
               {/* TAB 2: SCORE BREAKDOWN */}
               {modalTab === "score" && (
                 <div className="space-y-4">
-                  <div className="bg-gradient-to-br from-[#193F2E] to-[#2B6A4E] text-white p-6 rounded-3xl shadow-lg flex items-center justify-between">
+                  <div className="bg-gradient-to-br from-[#193F2E] to-[#2B6A4E] text-white p-5 sm:p-6 rounded-3xl shadow-lg flex items-center justify-between">
                     <div>
                       <span className="text-xs font-bold text-[#71C99B] uppercase tracking-wider">Total Qualification Score</span>
-                      <h2 className="text-4xl font-black mt-1">{viewLead.lead_score || 0} <span className="text-xl font-normal text-white/70">/ 100 PTS</span></h2>
+                      <h2 className="text-3xl sm:text-4xl font-black mt-1">{viewLead.lead_score || 0} <span className="text-xl font-normal text-white/70">/ 100 PTS</span></h2>
                       <span className="inline-block mt-2 px-3 py-1 bg-white/10 rounded-full text-xs font-bold">
                         Tier Status: {viewLead.lead_tier || "LOW"}
                       </span>
                     </div>
                     <div className="text-right">
-                      <Flame className="w-12 h-12 text-[#71C99B] opacity-80" />
+                      <Flame className="w-10 h-10 sm:w-12 sm:h-12 text-[#71C99B] opacity-80" />
                     </div>
                   </div>
 
-                  <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                  <div className="bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-100">
                     <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Scoring Factors & Logic</h4>
-                    <p className="text-sm font-semibold text-[#1E293B] leading-relaxed">
+                    <p className="text-xs sm:text-sm font-semibold text-[#1E293B] leading-relaxed">
                       {viewLead.qualification_reason || "Standard scoring criteria applied."}
                     </p>
                   </div>
@@ -1256,22 +1406,22 @@ export default function Dashboard() {
 
               {/* TAB 3: AI OUTREACH & DEMO */}
               {modalTab === "pitch" && (
-                <div className="space-y-5">
+                <div className="space-y-4 sm:space-y-5">
                   {/* Demo URL Bar */}
                   {viewLead.demo_url && (
-                    <div className="bg-emerald-50 border border-emerald-200 p-4 rounded-2xl flex items-center justify-between">
+                    <div className="bg-emerald-50 border border-emerald-200 p-3 sm:p-4 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                       <div className="flex items-center gap-2.5">
-                        <Sparkles className="w-5 h-5 text-emerald-600" />
-                        <div>
+                        <Sparkles className="w-5 h-5 text-emerald-600 shrink-0" />
+                        <div className="truncate">
                           <div className="text-xs font-bold text-emerald-900">Personalized Demo Landing Page</div>
-                          <a href={viewLead.demo_url} target="_blank" rel="noreferrer" className="text-xs font-semibold text-emerald-700 hover:underline">
+                          <a href={viewLead.demo_url} target="_blank" rel="noreferrer" className="text-xs font-semibold text-emerald-700 hover:underline truncate block">
                             {viewLead.demo_url} ↗
                           </a>
                         </div>
                       </div>
                       <button
                         onClick={() => handleCopyToClipboard(viewLead.demo_url!, "demo")}
-                        className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1"
+                        className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold transition-colors flex items-center justify-center gap-1 shrink-0"
                       >
                         {copiedField === "demo" ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                         <span>{copiedField === "demo" ? "Copied" : "Copy Link"}</span>
@@ -1280,7 +1430,7 @@ export default function Dashboard() {
                   )}
 
                   {/* Email Pitch */}
-                  <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80">
+                  <div className="bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200/80">
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
                         <Mail className="w-4 h-4 text-[#489473]" /> Cold Email Pitch
@@ -1293,14 +1443,14 @@ export default function Dashboard() {
                         <span>{copiedField === "email" ? "Copied" : "Copy Email"}</span>
                       </button>
                     </div>
-                    <pre className="text-xs font-sans text-slate-700 whitespace-pre-wrap leading-relaxed bg-white p-4 rounded-xl border border-slate-100">
+                    <pre className="text-xs font-sans text-slate-700 whitespace-pre-wrap leading-relaxed bg-white p-3 sm:p-4 rounded-xl border border-slate-100">
                       {viewLead.email_message || "Email message has not been generated for this lead."}
                     </pre>
                   </div>
 
                   {/* WhatsApp Pitch */}
-                  <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80">
-                    <div className="flex items-center justify-between mb-3">
+                  <div className="bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200/80">
+                    <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
                       <span className="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
                         <MessageSquare className="w-4 h-4 text-emerald-600" /> WhatsApp Message
                       </span>
@@ -1324,7 +1474,7 @@ export default function Dashboard() {
                         </button>
                       </div>
                     </div>
-                    <p className="text-xs text-slate-700 bg-white p-4 rounded-xl border border-slate-100 leading-relaxed font-medium">
+                    <p className="text-xs text-slate-700 bg-white p-3 sm:p-4 rounded-xl border border-slate-100 leading-relaxed font-medium">
                       {viewLead.whatsapp_message || "WhatsApp message has not been generated for this lead."}
                     </p>
                   </div>
@@ -1341,7 +1491,7 @@ export default function Dashboard() {
                     {copiedField === "raw" ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                     <span>{copiedField === "raw" ? "Copied JSON" : "Copy Payload"}</span>
                   </button>
-                  <pre className="bg-slate-950 text-emerald-400 p-5 rounded-2xl text-xs font-mono overflow-x-auto max-h-96 leading-relaxed">
+                  <pre className="bg-slate-950 text-emerald-400 p-4 sm:p-5 rounded-2xl text-[11px] sm:text-xs font-mono overflow-x-auto max-h-96 leading-relaxed">
                     {JSON.stringify(viewLead, null, 2)}
                   </pre>
                 </div>
@@ -1350,19 +1500,19 @@ export default function Dashboard() {
             </div>
 
             {/* Modal Footer */}
-            <div className="p-5 border-t border-slate-100 bg-slate-50/50 flex justify-between items-center shrink-0">
-              <span className="text-xs text-slate-400 font-mono">Lead ID: {viewLead.lead_id}</span>
+            <div className="p-4 sm:p-5 border-t border-slate-100 bg-slate-50/50 flex justify-between items-center shrink-0">
+              <span className="text-[11px] sm:text-xs text-slate-400 font-mono truncate max-w-[150px]">ID: {viewLead.lead_id}</span>
               <div className="flex gap-2">
                 <button 
                   onClick={() => setViewLead(null)}
-                  className="px-5 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold text-xs rounded-xl transition-colors"
+                  className="px-4 sm:px-5 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold text-xs rounded-xl transition-colors"
                 >
                   Close
                 </button>
                 <button
                   onClick={() => { approveLead(String(viewLead.lead_id)); setViewLead(null); }}
                   disabled={!viewLead.email_message}
-                  className="px-5 py-2 bg-[#489473] hover:bg-[#3C7F62] text-white font-bold text-xs rounded-xl transition-colors shadow-sm disabled:opacity-50"
+                  className="px-4 sm:px-5 py-2 bg-[#489473] hover:bg-[#3C7F62] text-white font-bold text-xs rounded-xl transition-colors shadow-sm disabled:opacity-50"
                 >
                   Approve & Dispatch
                 </button>
