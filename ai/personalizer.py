@@ -1,3 +1,12 @@
+import sys
+import os
+try:
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    if hasattr(sys.stderr, 'reconfigure'):
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
 import time
 import json
 from groq import Groq
@@ -61,16 +70,28 @@ Instructions:
 Output format MUST be a pure JSON object with these exact keys: "email_subject", "email_body", "whatsapp_message". Do not include any other text or markdown block backticks.
 """
     try:
-        response = client.chat.completions.create(
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": prompt_data}
-            ],
-            model="llama-3.1-8b-instant",
-            response_format={"type": "json_object"},
-            temperature=0.7,
-            max_tokens=500
-        )
+        try:
+            response = client.chat.completions.create(
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": prompt_data}
+                ],
+                model="llama3-8b-8192",
+                response_format={"type": "json_object"},
+                temperature=0.7,
+                max_tokens=500
+            )
+        except Exception:
+            response = client.chat.completions.create(
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": prompt_data}
+                ],
+                model="llama-3.1-8b-instant",
+                response_format={"type": "json_object"},
+                temperature=0.7,
+                max_tokens=500
+            )
         
         content = response.choices[0].message.content
         if "```json" in content:

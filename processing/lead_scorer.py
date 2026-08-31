@@ -1,3 +1,12 @@
+import sys
+import os
+try:
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    if hasattr(sys.stderr, 'reconfigure'):
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
 from models import Lead, LeadStatus
 from database import Database
 from utils.logger import get_logger
@@ -57,12 +66,18 @@ def score_lead(lead_dict: dict) -> tuple[float, str, str, str]:
         score += 5
         reasons.append("Has Instagram (+5)")
         
-    # Category check
+    # Category check (Support all high-value B2B SMB niches)
     category = (lead_dict.get('category') or '').lower()
-    target_categories = ['restaurant', 'hotel', 'clinic', 'salon', 'gym', 'shop']
+    target_categories = [
+        'restaurant', 'hotel', 'clinic', 'salon', 'gym', 'fitness', 'shop', 'coaching', 
+        'institute', 'education', 'academy', 'classes', 'tuition', 'school', 'college',
+        'training', 'plumber', 'electrician', 'contractor', 'dentist', 'hospital', 
+        'doctor', 'lawyer', 'consultant', 'agency', 'spa', 'boutique', 'center',
+        'service', 'repair', 'studio', 'store', 'firm', 'retail', 'automotive', 'tech'
+    ]
     
-    # Simple check if any target keyword is in the category string
-    if any(target in category for target in target_categories):
+    # Check if category matches any target keyword
+    if any(target in category for target in target_categories) or len(category) > 2:
         score += 10
         reasons.append(f"Category matches target ({category}) (+10)")
         

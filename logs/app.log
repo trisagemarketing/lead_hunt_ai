@@ -1197,3 +1197,834 @@ max_results=10
 2026-08-31 18:10:22,121 - database - DEBUG - [database.py:147] - Lead a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075 inserted/updated successfully.
 2026-08-31 18:10:22,122 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Metro Flow Plumbing - Dallas Emergency Plumbers
 2026-08-31 18:12:44,705 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:48:33,334 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:48:42,690 - __main__ - INFO - [serpapi_search.py:15] - Starting business discovery:
+city=Lucknow
+business_type=Coaching Institutes
+max_results=10
+2026-08-31 18:48:42,690 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:48:44,433 - database - DEBUG - [database.py:147] - Lead 0b02d6d3f32a0ebb35a13a9a31b8f260350d4d19c0f4496586d98ef2c3d438f0 inserted/updated successfully.
+2026-08-31 18:48:44,435 - __main__ - INFO - [serpapi_search.py:108] - Lead inserted: 0b02d6d3f32a0ebb35a13a9a31b8f260350d4d19c0f4496586d98ef2c3d438f0
+2026-08-31 18:48:44,470 - database - DEBUG - [database.py:147] - Lead 07d4ef7d0966768ebb82b50aeced1eee23ad76c948399f1ec524b9eee15d255d inserted/updated successfully.
+2026-08-31 18:48:44,471 - __main__ - INFO - [serpapi_search.py:108] - Lead inserted: 07d4ef7d0966768ebb82b50aeced1eee23ad76c948399f1ec524b9eee15d255d
+2026-08-31 18:48:44,504 - database - DEBUG - [database.py:147] - Lead 3dc194ff94c42d122e27560ec8a59a13dc5aa8a29bea4f70de39cd826bf720ab inserted/updated successfully.
+2026-08-31 18:48:44,505 - __main__ - INFO - [serpapi_search.py:108] - Lead inserted: 3dc194ff94c42d122e27560ec8a59a13dc5aa8a29bea4f70de39cd826bf720ab
+2026-08-31 18:48:44,531 - database - DEBUG - [database.py:147] - Lead d3da6e410197b0badb5b1131c2fde88b3942fb5fe380e164b293d851d8e7ffc5 inserted/updated successfully.
+2026-08-31 18:48:44,532 - __main__ - INFO - [serpapi_search.py:108] - Lead inserted: d3da6e410197b0badb5b1131c2fde88b3942fb5fe380e164b293d851d8e7ffc5
+2026-08-31 18:48:44,546 - database - DEBUG - [database.py:147] - Lead 97b1279161e8c58566c70ee7a66ad43b82f512b3e36f8a5576c0cdfe54bd6f49 inserted/updated successfully.
+2026-08-31 18:48:44,547 - __main__ - INFO - [serpapi_search.py:108] - Lead inserted: 97b1279161e8c58566c70ee7a66ad43b82f512b3e36f8a5576c0cdfe54bd6f49
+2026-08-31 18:48:44,559 - database - DEBUG - [database.py:147] - Lead 83b8e435a423eb80dcc23a3d337b17e6ef2740f3c86444b28a70d330e213498a inserted/updated successfully.
+2026-08-31 18:48:44,560 - __main__ - INFO - [serpapi_search.py:108] - Lead inserted: 83b8e435a423eb80dcc23a3d337b17e6ef2740f3c86444b28a70d330e213498a
+2026-08-31 18:48:44,576 - database - DEBUG - [database.py:147] - Lead 452692c58b780926a07c5b98fa279b64a8f5e5dbc8654b2b1361b5e99bd965c9 inserted/updated successfully.
+2026-08-31 18:48:44,576 - __main__ - INFO - [serpapi_search.py:108] - Lead inserted: 452692c58b780926a07c5b98fa279b64a8f5e5dbc8654b2b1361b5e99bd965c9
+2026-08-31 18:48:44,590 - database - DEBUG - [database.py:147] - Lead 989f1007d180d8fe89f20fbd99c41b507d12bcac179bed1351894313b172f645 inserted/updated successfully.
+2026-08-31 18:48:44,591 - __main__ - INFO - [serpapi_search.py:108] - Lead inserted: 989f1007d180d8fe89f20fbd99c41b507d12bcac179bed1351894313b172f645
+2026-08-31 18:48:44,603 - database - DEBUG - [database.py:147] - Lead 56f75fec3391095fbe2684df3b56b71d04223cc7c91658ae15363d36bc98b35e inserted/updated successfully.
+2026-08-31 18:48:44,603 - __main__ - INFO - [serpapi_search.py:108] - Lead inserted: 56f75fec3391095fbe2684df3b56b71d04223cc7c91658ae15363d36bc98b35e
+2026-08-31 18:48:44,616 - database - DEBUG - [database.py:147] - Lead 2a3444a01806e069886b224e2cc09fec2b103dbc1060af089785760f99312ce7 inserted/updated successfully.
+2026-08-31 18:48:44,617 - __main__ - INFO - [serpapi_search.py:108] - Lead inserted: 2a3444a01806e069886b224e2cc09fec2b103dbc1060af089785760f99312ce7
+2026-08-31 18:48:44,617 - __main__ - INFO - [serpapi_search.py:118] - Search completed: discovered=20, inserted=10, duplicates=0
+2026-08-31 18:48:58,973 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:50:09,354 - __main__ - INFO - [orchestrator.py:47] - STARTING FULL LEADHUNTER AI ORCHESTRATOR (Target: 10 leads)
+2026-08-31 18:50:09,354 - __main__ - INFO - [orchestrator.py:11] - ========== STARTING: Phase 1: Discovery (Google Maps Scrape) ==========
+2026-08-31 18:50:10,412 - __main__ - INFO - [serpapi_search.py:15] - Starting business discovery:
+city=Lucknow
+business_type=Coaching Institutes
+max_results=10
+2026-08-31 18:50:10,412 - __main__ - INFO - [serpapi_search.py:38] - Sanitized Google Maps Search Query: 'Coaching Institutes in Lucknow'
+2026-08-31 18:50:10,413 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:50:10,563 - __main__ - INFO - [serpapi_search.py:104] - Skipping duplicate lead: 0b02d6d3f32a0ebb35a13a9a31b8f260350d4d19c0f4496586d98ef2c3d438f0
+2026-08-31 18:50:10,564 - __main__ - INFO - [serpapi_search.py:104] - Skipping duplicate lead: 07d4ef7d0966768ebb82b50aeced1eee23ad76c948399f1ec524b9eee15d255d
+2026-08-31 18:50:10,566 - __main__ - INFO - [serpapi_search.py:104] - Skipping duplicate lead: 3dc194ff94c42d122e27560ec8a59a13dc5aa8a29bea4f70de39cd826bf720ab
+2026-08-31 18:50:10,568 - __main__ - INFO - [serpapi_search.py:104] - Skipping duplicate lead: d3da6e410197b0badb5b1131c2fde88b3942fb5fe380e164b293d851d8e7ffc5
+2026-08-31 18:50:10,570 - __main__ - INFO - [serpapi_search.py:104] - Skipping duplicate lead: 97b1279161e8c58566c70ee7a66ad43b82f512b3e36f8a5576c0cdfe54bd6f49
+2026-08-31 18:50:10,571 - __main__ - INFO - [serpapi_search.py:104] - Skipping duplicate lead: 83b8e435a423eb80dcc23a3d337b17e6ef2740f3c86444b28a70d330e213498a
+2026-08-31 18:50:10,573 - __main__ - INFO - [serpapi_search.py:104] - Skipping duplicate lead: 452692c58b780926a07c5b98fa279b64a8f5e5dbc8654b2b1361b5e99bd965c9
+2026-08-31 18:50:10,575 - __main__ - INFO - [serpapi_search.py:104] - Skipping duplicate lead: 989f1007d180d8fe89f20fbd99c41b507d12bcac179bed1351894313b172f645
+2026-08-31 18:50:10,578 - __main__ - INFO - [serpapi_search.py:104] - Skipping duplicate lead: 56f75fec3391095fbe2684df3b56b71d04223cc7c91658ae15363d36bc98b35e
+2026-08-31 18:50:10,579 - __main__ - INFO - [serpapi_search.py:104] - Skipping duplicate lead: 2a3444a01806e069886b224e2cc09fec2b103dbc1060af089785760f99312ce7
+2026-08-31 18:50:10,591 - database - DEBUG - [database.py:147] - Lead bad57bc273abf8edd3de50a49bbfd46ec1fe0a7ec1414e23c2412e7218ac7f22 inserted/updated successfully.
+2026-08-31 18:50:10,593 - __main__ - INFO - [serpapi_search.py:110] - Lead inserted: bad57bc273abf8edd3de50a49bbfd46ec1fe0a7ec1414e23c2412e7218ac7f22
+2026-08-31 18:50:10,597 - __main__ - INFO - [serpapi_search.py:104] - Skipping duplicate lead: 0b02d6d3f32a0ebb35a13a9a31b8f260350d4d19c0f4496586d98ef2c3d438f0
+2026-08-31 18:50:10,610 - database - DEBUG - [database.py:147] - Lead 9e3f1c3cb1ca5f979213e6088bfc71d9b541f76644b8232a4fef20121c6597c4 inserted/updated successfully.
+2026-08-31 18:50:10,611 - __main__ - INFO - [serpapi_search.py:110] - Lead inserted: 9e3f1c3cb1ca5f979213e6088bfc71d9b541f76644b8232a4fef20121c6597c4
+2026-08-31 18:50:10,625 - database - DEBUG - [database.py:147] - Lead fb70d6cb16c740dace3f959162709598010ffb007a867d1f83a4e163e9dcbfc3 inserted/updated successfully.
+2026-08-31 18:50:10,626 - __main__ - INFO - [serpapi_search.py:110] - Lead inserted: fb70d6cb16c740dace3f959162709598010ffb007a867d1f83a4e163e9dcbfc3
+2026-08-31 18:50:10,642 - database - DEBUG - [database.py:147] - Lead 1a2c9deeab79e16a7dc560ba8571738169909c60dff452f9f59a07d526c68237 inserted/updated successfully.
+2026-08-31 18:50:10,643 - __main__ - INFO - [serpapi_search.py:110] - Lead inserted: 1a2c9deeab79e16a7dc560ba8571738169909c60dff452f9f59a07d526c68237
+2026-08-31 18:50:10,658 - database - DEBUG - [database.py:147] - Lead 461702de3253bfd7caf65d60ced8db2cc87c131c5c218a4315ed2f4c5b32be81 inserted/updated successfully.
+2026-08-31 18:50:10,659 - __main__ - INFO - [serpapi_search.py:110] - Lead inserted: 461702de3253bfd7caf65d60ced8db2cc87c131c5c218a4315ed2f4c5b32be81
+2026-08-31 18:50:10,672 - database - DEBUG - [database.py:147] - Lead 31dd235c0a94032ee4510bf31f12e62dbb2d223ba28ccf30d53e034506a88095 inserted/updated successfully.
+2026-08-31 18:50:10,673 - __main__ - INFO - [serpapi_search.py:110] - Lead inserted: 31dd235c0a94032ee4510bf31f12e62dbb2d223ba28ccf30d53e034506a88095
+2026-08-31 18:50:10,690 - database - DEBUG - [database.py:147] - Lead 022aac37d5ea3197c832dca8ec3ef9435232c41b42313e78460b4d07d22bbb62 inserted/updated successfully.
+2026-08-31 18:50:10,691 - __main__ - INFO - [serpapi_search.py:110] - Lead inserted: 022aac37d5ea3197c832dca8ec3ef9435232c41b42313e78460b4d07d22bbb62
+2026-08-31 18:50:10,707 - database - DEBUG - [database.py:147] - Lead 1725d7f23033ccf075c5819d4f780269f4babdedf59804dc3c0aa40a3450cca8 inserted/updated successfully.
+2026-08-31 18:50:10,708 - __main__ - INFO - [serpapi_search.py:110] - Lead inserted: 1725d7f23033ccf075c5819d4f780269f4babdedf59804dc3c0aa40a3450cca8
+2026-08-31 18:50:10,726 - database - DEBUG - [database.py:147] - Lead 7db723e8453a01357e2bf067225a7ff47f9ab4681f16530139206be037988ce2 inserted/updated successfully.
+2026-08-31 18:50:10,727 - __main__ - INFO - [serpapi_search.py:110] - Lead inserted: 7db723e8453a01357e2bf067225a7ff47f9ab4681f16530139206be037988ce2
+2026-08-31 18:50:12,410 - database - DEBUG - [database.py:147] - Lead 7957b1f512c11277f60d17ceaa861e0dea6e77dc2817238ad0c07598a9b2cd71 inserted/updated successfully.
+2026-08-31 18:50:12,410 - __main__ - INFO - [serpapi_search.py:110] - Lead inserted: 7957b1f512c11277f60d17ceaa861e0dea6e77dc2817238ad0c07598a9b2cd71
+2026-08-31 18:50:12,411 - __main__ - INFO - [serpapi_search.py:120] - Search completed: discovered=40, inserted=10, duplicates=11
+2026-08-31 18:50:12,505 - __main__ - INFO - [orchestrator.py:33] - [SUCCESS] MODULE COMPLETE: Phase 1: Discovery (Google Maps Scrape)
+2026-08-31 18:50:14,506 - __main__ - INFO - [orchestrator.py:11] - ========== STARTING: Phase 2A: Data Normalization ==========
+2026-08-31 18:50:14,858 - __main__ - INFO - [orchestrator.py:33] - [SUCCESS] MODULE COMPLETE: Phase 2A: Data Normalization
+2026-08-31 18:50:16,860 - __main__ - INFO - [orchestrator.py:11] - ========== STARTING: Phase 2B: Deduplication ==========
+2026-08-31 18:50:17,702 - __main__ - INFO - [deduplicate.py:136] - Starting normalization and deduplication process...
+2026-08-31 18:50:17,703 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:50:17,725 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Unacademy Coaching Centre - Hazratganj
+2026-08-31 18:50:17,730 - database - DEBUG - [database.py:147] - Lead 7957b1f512c11277f60d17ceaa861e0dea6e77dc2817238ad0c07598a9b2cd71 inserted/updated successfully.
+2026-08-31 18:50:17,732 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: TCS ACADEMY
+2026-08-31 18:50:17,737 - database - DEBUG - [database.py:147] - Lead 7db723e8453a01357e2bf067225a7ff47f9ab4681f16530139206be037988ce2 inserted/updated successfully.
+2026-08-31 18:50:17,738 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Roy Coaching
+2026-08-31 18:50:17,743 - database - DEBUG - [database.py:147] - Lead 1725d7f23033ccf075c5819d4f780269f4babdedf59804dc3c0aa40a3450cca8 inserted/updated successfully.
+2026-08-31 18:50:17,744 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Physics Wallah Vidyapeeth Coaching Center Lucknow - Aliganj | IIT JEE, NEET Classes
+2026-08-31 18:50:17,748 - database - DEBUG - [database.py:147] - Lead 022aac37d5ea3197c832dca8ec3ef9435232c41b42313e78460b4d07d22bbb62 inserted/updated successfully.
+2026-08-31 18:50:17,749 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Excellent Classes
+2026-08-31 18:50:17,753 - database - DEBUG - [database.py:147] - Lead 31dd235c0a94032ee4510bf31f12e62dbb2d223ba28ccf30d53e034506a88095 inserted/updated successfully.
+2026-08-31 18:50:17,862 - database - DEBUG - [database.py:147] - Lead 461702de3253bfd7caf65d60ced8db2cc87c131c5c218a4315ed2f4c5b32be81 inserted/updated successfully.
+2026-08-31 18:50:17,863 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Engineers Academy
+2026-08-31 18:50:17,864 - database - DEBUG - [database.py:147] - Lead 1a2c9deeab79e16a7dc560ba8571738169909c60dff452f9f59a07d526c68237 inserted/updated successfully.
+2026-08-31 18:50:17,864 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: IMS Lucknow
+2026-08-31 18:50:17,865 - database - DEBUG - [database.py:147] - Lead fb70d6cb16c740dace3f959162709598010ffb007a867d1f83a4e163e9dcbfc3 inserted/updated successfully.
+2026-08-31 18:50:17,866 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: ALLEN Career Institute - Hazratganj Campus
+2026-08-31 18:50:17,867 - database - DEBUG - [database.py:147] - Lead 9e3f1c3cb1ca5f979213e6088bfc71d9b541f76644b8232a4fef20121c6597c4 inserted/updated successfully.
+2026-08-31 18:50:17,867 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Narain Institute
+2026-08-31 18:50:17,869 - database - DEBUG - [database.py:147] - Lead bad57bc273abf8edd3de50a49bbfd46ec1fe0a7ec1414e23c2412e7218ac7f22 inserted/updated successfully.
+2026-08-31 18:50:17,870 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Prabhat Pathak Classes
+2026-08-31 18:50:17,871 - database - DEBUG - [database.py:147] - Lead 2a3444a01806e069886b224e2cc09fec2b103dbc1060af089785760f99312ce7 inserted/updated successfully.
+2026-08-31 18:50:17,872 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Sarthak IAS
+2026-08-31 18:50:17,873 - database - DEBUG - [database.py:147] - Lead 56f75fec3391095fbe2684df3b56b71d04223cc7c91658ae15363d36bc98b35e inserted/updated successfully.
+2026-08-31 18:50:17,874 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Career Launcher Lucknow - Hazratganj Center
+2026-08-31 18:50:17,876 - database - DEBUG - [database.py:147] - Lead 989f1007d180d8fe89f20fbd99c41b507d12bcac179bed1351894313b172f645 inserted/updated successfully.
+2026-08-31 18:50:17,876 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: SKD New Standard Coaching Institute Hazratganj, Lucknow
+2026-08-31 18:50:17,878 - database - DEBUG - [database.py:147] - Lead 452692c58b780926a07c5b98fa279b64a8f5e5dbc8654b2b1361b5e99bd965c9 inserted/updated successfully.
+2026-08-31 18:50:17,878 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Sure Success Coaching Institute
+2026-08-31 18:50:17,880 - database - DEBUG - [database.py:147] - Lead 83b8e435a423eb80dcc23a3d337b17e6ef2740f3c86444b28a70d330e213498a inserted/updated successfully.
+2026-08-31 18:50:17,880 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: INPS Classes
+2026-08-31 18:50:17,882 - database - DEBUG - [database.py:147] - Lead 97b1279161e8c58566c70ee7a66ad43b82f512b3e36f8a5576c0cdfe54bd6f49 inserted/updated successfully.
+2026-08-31 18:50:17,882 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: T.I.M.E. Lucknow
+2026-08-31 18:50:17,883 - database - DEBUG - [database.py:147] - Lead d3da6e410197b0badb5b1131c2fde88b3942fb5fe380e164b293d851d8e7ffc5 inserted/updated successfully.
+2026-08-31 18:50:17,884 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: S.S. Coaching
+2026-08-31 18:50:17,886 - database - DEBUG - [database.py:147] - Lead 3dc194ff94c42d122e27560ec8a59a13dc5aa8a29bea4f70de39cd826bf720ab inserted/updated successfully.
+2026-08-31 18:50:17,886 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Toppers Institute CA / CS coaching in Lucknow
+2026-08-31 18:50:17,888 - database - DEBUG - [database.py:147] - Lead 07d4ef7d0966768ebb82b50aeced1eee23ad76c948399f1ec524b9eee15d255d inserted/updated successfully.
+2026-08-31 18:50:17,888 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Quantum Coaching Institute
+2026-08-31 18:50:17,890 - database - DEBUG - [database.py:147] - Lead 0b02d6d3f32a0ebb35a13a9a31b8f260350d4d19c0f4496586d98ef2c3d438f0 inserted/updated successfully.
+2026-08-31 18:50:17,891 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Reliant Plumbing - Dallas
+2026-08-31 18:50:17,892 - database - DEBUG - [database.py:147] - Lead 4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d inserted/updated successfully.
+2026-08-31 18:50:17,893 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Tide Turners Plumbing
+2026-08-31 18:50:17,894 - database - DEBUG - [database.py:147] - Lead eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086 inserted/updated successfully.
+2026-08-31 18:50:17,895 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Jake the Plumbing Pro
+2026-08-31 18:50:17,896 - database - DEBUG - [database.py:147] - Lead 7ed1e2ebabc3d18d9ec385f8a2a0205acd5d3101b6f428f10e181484eaa7f06e inserted/updated successfully.
+2026-08-31 18:50:17,897 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Anchor Plumbing Company
+2026-08-31 18:50:17,898 - database - DEBUG - [database.py:147] - Lead 0248ccd1a5ac7c76ecd1e232d20b93d87f789a6abd5dbaa5e8093f88583ca049 inserted/updated successfully.
+2026-08-31 18:50:17,898 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Baker Brothers Plumbing, Air & Electric
+2026-08-31 18:50:17,900 - database - DEBUG - [database.py:147] - Lead d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c inserted/updated successfully.
+2026-08-31 18:50:17,900 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Milestone Electric, A/C, & Plumbing
+2026-08-31 18:50:17,902 - database - DEBUG - [database.py:147] - Lead 135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858 inserted/updated successfully.
+2026-08-31 18:50:17,902 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Tribeca Plumbing, Inc.
+2026-08-31 18:50:17,904 - database - DEBUG - [database.py:147] - Lead bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf inserted/updated successfully.
+2026-08-31 18:50:17,904 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Dallas Plumbing & Air Conditioning
+2026-08-31 18:50:17,906 - database - DEBUG - [database.py:147] - Lead dfe0d94dbae3a0c76d953a458ddf076768addd6b3a5cf08655c3013b13daaf22 inserted/updated successfully.
+2026-08-31 18:50:17,906 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Metro Flow Plumbing - Dallas Emergency Plumbers
+2026-08-31 18:50:17,908 - database - DEBUG - [database.py:147] - Lead a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075 inserted/updated successfully.
+2026-08-31 18:50:17,908 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Public Service Plumbers
+2026-08-31 18:50:17,910 - database - DEBUG - [database.py:147] - Lead 67653dede81d016606aa3ea23aabdd9a17f48b66f637e93dc70b27681f382f20 inserted/updated successfully.
+2026-08-31 18:50:17,910 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Hocco Kitchen (OP Road)
+2026-08-31 18:50:17,912 - database - DEBUG - [database.py:147] - Lead c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3 inserted/updated successfully.
+2026-08-31 18:50:17,912 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Thyme & Whisk
+2026-08-31 18:50:17,913 - database - DEBUG - [database.py:147] - Lead 37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e inserted/updated successfully.
+2026-08-31 18:50:17,914 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: western restaurant
+2026-08-31 18:50:17,915 - database - DEBUG - [database.py:147] - Lead 54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a inserted/updated successfully.
+2026-08-31 18:50:17,916 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Fitoor
+2026-08-31 18:50:17,917 - database - DEBUG - [database.py:147] - Lead 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff inserted/updated successfully.
+2026-08-31 18:50:17,918 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Nizam's The Royal Kitchen
+2026-08-31 18:50:17,919 - database - DEBUG - [database.py:147] - Lead 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731 inserted/updated successfully.
+2026-08-31 18:50:17,920 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: The Highway Eats - Vadodara | Multicuisine Restaurant, Rooms, Banquet & Poolside Party Lawns
+2026-08-31 18:50:17,921 - database - DEBUG - [database.py:147] - Lead 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c inserted/updated successfully.
+2026-08-31 18:50:17,922 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: 812 CE Urban Restaurant
+2026-08-31 18:50:17,924 - database - DEBUG - [database.py:147] - Lead 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0 inserted/updated successfully.
+2026-08-31 18:50:17,924 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Barbeque Nation - Vadodara - Cine Mall
+2026-08-31 18:50:17,926 - database - DEBUG - [database.py:147] - Lead fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef inserted/updated successfully.
+2026-08-31 18:50:17,926 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: 22nd Parallel
+2026-08-31 18:50:17,928 - database - DEBUG - [database.py:147] - Lead 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140 inserted/updated successfully.
+2026-08-31 18:50:17,928 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Bayleaf Multi Cuisine Restaurant
+2026-08-31 18:50:17,930 - database - DEBUG - [database.py:147] - Lead d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1 inserted/updated successfully.
+2026-08-31 18:50:17,930 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: The Morsel Restaurant
+2026-08-31 18:50:17,931 - database - DEBUG - [database.py:147] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-31 18:50:17,931 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Island The Restaurant Waves Club
+2026-08-31 18:50:17,932 - database - DEBUG - [database.py:147] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-31 18:50:17,933 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Peshawri by Welcomhotel Vadodara
+2026-08-31 18:50:17,934 - database - DEBUG - [database.py:147] - Lead dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996 inserted/updated successfully.
+2026-08-31 18:50:17,934 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: The Secret Kitchen
+2026-08-31 18:50:17,935 - database - DEBUG - [database.py:147] - Lead fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86 inserted/updated successfully.
+2026-08-31 18:50:17,935 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Retro Bistro : The Fine Multi Cuisine Restaurant ( Vadodara )
+2026-08-31 18:50:17,936 - database - DEBUG - [database.py:147] - Lead 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e inserted/updated successfully.
+2026-08-31 18:50:17,936 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Sakura Pan Asian Cuisine
+2026-08-31 18:50:17,937 - database - DEBUG - [database.py:147] - Lead 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3 inserted/updated successfully.
+2026-08-31 18:50:17,938 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Spice Kraft Restaurant
+2026-08-31 18:50:17,939 - database - DEBUG - [database.py:147] - Lead e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8 inserted/updated successfully.
+2026-08-31 18:50:17,939 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Taste Carnival - (Banquet, Rooms, Restaurant)
+2026-08-31 18:50:17,940 - database - DEBUG - [database.py:147] - Lead 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b inserted/updated successfully.
+2026-08-31 18:50:17,941 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Le Prive World Cuisine
+2026-08-31 18:50:17,942 - database - DEBUG - [database.py:147] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-31 18:50:17,942 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: The House of Makeba - Veg Family Dining Restaurant in Vadodara
+2026-08-31 18:50:17,943 - database - DEBUG - [database.py:147] - Lead 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03 inserted/updated successfully.
+2026-08-31 18:50:17,943 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Jassi De Parathe
+2026-08-31 18:50:17,944 - database - DEBUG - [database.py:147] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-31 18:50:17,945 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Vibes The Bistro
+2026-08-31 18:50:17,946 - database - DEBUG - [database.py:147] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-31 18:50:17,946 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Candle Light Date N Dinner & Rooftop Restaurant Vadodara
+2026-08-31 18:50:17,947 - database - DEBUG - [database.py:147] - Lead c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde inserted/updated successfully.
+2026-08-31 18:50:17,947 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Vadodara Rest 1
+2026-08-31 18:50:17,948 - database - DEBUG - [database.py:147] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-31 18:50:17,949 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Acme Corp
+2026-08-31 18:50:17,949 - database - DEBUG - [database.py:147] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-31 18:50:17,980 - __main__ - INFO - [orchestrator.py:33] - [SUCCESS] MODULE COMPLETE: Phase 2B: Deduplication
+2026-08-31 18:50:19,982 - __main__ - INFO - [orchestrator.py:11] - ========== STARTING: Phase 3: Website Auditing ==========
+2026-08-31 18:50:21,767 - __main__ - INFO - [website_checker.py:202] - Starting Website Verification Module...
+2026-08-31 18:50:21,767 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:50:21,771 - __main__ - INFO - [website_checker.py:136] - Checking website for Unacademy Coaching Centre - Hazratganj (7957b1f512c11277f60d17ceaa861e0dea6e77dc2817238ad0c07598a9b2cd71)
+2026-08-31 18:50:22,837 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Unacademy Coaching Centre - Hazratganj: VALID_WEBSITE
+2026-08-31 18:50:22,857 - database - DEBUG - [database.py:147] - Lead 7957b1f512c11277f60d17ceaa861e0dea6e77dc2817238ad0c07598a9b2cd71 inserted/updated successfully.
+2026-08-31 18:50:23,858 - __main__ - INFO - [website_checker.py:136] - Checking website for TCS ACADEMY (7db723e8453a01357e2bf067225a7ff47f9ab4681f16530139206be037988ce2)
+2026-08-31 18:50:28,141 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for TCS ACADEMY: VALID_WEBSITE
+2026-08-31 18:50:28,156 - database - DEBUG - [database.py:147] - Lead 7db723e8453a01357e2bf067225a7ff47f9ab4681f16530139206be037988ce2 inserted/updated successfully.
+2026-08-31 18:50:29,158 - __main__ - INFO - [website_checker.py:136] - Checking website for Roy Coaching (1725d7f23033ccf075c5819d4f780269f4babdedf59804dc3c0aa40a3450cca8)
+2026-08-31 18:50:29,458 - __main__ - WARNING - [website_checker.py:80] - HTTP Error 403 for https://nioscoaching.in/
+2026-08-31 18:50:29,459 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Roy Coaching: BROKEN_WEBSITE
+2026-08-31 18:50:29,496 - database - DEBUG - [database.py:147] - Lead 1725d7f23033ccf075c5819d4f780269f4babdedf59804dc3c0aa40a3450cca8 inserted/updated successfully.
+2026-08-31 18:50:30,499 - __main__ - INFO - [website_checker.py:136] - Checking website for Physics Wallah Vidyapeeth Coaching Center Lucknow - Aliganj | IIT JEE, NEET Classes (022aac37d5ea3197c832dca8ec3ef9435232c41b42313e78460b4d07d22bbb62)
+2026-08-31 18:50:31,242 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Physics Wallah Vidyapeeth Coaching Center Lucknow - Aliganj | IIT JEE, NEET Classes: VALID_WEBSITE
+2026-08-31 18:50:31,258 - database - DEBUG - [database.py:147] - Lead 022aac37d5ea3197c832dca8ec3ef9435232c41b42313e78460b4d07d22bbb62 inserted/updated successfully.
+2026-08-31 18:50:32,260 - __main__ - INFO - [website_checker.py:136] - Checking website for Excellent Classes (31dd235c0a94032ee4510bf31f12e62dbb2d223ba28ccf30d53e034506a88095)
+2026-08-31 18:50:32,834 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Excellent Classes: VALID_WEBSITE
+2026-08-31 18:50:32,870 - database - DEBUG - [database.py:147] - Lead 31dd235c0a94032ee4510bf31f12e62dbb2d223ba28ccf30d53e034506a88095 inserted/updated successfully.
+2026-08-31 18:50:34,093 - __main__ - WARNING - [website_checker.py:83] - Request Error for https://s-orbit.in/: [Errno 11001] getaddrinfo failed
+2026-08-31 18:50:34,117 - database - DEBUG - [database.py:147] - Lead 461702de3253bfd7caf65d60ced8db2cc87c131c5c218a4315ed2f4c5b32be81 inserted/updated successfully.
+2026-08-31 18:50:35,118 - __main__ - INFO - [website_checker.py:136] - Checking website for Engineers Academy (1a2c9deeab79e16a7dc560ba8571738169909c60dff452f9f59a07d526c68237)
+2026-08-31 18:50:36,041 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Engineers Academy: VALID_WEBSITE
+2026-08-31 18:50:36,060 - database - DEBUG - [database.py:147] - Lead 1a2c9deeab79e16a7dc560ba8571738169909c60dff452f9f59a07d526c68237 inserted/updated successfully.
+2026-08-31 18:50:37,062 - __main__ - INFO - [website_checker.py:136] - Checking website for IMS Lucknow (fb70d6cb16c740dace3f959162709598010ffb007a867d1f83a4e163e9dcbfc3)
+2026-08-31 18:50:37,343 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for IMS Lucknow: VALID_WEBSITE
+2026-08-31 18:50:37,359 - database - DEBUG - [database.py:147] - Lead fb70d6cb16c740dace3f959162709598010ffb007a867d1f83a4e163e9dcbfc3 inserted/updated successfully.
+2026-08-31 18:50:38,360 - __main__ - INFO - [website_checker.py:136] - Checking website for ALLEN Career Institute - Hazratganj Campus (9e3f1c3cb1ca5f979213e6088bfc71d9b541f76644b8232a4fef20121c6597c4)
+2026-08-31 18:50:38,983 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for ALLEN Career Institute - Hazratganj Campus: VALID_WEBSITE
+2026-08-31 18:50:39,003 - database - DEBUG - [database.py:147] - Lead 9e3f1c3cb1ca5f979213e6088bfc71d9b541f76644b8232a4fef20121c6597c4 inserted/updated successfully.
+2026-08-31 18:50:40,005 - __main__ - INFO - [website_checker.py:136] - Checking website for Narain Institute (bad57bc273abf8edd3de50a49bbfd46ec1fe0a7ec1414e23c2412e7218ac7f22)
+2026-08-31 18:50:42,613 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Narain Institute: VALID_WEBSITE
+2026-08-31 18:50:42,629 - database - DEBUG - [database.py:147] - Lead bad57bc273abf8edd3de50a49bbfd46ec1fe0a7ec1414e23c2412e7218ac7f22 inserted/updated successfully.
+2026-08-31 18:50:43,630 - __main__ - INFO - [website_checker.py:136] - Checking website for Prabhat Pathak Classes (2a3444a01806e069886b224e2cc09fec2b103dbc1060af089785760f99312ce7)
+2026-08-31 18:50:45,007 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Prabhat Pathak Classes: VALID_WEBSITE
+2026-08-31 18:50:45,023 - database - DEBUG - [database.py:147] - Lead 2a3444a01806e069886b224e2cc09fec2b103dbc1060af089785760f99312ce7 inserted/updated successfully.
+2026-08-31 18:50:46,024 - __main__ - INFO - [website_checker.py:136] - Checking website for Sarthak IAS (56f75fec3391095fbe2684df3b56b71d04223cc7c91658ae15363d36bc98b35e)
+2026-08-31 18:50:46,283 - __main__ - WARNING - [website_checker.py:80] - HTTP Error 403 for https://sarthakias.in/
+2026-08-31 18:50:46,284 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Sarthak IAS: BROKEN_WEBSITE
+2026-08-31 18:50:46,303 - database - DEBUG - [database.py:147] - Lead 56f75fec3391095fbe2684df3b56b71d04223cc7c91658ae15363d36bc98b35e inserted/updated successfully.
+2026-08-31 18:50:47,304 - __main__ - INFO - [website_checker.py:136] - Checking website for Career Launcher Lucknow - Hazratganj Center (989f1007d180d8fe89f20fbd99c41b507d12bcac179bed1351894313b172f645)
+2026-08-31 18:50:48,068 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Career Launcher Lucknow - Hazratganj Center: VALID_WEBSITE
+2026-08-31 18:50:48,097 - database - DEBUG - [database.py:147] - Lead 989f1007d180d8fe89f20fbd99c41b507d12bcac179bed1351894313b172f645 inserted/updated successfully.
+2026-08-31 18:50:49,098 - __main__ - INFO - [website_checker.py:136] - Checking website for SKD New Standard Coaching Institute Hazratganj, Lucknow (452692c58b780926a07c5b98fa279b64a8f5e5dbc8654b2b1361b5e99bd965c9)
+2026-08-31 18:50:49,612 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for SKD New Standard Coaching Institute Hazratganj, Lucknow: VALID_WEBSITE
+2026-08-31 18:50:49,628 - database - DEBUG - [database.py:147] - Lead 452692c58b780926a07c5b98fa279b64a8f5e5dbc8654b2b1361b5e99bd965c9 inserted/updated successfully.
+2026-08-31 18:50:50,629 - __main__ - INFO - [website_checker.py:136] - Checking website for Sure Success Coaching Institute (83b8e435a423eb80dcc23a3d337b17e6ef2740f3c86444b28a70d330e213498a)
+2026-08-31 18:50:50,857 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Sure Success Coaching Institute: VALID_WEBSITE
+2026-08-31 18:50:50,870 - database - DEBUG - [database.py:147] - Lead 83b8e435a423eb80dcc23a3d337b17e6ef2740f3c86444b28a70d330e213498a inserted/updated successfully.
+2026-08-31 18:50:51,871 - __main__ - INFO - [website_checker.py:136] - Checking website for INPS Classes (97b1279161e8c58566c70ee7a66ad43b82f512b3e36f8a5576c0cdfe54bd6f49)
+2026-08-31 18:50:52,354 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for INPS Classes: VALID_WEBSITE
+2026-08-31 18:50:52,365 - database - DEBUG - [database.py:147] - Lead 97b1279161e8c58566c70ee7a66ad43b82f512b3e36f8a5576c0cdfe54bd6f49 inserted/updated successfully.
+2026-08-31 18:50:53,367 - __main__ - INFO - [website_checker.py:136] - Checking website for T.I.M.E. Lucknow (d3da6e410197b0badb5b1131c2fde88b3942fb5fe380e164b293d851d8e7ffc5)
+2026-08-31 18:51:03,437 - __main__ - WARNING - [website_checker.py:83] - Request Error for http://www.time4education.com/: timed out
+2026-08-31 18:51:03,438 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for T.I.M.E. Lucknow: BROKEN_WEBSITE
+2026-08-31 18:51:03,477 - database - DEBUG - [database.py:147] - Lead d3da6e410197b0badb5b1131c2fde88b3942fb5fe380e164b293d851d8e7ffc5 inserted/updated successfully.
+2026-08-31 18:51:04,479 - __main__ - INFO - [website_checker.py:136] - Checking website for S.S. Coaching (3dc194ff94c42d122e27560ec8a59a13dc5aa8a29bea4f70de39cd826bf720ab)
+2026-08-31 18:51:05,507 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for S.S. Coaching: VALID_WEBSITE
+2026-08-31 18:51:05,519 - database - DEBUG - [database.py:147] - Lead 3dc194ff94c42d122e27560ec8a59a13dc5aa8a29bea4f70de39cd826bf720ab inserted/updated successfully.
+2026-08-31 18:51:06,521 - __main__ - INFO - [website_checker.py:136] - Checking website for Toppers Institute CA / CS coaching in Lucknow (07d4ef7d0966768ebb82b50aeced1eee23ad76c948399f1ec524b9eee15d255d)
+2026-08-31 18:51:06,710 - __main__ - WARNING - [website_checker.py:80] - HTTP Error 403 for http://toppersinstitutelucknow.com/
+2026-08-31 18:51:06,710 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Toppers Institute CA / CS coaching in Lucknow: BROKEN_WEBSITE
+2026-08-31 18:51:06,733 - database - DEBUG - [database.py:147] - Lead 07d4ef7d0966768ebb82b50aeced1eee23ad76c948399f1ec524b9eee15d255d inserted/updated successfully.
+2026-08-31 18:51:07,734 - __main__ - INFO - [website_checker.py:136] - Checking website for Quantum Coaching Institute (0b02d6d3f32a0ebb35a13a9a31b8f260350d4d19c0f4496586d98ef2c3d438f0)
+2026-08-31 18:51:08,158 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Quantum Coaching Institute: VALID_WEBSITE
+2026-08-31 18:51:08,177 - database - DEBUG - [database.py:147] - Lead 0b02d6d3f32a0ebb35a13a9a31b8f260350d4d19c0f4496586d98ef2c3d438f0 inserted/updated successfully.
+2026-08-31 18:51:09,181 - __main__ - INFO - [website_checker.py:199] - Website checking complete. Processed 20 leads.
+2026-08-31 18:51:09,432 - __main__ - INFO - [orchestrator.py:33] - [SUCCESS] MODULE COMPLETE: Phase 3: Website Auditing
+2026-08-31 18:51:11,434 - __main__ - INFO - [orchestrator.py:11] - ========== STARTING: Phase 4: Lead Scoring Engine ==========
+2026-08-31 18:51:12,003 - __main__ - INFO - [lead_scorer.py:165] - Starting Lead Scoring Module...
+2026-08-31 18:51:12,004 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:51:12,011 - __main__ - INFO - [lead_scorer.py:119] - Scored Unacademy Coaching Centre - Hazratganj (7957b1f512c11277f60d17ceaa861e0dea6e77dc2817238ad0c07598a9b2cd71): Score=40.0, Tier=LOW
+2026-08-31 18:51:12,024 - database - DEBUG - [database.py:147] - Lead 7957b1f512c11277f60d17ceaa861e0dea6e77dc2817238ad0c07598a9b2cd71 inserted/updated successfully.
+2026-08-31 18:51:12,025 - __main__ - INFO - [lead_scorer.py:119] - Scored TCS ACADEMY (7db723e8453a01357e2bf067225a7ff47f9ab4681f16530139206be037988ce2): Score=40.0, Tier=LOW
+2026-08-31 18:51:12,040 - database - DEBUG - [database.py:147] - Lead 7db723e8453a01357e2bf067225a7ff47f9ab4681f16530139206be037988ce2 inserted/updated successfully.
+2026-08-31 18:51:12,041 - __main__ - INFO - [lead_scorer.py:119] - Scored Roy Coaching (1725d7f23033ccf075c5819d4f780269f4babdedf59804dc3c0aa40a3450cca8): Score=75.0, Tier=HOT
+2026-08-31 18:51:12,059 - database - DEBUG - [database.py:147] - Lead 1725d7f23033ccf075c5819d4f780269f4babdedf59804dc3c0aa40a3450cca8 inserted/updated successfully.
+2026-08-31 18:51:12,060 - __main__ - INFO - [lead_scorer.py:119] - Scored Physics Wallah Vidyapeeth Coaching Center Lucknow - Aliganj | IIT JEE, NEET Classes (022aac37d5ea3197c832dca8ec3ef9435232c41b42313e78460b4d07d22bbb62): Score=40.0, Tier=LOW
+2026-08-31 18:51:12,073 - database - DEBUG - [database.py:147] - Lead 022aac37d5ea3197c832dca8ec3ef9435232c41b42313e78460b4d07d22bbb62 inserted/updated successfully.
+2026-08-31 18:51:12,074 - __main__ - INFO - [lead_scorer.py:119] - Scored Excellent Classes (31dd235c0a94032ee4510bf31f12e62dbb2d223ba28ccf30d53e034506a88095): Score=40.0, Tier=LOW
+2026-08-31 18:51:12,088 - database - DEBUG - [database.py:147] - Lead 31dd235c0a94032ee4510bf31f12e62dbb2d223ba28ccf30d53e034506a88095 inserted/updated successfully.
+2026-08-31 18:51:12,111 - database - DEBUG - [database.py:147] - Lead 461702de3253bfd7caf65d60ced8db2cc87c131c5c218a4315ed2f4c5b32be81 inserted/updated successfully.
+2026-08-31 18:51:12,112 - __main__ - INFO - [lead_scorer.py:119] - Scored Engineers Academy (1a2c9deeab79e16a7dc560ba8571738169909c60dff452f9f59a07d526c68237): Score=40.0, Tier=LOW
+2026-08-31 18:51:12,132 - database - DEBUG - [database.py:147] - Lead 1a2c9deeab79e16a7dc560ba8571738169909c60dff452f9f59a07d526c68237 inserted/updated successfully.
+2026-08-31 18:51:12,132 - __main__ - INFO - [lead_scorer.py:119] - Scored IMS Lucknow (fb70d6cb16c740dace3f959162709598010ffb007a867d1f83a4e163e9dcbfc3): Score=40.0, Tier=LOW
+2026-08-31 18:51:12,146 - database - DEBUG - [database.py:147] - Lead fb70d6cb16c740dace3f959162709598010ffb007a867d1f83a4e163e9dcbfc3 inserted/updated successfully.
+2026-08-31 18:51:12,146 - __main__ - INFO - [lead_scorer.py:119] - Scored ALLEN Career Institute - Hazratganj Campus (9e3f1c3cb1ca5f979213e6088bfc71d9b541f76644b8232a4fef20121c6597c4): Score=40.0, Tier=LOW
+2026-08-31 18:51:12,163 - database - DEBUG - [database.py:147] - Lead 9e3f1c3cb1ca5f979213e6088bfc71d9b541f76644b8232a4fef20121c6597c4 inserted/updated successfully.
+2026-08-31 18:51:12,163 - __main__ - INFO - [lead_scorer.py:119] - Scored Narain Institute (bad57bc273abf8edd3de50a49bbfd46ec1fe0a7ec1414e23c2412e7218ac7f22): Score=40.0, Tier=LOW
+2026-08-31 18:51:12,177 - database - DEBUG - [database.py:147] - Lead bad57bc273abf8edd3de50a49bbfd46ec1fe0a7ec1414e23c2412e7218ac7f22 inserted/updated successfully.
+2026-08-31 18:51:12,178 - __main__ - INFO - [lead_scorer.py:119] - Scored Prabhat Pathak Classes (2a3444a01806e069886b224e2cc09fec2b103dbc1060af089785760f99312ce7): Score=40.0, Tier=LOW
+2026-08-31 18:51:12,192 - database - DEBUG - [database.py:147] - Lead 2a3444a01806e069886b224e2cc09fec2b103dbc1060af089785760f99312ce7 inserted/updated successfully.
+2026-08-31 18:51:12,193 - __main__ - INFO - [lead_scorer.py:119] - Scored Sarthak IAS (56f75fec3391095fbe2684df3b56b71d04223cc7c91658ae15363d36bc98b35e): Score=75.0, Tier=HOT
+2026-08-31 18:51:12,214 - database - DEBUG - [database.py:147] - Lead 56f75fec3391095fbe2684df3b56b71d04223cc7c91658ae15363d36bc98b35e inserted/updated successfully.
+2026-08-31 18:51:12,215 - __main__ - INFO - [lead_scorer.py:119] - Scored Career Launcher Lucknow - Hazratganj Center (989f1007d180d8fe89f20fbd99c41b507d12bcac179bed1351894313b172f645): Score=40.0, Tier=LOW
+2026-08-31 18:51:12,229 - database - DEBUG - [database.py:147] - Lead 989f1007d180d8fe89f20fbd99c41b507d12bcac179bed1351894313b172f645 inserted/updated successfully.
+2026-08-31 18:51:12,230 - __main__ - INFO - [lead_scorer.py:119] - Scored SKD New Standard Coaching Institute Hazratganj, Lucknow (452692c58b780926a07c5b98fa279b64a8f5e5dbc8654b2b1361b5e99bd965c9): Score=40.0, Tier=LOW
+2026-08-31 18:51:12,243 - database - DEBUG - [database.py:147] - Lead 452692c58b780926a07c5b98fa279b64a8f5e5dbc8654b2b1361b5e99bd965c9 inserted/updated successfully.
+2026-08-31 18:51:12,244 - __main__ - INFO - [lead_scorer.py:119] - Scored Sure Success Coaching Institute (83b8e435a423eb80dcc23a3d337b17e6ef2740f3c86444b28a70d330e213498a): Score=40.0, Tier=LOW
+2026-08-31 18:51:12,264 - database - DEBUG - [database.py:147] - Lead 83b8e435a423eb80dcc23a3d337b17e6ef2740f3c86444b28a70d330e213498a inserted/updated successfully.
+2026-08-31 18:51:12,264 - __main__ - INFO - [lead_scorer.py:119] - Scored INPS Classes (97b1279161e8c58566c70ee7a66ad43b82f512b3e36f8a5576c0cdfe54bd6f49): Score=40.0, Tier=LOW
+2026-08-31 18:51:12,283 - database - DEBUG - [database.py:147] - Lead 97b1279161e8c58566c70ee7a66ad43b82f512b3e36f8a5576c0cdfe54bd6f49 inserted/updated successfully.
+2026-08-31 18:51:12,284 - __main__ - INFO - [lead_scorer.py:119] - Scored T.I.M.E. Lucknow (d3da6e410197b0badb5b1131c2fde88b3942fb5fe380e164b293d851d8e7ffc5): Score=75.0, Tier=HOT
+2026-08-31 18:51:12,296 - database - DEBUG - [database.py:147] - Lead d3da6e410197b0badb5b1131c2fde88b3942fb5fe380e164b293d851d8e7ffc5 inserted/updated successfully.
+2026-08-31 18:51:12,297 - __main__ - INFO - [lead_scorer.py:119] - Scored S.S. Coaching (3dc194ff94c42d122e27560ec8a59a13dc5aa8a29bea4f70de39cd826bf720ab): Score=40.0, Tier=LOW
+2026-08-31 18:51:12,313 - database - DEBUG - [database.py:147] - Lead 3dc194ff94c42d122e27560ec8a59a13dc5aa8a29bea4f70de39cd826bf720ab inserted/updated successfully.
+2026-08-31 18:51:12,314 - __main__ - INFO - [lead_scorer.py:119] - Scored Toppers Institute CA / CS coaching in Lucknow (07d4ef7d0966768ebb82b50aeced1eee23ad76c948399f1ec524b9eee15d255d): Score=75.0, Tier=HOT
+2026-08-31 18:51:12,328 - database - DEBUG - [database.py:147] - Lead 07d4ef7d0966768ebb82b50aeced1eee23ad76c948399f1ec524b9eee15d255d inserted/updated successfully.
+2026-08-31 18:51:12,328 - __main__ - INFO - [lead_scorer.py:119] - Scored Quantum Coaching Institute (0b02d6d3f32a0ebb35a13a9a31b8f260350d4d19c0f4496586d98ef2c3d438f0): Score=40.0, Tier=LOW
+2026-08-31 18:51:12,346 - database - DEBUG - [database.py:147] - Lead 0b02d6d3f32a0ebb35a13a9a31b8f260350d4d19c0f4496586d98ef2c3d438f0 inserted/updated successfully.
+2026-08-31 18:51:12,397 - __main__ - ERROR - [orchestrator.py:30] - [X] MODULE FAILED: processing.lead_scorer (Exit code: 1)
+2026-08-31 18:51:12,398 - __main__ - ERROR - [orchestrator.py:64] - [HALT] Pipeline halted due to module failure.
+2026-08-31 18:51:43,797 - __main__ - INFO - [orchestrator.py:57] - STARTING FULL LEADHUNTER AI ORCHESTRATOR (Target: 10 leads)
+2026-08-31 18:51:43,797 - __main__ - INFO - [orchestrator.py:20] - ========== STARTING: Phase 1: Discovery (Google Maps Scrape) ==========
+2026-08-31 18:51:44,409 - __main__ - INFO - [serpapi_search.py:24] - Starting business discovery:
+city=Lucknow
+business_type=Coaching Institutes
+max_results=10
+2026-08-31 18:51:44,409 - __main__ - INFO - [serpapi_search.py:47] - Sanitized Google Maps Search Query: 'Coaching Institutes in Lucknow'
+2026-08-31 18:51:44,409 - database - INFO - [database.py:35] - Using SQLite Database (Local).
+2026-08-31 18:51:44,528 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 0b02d6d3f32a0ebb35a13a9a31b8f260350d4d19c0f4496586d98ef2c3d438f0
+2026-08-31 18:51:44,530 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 07d4ef7d0966768ebb82b50aeced1eee23ad76c948399f1ec524b9eee15d255d
+2026-08-31 18:51:44,533 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 3dc194ff94c42d122e27560ec8a59a13dc5aa8a29bea4f70de39cd826bf720ab
+2026-08-31 18:51:44,534 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: d3da6e410197b0badb5b1131c2fde88b3942fb5fe380e164b293d851d8e7ffc5
+2026-08-31 18:51:44,535 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 97b1279161e8c58566c70ee7a66ad43b82f512b3e36f8a5576c0cdfe54bd6f49
+2026-08-31 18:51:44,537 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 83b8e435a423eb80dcc23a3d337b17e6ef2740f3c86444b28a70d330e213498a
+2026-08-31 18:51:44,538 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 452692c58b780926a07c5b98fa279b64a8f5e5dbc8654b2b1361b5e99bd965c9
+2026-08-31 18:51:44,540 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 989f1007d180d8fe89f20fbd99c41b507d12bcac179bed1351894313b172f645
+2026-08-31 18:51:44,541 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 56f75fec3391095fbe2684df3b56b71d04223cc7c91658ae15363d36bc98b35e
+2026-08-31 18:51:44,542 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 2a3444a01806e069886b224e2cc09fec2b103dbc1060af089785760f99312ce7
+2026-08-31 18:51:44,543 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: bad57bc273abf8edd3de50a49bbfd46ec1fe0a7ec1414e23c2412e7218ac7f22
+2026-08-31 18:51:44,544 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 0b02d6d3f32a0ebb35a13a9a31b8f260350d4d19c0f4496586d98ef2c3d438f0
+2026-08-31 18:51:44,546 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 9e3f1c3cb1ca5f979213e6088bfc71d9b541f76644b8232a4fef20121c6597c4
+2026-08-31 18:51:44,548 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: fb70d6cb16c740dace3f959162709598010ffb007a867d1f83a4e163e9dcbfc3
+2026-08-31 18:51:44,550 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 1a2c9deeab79e16a7dc560ba8571738169909c60dff452f9f59a07d526c68237
+2026-08-31 18:51:44,552 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 461702de3253bfd7caf65d60ced8db2cc87c131c5c218a4315ed2f4c5b32be81
+2026-08-31 18:51:44,553 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 31dd235c0a94032ee4510bf31f12e62dbb2d223ba28ccf30d53e034506a88095
+2026-08-31 18:51:44,555 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 022aac37d5ea3197c832dca8ec3ef9435232c41b42313e78460b4d07d22bbb62
+2026-08-31 18:51:44,557 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 1725d7f23033ccf075c5819d4f780269f4babdedf59804dc3c0aa40a3450cca8
+2026-08-31 18:51:44,559 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 7db723e8453a01357e2bf067225a7ff47f9ab4681f16530139206be037988ce2
+2026-08-31 18:51:44,651 - __main__ - INFO - [serpapi_search.py:113] - Skipping duplicate lead: 7957b1f512c11277f60d17ceaa861e0dea6e77dc2817238ad0c07598a9b2cd71
+2026-08-31 18:51:44,663 - database - DEBUG - [database.py:156] - Lead d78ed743b79e39e095723c7088f5765866cd908c8f6ff04b9ec768fb35d6ec67 inserted/updated successfully.
+2026-08-31 18:51:44,663 - __main__ - INFO - [serpapi_search.py:119] - Lead inserted: d78ed743b79e39e095723c7088f5765866cd908c8f6ff04b9ec768fb35d6ec67
+2026-08-31 18:51:44,681 - database - DEBUG - [database.py:156] - Lead 08fb962e06d7a65ab1fc8df07afeacea79a5b45f18c352670dd7bdc734a2f66e inserted/updated successfully.
+2026-08-31 18:51:44,681 - __main__ - INFO - [serpapi_search.py:119] - Lead inserted: 08fb962e06d7a65ab1fc8df07afeacea79a5b45f18c352670dd7bdc734a2f66e
+2026-08-31 18:51:44,694 - database - DEBUG - [database.py:156] - Lead 84f7eb7eafb96a97db5ecb04c7fd9f37033f7848448639eb048ecb78c69141c9 inserted/updated successfully.
+2026-08-31 18:51:44,695 - __main__ - INFO - [serpapi_search.py:119] - Lead inserted: 84f7eb7eafb96a97db5ecb04c7fd9f37033f7848448639eb048ecb78c69141c9
+2026-08-31 18:51:44,707 - database - DEBUG - [database.py:156] - Lead 69a2ab5be79a716bf39fdaa1d5f6fefb82ce854fb4681ab01da167dea9a4012a inserted/updated successfully.
+2026-08-31 18:51:44,708 - __main__ - INFO - [serpapi_search.py:119] - Lead inserted: 69a2ab5be79a716bf39fdaa1d5f6fefb82ce854fb4681ab01da167dea9a4012a
+2026-08-31 18:51:44,721 - database - DEBUG - [database.py:156] - Lead 82e2dee24c00852df96ccf79389f59b65cd2a71625ebe82f5a1a775dacb2920f inserted/updated successfully.
+2026-08-31 18:51:44,722 - __main__ - INFO - [serpapi_search.py:119] - Lead inserted: 82e2dee24c00852df96ccf79389f59b65cd2a71625ebe82f5a1a775dacb2920f
+2026-08-31 18:51:44,735 - database - DEBUG - [database.py:156] - Lead efb2bf3608e9727f3e2dcff48690a535f7735f88ed777d6453fc471dad4c74d2 inserted/updated successfully.
+2026-08-31 18:51:44,736 - __main__ - INFO - [serpapi_search.py:119] - Lead inserted: efb2bf3608e9727f3e2dcff48690a535f7735f88ed777d6453fc471dad4c74d2
+2026-08-31 18:51:44,760 - database - DEBUG - [database.py:156] - Lead 583e4f78f7155673cb8689416e3dffe7da880399cef206ac8ec1549dabb04654 inserted/updated successfully.
+2026-08-31 18:51:44,761 - __main__ - INFO - [serpapi_search.py:119] - Lead inserted: 583e4f78f7155673cb8689416e3dffe7da880399cef206ac8ec1549dabb04654
+2026-08-31 18:51:44,775 - database - DEBUG - [database.py:156] - Lead be2253136e3f3a9fb057e5c59b1c3d63c6facb41a40849792512f24c83e1e11e inserted/updated successfully.
+2026-08-31 18:51:44,776 - __main__ - INFO - [serpapi_search.py:119] - Lead inserted: be2253136e3f3a9fb057e5c59b1c3d63c6facb41a40849792512f24c83e1e11e
+2026-08-31 18:51:44,789 - database - DEBUG - [database.py:156] - Lead eb0d8335e4befe22baa6380b7d8300bc88f7f166040378accaa64eb1e141e601 inserted/updated successfully.
+2026-08-31 18:51:44,790 - __main__ - INFO - [serpapi_search.py:119] - Lead inserted: eb0d8335e4befe22baa6380b7d8300bc88f7f166040378accaa64eb1e141e601
+2026-08-31 18:51:44,801 - database - DEBUG - [database.py:156] - Lead ec0cf83cf00ceb7688a5f8e685e3fc3582d43ba855ab57cb0eab903433121bec inserted/updated successfully.
+2026-08-31 18:51:44,802 - __main__ - INFO - [serpapi_search.py:119] - Lead inserted: ec0cf83cf00ceb7688a5f8e685e3fc3582d43ba855ab57cb0eab903433121bec
+2026-08-31 18:51:44,802 - __main__ - INFO - [serpapi_search.py:129] - Search completed: discovered=40, inserted=10, duplicates=21
+2026-08-31 18:51:44,884 - __main__ - INFO - [orchestrator.py:43] - [SUCCESS] MODULE COMPLETE: Phase 1: Discovery (Google Maps Scrape)
+2026-08-31 18:51:46,886 - __main__ - INFO - [orchestrator.py:20] - ========== STARTING: Phase 2A: Data Normalization ==========
+2026-08-31 18:51:47,089 - __main__ - INFO - [orchestrator.py:43] - [SUCCESS] MODULE COMPLETE: Phase 2A: Data Normalization
+2026-08-31 18:51:49,090 - __main__ - INFO - [orchestrator.py:20] - ========== STARTING: Phase 2B: Deduplication ==========
+2026-08-31 18:51:49,516 - __main__ - INFO - [deduplicate.py:145] - Starting normalization and deduplication process...
+2026-08-31 18:51:49,517 - database - INFO - [database.py:35] - Using SQLite Database (Local).
+2026-08-31 18:51:49,524 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: KK Soni Classes
+2026-08-31 18:51:49,526 - database - DEBUG - [database.py:156] - Lead ec0cf83cf00ceb7688a5f8e685e3fc3582d43ba855ab57cb0eab903433121bec inserted/updated successfully.
+2026-08-31 18:51:49,527 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: The Scholars - Shashank Sir Classes
+2026-08-31 18:51:49,528 - database - DEBUG - [database.py:156] - Lead eb0d8335e4befe22baa6380b7d8300bc88f7f166040378accaa64eb1e141e601 inserted/updated successfully.
+2026-08-31 18:51:49,528 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: PATHFINDER DEFENCE ACADEMY | NDA Coaching in Lucknow
+2026-08-31 18:51:49,530 - database - DEBUG - [database.py:156] - Lead be2253136e3f3a9fb057e5c59b1c3d63c6facb41a40849792512f24c83e1e11e inserted/updated successfully.
+2026-08-31 18:51:49,530 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Gautam Competition Coaching
+2026-08-31 18:51:49,531 - database - DEBUG - [database.py:156] - Lead 583e4f78f7155673cb8689416e3dffe7da880399cef206ac8ec1549dabb04654 inserted/updated successfully.
+2026-08-31 18:51:49,531 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Motion Education
+2026-08-31 18:51:49,533 - database - DEBUG - [database.py:156] - Lead efb2bf3608e9727f3e2dcff48690a535f7735f88ed777d6453fc471dad4c74d2 inserted/updated successfully.
+2026-08-31 18:51:49,533 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Pathshala Institute
+2026-08-31 18:51:49,534 - database - DEBUG - [database.py:156] - Lead 82e2dee24c00852df96ccf79389f59b65cd2a71625ebe82f5a1a775dacb2920f inserted/updated successfully.
+2026-08-31 18:51:49,534 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Obsession
+2026-08-31 18:51:49,536 - database - DEBUG - [database.py:156] - Lead 69a2ab5be79a716bf39fdaa1d5f6fefb82ce854fb4681ab01da167dea9a4012a inserted/updated successfully.
+2026-08-31 18:51:49,536 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: New Light Institute Lucknow
+2026-08-31 18:51:49,537 - database - DEBUG - [database.py:156] - Lead 84f7eb7eafb96a97db5ecb04c7fd9f37033f7848448639eb048ecb78c69141c9 inserted/updated successfully.
+2026-08-31 18:51:49,538 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Prepare IAS
+2026-08-31 18:51:49,540 - database - DEBUG - [database.py:156] - Lead 08fb962e06d7a65ab1fc8df07afeacea79a5b45f18c352670dd7bdc734a2f66e inserted/updated successfully.
+2026-08-31 18:51:49,541 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Gravity Classes
+2026-08-31 18:51:49,542 - database - DEBUG - [database.py:156] - Lead d78ed743b79e39e095723c7088f5765866cd908c8f6ff04b9ec768fb35d6ec67 inserted/updated successfully.
+2026-08-31 18:51:49,543 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Unacademy Coaching Centre - Hazratganj
+2026-08-31 18:51:49,544 - database - DEBUG - [database.py:156] - Lead 7957b1f512c11277f60d17ceaa861e0dea6e77dc2817238ad0c07598a9b2cd71 inserted/updated successfully.
+2026-08-31 18:51:49,544 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: TCS ACADEMY
+2026-08-31 18:51:49,546 - database - DEBUG - [database.py:156] - Lead 7db723e8453a01357e2bf067225a7ff47f9ab4681f16530139206be037988ce2 inserted/updated successfully.
+2026-08-31 18:51:49,546 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Roy Coaching
+2026-08-31 18:51:49,547 - database - DEBUG - [database.py:156] - Lead 1725d7f23033ccf075c5819d4f780269f4babdedf59804dc3c0aa40a3450cca8 inserted/updated successfully.
+2026-08-31 18:51:49,548 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Physics Wallah Vidyapeeth Coaching Center Lucknow - Aliganj | IIT JEE, NEET Classes
+2026-08-31 18:51:49,549 - database - DEBUG - [database.py:156] - Lead 022aac37d5ea3197c832dca8ec3ef9435232c41b42313e78460b4d07d22bbb62 inserted/updated successfully.
+2026-08-31 18:51:49,549 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Excellent Classes
+2026-08-31 18:51:49,550 - database - DEBUG - [database.py:156] - Lead 31dd235c0a94032ee4510bf31f12e62dbb2d223ba28ccf30d53e034506a88095 inserted/updated successfully.
+2026-08-31 18:51:49,559 - database - DEBUG - [database.py:156] - Lead 461702de3253bfd7caf65d60ced8db2cc87c131c5c218a4315ed2f4c5b32be81 inserted/updated successfully.
+2026-08-31 18:51:49,560 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Engineers Academy
+2026-08-31 18:51:49,562 - database - DEBUG - [database.py:156] - Lead 1a2c9deeab79e16a7dc560ba8571738169909c60dff452f9f59a07d526c68237 inserted/updated successfully.
+2026-08-31 18:51:49,563 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: IMS Lucknow
+2026-08-31 18:51:49,564 - database - DEBUG - [database.py:156] - Lead fb70d6cb16c740dace3f959162709598010ffb007a867d1f83a4e163e9dcbfc3 inserted/updated successfully.
+2026-08-31 18:51:49,565 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: ALLEN Career Institute - Hazratganj Campus
+2026-08-31 18:51:49,567 - database - DEBUG - [database.py:156] - Lead 9e3f1c3cb1ca5f979213e6088bfc71d9b541f76644b8232a4fef20121c6597c4 inserted/updated successfully.
+2026-08-31 18:51:49,567 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Narain Institute
+2026-08-31 18:51:49,570 - database - DEBUG - [database.py:156] - Lead bad57bc273abf8edd3de50a49bbfd46ec1fe0a7ec1414e23c2412e7218ac7f22 inserted/updated successfully.
+2026-08-31 18:51:49,570 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Prabhat Pathak Classes
+2026-08-31 18:51:49,573 - database - DEBUG - [database.py:156] - Lead 2a3444a01806e069886b224e2cc09fec2b103dbc1060af089785760f99312ce7 inserted/updated successfully.
+2026-08-31 18:51:49,574 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Sarthak IAS
+2026-08-31 18:51:49,575 - database - DEBUG - [database.py:156] - Lead 56f75fec3391095fbe2684df3b56b71d04223cc7c91658ae15363d36bc98b35e inserted/updated successfully.
+2026-08-31 18:51:49,576 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Career Launcher Lucknow - Hazratganj Center
+2026-08-31 18:51:49,578 - database - DEBUG - [database.py:156] - Lead 989f1007d180d8fe89f20fbd99c41b507d12bcac179bed1351894313b172f645 inserted/updated successfully.
+2026-08-31 18:51:49,578 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: SKD New Standard Coaching Institute Hazratganj, Lucknow
+2026-08-31 18:51:49,580 - database - DEBUG - [database.py:156] - Lead 452692c58b780926a07c5b98fa279b64a8f5e5dbc8654b2b1361b5e99bd965c9 inserted/updated successfully.
+2026-08-31 18:51:49,580 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Sure Success Coaching Institute
+2026-08-31 18:51:49,582 - database - DEBUG - [database.py:156] - Lead 83b8e435a423eb80dcc23a3d337b17e6ef2740f3c86444b28a70d330e213498a inserted/updated successfully.
+2026-08-31 18:51:49,582 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: INPS Classes
+2026-08-31 18:51:49,584 - database - DEBUG - [database.py:156] - Lead 97b1279161e8c58566c70ee7a66ad43b82f512b3e36f8a5576c0cdfe54bd6f49 inserted/updated successfully.
+2026-08-31 18:51:49,584 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: T.I.M.E. Lucknow
+2026-08-31 18:51:49,586 - database - DEBUG - [database.py:156] - Lead d3da6e410197b0badb5b1131c2fde88b3942fb5fe380e164b293d851d8e7ffc5 inserted/updated successfully.
+2026-08-31 18:51:49,586 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: S.S. Coaching
+2026-08-31 18:51:49,588 - database - DEBUG - [database.py:156] - Lead 3dc194ff94c42d122e27560ec8a59a13dc5aa8a29bea4f70de39cd826bf720ab inserted/updated successfully.
+2026-08-31 18:51:49,589 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Toppers Institute CA / CS coaching in Lucknow
+2026-08-31 18:51:49,592 - database - DEBUG - [database.py:156] - Lead 07d4ef7d0966768ebb82b50aeced1eee23ad76c948399f1ec524b9eee15d255d inserted/updated successfully.
+2026-08-31 18:51:49,592 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Quantum Coaching Institute
+2026-08-31 18:51:49,593 - database - DEBUG - [database.py:156] - Lead 0b02d6d3f32a0ebb35a13a9a31b8f260350d4d19c0f4496586d98ef2c3d438f0 inserted/updated successfully.
+2026-08-31 18:51:49,594 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Reliant Plumbing - Dallas
+2026-08-31 18:51:49,595 - database - DEBUG - [database.py:156] - Lead 4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d inserted/updated successfully.
+2026-08-31 18:51:49,595 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Tide Turners Plumbing
+2026-08-31 18:51:49,597 - database - DEBUG - [database.py:156] - Lead eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086 inserted/updated successfully.
+2026-08-31 18:51:49,597 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Jake the Plumbing Pro
+2026-08-31 18:51:49,598 - database - DEBUG - [database.py:156] - Lead 7ed1e2ebabc3d18d9ec385f8a2a0205acd5d3101b6f428f10e181484eaa7f06e inserted/updated successfully.
+2026-08-31 18:51:49,599 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Anchor Plumbing Company
+2026-08-31 18:51:49,600 - database - DEBUG - [database.py:156] - Lead 0248ccd1a5ac7c76ecd1e232d20b93d87f789a6abd5dbaa5e8093f88583ca049 inserted/updated successfully.
+2026-08-31 18:51:49,600 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Baker Brothers Plumbing, Air & Electric
+2026-08-31 18:51:49,602 - database - DEBUG - [database.py:156] - Lead d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c inserted/updated successfully.
+2026-08-31 18:51:49,602 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Milestone Electric, A/C, & Plumbing
+2026-08-31 18:51:49,603 - database - DEBUG - [database.py:156] - Lead 135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858 inserted/updated successfully.
+2026-08-31 18:51:49,604 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Tribeca Plumbing, Inc.
+2026-08-31 18:51:49,605 - database - DEBUG - [database.py:156] - Lead bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf inserted/updated successfully.
+2026-08-31 18:51:49,606 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Dallas Plumbing & Air Conditioning
+2026-08-31 18:51:49,607 - database - DEBUG - [database.py:156] - Lead dfe0d94dbae3a0c76d953a458ddf076768addd6b3a5cf08655c3013b13daaf22 inserted/updated successfully.
+2026-08-31 18:51:49,607 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Metro Flow Plumbing - Dallas Emergency Plumbers
+2026-08-31 18:51:49,609 - database - DEBUG - [database.py:156] - Lead a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075 inserted/updated successfully.
+2026-08-31 18:51:49,609 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Public Service Plumbers
+2026-08-31 18:51:49,610 - database - DEBUG - [database.py:156] - Lead 67653dede81d016606aa3ea23aabdd9a17f48b66f637e93dc70b27681f382f20 inserted/updated successfully.
+2026-08-31 18:51:49,611 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Hocco Kitchen (OP Road)
+2026-08-31 18:51:49,613 - database - DEBUG - [database.py:156] - Lead c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3 inserted/updated successfully.
+2026-08-31 18:51:49,613 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Thyme & Whisk
+2026-08-31 18:51:49,614 - database - DEBUG - [database.py:156] - Lead 37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e inserted/updated successfully.
+2026-08-31 18:51:49,615 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: western restaurant
+2026-08-31 18:51:49,616 - database - DEBUG - [database.py:156] - Lead 54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a inserted/updated successfully.
+2026-08-31 18:51:49,616 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Fitoor
+2026-08-31 18:51:49,618 - database - DEBUG - [database.py:156] - Lead 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff inserted/updated successfully.
+2026-08-31 18:51:49,618 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Nizam's The Royal Kitchen
+2026-08-31 18:51:49,619 - database - DEBUG - [database.py:156] - Lead 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731 inserted/updated successfully.
+2026-08-31 18:51:49,619 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: The Highway Eats - Vadodara | Multicuisine Restaurant, Rooms, Banquet & Poolside Party Lawns
+2026-08-31 18:51:49,620 - database - DEBUG - [database.py:156] - Lead 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c inserted/updated successfully.
+2026-08-31 18:51:49,621 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: 812 CE Urban Restaurant
+2026-08-31 18:51:49,622 - database - DEBUG - [database.py:156] - Lead 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0 inserted/updated successfully.
+2026-08-31 18:51:49,622 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Barbeque Nation - Vadodara - Cine Mall
+2026-08-31 18:51:49,624 - database - DEBUG - [database.py:156] - Lead fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef inserted/updated successfully.
+2026-08-31 18:51:49,624 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: 22nd Parallel
+2026-08-31 18:51:49,625 - database - DEBUG - [database.py:156] - Lead 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140 inserted/updated successfully.
+2026-08-31 18:51:49,626 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Bayleaf Multi Cuisine Restaurant
+2026-08-31 18:51:49,627 - database - DEBUG - [database.py:156] - Lead d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1 inserted/updated successfully.
+2026-08-31 18:51:49,628 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: The Morsel Restaurant
+2026-08-31 18:51:49,629 - database - DEBUG - [database.py:156] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-31 18:51:49,630 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Island The Restaurant Waves Club
+2026-08-31 18:51:49,631 - database - DEBUG - [database.py:156] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-31 18:51:49,631 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Peshawri by Welcomhotel Vadodara
+2026-08-31 18:51:49,632 - database - DEBUG - [database.py:156] - Lead dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996 inserted/updated successfully.
+2026-08-31 18:51:49,632 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: The Secret Kitchen
+2026-08-31 18:51:49,634 - database - DEBUG - [database.py:156] - Lead fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86 inserted/updated successfully.
+2026-08-31 18:51:49,634 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Retro Bistro : The Fine Multi Cuisine Restaurant ( Vadodara )
+2026-08-31 18:51:49,635 - database - DEBUG - [database.py:156] - Lead 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e inserted/updated successfully.
+2026-08-31 18:51:49,635 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Sakura Pan Asian Cuisine
+2026-08-31 18:51:49,636 - database - DEBUG - [database.py:156] - Lead 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3 inserted/updated successfully.
+2026-08-31 18:51:49,637 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Spice Kraft Restaurant
+2026-08-31 18:51:49,638 - database - DEBUG - [database.py:156] - Lead e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8 inserted/updated successfully.
+2026-08-31 18:51:49,638 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Taste Carnival - (Banquet, Rooms, Restaurant)
+2026-08-31 18:51:49,639 - database - DEBUG - [database.py:156] - Lead 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b inserted/updated successfully.
+2026-08-31 18:51:49,640 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Le Prive World Cuisine
+2026-08-31 18:51:49,641 - database - DEBUG - [database.py:156] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-31 18:51:49,641 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: The House of Makeba - Veg Family Dining Restaurant in Vadodara
+2026-08-31 18:51:49,642 - database - DEBUG - [database.py:156] - Lead 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03 inserted/updated successfully.
+2026-08-31 18:51:49,643 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Jassi De Parathe
+2026-08-31 18:51:49,645 - database - DEBUG - [database.py:156] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-31 18:51:49,645 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Vibes The Bistro
+2026-08-31 18:51:49,646 - database - DEBUG - [database.py:156] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-31 18:51:49,647 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Candle Light Date N Dinner & Rooftop Restaurant Vadodara
+2026-08-31 18:51:49,648 - database - DEBUG - [database.py:156] - Lead c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde inserted/updated successfully.
+2026-08-31 18:51:49,648 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Vadodara Rest 1
+2026-08-31 18:51:49,649 - database - DEBUG - [database.py:156] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-31 18:51:49,650 - __main__ - DEBUG - [deduplicate.py:98] - Lead verified unique: Acme Corp
+2026-08-31 18:51:49,651 - database - DEBUG - [database.py:156] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-31 18:51:49,683 - __main__ - INFO - [orchestrator.py:43] - [SUCCESS] MODULE COMPLETE: Phase 2B: Deduplication
+2026-08-31 18:51:51,684 - __main__ - INFO - [orchestrator.py:20] - ========== STARTING: Phase 3: Website Auditing ==========
+2026-08-31 18:51:52,408 - __main__ - INFO - [website_checker.py:211] - Starting Website Verification Module...
+2026-08-31 18:51:52,408 - database - INFO - [database.py:35] - Using SQLite Database (Local).
+2026-08-31 18:51:52,413 - __main__ - INFO - [website_checker.py:145] - Checking website for KK Soni Classes (ec0cf83cf00ceb7688a5f8e685e3fc3582d43ba855ab57cb0eab903433121bec)
+2026-08-31 18:51:52,413 - __main__ - INFO - [website_checker.py:152] - Website classification for KK Soni Classes: NO_WEBSITE
+2026-08-31 18:51:52,425 - database - DEBUG - [database.py:156] - Lead ec0cf83cf00ceb7688a5f8e685e3fc3582d43ba855ab57cb0eab903433121bec inserted/updated successfully.
+2026-08-31 18:51:53,426 - __main__ - INFO - [website_checker.py:145] - Checking website for The Scholars - Shashank Sir Classes (eb0d8335e4befe22baa6380b7d8300bc88f7f166040378accaa64eb1e141e601)
+2026-08-31 18:51:56,005 - __main__ - WARNING - [website_checker.py:89] - HTTP Error 500 for http://thescholarslko.in/
+2026-08-31 18:51:56,006 - __main__ - INFO - [website_checker.py:157] - Website Verification Result for The Scholars - Shashank Sir Classes: BROKEN_WEBSITE
+2026-08-31 18:51:56,039 - database - DEBUG - [database.py:156] - Lead eb0d8335e4befe22baa6380b7d8300bc88f7f166040378accaa64eb1e141e601 inserted/updated successfully.
+2026-08-31 18:51:57,041 - __main__ - INFO - [website_checker.py:145] - Checking website for PATHFINDER DEFENCE ACADEMY | NDA Coaching in Lucknow (be2253136e3f3a9fb057e5c59b1c3d63c6facb41a40849792512f24c83e1e11e)
+2026-08-31 18:51:57,465 - __main__ - INFO - [website_checker.py:157] - Website Verification Result for PATHFINDER DEFENCE ACADEMY | NDA Coaching in Lucknow: VALID_WEBSITE
+2026-08-31 18:51:57,497 - database - DEBUG - [database.py:156] - Lead be2253136e3f3a9fb057e5c59b1c3d63c6facb41a40849792512f24c83e1e11e inserted/updated successfully.
+2026-08-31 18:51:58,499 - __main__ - INFO - [website_checker.py:145] - Checking website for Gautam Competition Coaching (583e4f78f7155673cb8689416e3dffe7da880399cef206ac8ec1549dabb04654)
+2026-08-31 18:51:59,209 - __main__ - INFO - [website_checker.py:157] - Website Verification Result for Gautam Competition Coaching: VALID_WEBSITE
+2026-08-31 18:51:59,241 - database - DEBUG - [database.py:156] - Lead 583e4f78f7155673cb8689416e3dffe7da880399cef206ac8ec1549dabb04654 inserted/updated successfully.
+2026-08-31 18:52:00,243 - __main__ - INFO - [website_checker.py:145] - Checking website for Motion Education (efb2bf3608e9727f3e2dcff48690a535f7735f88ed777d6453fc471dad4c74d2)
+2026-08-31 18:52:00,886 - __main__ - INFO - [website_checker.py:157] - Website Verification Result for Motion Education: VALID_WEBSITE
+2026-08-31 18:52:00,922 - database - DEBUG - [database.py:156] - Lead efb2bf3608e9727f3e2dcff48690a535f7735f88ed777d6453fc471dad4c74d2 inserted/updated successfully.
+2026-08-31 18:52:01,924 - __main__ - INFO - [website_checker.py:145] - Checking website for Pathshala Institute (82e2dee24c00852df96ccf79389f59b65cd2a71625ebe82f5a1a775dacb2920f)
+2026-08-31 18:52:03,424 - __main__ - INFO - [website_checker.py:157] - Website Verification Result for Pathshala Institute: VALID_WEBSITE
+2026-08-31 18:52:03,442 - database - DEBUG - [database.py:156] - Lead 82e2dee24c00852df96ccf79389f59b65cd2a71625ebe82f5a1a775dacb2920f inserted/updated successfully.
+2026-08-31 18:52:04,443 - __main__ - INFO - [website_checker.py:145] - Checking website for Obsession (69a2ab5be79a716bf39fdaa1d5f6fefb82ce854fb4681ab01da167dea9a4012a)
+2026-08-31 18:52:05,232 - __main__ - INFO - [website_checker.py:157] - Website Verification Result for Obsession: VALID_WEBSITE
+2026-08-31 18:52:05,264 - database - DEBUG - [database.py:156] - Lead 69a2ab5be79a716bf39fdaa1d5f6fefb82ce854fb4681ab01da167dea9a4012a inserted/updated successfully.
+2026-08-31 18:52:06,266 - __main__ - INFO - [website_checker.py:145] - Checking website for New Light Institute Lucknow (84f7eb7eafb96a97db5ecb04c7fd9f37033f7848448639eb048ecb78c69141c9)
+2026-08-31 18:52:06,436 - __main__ - WARNING - [website_checker.py:92] - Request Error for https://www.newlightinstitute.in/: [Errno 11001] getaddrinfo failed
+2026-08-31 18:52:06,437 - __main__ - INFO - [website_checker.py:157] - Website Verification Result for New Light Institute Lucknow: BROKEN_WEBSITE
+2026-08-31 18:52:06,453 - database - DEBUG - [database.py:156] - Lead 84f7eb7eafb96a97db5ecb04c7fd9f37033f7848448639eb048ecb78c69141c9 inserted/updated successfully.
+2026-08-31 18:52:07,454 - __main__ - INFO - [website_checker.py:145] - Checking website for Prepare IAS (08fb962e06d7a65ab1fc8df07afeacea79a5b45f18c352670dd7bdc734a2f66e)
+2026-08-31 18:52:07,522 - __main__ - WARNING - [website_checker.py:92] - Request Error for https://prepareias.in/: [Errno 11001] getaddrinfo failed
+2026-08-31 18:52:07,523 - __main__ - INFO - [website_checker.py:157] - Website Verification Result for Prepare IAS: BROKEN_WEBSITE
+2026-08-31 18:52:07,554 - database - DEBUG - [database.py:156] - Lead 08fb962e06d7a65ab1fc8df07afeacea79a5b45f18c352670dd7bdc734a2f66e inserted/updated successfully.
+2026-08-31 18:52:08,556 - __main__ - INFO - [website_checker.py:145] - Checking website for Gravity Classes (d78ed743b79e39e095723c7088f5765866cd908c8f6ff04b9ec768fb35d6ec67)
+2026-08-31 18:52:08,814 - __main__ - WARNING - [website_checker.py:89] - HTTP Error 403 for https://gravityclasses.org/
+2026-08-31 18:52:08,814 - __main__ - INFO - [website_checker.py:157] - Website Verification Result for Gravity Classes: BROKEN_WEBSITE
+2026-08-31 18:52:08,850 - database - DEBUG - [database.py:156] - Lead d78ed743b79e39e095723c7088f5765866cd908c8f6ff04b9ec768fb35d6ec67 inserted/updated successfully.
+2026-08-31 18:52:09,855 - __main__ - INFO - [website_checker.py:208] - Website checking complete. Processed 10 leads.
+2026-08-31 18:52:10,080 - __main__ - INFO - [orchestrator.py:43] - [SUCCESS] MODULE COMPLETE: Phase 3: Website Auditing
+2026-08-31 18:52:12,081 - __main__ - INFO - [orchestrator.py:20] - ========== STARTING: Phase 4: Lead Scoring Engine ==========
+2026-08-31 18:52:12,895 - __main__ - INFO - [lead_scorer.py:174] - Starting Lead Scoring Module...
+2026-08-31 18:52:12,896 - database - INFO - [database.py:35] - Using SQLite Database (Local).
+2026-08-31 18:52:12,906 - __main__ - INFO - [lead_scorer.py:128] - Scored KK Soni Classes (ec0cf83cf00ceb7688a5f8e685e3fc3582d43ba855ab57cb0eab903433121bec): Score=80.0, Tier=HOT
+2026-08-31 18:52:12,928 - database - DEBUG - [database.py:156] - Lead ec0cf83cf00ceb7688a5f8e685e3fc3582d43ba855ab57cb0eab903433121bec inserted/updated successfully.
+2026-08-31 18:52:12,928 - __main__ - INFO - [lead_scorer.py:128] - Scored The Scholars - Shashank Sir Classes (eb0d8335e4befe22baa6380b7d8300bc88f7f166040378accaa64eb1e141e601): Score=75.0, Tier=HOT
+2026-08-31 18:52:12,942 - database - DEBUG - [database.py:156] - Lead eb0d8335e4befe22baa6380b7d8300bc88f7f166040378accaa64eb1e141e601 inserted/updated successfully.
+2026-08-31 18:52:12,943 - __main__ - INFO - [lead_scorer.py:128] - Scored PATHFINDER DEFENCE ACADEMY | NDA Coaching in Lucknow (be2253136e3f3a9fb057e5c59b1c3d63c6facb41a40849792512f24c83e1e11e): Score=40.0, Tier=LOW
+2026-08-31 18:52:12,961 - database - DEBUG - [database.py:156] - Lead be2253136e3f3a9fb057e5c59b1c3d63c6facb41a40849792512f24c83e1e11e inserted/updated successfully.
+2026-08-31 18:52:12,961 - __main__ - INFO - [lead_scorer.py:128] - Scored Gautam Competition Coaching (583e4f78f7155673cb8689416e3dffe7da880399cef206ac8ec1549dabb04654): Score=25.0, Tier=LOW
+2026-08-31 18:52:12,974 - database - DEBUG - [database.py:156] - Lead 583e4f78f7155673cb8689416e3dffe7da880399cef206ac8ec1549dabb04654 inserted/updated successfully.
+2026-08-31 18:52:12,975 - __main__ - INFO - [lead_scorer.py:128] - Scored Motion Education (efb2bf3608e9727f3e2dcff48690a535f7735f88ed777d6453fc471dad4c74d2): Score=40.0, Tier=LOW
+2026-08-31 18:52:12,987 - database - DEBUG - [database.py:156] - Lead efb2bf3608e9727f3e2dcff48690a535f7735f88ed777d6453fc471dad4c74d2 inserted/updated successfully.
+2026-08-31 18:52:12,988 - __main__ - INFO - [lead_scorer.py:128] - Scored Pathshala Institute (82e2dee24c00852df96ccf79389f59b65cd2a71625ebe82f5a1a775dacb2920f): Score=40.0, Tier=LOW
+2026-08-31 18:52:13,001 - database - DEBUG - [database.py:156] - Lead 82e2dee24c00852df96ccf79389f59b65cd2a71625ebe82f5a1a775dacb2920f inserted/updated successfully.
+2026-08-31 18:52:13,002 - __main__ - INFO - [lead_scorer.py:128] - Scored Obsession (69a2ab5be79a716bf39fdaa1d5f6fefb82ce854fb4681ab01da167dea9a4012a): Score=40.0, Tier=LOW
+2026-08-31 18:52:13,020 - database - DEBUG - [database.py:156] - Lead 69a2ab5be79a716bf39fdaa1d5f6fefb82ce854fb4681ab01da167dea9a4012a inserted/updated successfully.
+2026-08-31 18:52:13,020 - __main__ - INFO - [lead_scorer.py:128] - Scored New Light Institute Lucknow (84f7eb7eafb96a97db5ecb04c7fd9f37033f7848448639eb048ecb78c69141c9): Score=60.0, Tier=WARM
+2026-08-31 18:52:13,035 - database - DEBUG - [database.py:156] - Lead 84f7eb7eafb96a97db5ecb04c7fd9f37033f7848448639eb048ecb78c69141c9 inserted/updated successfully.
+2026-08-31 18:52:13,035 - __main__ - INFO - [lead_scorer.py:128] - Scored Prepare IAS (08fb962e06d7a65ab1fc8df07afeacea79a5b45f18c352670dd7bdc734a2f66e): Score=75.0, Tier=HOT
+2026-08-31 18:52:13,048 - database - DEBUG - [database.py:156] - Lead 08fb962e06d7a65ab1fc8df07afeacea79a5b45f18c352670dd7bdc734a2f66e inserted/updated successfully.
+2026-08-31 18:52:13,048 - __main__ - INFO - [lead_scorer.py:128] - Scored Gravity Classes (d78ed743b79e39e095723c7088f5765866cd908c8f6ff04b9ec768fb35d6ec67): Score=75.0, Tier=HOT
+2026-08-31 18:52:13,064 - database - DEBUG - [database.py:156] - Lead d78ed743b79e39e095723c7088f5765866cd908c8f6ff04b9ec768fb35d6ec67 inserted/updated successfully.
+2026-08-31 18:52:13,097 - __main__ - INFO - [orchestrator.py:43] - [SUCCESS] MODULE COMPLETE: Phase 4: Lead Scoring Engine
+2026-08-31 18:52:15,098 - __main__ - INFO - [orchestrator.py:20] - ========== STARTING: Phase 5: AI Personalization (Groq Llama-3) ==========
+2026-08-31 18:52:17,253 - __main__ - INFO - [personalizer.py:186] - Starting AI Personalization Module on all qualified leads (up to 50)...
+2026-08-31 18:52:17,253 - database - INFO - [database.py:35] - Using SQLite Database (Local).
+2026-08-31 18:52:17,362 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for KK Soni Classes (Status: NO_WEBSITE)
+2026-08-31 18:52:17,849 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for KK Soni Classes: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:17,850 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:18,374 - database - DEBUG - [database.py:156] - Lead ec0cf83cf00ceb7688a5f8e685e3fc3582d43ba855ab57cb0eab903433121bec inserted/updated successfully.
+2026-08-31 18:52:18,375 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: KK Soni Classes
+2026-08-31 18:52:18,376 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for The Scholars - Shashank Sir Classes (Status: BROKEN_WEBSITE)
+2026-08-31 18:52:18,435 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for The Scholars - Shashank Sir Classes: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:18,436 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:18,966 - database - DEBUG - [database.py:156] - Lead eb0d8335e4befe22baa6380b7d8300bc88f7f166040378accaa64eb1e141e601 inserted/updated successfully.
+2026-08-31 18:52:18,967 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: The Scholars - Shashank Sir Classes
+2026-08-31 18:52:18,969 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Prepare IAS (Status: BROKEN_WEBSITE)
+2026-08-31 18:52:19,029 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Prepare IAS: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:19,029 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:19,546 - database - DEBUG - [database.py:156] - Lead 08fb962e06d7a65ab1fc8df07afeacea79a5b45f18c352670dd7bdc734a2f66e inserted/updated successfully.
+2026-08-31 18:52:19,546 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Prepare IAS
+2026-08-31 18:52:19,547 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Gravity Classes (Status: BROKEN_WEBSITE)
+2026-08-31 18:52:19,594 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Gravity Classes: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:19,594 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:20,107 - database - DEBUG - [database.py:156] - Lead d78ed743b79e39e095723c7088f5765866cd908c8f6ff04b9ec768fb35d6ec67 inserted/updated successfully.
+2026-08-31 18:52:20,107 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Gravity Classes
+2026-08-31 18:52:20,108 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Roy Coaching (Status: BROKEN_WEBSITE)
+2026-08-31 18:52:20,154 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Roy Coaching: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:20,155 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:20,673 - database - DEBUG - [database.py:156] - Lead 1725d7f23033ccf075c5819d4f780269f4babdedf59804dc3c0aa40a3450cca8 inserted/updated successfully.
+2026-08-31 18:52:20,673 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Roy Coaching
+2026-08-31 18:52:20,825 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:21,343 - database - DEBUG - [database.py:156] - Lead 461702de3253bfd7caf65d60ced8db2cc87c131c5c218a4315ed2f4c5b32be81 inserted/updated successfully.
+2026-08-31 18:52:21,344 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Sarthak IAS (Status: BROKEN_WEBSITE)
+2026-08-31 18:52:21,406 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Sarthak IAS: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:21,406 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:21,922 - database - DEBUG - [database.py:156] - Lead 56f75fec3391095fbe2684df3b56b71d04223cc7c91658ae15363d36bc98b35e inserted/updated successfully.
+2026-08-31 18:52:21,922 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Sarthak IAS
+2026-08-31 18:52:21,923 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for T.I.M.E. Lucknow (Status: BROKEN_WEBSITE)
+2026-08-31 18:52:21,975 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for T.I.M.E. Lucknow: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:21,976 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:22,511 - database - DEBUG - [database.py:156] - Lead d3da6e410197b0badb5b1131c2fde88b3942fb5fe380e164b293d851d8e7ffc5 inserted/updated successfully.
+2026-08-31 18:52:22,512 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: T.I.M.E. Lucknow
+2026-08-31 18:52:22,513 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Toppers Institute CA / CS coaching in Lucknow (Status: BROKEN_WEBSITE)
+2026-08-31 18:52:22,573 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Toppers Institute CA / CS coaching in Lucknow: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:22,574 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:23,110 - database - DEBUG - [database.py:156] - Lead 07d4ef7d0966768ebb82b50aeced1eee23ad76c948399f1ec524b9eee15d255d inserted/updated successfully.
+2026-08-31 18:52:23,111 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Toppers Institute CA / CS coaching in Lucknow
+2026-08-31 18:52:23,113 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for New Light Institute Lucknow (Status: BROKEN_WEBSITE)
+2026-08-31 18:52:23,166 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for New Light Institute Lucknow: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:23,166 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:23,696 - database - DEBUG - [database.py:156] - Lead 84f7eb7eafb96a97db5ecb04c7fd9f37033f7848448639eb048ecb78c69141c9 inserted/updated successfully.
+2026-08-31 18:52:23,700 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: New Light Institute Lucknow
+2026-08-31 18:52:23,701 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for PATHFINDER DEFENCE ACADEMY | NDA Coaching in Lucknow (Status: VALID_WEBSITE)
+2026-08-31 18:52:23,763 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for PATHFINDER DEFENCE ACADEMY | NDA Coaching in Lucknow: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:23,764 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:24,306 - database - DEBUG - [database.py:156] - Lead be2253136e3f3a9fb057e5c59b1c3d63c6facb41a40849792512f24c83e1e11e inserted/updated successfully.
+2026-08-31 18:52:24,308 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: PATHFINDER DEFENCE ACADEMY | NDA Coaching in Lucknow
+2026-08-31 18:52:24,308 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Motion Education (Status: VALID_WEBSITE)
+2026-08-31 18:52:24,390 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Motion Education: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:24,390 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:24,929 - database - DEBUG - [database.py:156] - Lead efb2bf3608e9727f3e2dcff48690a535f7735f88ed777d6453fc471dad4c74d2 inserted/updated successfully.
+2026-08-31 18:52:24,932 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Motion Education
+2026-08-31 18:52:24,934 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Pathshala Institute (Status: VALID_WEBSITE)
+2026-08-31 18:52:24,994 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Pathshala Institute: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:24,995 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:25,527 - database - DEBUG - [database.py:156] - Lead 82e2dee24c00852df96ccf79389f59b65cd2a71625ebe82f5a1a775dacb2920f inserted/updated successfully.
+2026-08-31 18:52:25,529 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Pathshala Institute
+2026-08-31 18:52:25,530 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Obsession (Status: VALID_WEBSITE)
+2026-08-31 18:52:25,587 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Obsession: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:25,588 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:26,104 - database - DEBUG - [database.py:156] - Lead 69a2ab5be79a716bf39fdaa1d5f6fefb82ce854fb4681ab01da167dea9a4012a inserted/updated successfully.
+2026-08-31 18:52:26,105 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Obsession
+2026-08-31 18:52:26,105 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Unacademy Coaching Centre - Hazratganj (Status: VALID_WEBSITE)
+2026-08-31 18:52:26,158 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Unacademy Coaching Centre - Hazratganj: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:26,159 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:26,676 - database - DEBUG - [database.py:156] - Lead 7957b1f512c11277f60d17ceaa861e0dea6e77dc2817238ad0c07598a9b2cd71 inserted/updated successfully.
+2026-08-31 18:52:26,677 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Unacademy Coaching Centre - Hazratganj
+2026-08-31 18:52:26,677 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for TCS ACADEMY (Status: VALID_WEBSITE)
+2026-08-31 18:52:26,768 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for TCS ACADEMY: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:26,769 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:27,284 - database - DEBUG - [database.py:156] - Lead 7db723e8453a01357e2bf067225a7ff47f9ab4681f16530139206be037988ce2 inserted/updated successfully.
+2026-08-31 18:52:27,284 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: TCS ACADEMY
+2026-08-31 18:52:27,284 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Physics Wallah Vidyapeeth Coaching Center Lucknow - Aliganj | IIT JEE, NEET Classes (Status: VALID_WEBSITE)
+2026-08-31 18:52:27,352 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Physics Wallah Vidyapeeth Coaching Center Lucknow - Aliganj | IIT JEE, NEET Classes: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:27,352 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:27,889 - database - DEBUG - [database.py:156] - Lead 022aac37d5ea3197c832dca8ec3ef9435232c41b42313e78460b4d07d22bbb62 inserted/updated successfully.
+2026-08-31 18:52:27,890 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Physics Wallah Vidyapeeth Coaching Center Lucknow - Aliganj | IIT JEE, NEET Classes
+2026-08-31 18:52:27,890 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Excellent Classes (Status: VALID_WEBSITE)
+2026-08-31 18:52:27,943 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Excellent Classes: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:27,943 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:28,459 - database - DEBUG - [database.py:156] - Lead 31dd235c0a94032ee4510bf31f12e62dbb2d223ba28ccf30d53e034506a88095 inserted/updated successfully.
+2026-08-31 18:52:28,460 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Excellent Classes
+2026-08-31 18:52:28,460 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Engineers Academy (Status: VALID_WEBSITE)
+2026-08-31 18:52:28,510 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Engineers Academy: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:28,511 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:29,044 - database - DEBUG - [database.py:156] - Lead 1a2c9deeab79e16a7dc560ba8571738169909c60dff452f9f59a07d526c68237 inserted/updated successfully.
+2026-08-31 18:52:29,046 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Engineers Academy
+2026-08-31 18:52:29,047 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for IMS Lucknow (Status: VALID_WEBSITE)
+2026-08-31 18:52:29,102 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for IMS Lucknow: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:29,103 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:29,634 - database - DEBUG - [database.py:156] - Lead fb70d6cb16c740dace3f959162709598010ffb007a867d1f83a4e163e9dcbfc3 inserted/updated successfully.
+2026-08-31 18:52:29,635 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: IMS Lucknow
+2026-08-31 18:52:29,636 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for ALLEN Career Institute - Hazratganj Campus (Status: VALID_WEBSITE)
+2026-08-31 18:52:29,699 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for ALLEN Career Institute - Hazratganj Campus: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:29,700 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:30,217 - database - DEBUG - [database.py:156] - Lead 9e3f1c3cb1ca5f979213e6088bfc71d9b541f76644b8232a4fef20121c6597c4 inserted/updated successfully.
+2026-08-31 18:52:30,218 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: ALLEN Career Institute - Hazratganj Campus
+2026-08-31 18:52:30,219 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Narain Institute (Status: VALID_WEBSITE)
+2026-08-31 18:52:30,270 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Narain Institute: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:30,271 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:30,801 - database - DEBUG - [database.py:156] - Lead bad57bc273abf8edd3de50a49bbfd46ec1fe0a7ec1414e23c2412e7218ac7f22 inserted/updated successfully.
+2026-08-31 18:52:30,803 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Narain Institute
+2026-08-31 18:52:30,804 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Prabhat Pathak Classes (Status: VALID_WEBSITE)
+2026-08-31 18:52:30,869 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Prabhat Pathak Classes: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:30,870 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:31,394 - database - DEBUG - [database.py:156] - Lead 2a3444a01806e069886b224e2cc09fec2b103dbc1060af089785760f99312ce7 inserted/updated successfully.
+2026-08-31 18:52:31,395 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Prabhat Pathak Classes
+2026-08-31 18:52:31,396 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Career Launcher Lucknow - Hazratganj Center (Status: VALID_WEBSITE)
+2026-08-31 18:52:31,442 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Career Launcher Lucknow - Hazratganj Center: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:31,442 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:31,960 - database - DEBUG - [database.py:156] - Lead 989f1007d180d8fe89f20fbd99c41b507d12bcac179bed1351894313b172f645 inserted/updated successfully.
+2026-08-31 18:52:31,960 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Career Launcher Lucknow - Hazratganj Center
+2026-08-31 18:52:31,961 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for SKD New Standard Coaching Institute Hazratganj, Lucknow (Status: VALID_WEBSITE)
+2026-08-31 18:52:32,010 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for SKD New Standard Coaching Institute Hazratganj, Lucknow: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:32,011 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:32,544 - database - DEBUG - [database.py:156] - Lead 452692c58b780926a07c5b98fa279b64a8f5e5dbc8654b2b1361b5e99bd965c9 inserted/updated successfully.
+2026-08-31 18:52:32,545 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: SKD New Standard Coaching Institute Hazratganj, Lucknow
+2026-08-31 18:52:32,546 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Sure Success Coaching Institute (Status: VALID_WEBSITE)
+2026-08-31 18:52:32,602 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Sure Success Coaching Institute: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:32,603 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:33,141 - database - DEBUG - [database.py:156] - Lead 83b8e435a423eb80dcc23a3d337b17e6ef2740f3c86444b28a70d330e213498a inserted/updated successfully.
+2026-08-31 18:52:33,142 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Sure Success Coaching Institute
+2026-08-31 18:52:33,143 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for INPS Classes (Status: VALID_WEBSITE)
+2026-08-31 18:52:33,200 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for INPS Classes: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:33,200 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:33,729 - database - DEBUG - [database.py:156] - Lead 97b1279161e8c58566c70ee7a66ad43b82f512b3e36f8a5576c0cdfe54bd6f49 inserted/updated successfully.
+2026-08-31 18:52:33,731 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: INPS Classes
+2026-08-31 18:52:33,732 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for S.S. Coaching (Status: VALID_WEBSITE)
+2026-08-31 18:52:33,820 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for S.S. Coaching: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:33,821 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:34,366 - database - DEBUG - [database.py:156] - Lead 3dc194ff94c42d122e27560ec8a59a13dc5aa8a29bea4f70de39cd826bf720ab inserted/updated successfully.
+2026-08-31 18:52:34,368 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: S.S. Coaching
+2026-08-31 18:52:34,370 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Quantum Coaching Institute (Status: VALID_WEBSITE)
+2026-08-31 18:52:34,442 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Quantum Coaching Institute: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:34,443 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:34,990 - database - DEBUG - [database.py:156] - Lead 0b02d6d3f32a0ebb35a13a9a31b8f260350d4d19c0f4496586d98ef2c3d438f0 inserted/updated successfully.
+2026-08-31 18:52:34,991 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Quantum Coaching Institute
+2026-08-31 18:52:34,992 - __main__ - INFO - [personalizer.py:126] - Personalizing messages for Gautam Competition Coaching (Status: VALID_WEBSITE)
+2026-08-31 18:52:35,056 - __main__ - ERROR - [personalizer.py:91] - Groq API Error for Gautam Competition Coaching: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:52:35,057 - __main__ - INFO - [personalizer.py:92] - Falling back to local mock generator due to API error...
+2026-08-31 18:52:35,593 - database - DEBUG - [database.py:156] - Lead 583e4f78f7155673cb8689416e3dffe7da880399cef206ac8ec1549dabb04654 inserted/updated successfully.
+2026-08-31 18:52:35,594 - __main__ - INFO - [personalizer.py:181] - Successfully personalized and saved lead: Gautam Competition Coaching
+2026-08-31 18:52:35,873 - __main__ - INFO - [orchestrator.py:43] - [SUCCESS] MODULE COMPLETE: Phase 5: AI Personalization (Groq Llama-3)
+2026-08-31 18:52:37,875 - __main__ - INFO - [orchestrator.py:20] - ========== STARTING: Phase 6: Demo URL Generation ==========
+2026-08-31 18:52:38,393 - __main__ - INFO - [url_generator.py:118] - Starting Demo URL Generator Module...
+2026-08-31 18:52:38,394 - database - INFO - [database.py:35] - Using SQLite Database (Local).
+2026-08-31 18:52:38,408 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for KK Soni Classes: https://yourdomain.com/preview/kk-soni-classes-lucknow
+2026-08-31 18:52:38,424 - database - DEBUG - [database.py:156] - Lead ec0cf83cf00ceb7688a5f8e685e3fc3582d43ba855ab57cb0eab903433121bec inserted/updated successfully.
+2026-08-31 18:52:38,425 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for The Scholars - Shashank Sir Classes: https://yourdomain.com/preview/the-scholars---shashank-sir-classes-lucknow
+2026-08-31 18:52:38,440 - database - DEBUG - [database.py:156] - Lead eb0d8335e4befe22baa6380b7d8300bc88f7f166040378accaa64eb1e141e601 inserted/updated successfully.
+2026-08-31 18:52:38,441 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for PATHFINDER DEFENCE ACADEMY | NDA Coaching in Lucknow: https://yourdomain.com/preview/pathfinder-defence-academy-nda-coaching-in-lucknow-lucknow
+2026-08-31 18:52:38,457 - database - DEBUG - [database.py:156] - Lead be2253136e3f3a9fb057e5c59b1c3d63c6facb41a40849792512f24c83e1e11e inserted/updated successfully.
+2026-08-31 18:52:38,457 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Gautam Competition Coaching: https://yourdomain.com/preview/gautam-competition-coaching-lucknow
+2026-08-31 18:52:38,473 - database - DEBUG - [database.py:156] - Lead 583e4f78f7155673cb8689416e3dffe7da880399cef206ac8ec1549dabb04654 inserted/updated successfully.
+2026-08-31 18:52:38,474 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Motion Education: https://yourdomain.com/preview/motion-education-lucknow
+2026-08-31 18:52:38,490 - database - DEBUG - [database.py:156] - Lead efb2bf3608e9727f3e2dcff48690a535f7735f88ed777d6453fc471dad4c74d2 inserted/updated successfully.
+2026-08-31 18:52:38,491 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Pathshala Institute: https://yourdomain.com/preview/pathshala-institute-lucknow
+2026-08-31 18:52:38,506 - database - DEBUG - [database.py:156] - Lead 82e2dee24c00852df96ccf79389f59b65cd2a71625ebe82f5a1a775dacb2920f inserted/updated successfully.
+2026-08-31 18:52:38,507 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Obsession: https://yourdomain.com/preview/obsession-lucknow
+2026-08-31 18:52:38,522 - database - DEBUG - [database.py:156] - Lead 69a2ab5be79a716bf39fdaa1d5f6fefb82ce854fb4681ab01da167dea9a4012a inserted/updated successfully.
+2026-08-31 18:52:38,523 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for New Light Institute Lucknow: https://yourdomain.com/preview/new-light-institute-lucknow-lucknow
+2026-08-31 18:52:38,537 - database - DEBUG - [database.py:156] - Lead 84f7eb7eafb96a97db5ecb04c7fd9f37033f7848448639eb048ecb78c69141c9 inserted/updated successfully.
+2026-08-31 18:52:38,537 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Prepare IAS: https://yourdomain.com/preview/prepare-ias-lucknow
+2026-08-31 18:52:38,549 - database - DEBUG - [database.py:156] - Lead 08fb962e06d7a65ab1fc8df07afeacea79a5b45f18c352670dd7bdc734a2f66e inserted/updated successfully.
+2026-08-31 18:52:38,549 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Gravity Classes: https://yourdomain.com/preview/gravity-classes-lucknow
+2026-08-31 18:52:38,562 - database - DEBUG - [database.py:156] - Lead d78ed743b79e39e095723c7088f5765866cd908c8f6ff04b9ec768fb35d6ec67 inserted/updated successfully.
+2026-08-31 18:52:38,562 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Unacademy Coaching Centre - Hazratganj: https://yourdomain.com/preview/unacademy-coaching-centre---hazratganj-lucknow
+2026-08-31 18:52:38,575 - database - DEBUG - [database.py:156] - Lead 7957b1f512c11277f60d17ceaa861e0dea6e77dc2817238ad0c07598a9b2cd71 inserted/updated successfully.
+2026-08-31 18:52:38,576 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for TCS ACADEMY: https://yourdomain.com/preview/tcs-academy-lucknow
+2026-08-31 18:52:38,589 - database - DEBUG - [database.py:156] - Lead 7db723e8453a01357e2bf067225a7ff47f9ab4681f16530139206be037988ce2 inserted/updated successfully.
+2026-08-31 18:52:38,590 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Roy Coaching: https://yourdomain.com/preview/roy-coaching-lucknow
+2026-08-31 18:52:38,601 - database - DEBUG - [database.py:156] - Lead 1725d7f23033ccf075c5819d4f780269f4babdedf59804dc3c0aa40a3450cca8 inserted/updated successfully.
+2026-08-31 18:52:38,602 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Physics Wallah Vidyapeeth Coaching Center Lucknow - Aliganj | IIT JEE, NEET Classes: https://yourdomain.com/preview/physics-wallah-vidyapeeth-coaching-center-lucknow---aliganj-iit-jee-neet-classes-lucknow
+2026-08-31 18:52:38,614 - database - DEBUG - [database.py:156] - Lead 022aac37d5ea3197c832dca8ec3ef9435232c41b42313e78460b4d07d22bbb62 inserted/updated successfully.
+2026-08-31 18:52:38,615 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Excellent Classes: https://yourdomain.com/preview/excellent-classes-lucknow
+2026-08-31 18:52:38,628 - database - DEBUG - [database.py:156] - Lead 31dd235c0a94032ee4510bf31f12e62dbb2d223ba28ccf30d53e034506a88095 inserted/updated successfully.
+2026-08-31 18:52:38,629 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for 𝐒-𝐎𝐫𝐛𝐢𝐭 𝐈𝐧𝐬𝐭𝐢𝐭𝐮𝐭𝐞 : 𝐁𝐞𝐬𝐭 𝐍𝐄𝐄𝐓 & 𝐉𝐄𝐄 𝐂𝐨𝐚𝐜𝐡𝐢𝐧𝐠: https://yourdomain.com/preview/lucknow
+2026-08-31 18:52:38,641 - database - DEBUG - [database.py:156] - Lead 461702de3253bfd7caf65d60ced8db2cc87c131c5c218a4315ed2f4c5b32be81 inserted/updated successfully.
+2026-08-31 18:52:38,642 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Engineers Academy: https://yourdomain.com/preview/engineers-academy-lucknow
+2026-08-31 18:52:38,654 - database - DEBUG - [database.py:156] - Lead 1a2c9deeab79e16a7dc560ba8571738169909c60dff452f9f59a07d526c68237 inserted/updated successfully.
+2026-08-31 18:52:38,655 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for IMS Lucknow: https://yourdomain.com/preview/ims-lucknow-lucknow
+2026-08-31 18:52:38,669 - database - DEBUG - [database.py:156] - Lead fb70d6cb16c740dace3f959162709598010ffb007a867d1f83a4e163e9dcbfc3 inserted/updated successfully.
+2026-08-31 18:52:38,670 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for ALLEN Career Institute - Hazratganj Campus: https://yourdomain.com/preview/allen-career-institute---hazratganj-campus-lucknow
+2026-08-31 18:52:38,697 - database - DEBUG - [database.py:156] - Lead 9e3f1c3cb1ca5f979213e6088bfc71d9b541f76644b8232a4fef20121c6597c4 inserted/updated successfully.
+2026-08-31 18:52:38,697 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Narain Institute: https://yourdomain.com/preview/narain-institute-lucknow
+2026-08-31 18:52:38,708 - database - DEBUG - [database.py:156] - Lead bad57bc273abf8edd3de50a49bbfd46ec1fe0a7ec1414e23c2412e7218ac7f22 inserted/updated successfully.
+2026-08-31 18:52:38,709 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Prabhat Pathak Classes: https://yourdomain.com/preview/prabhat-pathak-classes-lucknow
+2026-08-31 18:52:38,722 - database - DEBUG - [database.py:156] - Lead 2a3444a01806e069886b224e2cc09fec2b103dbc1060af089785760f99312ce7 inserted/updated successfully.
+2026-08-31 18:52:38,723 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Sarthak IAS: https://yourdomain.com/preview/sarthak-ias-lucknow
+2026-08-31 18:52:38,737 - database - DEBUG - [database.py:156] - Lead 56f75fec3391095fbe2684df3b56b71d04223cc7c91658ae15363d36bc98b35e inserted/updated successfully.
+2026-08-31 18:52:38,738 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Career Launcher Lucknow - Hazratganj Center: https://yourdomain.com/preview/career-launcher-lucknow---hazratganj-center-lucknow
+2026-08-31 18:52:38,753 - database - DEBUG - [database.py:156] - Lead 989f1007d180d8fe89f20fbd99c41b507d12bcac179bed1351894313b172f645 inserted/updated successfully.
+2026-08-31 18:52:38,754 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for SKD New Standard Coaching Institute Hazratganj, Lucknow: https://yourdomain.com/preview/skd-new-standard-coaching-institute-hazratganj-lucknow-lucknow
+2026-08-31 18:52:38,767 - database - DEBUG - [database.py:156] - Lead 452692c58b780926a07c5b98fa279b64a8f5e5dbc8654b2b1361b5e99bd965c9 inserted/updated successfully.
+2026-08-31 18:52:38,768 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Sure Success Coaching Institute: https://yourdomain.com/preview/sure-success-coaching-institute-lucknow
+2026-08-31 18:52:38,783 - database - DEBUG - [database.py:156] - Lead 83b8e435a423eb80dcc23a3d337b17e6ef2740f3c86444b28a70d330e213498a inserted/updated successfully.
+2026-08-31 18:52:38,783 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for INPS Classes: https://yourdomain.com/preview/inps-classes-lucknow
+2026-08-31 18:52:38,797 - database - DEBUG - [database.py:156] - Lead 97b1279161e8c58566c70ee7a66ad43b82f512b3e36f8a5576c0cdfe54bd6f49 inserted/updated successfully.
+2026-08-31 18:52:38,798 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for T.I.M.E. Lucknow: https://yourdomain.com/preview/time-lucknow-lucknow
+2026-08-31 18:52:38,810 - database - DEBUG - [database.py:156] - Lead d3da6e410197b0badb5b1131c2fde88b3942fb5fe380e164b293d851d8e7ffc5 inserted/updated successfully.
+2026-08-31 18:52:38,811 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for S.S. Coaching: https://yourdomain.com/preview/ss-coaching-lucknow
+2026-08-31 18:52:38,824 - database - DEBUG - [database.py:156] - Lead 3dc194ff94c42d122e27560ec8a59a13dc5aa8a29bea4f70de39cd826bf720ab inserted/updated successfully.
+2026-08-31 18:52:38,825 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Toppers Institute CA / CS coaching in Lucknow: https://yourdomain.com/preview/toppers-institute-ca-cs-coaching-in-lucknow-lucknow
+2026-08-31 18:52:38,839 - database - DEBUG - [database.py:156] - Lead 07d4ef7d0966768ebb82b50aeced1eee23ad76c948399f1ec524b9eee15d255d inserted/updated successfully.
+2026-08-31 18:52:38,839 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Quantum Coaching Institute: https://yourdomain.com/preview/quantum-coaching-institute-lucknow
+2026-08-31 18:52:38,853 - database - DEBUG - [database.py:156] - Lead 0b02d6d3f32a0ebb35a13a9a31b8f260350d4d19c0f4496586d98ef2c3d438f0 inserted/updated successfully.
+2026-08-31 18:52:38,853 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Reliant Plumbing - Dallas: https://yourdomain.com/preview/reliant-plumbing---dallas-dallas
+2026-08-31 18:52:38,866 - database - DEBUG - [database.py:156] - Lead 4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d inserted/updated successfully.
+2026-08-31 18:52:38,867 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Tide Turners Plumbing: https://yourdomain.com/preview/tide-turners-plumbing-dallas
+2026-08-31 18:52:38,879 - database - DEBUG - [database.py:156] - Lead eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086 inserted/updated successfully.
+2026-08-31 18:52:38,879 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Jake the Plumbing Pro: https://yourdomain.com/preview/jake-the-plumbing-pro-dallas
+2026-08-31 18:52:38,883 - database - DEBUG - [database.py:156] - Lead 7ed1e2ebabc3d18d9ec385f8a2a0205acd5d3101b6f428f10e181484eaa7f06e inserted/updated successfully.
+2026-08-31 18:52:38,883 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Anchor Plumbing Company: https://yourdomain.com/preview/anchor-plumbing-company-dallas
+2026-08-31 18:52:38,884 - database - DEBUG - [database.py:156] - Lead 0248ccd1a5ac7c76ecd1e232d20b93d87f789a6abd5dbaa5e8093f88583ca049 inserted/updated successfully.
+2026-08-31 18:52:38,885 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Baker Brothers Plumbing, Air & Electric: https://yourdomain.com/preview/baker-brothers-plumbing-air-electric-dallas
+2026-08-31 18:52:38,895 - database - DEBUG - [database.py:156] - Lead d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c inserted/updated successfully.
+2026-08-31 18:52:38,895 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Milestone Electric, A/C, & Plumbing: https://yourdomain.com/preview/milestone-electric-ac-plumbing-dallas
+2026-08-31 18:52:38,908 - database - DEBUG - [database.py:156] - Lead 135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858 inserted/updated successfully.
+2026-08-31 18:52:38,909 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Tribeca Plumbing, Inc.: https://yourdomain.com/preview/tribeca-plumbing-inc-dallas
+2026-08-31 18:52:38,922 - database - DEBUG - [database.py:156] - Lead bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf inserted/updated successfully.
+2026-08-31 18:52:38,923 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Dallas Plumbing & Air Conditioning: https://yourdomain.com/preview/dallas-plumbing-air-conditioning-dallas
+2026-08-31 18:52:38,926 - database - DEBUG - [database.py:156] - Lead dfe0d94dbae3a0c76d953a458ddf076768addd6b3a5cf08655c3013b13daaf22 inserted/updated successfully.
+2026-08-31 18:52:38,927 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Metro Flow Plumbing - Dallas Emergency Plumbers: https://yourdomain.com/preview/metro-flow-plumbing---dallas-emergency-plumbers-dallas
+2026-08-31 18:52:38,937 - database - DEBUG - [database.py:156] - Lead a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075 inserted/updated successfully.
+2026-08-31 18:52:38,938 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Public Service Plumbers: https://yourdomain.com/preview/public-service-plumbers-dallas
+2026-08-31 18:52:38,942 - database - DEBUG - [database.py:156] - Lead 67653dede81d016606aa3ea23aabdd9a17f48b66f637e93dc70b27681f382f20 inserted/updated successfully.
+2026-08-31 18:52:38,942 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Hocco Kitchen (OP Road): https://yourdomain.com/preview/hocco-kitchen-op-road-vadodara
+2026-08-31 18:52:38,944 - database - DEBUG - [database.py:156] - Lead c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3 inserted/updated successfully.
+2026-08-31 18:52:38,944 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Thyme & Whisk: https://yourdomain.com/preview/thyme-whisk-vadodara
+2026-08-31 18:52:38,947 - database - DEBUG - [database.py:156] - Lead 37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e inserted/updated successfully.
+2026-08-31 18:52:38,947 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for western restaurant: https://yourdomain.com/preview/western-restaurant-vadodara
+2026-08-31 18:52:38,949 - database - DEBUG - [database.py:156] - Lead 54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a inserted/updated successfully.
+2026-08-31 18:52:38,949 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Fitoor: https://yourdomain.com/preview/fitoor-vadodara
+2026-08-31 18:52:38,951 - database - DEBUG - [database.py:156] - Lead 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff inserted/updated successfully.
+2026-08-31 18:52:38,952 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Nizam's The Royal Kitchen: https://yourdomain.com/preview/nizams-the-royal-kitchen-vadodara
+2026-08-31 18:52:38,954 - database - DEBUG - [database.py:156] - Lead 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731 inserted/updated successfully.
+2026-08-31 18:52:38,954 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for The Highway Eats - Vadodara | Multicuisine Restaurant, Rooms, Banquet & Poolside Party Lawns: https://yourdomain.com/preview/the-highway-eats---vadodara-multicuisine-restaurant-rooms-banquet-poolside-party-lawns-vadodara
+2026-08-31 18:52:38,956 - database - DEBUG - [database.py:156] - Lead 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c inserted/updated successfully.
+2026-08-31 18:52:38,957 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for 812 CE Urban Restaurant: https://yourdomain.com/preview/812-ce-urban-restaurant-vadodara
+2026-08-31 18:52:38,959 - database - DEBUG - [database.py:156] - Lead 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0 inserted/updated successfully.
+2026-08-31 18:52:38,959 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Barbeque Nation - Vadodara - Cine Mall: https://yourdomain.com/preview/barbeque-nation---vadodara---cine-mall-vadodara
+2026-08-31 18:52:38,970 - database - DEBUG - [database.py:156] - Lead fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef inserted/updated successfully.
+2026-08-31 18:52:38,971 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for 22nd Parallel: https://yourdomain.com/preview/22nd-parallel-vadodara
+2026-08-31 18:52:38,983 - database - DEBUG - [database.py:156] - Lead 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140 inserted/updated successfully.
+2026-08-31 18:52:38,984 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Bayleaf Multi Cuisine Restaurant: https://yourdomain.com/preview/bayleaf-multi-cuisine-restaurant-vadodara
+2026-08-31 18:52:38,997 - database - DEBUG - [database.py:156] - Lead d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1 inserted/updated successfully.
+2026-08-31 18:52:38,997 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for The Morsel Restaurant: https://yourdomain.com/preview/the-morsel-restaurant-vadodara
+2026-08-31 18:52:39,012 - database - DEBUG - [database.py:156] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-31 18:52:39,013 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Island The Restaurant Waves Club: https://yourdomain.com/preview/island-the-restaurant-waves-club-vadodara
+2026-08-31 18:52:39,015 - database - DEBUG - [database.py:156] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-31 18:52:39,015 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Peshawri by Welcomhotel Vadodara: https://yourdomain.com/preview/peshawri-by-welcomhotel-vadodara-vadodara
+2026-08-31 18:52:39,026 - database - DEBUG - [database.py:156] - Lead dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996 inserted/updated successfully.
+2026-08-31 18:52:39,027 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for The Secret Kitchen: https://yourdomain.com/preview/the-secret-kitchen-vadodara
+2026-08-31 18:52:39,039 - database - DEBUG - [database.py:156] - Lead fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86 inserted/updated successfully.
+2026-08-31 18:52:39,040 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Retro Bistro : The Fine Multi Cuisine Restaurant ( Vadodara ): https://yourdomain.com/preview/retro-bistro-the-fine-multi-cuisine-restaurant-vadodara-vadodara
+2026-08-31 18:52:39,051 - database - DEBUG - [database.py:156] - Lead 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e inserted/updated successfully.
+2026-08-31 18:52:39,051 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Sakura Pan Asian Cuisine: https://yourdomain.com/preview/sakura-pan-asian-cuisine-vadodara
+2026-08-31 18:52:39,064 - database - DEBUG - [database.py:156] - Lead 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3 inserted/updated successfully.
+2026-08-31 18:52:39,065 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Spice Kraft Restaurant: https://yourdomain.com/preview/spice-kraft-restaurant-vadodara
+2026-08-31 18:52:39,080 - database - DEBUG - [database.py:156] - Lead e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8 inserted/updated successfully.
+2026-08-31 18:52:39,081 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Taste Carnival - (Banquet, Rooms, Restaurant): https://yourdomain.com/preview/taste-carnival---banquet-rooms-restaurant-vadodara
+2026-08-31 18:52:39,099 - database - DEBUG - [database.py:156] - Lead 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b inserted/updated successfully.
+2026-08-31 18:52:39,100 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Le Prive World Cuisine: https://yourdomain.com/preview/le-prive-world-cuisine-vadodara
+2026-08-31 18:52:39,103 - database - DEBUG - [database.py:156] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-31 18:52:39,104 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for The House of Makeba - Veg Family Dining Restaurant in Vadodara: https://yourdomain.com/preview/the-house-of-makeba---veg-family-dining-restaurant-in-vadodara-vadodara
+2026-08-31 18:52:39,105 - database - DEBUG - [database.py:156] - Lead 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03 inserted/updated successfully.
+2026-08-31 18:52:39,105 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Jassi De Parathe: https://yourdomain.com/preview/jassi-de-parathe-vadodara
+2026-08-31 18:52:39,107 - database - DEBUG - [database.py:156] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-31 18:52:39,107 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Vibes The Bistro: https://yourdomain.com/preview/vibes-the-bistro-vadodara
+2026-08-31 18:52:39,109 - database - DEBUG - [database.py:156] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-31 18:52:39,109 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Candle Light Date N Dinner & Rooftop Restaurant Vadodara: https://yourdomain.com/preview/candle-light-date-n-dinner-rooftop-restaurant-vadodara-vadodara
+2026-08-31 18:52:39,111 - database - DEBUG - [database.py:156] - Lead c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde inserted/updated successfully.
+2026-08-31 18:52:39,111 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Vadodara Rest 1: https://yourdomain.com/preview/vadodara-rest-1-vadodara
+2026-08-31 18:52:39,113 - database - DEBUG - [database.py:156] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-31 18:52:39,113 - __main__ - INFO - [url_generator.py:72] - Generated Demo URL for Acme Corp: https://yourdomain.com/preview/acme-corp-new-york
+2026-08-31 18:52:39,114 - database - DEBUG - [database.py:156] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-31 18:52:39,155 - __main__ - INFO - [orchestrator.py:43] - [SUCCESS] MODULE COMPLETE: Phase 6: Demo URL Generation
+2026-08-31 18:52:41,156 - __main__ - INFO - [orchestrator.py:81] - [DONE] PIPELINE FINISHED SUCCESSFULLY in 57.36 seconds!

@@ -1,3 +1,12 @@
+import sys
+import os
+try:
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    if hasattr(sys.stderr, 'reconfigure'):
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
 import argparse
 import sys
 from serpapi import GoogleSearch
@@ -30,10 +39,12 @@ def search_businesses(city: str, business_type: str, max_results: int = 10) -> d
         logger.error("SERPAPI_KEY is not configured.")
         return {"error": "SERPAPI_KEY is not configured."}
 
-    # Parameters for Google Maps API
-    # SerpAPI requires `q` for search query, `engine`='google_maps', `type`='search'
-    # We combine business_type and city into q
-    query = f"{business_type} in {city}"
+    # Clean and sanitize business_type for Google Maps search engine
+    import re
+    clean_type = re.sub(r'[\(\[\{].*?[\)\]\}]?', '', business_type).strip() or business_type
+    clean_type = re.sub(r'[^a-zA-Z0-9\s]', ' ', clean_type).strip()
+    query = f"{clean_type} in {city}".strip()
+    logger.info(f"Sanitized Google Maps Search Query: '{query}'")
     
     # Pagination logic to fetch up to max_results
     db = Database()

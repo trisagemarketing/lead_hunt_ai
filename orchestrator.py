@@ -1,3 +1,12 @@
+import sys
+import os
+try:
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    if hasattr(sys.stderr, 'reconfigure'):
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
 import subprocess
 import sys
 import time
@@ -18,7 +27,8 @@ def run_module(module_args: list, description: str):
             stderr=subprocess.STDOUT,
             text=True,
             encoding='utf-8',
-            errors='replace'
+            errors='replace',
+            env={**os.environ, 'PYTHONIOENCODING': 'utf-8'}
         )
         
         for line in process.stdout:

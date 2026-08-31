@@ -7,7 +7,7 @@ import {
   Link as LinkIcon, Building2, ChevronLeft, Loader2, RefreshCw, 
   Flame, History, Zap, Play, Download, Copy, Check, Star, 
   MapPin, AlertCircle, Filter, ArrowUpRight, CheckSquare, 
-  FileJson, FileSpreadsheet, Eye, Terminal, Sparkles, Clock
+  FileJson, FileSpreadsheet, Eye, Terminal, Sparkles, Clock, Target
 } from "lucide-react";
 
 interface Lead {
@@ -63,11 +63,12 @@ export default function Dashboard() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTierFilter, setSelectedTierFilter] = useState<"ALL" | "HOT" | "WARM" | "NO_WEBSITE" | "DEMO_READY" | "PENDING">("ALL");
+  const [selectedCityFilter, setSelectedCityFilter] = useState<string>("ALL");
   const [activeCampaign, setActiveCampaign] = useState<{ city: string; category: string } | null>(null);
 
   // Engine Run State
-  const [city, setCity] = useState("Vadodara");
-  const [category, setCategory] = useState("Restaurants");
+  const [city, setCity] = useState("Lucknow");
+  const [category, setCategory] = useState("Coaching Institutes");
   const [targetCount, setTargetCount] = useState(50);
   const [startingEngine, setStartingEngine] = useState(false);
   const [engineLogs, setEngineLogs] = useState("");
@@ -133,6 +134,10 @@ export default function Dashboard() {
               setStartingEngine(false);
               setEngineProgress(100);
               setEnginePhase("Hunt Completed!");
+              
+              // Automatically switch city filter to newly scraped city!
+              setSelectedCityFilter(city);
+              setActiveCampaign({ city, category });
               fetchLeads();
               setActiveTab("pipeline");
             }
@@ -143,7 +148,7 @@ export default function Dashboard() {
       }, 2500);
     }
     return () => clearInterval(interval);
-  }, [startingEngine, API_URL]);
+  }, [startingEngine, city, category, API_URL]);
 
   async function fetchLeads() {
     try {
@@ -279,10 +284,27 @@ export default function Dashboard() {
     return leads.filter(l => !deletedLeads.has(String(l.lead_id)));
   }, [leads, deletedLeads]);
 
-  // Derived filtered leads based on tabs, search, and active campaign
+  // Unique Cities in Database with Counts
+  const citiesList = useMemo(() => {
+    const map: Record<string, number> = {};
+    visibleLeads.forEach(l => {
+      const c = (l.city || "Unknown").trim();
+      map[c] = (map[c] || 0) + 1;
+    });
+    return Object.entries(map).map(([name, count]) => ({ name, count })).sort((a, b) => b.count - a.count);
+  }, [visibleLeads]);
+
+  // Derived filtered leads based on tabs, search, city filter, and active campaign
   const filteredLeads = useMemo(() => {
     return visibleLeads.filter(lead => {
-      // 1. Campaign Filter
+      // 1. City Filter Badge
+      if (selectedCityFilter !== "ALL") {
+        if ((lead.city || "").toLowerCase() !== selectedCityFilter.toLowerCase()) {
+          return false;
+        }
+      }
+
+      // 2. Active Campaign Filter
       if (activeCampaign) {
         if ((lead.city || "").toLowerCase() !== activeCampaign.city.toLowerCase()) {
           return false;
@@ -292,14 +314,14 @@ export default function Dashboard() {
         }
       }
 
-      // 2. Tier / Status Pill Filter
+      // 3. Tier / Status Pill Filter
       if (selectedTierFilter === "HOT" && lead.lead_tier !== "HOT") return false;
       if (selectedTierFilter === "WARM" && lead.lead_tier !== "WARM") return false;
       if (selectedTierFilter === "NO_WEBSITE" && !["NO_WEBSITE", "BROKEN_WEBSITE", "SOCIAL_ONLY"].includes(lead.website_status || "")) return false;
       if (selectedTierFilter === "DEMO_READY" && !lead.demo_url) return false;
       if (selectedTierFilter === "PENDING" && !(lead.email_message && lead.lead_tier === "HOT")) return false;
 
-      // 3. Search Query Filter
+      // 4. Global Search Query Filter
       if (!searchQuery.trim()) return true;
       const q = searchQuery.toLowerCase();
       return (
@@ -311,19 +333,20 @@ export default function Dashboard() {
         (lead.qualification_reason && String(lead.qualification_reason).toLowerCase().includes(q))
       );
     });
-  }, [visibleLeads, activeCampaign, selectedTierFilter, searchQuery]);
+  }, [visibleLeads, selectedCityFilter, activeCampaign, selectedTierFilter, searchQuery]);
 
-  // Aggregate Metrics
+  // Aggregate Metrics for currently viewed segment or all leads
   const metrics = useMemo(() => {
+    const base = selectedCityFilter === "ALL" ? visibleLeads : visibleLeads.filter(l => (l.city || "").toLowerCase() === selectedCityFilter.toLowerCase());
     return {
-      total: visibleLeads.length,
-      hot: visibleLeads.filter(l => l.lead_tier === "HOT").length,
-      warm: visibleLeads.filter(l => l.lead_tier === "WARM").length,
-      no_website: visibleLeads.filter(l => ["NO_WEBSITE", "BROKEN_WEBSITE", "SOCIAL_ONLY"].includes(l.website_status || "")).length,
-      demo_ready: visibleLeads.filter(l => Boolean(l.demo_url)).length,
-      pending: visibleLeads.filter(l => Boolean(l.email_message) && l.lead_tier === "HOT").length,
+      total: base.length,
+      hot: base.filter(l => l.lead_tier === "HOT").length,
+      warm: base.filter(l => l.lead_tier === "WARM").length,
+      no_website: base.filter(l => ["NO_WEBSITE", "BROKEN_WEBSITE", "SOCIAL_ONLY"].includes(l.website_status || "")).length,
+      demo_ready: base.filter(l => Boolean(l.demo_url)).length,
+      pending: base.filter(l => Boolean(l.email_message) && l.lead_tier === "HOT").length,
     };
-  }, [visibleLeads]);
+  }, [visibleLeads, selectedCityFilter]);
 
   // Unique Campaign Groups for History Tab
   const campaignsList = useMemo(() => {
@@ -476,7 +499,7 @@ export default function Dashboard() {
                 value={city} 
                 onChange={e => setCity(e.target.value)}
                 className="bg-transparent border-none text-[#1E293B] focus:outline-none w-full text-sm font-bold placeholder-slate-400"
-                placeholder="e.g. Vadodara"
+                placeholder="e.g. Lucknow"
               />
             </div>
             
@@ -488,7 +511,7 @@ export default function Dashboard() {
                 value={category} 
                 onChange={e => setCategory(e.target.value)}
                 className="bg-transparent border-none text-[#1E293B] focus:outline-none w-full text-sm font-bold placeholder-slate-400"
-                placeholder="e.g. Restaurants"
+                placeholder="e.g. Coaching Institutes"
               />
             </div>
 
@@ -534,6 +557,45 @@ export default function Dashboard() {
           {/* TAB 1: PIPELINE & LEADS */}
           {activeTab === 'pipeline' && (
             <>
+              {/* LOCATION CLUSTER SELECTOR PILLS */}
+              <div className="flex items-center gap-2 mb-6 overflow-x-auto pb-1 scrollbar-none">
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1 shrink-0 mr-1">
+                  <MapPin className="w-3.5 h-3.5 text-[#489473]" /> Filter Location:
+                </span>
+                
+                <button
+                  onClick={() => { setSelectedCityFilter("ALL"); setActiveCampaign(null); }}
+                  className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all shrink-0 ${
+                    selectedCityFilter === "ALL"
+                      ? "bg-[#193F2E] text-white shadow-md shadow-[#193F2E]/20"
+                      : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-100"
+                  }`}
+                >
+                  All Locations ({visibleLeads.length})
+                </button>
+
+                {citiesList.map(c => (
+                  <button
+                    key={c.name}
+                    onClick={() => { setSelectedCityFilter(c.name); setActiveCampaign(null); }}
+                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all shrink-0 flex items-center gap-1.5 ${
+                      selectedCityFilter.toLowerCase() === c.name.toLowerCase()
+                        ? "bg-[#489473] text-white shadow-md shadow-[#489473]/30"
+                        : "bg-white text-slate-700 border border-slate-200 hover:bg-slate-100"
+                    }`}
+                  >
+                    <span>{c.name}</span>
+                    <span className={`px-1.5 py-0.2 rounded-md text-[10px] ${
+                      selectedCityFilter.toLowerCase() === c.name.toLowerCase()
+                        ? "bg-white/20 text-white"
+                        : "bg-slate-100 text-slate-500"
+                    }`}>
+                      {c.count}
+                    </span>
+                  </button>
+                ))}
+              </div>
+
               {/* METRIC CARDS OVERVIEW */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
                 
@@ -551,7 +613,7 @@ export default function Dashboard() {
                     <Search className="w-4 h-4 opacity-70" />
                   </div>
                   <div className="text-2xl font-black">{metrics.total}</div>
-                  <div className="text-[11px] opacity-70 mt-1">Total in database</div>
+                  <div className="text-[11px] opacity-70 mt-1">{selectedCityFilter === "ALL" ? "All cities" : selectedCityFilter}</div>
                 </div>
 
                 {/* Hot Prospects */}
@@ -602,7 +664,7 @@ export default function Dashboard() {
                     <Globe className="w-4 h-4 text-indigo-500" />
                   </div>
                   <div className="text-2xl font-black text-indigo-600">{metrics.no_website}</div>
-                  <div className="text-[11px] text-slate-400 mt-1">Prime web design targets</div>
+                  <div className="text-[11px] text-slate-400 mt-1">Prime design targets</div>
                 </div>
 
                 {/* Demo Ready */}
@@ -619,7 +681,7 @@ export default function Dashboard() {
                     <Sparkles className="w-4 h-4 text-emerald-500" />
                   </div>
                   <div className="text-2xl font-black text-emerald-600">{metrics.demo_ready}</div>
-                  <div className="text-[11px] text-slate-400 mt-1">Live concept pitch ready</div>
+                  <div className="text-[11px] text-slate-400 mt-1">Pitch URL generated</div>
                 </div>
 
                 {/* Pending Approval */}
@@ -648,14 +710,14 @@ export default function Dashboard() {
                 <div className="p-5 border-b border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4 bg-slate-50/50">
                   
                   {/* Left: Search query within results & active campaign indicator */}
-                  <div className="flex items-center gap-3 flex-1">
-                    <div className="relative flex-1 max-w-md">
+                  <div className="flex items-center gap-3 flex-1 flex-wrap">
+                    <div className="relative flex-1 min-w-[280px] max-w-md">
                       <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                       <input 
                         type="text"
                         value={searchQuery}
                         onChange={e => setSearchQuery(e.target.value)}
-                        placeholder="Search by business name, phone, address, website..."
+                        placeholder="Search by name, phone, category, address..."
                         className="w-full pl-10 pr-4 py-2 bg-white rounded-xl text-xs font-medium text-[#1E293B] border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#489473]/20 focus:border-[#489473]"
                       />
                       {searchQuery && (
@@ -670,6 +732,15 @@ export default function Dashboard() {
                       <div className="flex items-center gap-1.5 bg-[#489473]/10 text-[#489473] px-3 py-1.5 rounded-lg text-xs font-bold border border-[#489473]/20">
                         <span>Campaign: {activeCampaign.city} ({activeCampaign.category})</span>
                         <button onClick={() => setActiveCampaign(null)} className="hover:text-rose-600 ml-1">
+                          <X className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    )}
+
+                    {selectedCityFilter !== "ALL" && (
+                      <div className="flex items-center gap-1.5 bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-200">
+                        <span>City: {selectedCityFilter}</span>
+                        <button onClick={() => setSelectedCityFilter("ALL")} className="hover:text-rose-600 ml-1">
                           <X className="w-3.5 h-3.5" />
                         </button>
                       </div>
@@ -751,18 +822,30 @@ export default function Dashboard() {
                             </div>
                             <h4 className="font-bold text-[#1E293B] mb-1">No Leads Found</h4>
                             <p className="text-xs text-slate-500 max-w-sm mx-auto mb-4">
-                              {searchQuery 
+                              {selectedCityFilter !== "ALL"
+                                ? `No leads found for location "${selectedCityFilter}". Click 'Start AI Hunt' above to scrape leads in ${selectedCityFilter}!`
+                                : searchQuery 
                                 ? `No leads matched your search query "${searchQuery}".` 
                                 : "Start your first AI Hunt by clicking 'Start AI Hunt' above!"}
                             </p>
-                            {searchQuery && (
-                              <button 
-                                onClick={() => setSearchQuery("")} 
-                                className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold transition-colors"
-                              >
-                                Clear Search Filter
-                              </button>
-                            )}
+                            <div className="flex justify-center gap-2">
+                              {selectedCityFilter !== "ALL" && (
+                                <button 
+                                  onClick={() => setSelectedCityFilter("ALL")} 
+                                  className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold transition-colors"
+                                >
+                                  View All Locations ({visibleLeads.length})
+                                </button>
+                              )}
+                              {searchQuery && (
+                                <button 
+                                  onClick={() => setSearchQuery("")} 
+                                  className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold transition-colors"
+                                >
+                                  Clear Search Query
+                                </button>
+                              )}
+                            </div>
                           </td>
                         </tr>
                       ) : (
@@ -801,7 +884,7 @@ export default function Dashboard() {
                               <div className="text-xs text-slate-500 flex items-center gap-2 mt-1 font-medium">
                                 <span>{lead.category || "Business"}</span>
                                 <span>•</span>
-                                <span>{lead.city}</span>
+                                <span className="font-bold text-slate-700">{lead.city}</span>
                               </div>
 
                               {lead.rating && lead.rating > 0 ? (
@@ -990,6 +1073,7 @@ export default function Dashboard() {
                           <td className="px-5 py-4 text-right">
                             <button
                               onClick={() => {
+                                setSelectedCityFilter(c.city);
                                 setActiveCampaign({ city: c.city, category: c.category });
                                 setActiveTab("pipeline");
                               }}
