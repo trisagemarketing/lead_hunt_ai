@@ -48,7 +48,7 @@ def main():
     
     # Define the exact sequence of the pipeline
     pipeline = [
-        (["discovery.serpapi_search", "--city", args.city, "--business-type", args.business_type], "Phase 1: Discovery (Google Maps Scrape)"),
+        (["discovery.serpapi_search", "--city", args.city, "--business-type", args.business_type, "--max-results", "50"], "Phase 1: Discovery (Google Maps Scrape)"),
         (["processing.normalize"], "Phase 2A: Data Normalization"),
         (["processing.deduplicate"], "Phase 2B: Deduplication"),
         (["processing.website_checker"], "Phase 3: Website Auditing"),
