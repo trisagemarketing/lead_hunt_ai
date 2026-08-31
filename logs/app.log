@@ -741,3 +741,459 @@ max_results=10
 2026-08-20 17:17:48,624 - database - INFO - [database.py:26] - Using SQLite Database (Local).
 2026-08-20 17:17:49,798 - database - INFO - [database.py:26] - Using SQLite Database (Local).
 2026-08-20 17:17:50,130 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:06:47,268 - __main__ - INFO - [deduplicate.py:136] - Starting normalization and deduplication process...
+2026-08-31 18:06:47,269 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:06:47,281 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Reliant Plumbing - Dallas
+2026-08-31 18:06:47,284 - database - DEBUG - [database.py:147] - Lead 4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d inserted/updated successfully.
+2026-08-31 18:06:47,284 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Tide Turners Plumbing
+2026-08-31 18:06:47,286 - database - DEBUG - [database.py:147] - Lead eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086 inserted/updated successfully.
+2026-08-31 18:06:47,287 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Jake the Plumbing Pro
+2026-08-31 18:06:47,288 - database - DEBUG - [database.py:147] - Lead 7ed1e2ebabc3d18d9ec385f8a2a0205acd5d3101b6f428f10e181484eaa7f06e inserted/updated successfully.
+2026-08-31 18:06:47,289 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Anchor Plumbing Company
+2026-08-31 18:06:47,290 - database - DEBUG - [database.py:147] - Lead 0248ccd1a5ac7c76ecd1e232d20b93d87f789a6abd5dbaa5e8093f88583ca049 inserted/updated successfully.
+2026-08-31 18:06:47,291 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Baker Brothers Plumbing, Air & Electric
+2026-08-31 18:06:47,292 - database - DEBUG - [database.py:147] - Lead d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c inserted/updated successfully.
+2026-08-31 18:06:47,293 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Milestone Electric, A/C, & Plumbing
+2026-08-31 18:06:47,294 - database - DEBUG - [database.py:147] - Lead 135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858 inserted/updated successfully.
+2026-08-31 18:06:47,295 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Tribeca Plumbing, Inc.
+2026-08-31 18:06:47,296 - database - DEBUG - [database.py:147] - Lead bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf inserted/updated successfully.
+2026-08-31 18:06:47,297 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Dallas Plumbing & Air Conditioning
+2026-08-31 18:06:47,298 - database - DEBUG - [database.py:147] - Lead dfe0d94dbae3a0c76d953a458ddf076768addd6b3a5cf08655c3013b13daaf22 inserted/updated successfully.
+2026-08-31 18:06:47,299 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Metro Flow Plumbing - Dallas Emergency Plumbers
+2026-08-31 18:06:47,300 - database - DEBUG - [database.py:147] - Lead a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075 inserted/updated successfully.
+2026-08-31 18:06:47,301 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Public Service Plumbers
+2026-08-31 18:06:47,302 - database - DEBUG - [database.py:147] - Lead 67653dede81d016606aa3ea23aabdd9a17f48b66f637e93dc70b27681f382f20 inserted/updated successfully.
+2026-08-31 18:06:47,303 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Hocco Kitchen (OP Road)
+2026-08-31 18:06:47,304 - database - DEBUG - [database.py:147] - Lead c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3 inserted/updated successfully.
+2026-08-31 18:06:47,304 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Thyme & Whisk
+2026-08-31 18:06:47,306 - database - DEBUG - [database.py:147] - Lead 37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e inserted/updated successfully.
+2026-08-31 18:06:47,306 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: western restaurant
+2026-08-31 18:06:47,308 - database - DEBUG - [database.py:147] - Lead 54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a inserted/updated successfully.
+2026-08-31 18:06:47,308 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Fitoor
+2026-08-31 18:06:47,310 - database - DEBUG - [database.py:147] - Lead 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff inserted/updated successfully.
+2026-08-31 18:06:47,310 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Nizam's The Royal Kitchen
+2026-08-31 18:06:47,312 - database - DEBUG - [database.py:147] - Lead 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731 inserted/updated successfully.
+2026-08-31 18:06:47,312 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: The Highway Eats - Vadodara | Multicuisine Restaurant, Rooms, Banquet & Poolside Party Lawns
+2026-08-31 18:06:47,314 - database - DEBUG - [database.py:147] - Lead 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c inserted/updated successfully.
+2026-08-31 18:06:47,314 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: 812 CE Urban Restaurant
+2026-08-31 18:06:47,315 - database - DEBUG - [database.py:147] - Lead 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0 inserted/updated successfully.
+2026-08-31 18:06:47,316 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Barbeque Nation - Vadodara - Cine Mall
+2026-08-31 18:06:47,318 - database - DEBUG - [database.py:147] - Lead fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef inserted/updated successfully.
+2026-08-31 18:06:47,320 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: 22nd Parallel
+2026-08-31 18:06:47,325 - database - DEBUG - [database.py:147] - Lead 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140 inserted/updated successfully.
+2026-08-31 18:06:47,325 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Bayleaf Multi Cuisine Restaurant
+2026-08-31 18:06:47,327 - database - DEBUG - [database.py:147] - Lead d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1 inserted/updated successfully.
+2026-08-31 18:06:47,328 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: The Morsel Restaurant
+2026-08-31 18:06:47,329 - database - DEBUG - [database.py:147] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-31 18:06:47,330 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Island The Restaurant Waves Club
+2026-08-31 18:06:47,331 - database - DEBUG - [database.py:147] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-31 18:06:47,331 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Peshawri by Welcomhotel Vadodara
+2026-08-31 18:06:47,332 - database - DEBUG - [database.py:147] - Lead dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996 inserted/updated successfully.
+2026-08-31 18:06:47,332 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: The Secret Kitchen
+2026-08-31 18:06:47,333 - database - DEBUG - [database.py:147] - Lead fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86 inserted/updated successfully.
+2026-08-31 18:06:47,334 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Retro Bistro : The Fine Multi Cuisine Restaurant ( Vadodara )
+2026-08-31 18:06:47,335 - database - DEBUG - [database.py:147] - Lead 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e inserted/updated successfully.
+2026-08-31 18:06:47,335 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Sakura Pan Asian Cuisine
+2026-08-31 18:06:47,336 - database - DEBUG - [database.py:147] - Lead 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3 inserted/updated successfully.
+2026-08-31 18:06:47,337 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Spice Kraft Restaurant
+2026-08-31 18:06:47,338 - database - DEBUG - [database.py:147] - Lead e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8 inserted/updated successfully.
+2026-08-31 18:06:47,338 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Taste Carnival - (Banquet, Rooms, Restaurant)
+2026-08-31 18:06:47,342 - database - DEBUG - [database.py:147] - Lead 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b inserted/updated successfully.
+2026-08-31 18:06:47,342 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Le Prive World Cuisine
+2026-08-31 18:06:47,344 - database - DEBUG - [database.py:147] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-31 18:06:47,345 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: The House of Makeba - Veg Family Dining Restaurant in Vadodara
+2026-08-31 18:06:47,347 - database - DEBUG - [database.py:147] - Lead 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03 inserted/updated successfully.
+2026-08-31 18:06:47,347 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Jassi De Parathe
+2026-08-31 18:06:47,349 - database - DEBUG - [database.py:147] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-31 18:06:47,349 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Vibes The Bistro
+2026-08-31 18:06:47,351 - database - DEBUG - [database.py:147] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-31 18:06:47,352 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Candle Light Date N Dinner & Rooftop Restaurant Vadodara
+2026-08-31 18:06:47,353 - database - DEBUG - [database.py:147] - Lead c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde inserted/updated successfully.
+2026-08-31 18:06:47,354 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Vadodara Rest 1
+2026-08-31 18:06:47,356 - database - DEBUG - [database.py:147] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-31 18:06:47,356 - __main__ - DEBUG - [deduplicate.py:89] - Lead verified unique: Acme Corp
+2026-08-31 18:06:47,358 - database - DEBUG - [database.py:147] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-31 18:06:48,895 - __main__ - INFO - [website_checker.py:202] - Starting Website Verification Module...
+2026-08-31 18:06:48,895 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:06:48,898 - __main__ - INFO - [website_checker.py:136] - Checking website for Reliant Plumbing - Dallas (4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d)
+2026-08-31 18:06:54,734 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Reliant Plumbing - Dallas: VALID_WEBSITE
+2026-08-31 18:06:54,747 - database - DEBUG - [database.py:147] - Lead 4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d inserted/updated successfully.
+2026-08-31 18:06:55,748 - __main__ - INFO - [website_checker.py:136] - Checking website for Tide Turners Plumbing (eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086)
+2026-08-31 18:06:59,927 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Tide Turners Plumbing: VALID_WEBSITE
+2026-08-31 18:06:59,940 - database - DEBUG - [database.py:147] - Lead eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086 inserted/updated successfully.
+2026-08-31 18:07:00,941 - __main__ - INFO - [website_checker.py:136] - Checking website for Jake the Plumbing Pro (7ed1e2ebabc3d18d9ec385f8a2a0205acd5d3101b6f428f10e181484eaa7f06e)
+2026-08-31 18:07:01,972 - __main__ - WARNING - [website_checker.py:80] - HTTP Error 403 for https://jakeplumbingpro.com/
+2026-08-31 18:07:01,973 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Jake the Plumbing Pro: BROKEN_WEBSITE
+2026-08-31 18:07:02,020 - database - DEBUG - [database.py:147] - Lead 7ed1e2ebabc3d18d9ec385f8a2a0205acd5d3101b6f428f10e181484eaa7f06e inserted/updated successfully.
+2026-08-31 18:07:03,023 - __main__ - INFO - [website_checker.py:136] - Checking website for Anchor Plumbing Company (0248ccd1a5ac7c76ecd1e232d20b93d87f789a6abd5dbaa5e8093f88583ca049)
+2026-08-31 18:07:04,156 - __main__ - WARNING - [website_checker.py:80] - HTTP Error 404 for https://anchorplumbingcompany.com/?utm_source=google&utm_medium=gbp-website-button&utm_campaign=website
+2026-08-31 18:07:04,158 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Anchor Plumbing Company: BROKEN_WEBSITE
+2026-08-31 18:07:04,208 - database - DEBUG - [database.py:147] - Lead 0248ccd1a5ac7c76ecd1e232d20b93d87f789a6abd5dbaa5e8093f88583ca049 inserted/updated successfully.
+2026-08-31 18:07:05,211 - __main__ - INFO - [website_checker.py:136] - Checking website for Baker Brothers Plumbing, Air & Electric (d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c)
+2026-08-31 18:07:07,415 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Baker Brothers Plumbing, Air & Electric: VALID_WEBSITE
+2026-08-31 18:07:07,440 - database - DEBUG - [database.py:147] - Lead d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c inserted/updated successfully.
+2026-08-31 18:07:08,441 - __main__ - INFO - [website_checker.py:136] - Checking website for Milestone Electric, A/C, & Plumbing (135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858)
+2026-08-31 18:07:10,888 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Milestone Electric, A/C, & Plumbing: VALID_WEBSITE
+2026-08-31 18:07:10,929 - database - DEBUG - [database.py:147] - Lead 135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858 inserted/updated successfully.
+2026-08-31 18:07:11,931 - __main__ - INFO - [website_checker.py:136] - Checking website for Tribeca Plumbing, Inc. (bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf)
+2026-08-31 18:07:14,573 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Tribeca Plumbing, Inc.: VALID_WEBSITE
+2026-08-31 18:07:14,594 - database - DEBUG - [database.py:147] - Lead bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf inserted/updated successfully.
+2026-08-31 18:07:15,596 - __main__ - INFO - [website_checker.py:136] - Checking website for Dallas Plumbing & Air Conditioning (dfe0d94dbae3a0c76d953a458ddf076768addd6b3a5cf08655c3013b13daaf22)
+2026-08-31 18:07:25,891 - __main__ - WARNING - [website_checker.py:83] - Request Error for https://www.dallasplumbing.com/dallas/?utm_source=organic&utm_medium=organic&utm_campaign=dallas&utm_id=gbp: timed out
+2026-08-31 18:07:25,892 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Dallas Plumbing & Air Conditioning: BROKEN_WEBSITE
+2026-08-31 18:07:25,922 - database - DEBUG - [database.py:147] - Lead dfe0d94dbae3a0c76d953a458ddf076768addd6b3a5cf08655c3013b13daaf22 inserted/updated successfully.
+2026-08-31 18:07:26,924 - __main__ - INFO - [website_checker.py:136] - Checking website for Metro Flow Plumbing - Dallas Emergency Plumbers (a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075)
+2026-08-31 18:07:27,693 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Metro Flow Plumbing - Dallas Emergency Plumbers: VALID_WEBSITE
+2026-08-31 18:07:27,708 - database - DEBUG - [database.py:147] - Lead a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075 inserted/updated successfully.
+2026-08-31 18:07:28,709 - __main__ - INFO - [website_checker.py:136] - Checking website for Public Service Plumbers (67653dede81d016606aa3ea23aabdd9a17f48b66f637e93dc70b27681f382f20)
+2026-08-31 18:07:29,140 - __main__ - WARNING - [website_checker.py:80] - HTTP Error 403 for https://publicserviceplumbers.com/?utm_source=google-gbp&utm_medium=organic&utm_campaign=*163*public-service-plumbers-dallas
+2026-08-31 18:07:29,141 - __main__ - INFO - [website_checker.py:148] - Website Verification Result for Public Service Plumbers: BROKEN_WEBSITE
+2026-08-31 18:07:29,176 - database - DEBUG - [database.py:147] - Lead 67653dede81d016606aa3ea23aabdd9a17f48b66f637e93dc70b27681f382f20 inserted/updated successfully.
+2026-08-31 18:07:30,180 - __main__ - INFO - [website_checker.py:199] - Website checking complete. Processed 10 leads.
+2026-08-31 18:07:31,158 - __main__ - INFO - [lead_scorer.py:159] - Starting Lead Scoring Module...
+2026-08-31 18:07:31,160 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:07:31,182 - __main__ - INFO - [lead_scorer.py:113] - Scored Reliant Plumbing - Dallas (4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d): Score=30.0, Tier=LOW
+2026-08-31 18:07:31,208 - database - DEBUG - [database.py:147] - Lead 4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d inserted/updated successfully.
+2026-08-31 18:07:31,210 - __main__ - INFO - [lead_scorer.py:113] - Scored Tide Turners Plumbing (eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086): Score=30.0, Tier=LOW
+2026-08-31 18:07:31,237 - database - DEBUG - [database.py:147] - Lead eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086 inserted/updated successfully.
+2026-08-31 18:07:31,238 - __main__ - INFO - [lead_scorer.py:113] - Scored Jake the Plumbing Pro (7ed1e2ebabc3d18d9ec385f8a2a0205acd5d3101b6f428f10e181484eaa7f06e): Score=65.0, Tier=WARM
+2026-08-31 18:07:31,254 - database - DEBUG - [database.py:147] - Lead 7ed1e2ebabc3d18d9ec385f8a2a0205acd5d3101b6f428f10e181484eaa7f06e inserted/updated successfully.
+2026-08-31 18:07:31,255 - __main__ - INFO - [lead_scorer.py:113] - Scored Anchor Plumbing Company (0248ccd1a5ac7c76ecd1e232d20b93d87f789a6abd5dbaa5e8093f88583ca049): Score=65.0, Tier=WARM
+2026-08-31 18:07:31,269 - database - DEBUG - [database.py:147] - Lead 0248ccd1a5ac7c76ecd1e232d20b93d87f789a6abd5dbaa5e8093f88583ca049 inserted/updated successfully.
+2026-08-31 18:07:31,269 - __main__ - INFO - [lead_scorer.py:113] - Scored Baker Brothers Plumbing, Air & Electric (d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c): Score=30.0, Tier=LOW
+2026-08-31 18:07:31,285 - database - DEBUG - [database.py:147] - Lead d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c inserted/updated successfully.
+2026-08-31 18:07:31,286 - __main__ - INFO - [lead_scorer.py:113] - Scored Milestone Electric, A/C, & Plumbing (135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858): Score=30.0, Tier=LOW
+2026-08-31 18:07:31,299 - database - DEBUG - [database.py:147] - Lead 135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858 inserted/updated successfully.
+2026-08-31 18:07:31,299 - __main__ - INFO - [lead_scorer.py:113] - Scored Tribeca Plumbing, Inc. (bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf): Score=30.0, Tier=LOW
+2026-08-31 18:07:31,311 - database - DEBUG - [database.py:147] - Lead bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf inserted/updated successfully.
+2026-08-31 18:07:31,312 - __main__ - INFO - [lead_scorer.py:113] - Scored Dallas Plumbing & Air Conditioning (dfe0d94dbae3a0c76d953a458ddf076768addd6b3a5cf08655c3013b13daaf22): Score=65.0, Tier=WARM
+2026-08-31 18:07:31,329 - database - DEBUG - [database.py:147] - Lead dfe0d94dbae3a0c76d953a458ddf076768addd6b3a5cf08655c3013b13daaf22 inserted/updated successfully.
+2026-08-31 18:07:31,330 - __main__ - INFO - [lead_scorer.py:113] - Scored Metro Flow Plumbing - Dallas Emergency Plumbers (a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075): Score=30.0, Tier=LOW
+2026-08-31 18:07:31,342 - database - DEBUG - [database.py:147] - Lead a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075 inserted/updated successfully.
+2026-08-31 18:07:31,343 - __main__ - INFO - [lead_scorer.py:113] - Scored Public Service Plumbers (67653dede81d016606aa3ea23aabdd9a17f48b66f637e93dc70b27681f382f20): Score=65.0, Tier=WARM
+2026-08-31 18:07:31,357 - database - DEBUG - [database.py:147] - Lead 67653dede81d016606aa3ea23aabdd9a17f48b66f637e93dc70b27681f382f20 inserted/updated successfully.
+2026-08-31 18:07:33,439 - __main__ - INFO - [personalizer.py:176] - Starting AI Personalization Module on all qualified leads (up to 50)...
+2026-08-31 18:07:33,440 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:07:33,574 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Fitoor (Status: BROKEN_WEBSITE)
+2026-08-31 18:07:35,953 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Fitoor: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:07:35,953 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:07:36,494 - database - DEBUG - [database.py:147] - Lead 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff inserted/updated successfully.
+2026-08-31 18:07:36,496 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Fitoor
+2026-08-31 18:07:36,496 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for 812 CE Urban Restaurant (Status: BROKEN_WEBSITE)
+2026-08-31 18:07:37,951 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for 812 CE Urban Restaurant: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:07:37,954 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:07:38,489 - database - DEBUG - [database.py:147] - Lead 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0 inserted/updated successfully.
+2026-08-31 18:07:38,491 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: 812 CE Urban Restaurant
+2026-08-31 18:07:38,492 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for The Morsel Restaurant (Status: BROKEN_WEBSITE)
+2026-08-31 18:07:39,897 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for The Morsel Restaurant: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:07:39,897 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:07:40,412 - database - DEBUG - [database.py:147] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-31 18:07:40,413 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: The Morsel Restaurant
+2026-08-31 18:07:40,413 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Island The Restaurant Waves Club (Status: BROKEN_WEBSITE)
+2026-08-31 18:07:41,894 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Island The Restaurant Waves Club: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:07:41,895 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:07:42,410 - database - DEBUG - [database.py:147] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-31 18:07:42,411 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Island The Restaurant Waves Club
+2026-08-31 18:07:42,411 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Le Prive World Cuisine (Status: BROKEN_WEBSITE)
+2026-08-31 18:07:44,903 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Le Prive World Cuisine: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:07:44,904 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:07:45,673 - database - DEBUG - [database.py:147] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-31 18:07:45,675 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Le Prive World Cuisine
+2026-08-31 18:07:45,676 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Jassi De Parathe (Status: BROKEN_WEBSITE)
+2026-08-31 18:07:47,102 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Jassi De Parathe: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:07:47,102 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:07:47,632 - database - DEBUG - [database.py:147] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-31 18:07:47,633 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Jassi De Parathe
+2026-08-31 18:07:47,634 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Jake the Plumbing Pro (Status: BROKEN_WEBSITE)
+2026-08-31 18:07:49,091 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Jake the Plumbing Pro: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:07:49,092 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:07:49,626 - database - DEBUG - [database.py:147] - Lead 7ed1e2ebabc3d18d9ec385f8a2a0205acd5d3101b6f428f10e181484eaa7f06e inserted/updated successfully.
+2026-08-31 18:07:49,627 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Jake the Plumbing Pro
+2026-08-31 18:07:49,628 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Anchor Plumbing Company (Status: BROKEN_WEBSITE)
+2026-08-31 18:07:51,034 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Anchor Plumbing Company: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:07:51,034 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:07:51,552 - database - DEBUG - [database.py:147] - Lead 0248ccd1a5ac7c76ecd1e232d20b93d87f789a6abd5dbaa5e8093f88583ca049 inserted/updated successfully.
+2026-08-31 18:07:51,552 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Anchor Plumbing Company
+2026-08-31 18:07:51,553 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Dallas Plumbing & Air Conditioning (Status: BROKEN_WEBSITE)
+2026-08-31 18:07:52,951 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Dallas Plumbing & Air Conditioning: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:07:52,952 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:07:53,479 - database - DEBUG - [database.py:147] - Lead dfe0d94dbae3a0c76d953a458ddf076768addd6b3a5cf08655c3013b13daaf22 inserted/updated successfully.
+2026-08-31 18:07:53,480 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Dallas Plumbing & Air Conditioning
+2026-08-31 18:07:53,481 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Public Service Plumbers (Status: BROKEN_WEBSITE)
+2026-08-31 18:07:54,973 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Public Service Plumbers: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:07:54,973 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:07:55,496 - database - DEBUG - [database.py:147] - Lead 67653dede81d016606aa3ea23aabdd9a17f48b66f637e93dc70b27681f382f20 inserted/updated successfully.
+2026-08-31 18:07:55,496 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Public Service Plumbers
+2026-08-31 18:07:55,496 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for The Highway Eats - Vadodara | Multicuisine Restaurant, Rooms, Banquet & Poolside Party Lawns (Status: DOMAIN_ONLY)
+2026-08-31 18:08:00,093 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for The Highway Eats - Vadodara | Multicuisine Restaurant, Rooms, Banquet & Poolside Party Lawns: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:08:00,095 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:00,610 - database - DEBUG - [database.py:147] - Lead 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c inserted/updated successfully.
+2026-08-31 18:08:00,611 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: The Highway Eats - Vadodara | Multicuisine Restaurant, Rooms, Banquet & Poolside Party Lawns
+2026-08-31 18:08:00,611 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Vibes The Bistro (Status: DOMAIN_ONLY)
+2026-08-31 18:08:07,149 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Vibes The Bistro: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:08:07,149 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:07,689 - database - DEBUG - [database.py:147] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-31 18:08:07,691 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Vibes The Bistro
+2026-08-31 18:08:07,692 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Vadodara Rest 1 (Status: DOMAIN_ONLY)
+2026-08-31 18:08:15,239 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Vadodara Rest 1: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:08:15,240 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:15,770 - database - DEBUG - [database.py:147] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-31 18:08:15,772 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Vadodara Rest 1
+2026-08-31 18:08:15,773 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Hocco Kitchen (OP Road) (Status: VALID_WEBSITE)
+2026-08-31 18:08:22,454 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Hocco Kitchen (OP Road): Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:08:22,455 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:22,996 - database - DEBUG - [database.py:147] - Lead c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3 inserted/updated successfully.
+2026-08-31 18:08:22,999 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Hocco Kitchen (OP Road)
+2026-08-31 18:08:23,004 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Thyme & Whisk (Status: VALID_WEBSITE)
+2026-08-31 18:08:28,518 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Thyme & Whisk: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:08:28,519 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:29,032 - database - DEBUG - [database.py:147] - Lead 37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e inserted/updated successfully.
+2026-08-31 18:08:29,033 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Thyme & Whisk
+2026-08-31 18:08:29,033 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for western restaurant (Status: VALID_WEBSITE)
+2026-08-31 18:08:33,541 - __main__ - INFO - [personalizer.py:177] - Starting AI Personalization Module on all qualified leads (up to 50)...
+2026-08-31 18:08:33,541 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:08:33,658 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for western restaurant (Status: VALID_WEBSITE)
+2026-08-31 18:08:33,993 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for western restaurant: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:33,994 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:34,524 - database - DEBUG - [database.py:147] - Lead 54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a inserted/updated successfully.
+2026-08-31 18:08:34,525 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: western restaurant
+2026-08-31 18:08:34,525 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for Nizam's The Royal Kitchen (Status: VALID_WEBSITE)
+2026-08-31 18:08:34,599 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for Nizam's The Royal Kitchen: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:34,600 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:35,140 - database - DEBUG - [database.py:147] - Lead 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731 inserted/updated successfully.
+2026-08-31 18:08:35,142 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: Nizam's The Royal Kitchen
+2026-08-31 18:08:35,143 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for Barbeque Nation - Vadodara - Cine Mall (Status: VALID_WEBSITE)
+2026-08-31 18:08:35,214 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for Barbeque Nation - Vadodara - Cine Mall: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:35,215 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:35,437 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for western restaurant: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:08:35,437 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:35,735 - database - DEBUG - [database.py:147] - Lead fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef inserted/updated successfully.
+2026-08-31 18:08:35,736 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: Barbeque Nation - Vadodara - Cine Mall
+2026-08-31 18:08:35,736 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for 22nd Parallel (Status: VALID_WEBSITE)
+2026-08-31 18:08:35,785 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for 22nd Parallel: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:35,785 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:35,949 - database - DEBUG - [database.py:147] - Lead 54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a inserted/updated successfully.
+2026-08-31 18:08:35,950 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: western restaurant
+2026-08-31 18:08:35,950 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Nizam's The Royal Kitchen (Status: VALID_WEBSITE)
+2026-08-31 18:08:36,302 - database - DEBUG - [database.py:147] - Lead 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140 inserted/updated successfully.
+2026-08-31 18:08:36,302 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: 22nd Parallel
+2026-08-31 18:08:36,303 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for Bayleaf Multi Cuisine Restaurant (Status: VALID_WEBSITE)
+2026-08-31 18:08:36,351 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for Bayleaf Multi Cuisine Restaurant: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:36,352 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:36,883 - database - DEBUG - [database.py:147] - Lead d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1 inserted/updated successfully.
+2026-08-31 18:08:36,884 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: Bayleaf Multi Cuisine Restaurant
+2026-08-31 18:08:36,885 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for Peshawri by Welcomhotel Vadodara (Status: VALID_WEBSITE)
+2026-08-31 18:08:36,962 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for Peshawri by Welcomhotel Vadodara: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:36,962 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:37,484 - database - DEBUG - [database.py:147] - Lead dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996 inserted/updated successfully.
+2026-08-31 18:08:37,485 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: Peshawri by Welcomhotel Vadodara
+2026-08-31 18:08:37,485 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for The Secret Kitchen (Status: VALID_WEBSITE)
+2026-08-31 18:08:37,537 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for The Secret Kitchen: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:37,537 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:38,068 - database - DEBUG - [database.py:147] - Lead fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86 inserted/updated successfully.
+2026-08-31 18:08:38,069 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: The Secret Kitchen
+2026-08-31 18:08:38,070 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for Retro Bistro : The Fine Multi Cuisine Restaurant ( Vadodara ) (Status: VALID_WEBSITE)
+2026-08-31 18:08:38,144 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for Retro Bistro : The Fine Multi Cuisine Restaurant ( Vadodara ): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:38,145 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:38,673 - database - DEBUG - [database.py:147] - Lead 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e inserted/updated successfully.
+2026-08-31 18:08:38,674 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: Retro Bistro : The Fine Multi Cuisine Restaurant ( Vadodara )
+2026-08-31 18:08:38,675 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for Sakura Pan Asian Cuisine (Status: VALID_WEBSITE)
+2026-08-31 18:08:38,736 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for Sakura Pan Asian Cuisine: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:38,737 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:39,277 - database - DEBUG - [database.py:147] - Lead 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3 inserted/updated successfully.
+2026-08-31 18:08:39,278 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: Sakura Pan Asian Cuisine
+2026-08-31 18:08:39,279 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for Spice Kraft Restaurant (Status: VALID_WEBSITE)
+2026-08-31 18:08:39,352 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for Spice Kraft Restaurant: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:39,353 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:39,886 - database - DEBUG - [database.py:147] - Lead e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8 inserted/updated successfully.
+2026-08-31 18:08:39,887 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: Spice Kraft Restaurant
+2026-08-31 18:08:39,888 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for Taste Carnival - (Banquet, Rooms, Restaurant) (Status: VALID_WEBSITE)
+2026-08-31 18:08:39,951 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for Taste Carnival - (Banquet, Rooms, Restaurant): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:39,951 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:40,486 - database - DEBUG - [database.py:147] - Lead 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b inserted/updated successfully.
+2026-08-31 18:08:40,487 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: Taste Carnival - (Banquet, Rooms, Restaurant)
+2026-08-31 18:08:40,488 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for Reliant Plumbing - Dallas (Status: VALID_WEBSITE)
+2026-08-31 18:08:40,553 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for Reliant Plumbing - Dallas: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:40,553 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:41,090 - database - DEBUG - [database.py:147] - Lead 4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d inserted/updated successfully.
+2026-08-31 18:08:41,091 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: Reliant Plumbing - Dallas
+2026-08-31 18:08:41,091 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for Tide Turners Plumbing (Status: VALID_WEBSITE)
+2026-08-31 18:08:41,137 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for Tide Turners Plumbing: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:41,138 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:41,656 - database - DEBUG - [database.py:147] - Lead eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086 inserted/updated successfully.
+2026-08-31 18:08:41,656 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: Tide Turners Plumbing
+2026-08-31 18:08:41,657 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for Baker Brothers Plumbing, Air & Electric (Status: VALID_WEBSITE)
+2026-08-31 18:08:41,703 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for Baker Brothers Plumbing, Air & Electric: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:41,704 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:42,241 - database - DEBUG - [database.py:147] - Lead d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c inserted/updated successfully.
+2026-08-31 18:08:42,243 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: Baker Brothers Plumbing, Air & Electric
+2026-08-31 18:08:42,244 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for Milestone Electric, A/C, & Plumbing (Status: VALID_WEBSITE)
+2026-08-31 18:08:42,313 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for Milestone Electric, A/C, & Plumbing: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:42,314 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:42,460 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Nizam's The Royal Kitchen: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:08:42,460 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:42,840 - database - DEBUG - [database.py:147] - Lead 135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858 inserted/updated successfully.
+2026-08-31 18:08:42,842 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: Milestone Electric, A/C, & Plumbing
+2026-08-31 18:08:42,845 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for Tribeca Plumbing, Inc. (Status: VALID_WEBSITE)
+2026-08-31 18:08:42,913 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for Tribeca Plumbing, Inc.: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:42,913 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:42,964 - database - DEBUG - [database.py:147] - Lead 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731 inserted/updated successfully.
+2026-08-31 18:08:42,965 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Nizam's The Royal Kitchen
+2026-08-31 18:08:42,965 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Barbeque Nation - Vadodara - Cine Mall (Status: VALID_WEBSITE)
+2026-08-31 18:08:43,433 - database - DEBUG - [database.py:147] - Lead bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf inserted/updated successfully.
+2026-08-31 18:08:43,434 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: Tribeca Plumbing, Inc.
+2026-08-31 18:08:43,434 - __main__ - INFO - [personalizer.py:117] - Personalizing messages for Metro Flow Plumbing - Dallas Emergency Plumbers (Status: VALID_WEBSITE)
+2026-08-31 18:08:43,481 - __main__ - ERROR - [personalizer.py:82] - Groq API Error for Metro Flow Plumbing - Dallas Emergency Plumbers: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-08-31 18:08:43,482 - __main__ - INFO - [personalizer.py:83] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:43,995 - database - DEBUG - [database.py:147] - Lead a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075 inserted/updated successfully.
+2026-08-31 18:08:43,995 - __main__ - INFO - [personalizer.py:172] - Successfully personalized and saved lead: Metro Flow Plumbing - Dallas Emergency Plumbers
+2026-08-31 18:08:44,709 - __main__ - INFO - [url_generator.py:109] - Starting Demo URL Generator Module...
+2026-08-31 18:08:44,709 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:08:44,718 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Reliant Plumbing - Dallas: https://yourdomain.com/preview/reliant-plumbing---dallas-dallas
+2026-08-31 18:08:44,735 - database - DEBUG - [database.py:147] - Lead 4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d inserted/updated successfully.
+2026-08-31 18:08:44,736 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Tide Turners Plumbing: https://yourdomain.com/preview/tide-turners-plumbing-dallas
+2026-08-31 18:08:44,753 - database - DEBUG - [database.py:147] - Lead eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086 inserted/updated successfully.
+2026-08-31 18:08:44,753 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Jake the Plumbing Pro: https://yourdomain.com/preview/jake-the-plumbing-pro-dallas
+2026-08-31 18:08:44,767 - database - DEBUG - [database.py:147] - Lead 7ed1e2ebabc3d18d9ec385f8a2a0205acd5d3101b6f428f10e181484eaa7f06e inserted/updated successfully.
+2026-08-31 18:08:44,767 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Anchor Plumbing Company: https://yourdomain.com/preview/anchor-plumbing-company-dallas
+2026-08-31 18:08:44,780 - database - DEBUG - [database.py:147] - Lead 0248ccd1a5ac7c76ecd1e232d20b93d87f789a6abd5dbaa5e8093f88583ca049 inserted/updated successfully.
+2026-08-31 18:08:44,780 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Baker Brothers Plumbing, Air & Electric: https://yourdomain.com/preview/baker-brothers-plumbing-air-electric-dallas
+2026-08-31 18:08:44,797 - database - DEBUG - [database.py:147] - Lead d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c inserted/updated successfully.
+2026-08-31 18:08:44,797 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Milestone Electric, A/C, & Plumbing: https://yourdomain.com/preview/milestone-electric-ac-plumbing-dallas
+2026-08-31 18:08:44,809 - database - DEBUG - [database.py:147] - Lead 135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858 inserted/updated successfully.
+2026-08-31 18:08:44,810 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Tribeca Plumbing, Inc.: https://yourdomain.com/preview/tribeca-plumbing-inc-dallas
+2026-08-31 18:08:44,832 - database - DEBUG - [database.py:147] - Lead bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf inserted/updated successfully.
+2026-08-31 18:08:44,833 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Dallas Plumbing & Air Conditioning: https://yourdomain.com/preview/dallas-plumbing-air-conditioning-dallas
+2026-08-31 18:08:44,847 - database - DEBUG - [database.py:147] - Lead dfe0d94dbae3a0c76d953a458ddf076768addd6b3a5cf08655c3013b13daaf22 inserted/updated successfully.
+2026-08-31 18:08:44,848 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Metro Flow Plumbing - Dallas Emergency Plumbers: https://yourdomain.com/preview/metro-flow-plumbing---dallas-emergency-plumbers-dallas
+2026-08-31 18:08:44,864 - database - DEBUG - [database.py:147] - Lead a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075 inserted/updated successfully.
+2026-08-31 18:08:44,864 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Public Service Plumbers: https://yourdomain.com/preview/public-service-plumbers-dallas
+2026-08-31 18:08:44,878 - database - DEBUG - [database.py:147] - Lead 67653dede81d016606aa3ea23aabdd9a17f48b66f637e93dc70b27681f382f20 inserted/updated successfully.
+2026-08-31 18:08:44,879 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Hocco Kitchen (OP Road): https://yourdomain.com/preview/hocco-kitchen-op-road-vadodara
+2026-08-31 18:08:44,901 - database - DEBUG - [database.py:147] - Lead c2ff81417b8238286dcf8c05e515efe78f4534bfe3a2af9c90bffadc8806efc3 inserted/updated successfully.
+2026-08-31 18:08:44,901 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Thyme & Whisk: https://yourdomain.com/preview/thyme-whisk-vadodara
+2026-08-31 18:08:44,915 - database - DEBUG - [database.py:147] - Lead 37e139ef7e023c77342d27eebaeda5dbbb54aa35758dc71f1270e4e871acc34e inserted/updated successfully.
+2026-08-31 18:08:44,916 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for western restaurant: https://yourdomain.com/preview/western-restaurant-vadodara
+2026-08-31 18:08:44,928 - database - DEBUG - [database.py:147] - Lead 54be142a6ebb521cc2345af23966cae10c0f95bc0ac7f4e2b9622eb4b73e477a inserted/updated successfully.
+2026-08-31 18:08:44,929 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Fitoor: https://yourdomain.com/preview/fitoor-vadodara
+2026-08-31 18:08:44,941 - database - DEBUG - [database.py:147] - Lead 519551e02f6fea27264068dc13ec6c4a4d197c8c848b96891548dfbf3039eaff inserted/updated successfully.
+2026-08-31 18:08:44,942 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Nizam's The Royal Kitchen: https://yourdomain.com/preview/nizams-the-royal-kitchen-vadodara
+2026-08-31 18:08:44,960 - database - DEBUG - [database.py:147] - Lead 074b88d085994382969f65c309a083a83abd16cc1e7635fab0ee58ccfd172731 inserted/updated successfully.
+2026-08-31 18:08:44,961 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for The Highway Eats - Vadodara | Multicuisine Restaurant, Rooms, Banquet & Poolside Party Lawns: https://yourdomain.com/preview/the-highway-eats---vadodara-multicuisine-restaurant-rooms-banquet-poolside-party-lawns-vadodara
+2026-08-31 18:08:44,974 - database - DEBUG - [database.py:147] - Lead 36ef90327099341aa0a68b0741a965095ba0b8866f225894a433947c91f5464c inserted/updated successfully.
+2026-08-31 18:08:44,974 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for 812 CE Urban Restaurant: https://yourdomain.com/preview/812-ce-urban-restaurant-vadodara
+2026-08-31 18:08:44,985 - database - DEBUG - [database.py:147] - Lead 6fe85549400b705acab39e11fd5c701c1c613eeae10f3464f76648c8776155f0 inserted/updated successfully.
+2026-08-31 18:08:44,986 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Barbeque Nation - Vadodara - Cine Mall: https://yourdomain.com/preview/barbeque-nation---vadodara---cine-mall-vadodara
+2026-08-31 18:08:45,000 - database - DEBUG - [database.py:147] - Lead fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef inserted/updated successfully.
+2026-08-31 18:08:45,001 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for 22nd Parallel: https://yourdomain.com/preview/22nd-parallel-vadodara
+2026-08-31 18:08:45,017 - database - DEBUG - [database.py:147] - Lead 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140 inserted/updated successfully.
+2026-08-31 18:08:45,018 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Bayleaf Multi Cuisine Restaurant: https://yourdomain.com/preview/bayleaf-multi-cuisine-restaurant-vadodara
+2026-08-31 18:08:45,028 - database - DEBUG - [database.py:147] - Lead d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1 inserted/updated successfully.
+2026-08-31 18:08:45,029 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for The Morsel Restaurant: https://yourdomain.com/preview/the-morsel-restaurant-vadodara
+2026-08-31 18:08:45,041 - database - DEBUG - [database.py:147] - Lead 1f33331f49d53c5826361201cb349fd09058048ba9b16486975d867b08af754f inserted/updated successfully.
+2026-08-31 18:08:45,041 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Island The Restaurant Waves Club: https://yourdomain.com/preview/island-the-restaurant-waves-club-vadodara
+2026-08-31 18:08:45,059 - database - DEBUG - [database.py:147] - Lead 954e7786844addd19d395a658eaa0f2e040a6f62875844a46abe44f00580712f inserted/updated successfully.
+2026-08-31 18:08:45,060 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Peshawri by Welcomhotel Vadodara: https://yourdomain.com/preview/peshawri-by-welcomhotel-vadodara-vadodara
+2026-08-31 18:08:45,071 - database - DEBUG - [database.py:147] - Lead dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996 inserted/updated successfully.
+2026-08-31 18:08:45,071 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for The Secret Kitchen: https://yourdomain.com/preview/the-secret-kitchen-vadodara
+2026-08-31 18:08:45,083 - database - DEBUG - [database.py:147] - Lead fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86 inserted/updated successfully.
+2026-08-31 18:08:45,083 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Retro Bistro : The Fine Multi Cuisine Restaurant ( Vadodara ): https://yourdomain.com/preview/retro-bistro-the-fine-multi-cuisine-restaurant-vadodara-vadodara
+2026-08-31 18:08:45,094 - database - DEBUG - [database.py:147] - Lead 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e inserted/updated successfully.
+2026-08-31 18:08:45,094 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Sakura Pan Asian Cuisine: https://yourdomain.com/preview/sakura-pan-asian-cuisine-vadodara
+2026-08-31 18:08:45,105 - database - DEBUG - [database.py:147] - Lead 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3 inserted/updated successfully.
+2026-08-31 18:08:45,106 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Spice Kraft Restaurant: https://yourdomain.com/preview/spice-kraft-restaurant-vadodara
+2026-08-31 18:08:45,118 - database - DEBUG - [database.py:147] - Lead e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8 inserted/updated successfully.
+2026-08-31 18:08:45,119 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Taste Carnival - (Banquet, Rooms, Restaurant): https://yourdomain.com/preview/taste-carnival---banquet-rooms-restaurant-vadodara
+2026-08-31 18:08:45,131 - database - DEBUG - [database.py:147] - Lead 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b inserted/updated successfully.
+2026-08-31 18:08:45,131 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Le Prive World Cuisine: https://yourdomain.com/preview/le-prive-world-cuisine-vadodara
+2026-08-31 18:08:45,143 - database - DEBUG - [database.py:147] - Lead d034a132b04b025a77afe787765da25eb782c1cf07f83c9b5e05c891f8f78375 inserted/updated successfully.
+2026-08-31 18:08:45,144 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for The House of Makeba - Veg Family Dining Restaurant in Vadodara: https://yourdomain.com/preview/the-house-of-makeba---veg-family-dining-restaurant-in-vadodara-vadodara
+2026-08-31 18:08:45,147 - database - DEBUG - [database.py:147] - Lead 4a32cc6e9119c917795bac7ea3353e7eb30c71df0b46d71ea2bf3193d7c4ec03 inserted/updated successfully.
+2026-08-31 18:08:45,148 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Jassi De Parathe: https://yourdomain.com/preview/jassi-de-parathe-vadodara
+2026-08-31 18:08:45,163 - database - DEBUG - [database.py:147] - Lead a11bcf960b736bd5814353ef590f79b9c8a978f1e6695ad6cabb2f3522c9d015 inserted/updated successfully.
+2026-08-31 18:08:45,164 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Vibes The Bistro: https://yourdomain.com/preview/vibes-the-bistro-vadodara
+2026-08-31 18:08:45,175 - database - DEBUG - [database.py:147] - Lead 7208f2b757b861324229509e4e5d0b26278f896499d4ce2fadd8549324d5e061 inserted/updated successfully.
+2026-08-31 18:08:45,176 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Candle Light Date N Dinner & Rooftop Restaurant Vadodara: https://yourdomain.com/preview/candle-light-date-n-dinner-rooftop-restaurant-vadodara-vadodara
+2026-08-31 18:08:45,179 - database - DEBUG - [database.py:147] - Lead c31a261506f8f1ffe9b37be08bc8f95e902a5c50a5dd17d7f4526729bbe7cfde inserted/updated successfully.
+2026-08-31 18:08:45,179 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Vadodara Rest 1: https://yourdomain.com/preview/vadodara-rest-1-vadodara
+2026-08-31 18:08:45,193 - database - DEBUG - [database.py:147] - Lead 230fd204bdc93688c10c45900a6a5f0b0c1ae2c2634b877888e884cc50ea6902 inserted/updated successfully.
+2026-08-31 18:08:45,194 - __main__ - INFO - [url_generator.py:63] - Generated Demo URL for Acme Corp: https://yourdomain.com/preview/acme-corp-new-york
+2026-08-31 18:08:45,198 - database - DEBUG - [database.py:147] - Lead 68ca00ddd027f265c0289b54be07b06e3d96272736f8cf02b815bdabcab31cef inserted/updated successfully.
+2026-08-31 18:08:48,511 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Barbeque Nation - Vadodara - Cine Mall: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:08:48,511 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:49,039 - database - DEBUG - [database.py:147] - Lead fd8657d2b731b5d6bb2c8ddab80622646ef181713ac7c04c9f6ec0c98d1095ef inserted/updated successfully.
+2026-08-31 18:08:49,040 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Barbeque Nation - Vadodara - Cine Mall
+2026-08-31 18:08:49,040 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for 22nd Parallel (Status: VALID_WEBSITE)
+2026-08-31 18:08:55,424 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for 22nd Parallel: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:08:55,425 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:08:55,955 - database - DEBUG - [database.py:147] - Lead 5935f464148d2b9a86e0de01c63c0bfed02fb167d99b62b08e82503877545140 inserted/updated successfully.
+2026-08-31 18:08:55,956 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: 22nd Parallel
+2026-08-31 18:08:55,956 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Bayleaf Multi Cuisine Restaurant (Status: VALID_WEBSITE)
+2026-08-31 18:09:02,455 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Bayleaf Multi Cuisine Restaurant: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:09:02,456 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:09:02,934 - __main__ - INFO - [personalizer.py:177] - Starting AI Personalization Module on all qualified leads (up to 50)...
+2026-08-31 18:09:02,935 - database - INFO - [database.py:26] - Using SQLite Database (Local).
+2026-08-31 18:09:02,942 - __main__ - INFO - [personalizer.py:101] - No leads found requiring personalization.
+2026-08-31 18:09:02,969 - database - DEBUG - [database.py:147] - Lead d65cc2ef983b5aa66fb21ae9e1ba6b85442bcfd894f991a5b608d0c380ab5fb1 inserted/updated successfully.
+2026-08-31 18:09:02,970 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Bayleaf Multi Cuisine Restaurant
+2026-08-31 18:09:02,970 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Peshawri by Welcomhotel Vadodara (Status: VALID_WEBSITE)
+2026-08-31 18:09:08,317 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Peshawri by Welcomhotel Vadodara: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:09:08,318 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:09:08,844 - database - DEBUG - [database.py:147] - Lead dc4a1d19b98d3634095520f80a74ec925a809a541a6023957958b1a6c13b2996 inserted/updated successfully.
+2026-08-31 18:09:08,845 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Peshawri by Welcomhotel Vadodara
+2026-08-31 18:09:08,846 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for The Secret Kitchen (Status: VALID_WEBSITE)
+2026-08-31 18:09:16,092 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for The Secret Kitchen: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:09:16,093 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:09:16,659 - database - DEBUG - [database.py:147] - Lead fc2c498117d6863eec83514e9fbaaadae9b8e46e8d7b617e9ce2b1cd3b6d3c86 inserted/updated successfully.
+2026-08-31 18:09:16,660 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: The Secret Kitchen
+2026-08-31 18:09:16,661 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Retro Bistro : The Fine Multi Cuisine Restaurant ( Vadodara ) (Status: VALID_WEBSITE)
+2026-08-31 18:09:22,236 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Retro Bistro : The Fine Multi Cuisine Restaurant ( Vadodara ): Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:09:22,236 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:09:22,766 - database - DEBUG - [database.py:147] - Lead 510b7b02ec154001bfa344f57606f686afa0e1e241bd4b7e21482879b6b07e9e inserted/updated successfully.
+2026-08-31 18:09:22,767 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Retro Bistro : The Fine Multi Cuisine Restaurant ( Vadodara )
+2026-08-31 18:09:22,768 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Sakura Pan Asian Cuisine (Status: VALID_WEBSITE)
+2026-08-31 18:09:28,449 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Sakura Pan Asian Cuisine: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:09:28,450 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:09:28,985 - database - DEBUG - [database.py:147] - Lead 491b3b5c2da8179bdf15c87c210009c8cd1eb71d0e8b11a5a4f670e0c84c14f3 inserted/updated successfully.
+2026-08-31 18:09:28,988 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Sakura Pan Asian Cuisine
+2026-08-31 18:09:28,989 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Spice Kraft Restaurant (Status: VALID_WEBSITE)
+2026-08-31 18:09:35,314 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Spice Kraft Restaurant: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:09:35,314 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:09:35,865 - database - DEBUG - [database.py:147] - Lead e234570c1cada57d02a9c6bb64fc89bf15443a413c4d2ba213204d5b876cd4e8 inserted/updated successfully.
+2026-08-31 18:09:35,866 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Spice Kraft Restaurant
+2026-08-31 18:09:35,866 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Taste Carnival - (Banquet, Rooms, Restaurant) (Status: VALID_WEBSITE)
+2026-08-31 18:09:41,404 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Taste Carnival - (Banquet, Rooms, Restaurant): Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:09:41,405 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:09:41,942 - database - DEBUG - [database.py:147] - Lead 81eb6bbbd3e2ea9590fe092e9866472d0ebf47a6918d377f3226b1ac20425f9b inserted/updated successfully.
+2026-08-31 18:09:41,943 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Taste Carnival - (Banquet, Rooms, Restaurant)
+2026-08-31 18:09:41,943 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Reliant Plumbing - Dallas (Status: VALID_WEBSITE)
+2026-08-31 18:09:48,247 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Reliant Plumbing - Dallas: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:09:48,248 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:09:48,774 - database - DEBUG - [database.py:147] - Lead 4ea6745a9c64a2b4a014a151a390ed3f4b5f8c945fb3ec2e515169e5a776c42d inserted/updated successfully.
+2026-08-31 18:09:48,775 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Reliant Plumbing - Dallas
+2026-08-31 18:09:48,776 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Tide Turners Plumbing (Status: VALID_WEBSITE)
+2026-08-31 18:09:55,306 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Tide Turners Plumbing: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:09:55,306 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:09:55,830 - database - DEBUG - [database.py:147] - Lead eba6b5001ce1fa26a6e33f98ba29d7718325dcff8d4a5f73f7e3d0b7b009d086 inserted/updated successfully.
+2026-08-31 18:09:55,831 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Tide Turners Plumbing
+2026-08-31 18:09:55,831 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Baker Brothers Plumbing, Air & Electric (Status: VALID_WEBSITE)
+2026-08-31 18:10:01,293 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Baker Brothers Plumbing, Air & Electric: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:10:01,293 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:10:01,805 - database - DEBUG - [database.py:147] - Lead d80aeddb5e5224b66c7efbbfbf79953ab930347eaeaefb4ac58d269445537b3c inserted/updated successfully.
+2026-08-31 18:10:01,805 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Baker Brothers Plumbing, Air & Electric
+2026-08-31 18:10:01,805 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Milestone Electric, A/C, & Plumbing (Status: VALID_WEBSITE)
+2026-08-31 18:10:08,331 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Milestone Electric, A/C, & Plumbing: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:10:08,332 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:10:08,874 - database - DEBUG - [database.py:147] - Lead 135e8d4ba520bd4944a0e4c55f794c194b88155e14347dcc24b83cfc9035e858 inserted/updated successfully.
+2026-08-31 18:10:08,878 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Milestone Electric, A/C, & Plumbing
+2026-08-31 18:10:08,880 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Tribeca Plumbing, Inc. (Status: VALID_WEBSITE)
+2026-08-31 18:10:14,387 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Tribeca Plumbing, Inc.: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:10:14,387 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:10:14,920 - database - DEBUG - [database.py:147] - Lead bc96e159fba01ff74d0532dc10e62b11bda798c3d208f3c4c4af1cbd8fb63bcf inserted/updated successfully.
+2026-08-31 18:10:14,921 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Tribeca Plumbing, Inc.
+2026-08-31 18:10:14,921 - __main__ - INFO - [personalizer.py:116] - Personalizing messages for Metro Flow Plumbing - Dallas Emergency Plumbers (Status: VALID_WEBSITE)
+2026-08-31 18:10:21,591 - __main__ - ERROR - [personalizer.py:81] - Groq API Error for Metro Flow Plumbing - Dallas Emergency Plumbers: Expecting value: line 1 column 1 (char 0)
+2026-08-31 18:10:21,591 - __main__ - INFO - [personalizer.py:82] - Falling back to local mock generator due to API error...
+2026-08-31 18:10:22,121 - database - DEBUG - [database.py:147] - Lead a2863e404db00b421357dbc7caeee7bd4b0d7625988eb587672f111efe46e075 inserted/updated successfully.
+2026-08-31 18:10:22,122 - __main__ - INFO - [personalizer.py:171] - Successfully personalized and saved lead: Metro Flow Plumbing - Dallas Emergency Plumbers
+2026-08-31 18:12:44,705 - database - INFO - [database.py:26] - Using SQLite Database (Local).

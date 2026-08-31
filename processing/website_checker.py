@@ -120,7 +120,17 @@ def process_leads_websites():
         lead_dict = dict(row)
         status = lead_dict.get('status')
         
-        if status not in (LeadStatus.DISCOVERED.value, LeadStatus.ENRICHED.value):
+        # Skip duplicates or leads already verified with a valid status
+        if status == LeadStatus.DUPLICATE.value:
+            continue
+            
+        if lead_dict.get('website_status') and status in (
+            LeadStatus.VERIFIED.value, 
+            LeadStatus.QUALIFIED.value, 
+            LeadStatus.SCORED.value, 
+            LeadStatus.PERSONALIZED.value, 
+            LeadStatus.DEMO_READY.value
+        ):
             continue
             
         logger.info(f"Checking website for {lead_dict['business_name']} ({lead_dict['lead_id']})")
@@ -129,28 +139,15 @@ def process_leads_websites():
         classification = classify_initial_url(website)
         
         if classification in ("NO_WEBSITE", "SOCIAL_ONLY", "DIRECTORY_ONLY"):
-            # Try to find a real website
-            logger.info(f"No real website found. Searching via SerpAPI...")
-            found_website = serpapi_website_search(lead_dict['business_name'], lead_dict['city'])
-            time.sleep(1) # Delay between checks
-            
-            if found_website:
-                logger.info(f"Found website via SerpAPI: {found_website}")
-                website = found_website
-                lead_dict['website_url'] = website
-                classification = "REAL_WEBSITE"
-            else:
-                logger.info("No website found via secondary search.")
-                if classification == "NO_WEBSITE":
-                    lead_dict['website_status'] = "NO_WEBSITE"
-                else:
-                    lead_dict['website_status'] = classification
-                    
-        if classification == "REAL_WEBSITE":
-            # Verify the real website
+            lead_dict['website_status'] = classification
+            logger.info(f"Website classification for {lead_dict['business_name']}: {classification}")
+        elif classification == "REAL_WEBSITE":
+            # Verify the real website with timeout
             verify_status = verify_website(website, lead_dict['business_name'])
             lead_dict['website_status'] = verify_status
-            logger.info(f"Website Verification Result: {verify_status}")
+            logger.info(f"Website Verification Result for {lead_dict['business_name']}: {verify_status}")
+        else:
+            lead_dict['website_status'] = "NO_WEBSITE"
             
         # Update status
         lead_dict['status'] = LeadStatus.VERIFIED.value

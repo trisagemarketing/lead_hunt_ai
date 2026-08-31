@@ -16,10 +16,21 @@ def generate_slug(business_name: str, city: str) -> str:
 
 def run_url_generator():
     db = Database()
-    leads = db.get_leads_by_status(LeadStatus.PERSONALIZED.value)
+    all_leads = db.get_all_leads()
+    
+    # Target leads that are personalized or have outreach messages needing demo URLs
+    leads = [
+        dict(row) for row in all_leads
+        if dict(row).get('status') != LeadStatus.DUPLICATE.value
+        and (
+            dict(row).get('status') in (LeadStatus.PERSONALIZED.value, LeadStatus.QUALIFIED.value)
+            or (dict(row).get('email_message') and '{{DEMO_URL}}' in dict(row).get('email_message', ''))
+            or not dict(row).get('demo_url')
+        )
+    ]
     
     if not leads:
-        logger.info("No PERSONALIZED leads found.")
+        logger.info("No leads requiring Demo URL generation.")
         return []
 
     processed = []
@@ -52,6 +63,11 @@ def run_url_generator():
         logger.info(f"Generated Demo URL for {lead_dict['business_name']}: {demo_url}")
         
         # Save to DB
+        try:
+            status_enum = LeadStatus(lead_dict['status'])
+        except Exception:
+            status_enum = LeadStatus.DEMO_READY
+            
         updated_lead = Lead(
             business_name=lead_dict['business_name'],
             city=lead_dict['city'],
@@ -78,7 +94,7 @@ def run_url_generator():
             rating=lead_dict['rating'],
             review_count=lead_dict['review_count'],
             google_maps_url=lead_dict['google_maps_url'],
-            status=LeadStatus(lead_dict['status']),
+            status=status_enum,
             created_at=lead_dict['created_at'],
             updated_at=lead_dict['updated_at'],
             error_log=lead_dict['error_log']

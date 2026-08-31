@@ -69,3 +69,9 @@ def normalize_address(address: str) -> str:
     address = re.sub(r'[^a-z0-9\s,]', ' ', address)
     address = ' '.join(address.split())
     return address
+
+def main():
+    print("Phase 2A: Normalization engine ready.")
+
+if __name__ == "__main__":
+    main()

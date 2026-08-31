@@ -83,7 +83,10 @@ def deduplicate_and_score_leads():
             lead_dict['error_log'] = duplicate_reason
             logger.info(f"DUPLICATE FOUND: {lead_dict['business_name']} -> {duplicate_reason}")
         else:
-            lead_dict['status'] = LeadStatus.VERIFIED.value # Mark as ready for next phase
+            # If already further in pipeline, preserve status; otherwise keep DISCOVERED for website_checker
+            if lead_dict.get('status') in (LeadStatus.DUPLICATE.value, LeadStatus.DISCOVERED.value, ""):
+                lead_dict['status'] = LeadStatus.DISCOVERED.value
+            logger.debug(f"Lead verified unique: {lead_dict['business_name']}")
             
         # Save to DB
         try:

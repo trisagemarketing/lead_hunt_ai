@@ -83,10 +83,19 @@ def score_lead(lead_dict: dict) -> tuple[float, str, str, str]:
 
 def run_lead_scorer():
     db = Database()
-    leads = db.get_leads_by_status(LeadStatus.VERIFIED.value)
+    all_leads = db.get_all_leads()
+    
+    leads = [
+        dict(row) for row in all_leads 
+        if dict(row).get('status') != LeadStatus.DUPLICATE.value
+        and (
+            dict(row).get('status') in (LeadStatus.VERIFIED.value, LeadStatus.DISCOVERED.value, LeadStatus.ENRICHED.value)
+            or dict(row).get('lead_score', 0.0) == 0.0
+        )
+    ]
     
     if not leads:
-        logger.info("No VERIFIED leads found to score.")
+        logger.info("No leads found that need scoring.")
         return []
 
     processed = []

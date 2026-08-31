@@ -66,7 +66,8 @@ Output format MUST be a pure JSON object with these exact keys: "email_subject",
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": prompt_data}
             ],
-            model="openai/gpt-oss-120b",
+            model="llama-3.1-8b-instant",
+            response_format={"type": "json_object"},
             temperature=0.7,
             max_tokens=500
         )
@@ -82,19 +83,27 @@ Output format MUST be a pure JSON object with these exact keys: "email_subject",
         logger.info("Falling back to local mock generator due to API error...")
         return generate_messages_mock(lead_data)
 
-def process_leads(limit=20):
+def process_leads(limit=50):
     db = Database()
-    leads = db.get_leads_by_status(LeadStatus.SCORED.value)
+    all_leads = db.get_all_leads()
+    
+    # Get leads that need personalization (QUALIFIED, SCORED, or missing email_message) and are not duplicate
+    leads = [
+        dict(l) for l in all_leads 
+        if dict(l).get('status') != LeadStatus.DUPLICATE.value
+        and (
+            dict(l).get('status') in (LeadStatus.QUALIFIED.value, LeadStatus.SCORED.value, LeadStatus.VERIFIED.value)
+            or not dict(l).get('email_message')
+        )
+    ]
     
     if not leads:
-        logger.info("No SCORED leads found.")
+        logger.info("No leads found requiring personalization.")
         return []
 
-    # Sort to get HOT leads first (score >= 70)
-    hot_leads = [dict(l) for l in leads if l['lead_score'] >= 70]
-    # Fallback to any qualified if not enough hot leads
-    leads_to_process = hot_leads if hot_leads else [dict(l) for l in leads]
-    leads_to_process = leads_to_process[:limit]
+    # Sort to get HOT leads first (score >= 70), then WARM (score >= 45), then by score descending
+    leads.sort(key=lambda x: x.get('lead_score', 0.0), reverse=True)
+    leads_to_process = leads[:limit]
     
     if not config.GROQ_API_KEY:
         logger.warning("GROQ_API_KEY is missing. Using mock generator for testing.")
@@ -165,8 +174,8 @@ def process_leads(limit=20):
     return processed
 
 def main():
-    logger.info("Starting AI Personalization Module (Groq Edition) on 3 leads...")
-    results = process_leads(limit=3)
+    logger.info("Starting AI Personalization Module on all qualified leads (up to 50)...")
+    results = process_leads(limit=50)
     
     print("\nAI Generated Messages:")
     print("=" * 80)
